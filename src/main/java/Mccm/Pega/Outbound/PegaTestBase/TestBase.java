@@ -69,9 +69,10 @@ public class TestBase {
     public static void initialization() {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
-		String headLessMode = prop.getProperty("headless");
+    	String chromeDriver = prop.getProperty("chromedriver");
+	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", chromedriverPath+"/chromedriver");  
+			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);  
 			if(headLessMode.equals("true")) {
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
