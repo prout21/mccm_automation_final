@@ -39,7 +39,6 @@ pipeline {
                         mvn compile
                     '''
             }
-            
         } //stage (Build)
         stage('Test')
         {
@@ -47,7 +46,7 @@ pipeline {
                     echo "Testing...."
                     sh '''
                         cd ${WORKSPACE}
-                        # Not testing anything. will be added later
+                        # As of now not testing anything. will be added later
                     '''
             }
         } // (End of Test)
@@ -57,7 +56,8 @@ pipeline {
             steps {
                     echo "Saving Test results."
                     // Will be added later.
-            } // (End of Store to Jenkins)	
+            } 
+        }// (End of Store to Jenkins)	
     } // Stages
     
     post {
