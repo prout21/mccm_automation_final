@@ -47,7 +47,7 @@ pipeline {
                     echo "Testing...."
                     sh '''
                         cd ${WORKSPACE}
-                        # Not testing anything. will be added later
+                        # As of now, not testing anything. will be added later
                     '''
             }
         } // (End of Test)
@@ -57,7 +57,8 @@ pipeline {
             steps {
                     echo "Saving Test results."
                     // Will be added later.
-            } // (End of Store to Jenkins)	
+            } 
+        }// (End of Store to Jenkins)	
     } // Stages
     
     post {
@@ -69,15 +70,15 @@ pipeline {
 
         success {
             echo 'I succeeded!!!!!!!!!!!!!!'
-            script{
-                // if(nightlyBuild){
-                //     echo "Nightly build succeded!!!!!!!!!!!!!"
-                //     office365ConnectorSend message: "Log Url: (<${env.BUILD_URL}/console>)<br>Results Url: (<${env.BUILD_URL}/artifact/>)<br>Test Results Url: (<${env.BUILD_URL}/artifact/>)", status: "Nightly build Success", webhookUrl: 'https://outlook.office.com/webhook/d668f7b9-56dc-4dae-8078-e7f0d768b41f@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/fbd826977b0e48f7a7c8e25e5c3e5af7/19011347-d504-4b65-9a0a-abcdef'                    
-                // }
-                // if(normalBuild) {
-                //     emailext body: 'Log Url: (<${env.BUILD_URL}|Open>)', subject: 'Build Success', to: 'someone@dxc.com'
-                // }
-            }
+            // script{
+            //     if(nightlyBuild){
+            //         echo "Nightly build succeded!!!!!!!!!!!!!"
+            //         office365ConnectorSend message: "Log Url: (<${env.BUILD_URL}/console>)<br>Results Url: (<${env.BUILD_URL}/artifact/>)<br>Test Results Url: (<${env.BUILD_URL}/artifact/>)", status: "Nightly build Success", webhookUrl: 'https://outlook.office.com/webhook/d668f7b9-56dc-4dae-8078-e7f0d768b41f@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/fbd826977b0e48f7a7c8e25e5c3e5af7/19011347-d504-4b65-9a0a-abcdef'                    
+            //     }
+            //     if(normalBuild) {
+            //         emailext body: 'Log Url: (<${env.BUILD_URL}|Open>)', subject: 'Build Success', to: 'someone@dxc.com'
+            //     }
+            // }
         }
 
         unstable {
