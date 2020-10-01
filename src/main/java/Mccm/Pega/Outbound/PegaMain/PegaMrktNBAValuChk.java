@@ -123,7 +123,9 @@
 			
 			Assert.assertEquals(NBACampValueExits, "There are no results returned, please try a new search term.");
 			
-			System.out.println(NBACampValue + " is not present");
+			System.out.println(NBACampValue + " NBACampaignName Value is not Present");
+			
+			 System.out.println("NBACampaignName Value is not Present..Goto Main Flow"); 
 		 
 		}
 		 

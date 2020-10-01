@@ -18,6 +18,7 @@ import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
+import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
 import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
 import Mccm.Pega.Outbound.PegaMain.PreChkNBACampValu;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
@@ -62,6 +63,7 @@ public class TestBase {
 	   PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
 	   
 	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
+	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
 	 
   	      
 		} catch (FileNotFoundException e) {

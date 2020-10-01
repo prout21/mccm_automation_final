@@ -67,6 +67,12 @@ public class HomePage extends TestBase {
 	     action.moveToElement(Pegalunch).click().build().perform();
 	   	  return new PegaMrktNBAValuChk();
 	   } 
+   public PegaMrktNBAReSchd Pegamrklunch2()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	   	  return new PegaMrktNBAReSchd();
+	   }
    public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();

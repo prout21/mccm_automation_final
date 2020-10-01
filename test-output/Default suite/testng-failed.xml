@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.PreChkNBACampValuTest">
+      <class name="DemoEtEFlow.Testcase.PageMrktEtoEFlowReSchduOtbd">
         <methods>
-          <include name="VerifyOracleCansadraDataLoadedSuccessfully"/>
-          <include name="setup"/>
-          <include name="teardown"/>
+          <include name="NBABatchCampaignSuccessfull"/>
         </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.PreChkNBACampValuTest -->
+      </class> <!-- DemoEtEFlow.Testcase.PageMrktEtoEFlowReSchduOtbd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

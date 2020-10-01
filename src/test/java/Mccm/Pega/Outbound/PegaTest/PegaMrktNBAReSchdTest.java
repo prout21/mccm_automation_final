@@ -10,21 +10,21 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
-import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
+import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
-public class PegaMrktNBAValuChkTest extends TestBase {
+public class PegaMrktNBAReSchdTest extends TestBase {
 	private static final String priorty = null;
 	LoginPage loginpage;
 	HomePage  homepage;
-	PegaMrktNBAValuChk pegaMrktNBAValuChk;
+	PegaMrktNBAReSchd pegaMrktNBAReSchd;
 	TestUtil testutil;
 	
 
-	public PegaMrktNBAValuChkTest()
+	public PegaMrktNBAReSchdTest()
 	{
 		super();
 	}
@@ -35,27 +35,35 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 	     loginpage = new LoginPage();
 	     homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 	     testutil=new TestUtil();
-	     pegaMrktNBAValuChk =new PegaMrktNBAValuChk();
-	 //    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
-	      pegaMrktNBAValuChk=homepage.Pegamrklunch1();
+	     pegaMrktNBAReSchd =new PegaMrktNBAReSchd();
+	 //    PegaMrktNBAReSchd=homepage.PegaMrktNBAReSchd();
+	      pegaMrktNBAReSchd=homepage.Pegamrklunch2();
 	    }
  
 
  
 @Test (priority=1)
- public void VerifyNBACampValueChkPresentTestSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyNBACampReScheduleRunSuccessfully() throws InterruptedException, AWTException { 
 	 
-	 homepage.Pegamrklunch1();
-	 pegaMrktNBAValuChk.pegamarkting();
+	 homepage.Pegamrklunch2();
+	 pegaMrktNBAReSchd.pegamarkting();
 	 testutil.WindowHandling();
-	 pegaMrktNBAValuChk.ExpandPegMrkPage();
-	 pegaMrktNBAValuChk.Campaigns();
+	 pegaMrktNBAReSchd.ExpandPegMrkPage();
+	 pegaMrktNBAReSchd.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
-	 pegaMrktNBAValuChk.Filter();
-	 pegaMrktNBAValuChk.CampaignVlSrch();
-	 pegaMrktNBAValuChk.View();
-	 pegaMrktNBAValuChk.DisplayMsg(); 
+	 pegaMrktNBAReSchd.Filter();
+	 pegaMrktNBAReSchd.CampaignVlSrch();
+	 pegaMrktNBAReSchd.View();
+	 pegaMrktNBAReSchd.ImageClk();
+	 pegaMrktNBAReSchd.ActionsReSchd();
+	 pegaMrktNBAReSchd.Configure();
+	 pegaMrktNBAReSchd.CalendarApplay();
+	 pegaMrktNBAReSchd.Confirm();
+	 pegaMrktNBAReSchd.Refresh();
+	 pegaMrktNBAReSchd.RunStatus();
+	 pegaMrktNBAReSchd.CapturedRunID();
+	
 
 	}
 	 
@@ -65,7 +73,8 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 
     driver.quit();
 
-    System.out.println("NBACampaignName Value is not Present..Goto Main Flow");
+
+     System.out.println("NBACamp ReSchedule Run Successfully Done");  
 }	 
  }
  
