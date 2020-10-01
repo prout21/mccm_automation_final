@@ -84,7 +84,8 @@ public class PageMrktEtoEFlowPreChkNBACamp   {
 		String NBACampaignNamevalue = w3.getAttribute("value");
 
 		System.out.println(NBACampaignNamevalue);
-		File file = new File("C:\\Users\\prout21\\git\\Automation_Framework\\MCCM\\MCCM\\src\\main\\java\\Mccm\\Pega\\TestData\\PegaOutputData1.xlsx");
+		
+		File file = new File("C:\\Users\\prout21\\git\\mccm_automation\\src\\main\\java\\Mccm\\Pega\\TestData\\PegaOutputData1.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook();
 
 		XSSFSheet sh = wb.createSheet("PegaOutputData");

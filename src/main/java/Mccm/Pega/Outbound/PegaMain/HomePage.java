@@ -60,6 +60,19 @@ public class HomePage extends TestBase {
 	   	  Thread.sleep(8000);
 	   	  return new NBAOutboundValdtn();
 	   } 
+   
+   public PegaMrktNBAValuChk Pegamrklunch1()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	   	  return new PegaMrktNBAValuChk();
+	   } 
+   public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
+	   	  Thread.sleep(8000);
+	   	  Homepage.click();
+	   	  Thread.sleep(8000);
+	   	  return new PreChkNBACampValu();
+	   }
          
  
 }
