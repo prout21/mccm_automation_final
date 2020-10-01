@@ -44,7 +44,7 @@ public class PageMrktEtoEFlowReSchduOtbd extends TestBase  {
 	//private static final WebElement element10 = null;
 
 	@Test  
-	public void NBABatchCampaignSuccessfull() throws InterruptedException, AWTException {
+	public void NBABatchReschdeleCampaignSuccessfull() throws InterruptedException, AWTException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\Downloads\\chromedriver_win32\\chromedriver.exe");  
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
