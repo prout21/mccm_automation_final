@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import Demo.APIRestful.DemoDMPRTNBARestAPIGitTest;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
@@ -42,6 +43,10 @@ public class TestBase {
 			
 			String projectPath = System.getProperty("user.dir");
 			
+ //			String PROJECT_FOLDER_PATH1 = System.getProperty("PROJECT_FOLDER_PATH");
+//			String KeystorePath = System.getProperty("user.dir");
+		
+			
 							
 	FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
 	      prop.load(ip);
@@ -64,6 +69,8 @@ public class TestBase {
 	   
 	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
 	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
+	   
+	  
 	 
   	      
 		} catch (FileNotFoundException e) {

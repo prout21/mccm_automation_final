@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import Mccm.Pega.DMP.RealTime.LoginPageDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
+import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
@@ -33,6 +34,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	     pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
 	     testutil=new TestUtil();
 	     pegamarktDMPrealtime  = new PegaMarktDMPRealTime();
+	     pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
 	
 	    }
 
@@ -41,7 +43,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 @Test (priority=1)
  public void VerifyDMPrealtimeRunSuccessfully() throws InterruptedException, AWTException { 
 
-	 pegamarktDMPrealtime.Pegamrklunch();
+	 loginpageDMPrealtime.Pegamrklunch3();
 	 pegamarktDMPrealtime.pegamarkting();
 	 testutil.WindowHandling();
 	 pegamarktDMPrealtime.ExpandPegMrkPage();

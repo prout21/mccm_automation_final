@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="509930" started-at="2020-10-01T19:18:38 IST" finished-at="2020-10-01T19:27:08 IST">
+  <suite name="Default suite" duration-ms="3489" started-at="2020-10-05T17:21:01 IST" finished-at="2020-10-05T17:21:04 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="509930" started-at="2020-10-01T19:18:38 IST" finished-at="2020-10-01T19:27:08 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.PegaMrktNBAReSchdTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaMrktNBAReSchdTest@52f759d7]" name="setup" is-config="true" duration-ms="27414" started-at="2020-10-01T19:18:38 IST" finished-at="2020-10-01T19:19:05 IST">
+    <test name="Default test" duration-ms="3489" started-at="2020-10-05T17:21:01 IST" finished-at="2020-10-05T17:21:04 IST">
+      <class name="Demo.APIRestful.DemoDMPRTProcessOfferResult">
+        <test-method status="PASS" signature="test()[pri:0, instance:Demo.APIRestful.DemoDMPRTProcessOfferResult@612679d6]" name="test" duration-ms="3438" started-at="2020-10-05T17:21:01 IST" finished-at="2020-10-05T17:21:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyNBACampReScheduleRunSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegaMrktNBAReSchdTest@52f759d7]" name="VerifyNBACampReScheduleRunSuccessfully" duration-ms="472115" started-at="2020-10-01T19:19:05 IST" finished-at="2020-10-01T19:26:57 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyNBACampReScheduleRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaMrktNBAReSchdTest@52f759d7]" name="teardown" is-config="true" duration-ms="10343" started-at="2020-10-01T19:26:57 IST" finished-at="2020-10-01T19:27:08 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.PegaMrktNBAReSchdTest -->
+        </test-method> <!-- test -->
+      </class> <!-- Demo.APIRestful.DemoDMPRTProcessOfferResult -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

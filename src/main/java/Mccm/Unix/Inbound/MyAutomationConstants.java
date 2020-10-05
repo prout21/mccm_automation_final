@@ -1,5 +1,6 @@
 package Mccm.Unix.Inbound;
 
+import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
 public class MyAutomationConstants {
 
