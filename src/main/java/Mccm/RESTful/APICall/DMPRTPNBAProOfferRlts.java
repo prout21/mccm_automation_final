@@ -1,4 +1,4 @@
-package Mccm.Pega.DMPRealTime.PegaTest;
+package Mccm.RESTful.APICall;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class DMPRTPNBAMobHash extends TestBase  {
+public class DMPRTPNBAProOfferRlts extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -42,7 +42,7 @@ public class DMPRTPNBAMobHash extends TestBase  {
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
 		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processNextBestAction");
+		 			+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -53,7 +53,7 @@ public class DMPRTPNBAMobHash extends TestBase  {
 
 	      //  String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
             
-			 json = general_ReadProperty("NBA_json");
+			 json = general_ReadProperty("NBA_json_offer");
 	
 		 
 			

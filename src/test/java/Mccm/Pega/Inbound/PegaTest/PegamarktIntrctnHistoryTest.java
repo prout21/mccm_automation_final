@@ -37,6 +37,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 	     pegaMarketIntrctnHistry = loginpageinbound.login(prop.getProperty("username"), prop.getProperty("password")); 
 	     testutil=new TestUtil();
 	     pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
+	     pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
 	
 	    }
 
@@ -45,7 +46,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 @Test (priority=1)
  public void VerifyIntractionHistoryRunSuccessfully() throws InterruptedException, AWTException { 
 
-	 pegaMarketIntrctnHistry.Pegamrklunch();
+	 loginpageinbound.Pegamrklunch3();
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 testutil.WindowHandling();
 	 pegaMarketIntrctnHistry.ExpandReport();;

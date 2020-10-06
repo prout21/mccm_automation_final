@@ -26,6 +26,8 @@ public class DemoDMPRTNBARestAPI {
 
          URL urlForGetRequest = new URL("https://" + hostName + ":" + port
                       + "/prweb/PRRestService/CSM/customerMarketingProductAPI/processNextBestAction");
+//         URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+//                 + "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
          String readLine = null;
          System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/MCCM/keystore/css1identity.jks");
                  
@@ -36,9 +38,11 @@ public class DemoDMPRTNBARestAPI {
          System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/MCCM/keystore/mccminternaltrust.jks");
          System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-
+         
+    //     String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"Pega\"}]}}}";
+         
          String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"3ed536db3457\",\"schemeID\":\"MobileHashed\"}]}}}";
-
+    //     String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"9cd536xz3002\",\"schemeID\":\"MobileHashed\"}]}}}";
          // Create all-trusting host name verifier
          HostnameVerifier allHostsValid = new HostnameVerifier() {
                public boolean verify(String hostname, SSLSession session) {

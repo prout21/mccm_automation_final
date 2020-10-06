@@ -14,7 +14,8 @@
   
     <test name="RestAPI POST Call NBA Regression Test">
     <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHash"/>  
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest"/>  
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest"/>  
     </classes>
   </test> <!-- Test -->
    

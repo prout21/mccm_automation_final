@@ -18,9 +18,10 @@ public class DemoDMPRTProcessOfferResult {
  public void test() {
 
    //   public static void main(String[] args) {
-
   try {
          // String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
+	  
+	//  https://192.57.138.25:18576/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult
          String hostName = "192.57.138.25";
          String port = "18576";// 8573
 
@@ -28,17 +29,16 @@ public class DemoDMPRTProcessOfferResult {
                       + "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
          String readLine = null;
          System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/MCCM/keystore/css1identity.jks");
-                 
-                                                            
-   
          System.setProperty("javax.net.ssl.keyStorePassword", "password");
          System.setProperty("javax.net.ssl.keyStoreType", "JKS");
          System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/MCCM/keystore/mccminternaltrust.jks");
          System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-         String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}";
-
+        String json = "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"Pega\"}]}}}]";
+        
+    //    String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
+         
          // Create all-trusting host name verifier
          HostnameVerifier allHostsValid = new HostnameVerifier() {
                public boolean verify(String hostname, SSLSession session) {
