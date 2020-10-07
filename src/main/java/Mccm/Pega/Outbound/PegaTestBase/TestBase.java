@@ -43,10 +43,6 @@ public class TestBase {
 			
 			String projectPath = System.getProperty("user.dir");
 			
- //			String PROJECT_FOLDER_PATH1 = System.getProperty("PROJECT_FOLDER_PATH");
-//			String KeystorePath = System.getProperty("user.dir");
-		
-			
 							
 	FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
 	      prop.load(ip);
@@ -69,8 +65,6 @@ public class TestBase {
 	   
 	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
 	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
-	   
-	  
 	 
   	      
 		} catch (FileNotFoundException e) {
@@ -85,23 +79,23 @@ public class TestBase {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
-	    String headLessMode = prop.getProperty("headless");
+		String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
-		//	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
     		String projectPath = System.getProperty("user.dir");
     		 
-	 	    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
-	 	     driver = new ChromeDriver();     
-//			if(headLessMode.equals("true")) {
-//				ChromeOptions chromeOptions = new ChromeOptions();
-//				chromeOptions.addArguments("--no-sandbox");
-//				chromeOptions.addArguments("--disable-dev-shm-usage");
-//				chromeOptions.addArguments("--headless");
-//				driver = new ChromeDriver(chromeOptions);
-//			}
-//			else{
-//				driver = new ChromeDriver();
-//			}
+	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+	 	    //driver = new ChromeDriver();     
+			if(headLessMode.equals("true")) {
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--no-sandbox");
+				chromeOptions.addArguments("--disable-dev-shm-usage");
+				chromeOptions.addArguments("--headless");
+				driver = new ChromeDriver(chromeOptions);
+			}
+			else{
+				driver = new ChromeDriver();
+			}
     	}
     	
       driver.manage().window().maximize();
