@@ -3,12 +3,13 @@
 def buildMode = "default"
 def doBuild = false
 def doTest = false
+def nightlyBuild = false
 
 // Artifactory parameter
 pkg_repos = "DXC-VF"
 
 // Cron job setting for nightly build. Branch fb-test* will be included for nightlybuild.
-def schedule = env.BRANCH_NAME.contains('fb_fortesting')  ? "0 08 * * 1-5" : ""
+def schedule = env.BRANCH_NAME.contains('fb_develop')  ? "0 08 * * 1-5" : ""
 
 pipeline {
     agent {dockerfile true}
@@ -95,6 +96,7 @@ pipeline {
                 //From MS Teams add the enterprise github connector to your channel and follow the direction to add the webhook to github
                 //After this is setup and configured you MS Team channel will receive message from github and jenkins.                  
                 script {
+                    nightlyBuild = true
                     def passed  = sh(returnStdout: true, script: ''' grep "test(s) passed" TestReport/Test-Automaton-Report.html |awk -F">" '{print $3}'|awk -F"<" '{print $1}' ''')
                     def failed  = sh(returnStdout: true, script: ''' grep "test(s) failed" TestReport/Test-Automaton-Report.html |awk -F">" '{print $2}'|awk -F"<" '{print $1}' ''')
                     def others  = sh(returnStdout: true, script: ''' grep "test(s) failed" TestReport/Test-Automaton-Report.html |awk -F">" '{print $4}'|awk -F"<" '{print $1}' ''')
@@ -125,7 +127,7 @@ pipeline {
         failure {
             echo 'I failed :(' 
             script {
-                if(env.BRANCH_NAME == "fb_develop") {
+                if(env.BRANCH_NAME == "fb_develop" && nightlyBuild) {
                     office365ConnectorSend message: "Build: Failed" , status: "Nightly build Failed", webhookUrl: 'https://outlook.office.com/webhook/a1e5ba23-63a3-4537-977e-e2191201fb75@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/40afd56bba6442a490c90b645147cd87/19011347-d504-4b65-9a0a-0b676f0b9762'
                 }
                 // emailext body: '"Log Url: (<${env.BUILD_URL}|Open>)"', subject: 'Build Failed', to: 'someemail@dxc.com'
