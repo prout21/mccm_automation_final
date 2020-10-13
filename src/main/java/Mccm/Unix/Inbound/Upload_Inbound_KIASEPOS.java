@@ -89,15 +89,16 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	               }
 	           }   
 	        //   String[] name = {"custdata1", "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
-		     String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
+		//pr     String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
+	           String  name  = general_ReadProperty("File_KIASEPOS");
 	           
 	    //      String[] name = {"BUILDING"};//, "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
 	           
 	           int l = 0;
-	           for (int i = 0; i < name.length; i++) 
+	           for (int i = 0; i <1; i++) 
 	           {
 	        	   boolean  filefound = false;
-	            int k;
+	       //PR     int k;
 		       //    File curDir2 = new File("C:\\NBA_Inbound\\KIASEPOS");
 		           File curDir2 = new File(UnixInputFilePath+"/NBA_Inbound/KIASEPOS"); 
 		           File[] filesList2 = curDir2.listFiles();
@@ -111,10 +112,10 @@ import com.jcraft.jsch.SftpProgressMonitor;
 					//   ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
 	                String name11 = (f2.getName()); 
 	 //                if (lsEntry.getFilename()).contains(name[i]) { 
-	                if (name11.contains(name[i])) { 
+	                if (name11.contains(name)) { 
 	                 	 filefound = true;
-	                 	 k=i+1;
-	                	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
+	                 	 //PR       	 k=i+1;
+	                	 System.out.println("The file [" + i +"]:" + name + " is found in the input folder");
 	           	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
 	                	 //filename1=("C:\\oracle\\" + name11);
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
@@ -122,13 +123,11 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
 	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/KIASEPOS/"+f2.getName(),new progressMonitor());
 	                	 
-	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  KIASEPOS input folder");
+	                	 System.out.println("The file [" + i +"]:" + name + " UPLOAD done to the  KIASEPOS input folder");
 	                	 Thread.sleep(2000);
 	                	 
 	                	}
-	                 
-	          
-       
+	                  
 
 	        }
 	            
@@ -136,15 +135,16 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	            {
 	 
 //	                 System.out.println("The Keyword :file_list_oracle: is not found in the path");
-	            	 k=i+1;
-	            	  l = i+1;
-	           	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");
-	           	 System.out.println("The file [" + k +"]: " + name[i] + " Upload failed as file is missing");            	
+	            	 //PR  	 k=i+1;
+	            	 //PR 	  l = i+1;
+	           	 System.out.println("The file [" + i +"]: " + name + " is NOT found in the input folder");
+	           	 System.out.println("The file [" + i +"]: " + name + " Upload failed as file is missing");            	
 	           	 
 	           //	 System.out.println("The file :" + name[i] + ": is not found in given path");
 	          	 
 	            }
 	           }
+	           Thread.sleep(2000);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	           
 	       
 	//       channelSftp.put("", "/opt/SP/data/mccm02/logs/temp/cassandra/cusdata1.csv");

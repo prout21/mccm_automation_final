@@ -52,6 +52,7 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
 	public static String user;
 	public static String pass;
 	public static String host;
+	public static String name;
 	public static XSSFWorkbook wb;
 
    // static String name = " ";
@@ -116,6 +117,9 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
          
         //String host1 = "46.190.224.85";
         Upload_Inbound_OnlineShop.main(null);//main();
+        Thread.sleep(2000);
+        Thread.sleep(2000);
+        Thread.sleep(2000);
         
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
@@ -148,22 +152,57 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
            for (int i = 0; i < fileList.size(); i++) {
                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
                System.out.println(lsEntry.getFilename()); 
-           		}              
-           String[] name = {"TESTCYCL_1704_TC096_Validate_Onlineshop_Response_IP_Correct.txt"};
+           		}  
+           //NEW CODE
+           Thread.sleep(2000);
+           Thread.sleep(2000);
            
-           for (int i = 0; i < name.length; i++) 
+String  name  = general_ReadProperty("File_ONLINE_SHOP");
+           
+           System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
+          for (int i = 0; i <1; i++) 
+          {
+          	 filefound = false;
+           for (int j = 0; j < fileList.size(); j++) 
            {
-           	 filefound = false;
-            for (int j = 0; j < fileList.size(); j++) 
-            {
-                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
-                name11 = (lsEntry.getFilename()); 
- //                if (lsEntry.getFilename()).contains(name[i]) { 
-                if (name11.contains(name[i])) { 
-                 	 filefound = true;
-                 	 k=i+1;
-                	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
-                	}
+               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
+               name11 = (lsEntry.getFilename()); 
+ 
+               if (name11.contains(name)) { 
+                	 filefound = true;
+                	 k=i+1;
+               	 System.out.println("The file [" + k +"]:" + name  + " is found in the input folder");
+               	}
+           }
+           
+           if (!filefound)
+           {
+
+ 
+           	 k=i+1;
+          	 System.out.println("The file [" + k +"]: " + name  + " is NOT found in the input folder");            	
+ 
+         	 
+           }
+          }
+          System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+          //NEW CODE
+          
+//PR           String[] name = {"TESTCYCL_1704_TC096_Validate_Onlineshop_Response_IP_Correct.txt"};
+//PR           
+// PR          for (int i = 0; i < name.length; i++) 
+// PR          {
+//PR           	 filefound = false;
+//PR            for (int j = 0; j < fileList.size(); j++) 
+// PR           {
+//  PR              ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
+//   PR             name11 = (lsEntry.getFilename()); 
+// //                if (lsEntry.getFilename()).contains(name[i]) { 
+//  PR              if (name11.contains(name[i])) { 
+//  PR               	 filefound = true;
+//   PR              	 k=i+1;
+//   PR             	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
+//  PR              	}
                  
           
               //   If (true) {
@@ -215,18 +254,18 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
             //     Then 
               //   System.out.println("exist fifle  " + name1);                   
 
-        }
+       //  PR       }
             
-            if (!filefound)
-            {
+       //  PR        if (!filefound)
+       //  PR          {
  
 //                 System.out.println("The Keyword :file_list_oracle: is not found in the path");
-            	 k=i+1;
-           	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");            	
+       //  PR          	 k=i+1;
+            	//  PR         	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");            	
            //	 System.out.println("The file :" + name[i] + ": is not found in given path");
           	 
-            }
-           }
+       //  PR          }
+       //  PR       }
     	// }           
             //fileList = channelSftp.ls("C:\\ToUpload");
            //String dir = "C:\\ToUpload";
@@ -303,6 +342,7 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
 		   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 		   Thread.sleep(8000);
+		   Thread.sleep(2000);
 		  FileExistChk_Inbound_OnlineShop.main(null);
 		 
 			

@@ -87,21 +87,21 @@ public class TestBase {
     	String chromeDriver = prop.getProperty("chromedriver");
 	    String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
-		//	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+		 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
     		String projectPath = System.getProperty("user.dir");
     		 
-	 	    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
-	 	     driver = new ChromeDriver();     
-//			if(headLessMode.equals("true")) {
-//				ChromeOptions chromeOptions = new ChromeOptions();
-//				chromeOptions.addArguments("--no-sandbox");
-//				chromeOptions.addArguments("--disable-dev-shm-usage");
-//				chromeOptions.addArguments("--headless");
-//				driver = new ChromeDriver(chromeOptions);
-//			}
-//			else{
-//				driver = new ChromeDriver();
-//			}
+	 //pr	    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+	 //pr	     driver = new ChromeDriver();     
+			if(headLessMode.equals("true")) {
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--no-sandbox");
+				chromeOptions.addArguments("--disable-dev-shm-usage");
+				chromeOptions.addArguments("--headless");
+				driver = new ChromeDriver(chromeOptions);
+			}
+			else{
+				driver = new ChromeDriver();
+			}
     	}
     	
       driver.manage().window().maximize();

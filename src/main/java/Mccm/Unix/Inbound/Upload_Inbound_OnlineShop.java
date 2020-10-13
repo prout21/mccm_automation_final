@@ -30,6 +30,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
  //	public static String host;	
 	private static XSSFWorkbook wb;
 	public static String UnixInputFilePath;
+	public static String name;
 	
 	@Test
 	

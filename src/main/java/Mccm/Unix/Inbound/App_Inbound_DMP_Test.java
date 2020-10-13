@@ -105,6 +105,9 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
         //String host1 = "46.190.224.85";
         
         Upload_Inbound_DMP.main(null);//main();
+        Thread.sleep(2000);
+        Thread.sleep(2000);
+        Thread.sleep(2000);
       
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
@@ -138,12 +141,12 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
                System.out.println(lsEntry.getFilename()); 
          		}              
-           
+           Thread.sleep(2000);
        //  ----------------------------------------------  
-           String  name  = general_ReadProperty("File_NameDMP");
+           String  name  = general_ReadProperty("File_DMP");
            
            System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
-          for (int i = 0; i < name.length(); i++) 
+          for (int i = 0; i <1; i++) 
           {
           	 filefound = false;
            for (int j = 0; j < fileList.size(); j++) 
@@ -330,7 +333,9 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 		   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 		   
- 		   Thread.sleep(8000);
+ 		   Thread.sleep(2000);
+ 		   Thread.sleep(2000);
+ 	        Thread.sleep(2000);
 		   
  	 	  FileExistChk_Inbound_DMP.main(null);
 		   

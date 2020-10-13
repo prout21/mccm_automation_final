@@ -32,6 +32,8 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	
 	public static String UnixInputFilePath;
 	
+	 public static String name;
+	
 	  
 	
 	@Test
@@ -94,21 +96,24 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	               }
 	           }   
 	        //   String[] name = {"custdata1", "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
-	     String[] name = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};
+	 //pr    String[] name = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};
+	     
+	     String  name  = general_ReadProperty("File_DMP");
 		     
 		//     String  name = general_ReadProperty("UnixInputFilePath");
 	           
 	    //      String[] name = {"BUILDING"};//, "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
 	           
 	           int l = 0;
-	           for (int i = 0; i < name.length; i++) 
+	           for (int i = 0; i < 1; i++) 
 	           {
 	        	   boolean  filefound = false;
-	            int k;
+	        	   //pr        int k;
 	             
 		     //     File curDir2 = new File("C:\\NBA_Inbound\\DMP");
 	           File curDir2 = new File(UnixInputFilePath+"/NBA_Inbound/DMP");
-		           File[] filesList2 = curDir2.listFiles();
+		            File[] filesList2 = curDir2.listFiles();
+		      //     File  filesList2 = curDir2.listFiles();
 		           //File f2 = new File(".");
 //	            String filename1 = "";
 //	            File f1 : filesList1            
@@ -119,10 +124,10 @@ import com.jcraft.jsch.SftpProgressMonitor;
 					//   ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
 	                String name11 = (f2.getName()); 
 	 //                if (lsEntry.getFilename()).contains(name[i]) { 
-	                if (name11.contains(name[i])) { 
+	                if (name11.contains(name)) { 
 	                 	 filefound = true;
-	                 	 k=i+1;
-	                	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
+	                 	 //pr               	 k=i+1;
+	                	 System.out.println("The file [" + i +"]:" + name + " is found in the input folder");
 	           	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
 	                	 //filename1=("C:\\oracle\\" + name11);
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
@@ -130,7 +135,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
 	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/DMP/"+f2.getName(),new progressMonitor());
 	                	 
-	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  DMP input folder");
+	                	 System.out.println("The file [" + i +"]:" + name + " UPLOAD done to the  DMP input folder");
 	                	 Thread.sleep(2000);
 	                	 
 	                	}
@@ -144,10 +149,10 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	            {
 	 
 //	                 System.out.println("The Keyword :file_list_oracle: is not found in the path");
-	            	 k=i+1;
-	            	  l = i+1;
-	           	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");
-	           	 System.out.println("The file [" + k +"]: " + name[i] + " Upload failed as file is missing");            	
+	            	 //pr	 k=i+1;
+	            	 //pr   	  l = i+1;
+	           	 System.out.println("The file [" + i +"]: " + name + " is NOT found in the input folder");
+	           	 System.out.println("The file [" + i +"]: " + name + " Upload failed as file is missing");            	
 	           	 
 	           //	 System.out.println("The file :" + name[i] + ": is not found in given path");
 	          	 

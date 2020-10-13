@@ -41,7 +41,8 @@
 					<executable>/usr/bin/java</executable>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Report.xml</suiteXmlFiles>
+						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles>
+						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

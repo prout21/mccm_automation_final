@@ -21,37 +21,44 @@ static String host = "localhost";
 //static String user = "pegat02";
 static String user = "mccm02";
 static String password = "unix11";
+public static String filename;
 
 @Test
 
 public static void main(String[] args) {
 	
  //String filename = "file_list_oracle1.lst";
-	String[] filename = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};//, "file_list_oracle.lst";
+	//pr String[] filename = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};//, "file_list_oracle.lst";
 //pr	String[] filename = {"SCA_cass_20200722010201.csv.gz", "FCA_cass_202007220010201.csv.gz"};//, "file_list_oracle.lst";
-	 
+	String  filename  = general_ReadProperty("File_DMP");
+	
     String filepath = "/opt/SP/mccm/SYSN/input/DMP/";
   //pr  String filepath = "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/";
-  
+
     try {
-    	
+    	    Thread.sleep(2000);
+	        Thread.sleep(2000);
         Channel  channel = getChannelSftp(host, user, password);
         channel.connect();
         ChannelSftp channelSftp = (ChannelSftp) channel;
         channelSftp.cd(filepath);
-     	//System.out.println("Case 2:");     	
+     	//System.out.println("Case 2:");  
+         
      	int i;
      	String dir=null;
         String path=null;
-		for (i = 0; i < filename.length; i++) {
-			path = channelSftp.ls(filename[i]).toString();
-        if (!path.contains(filename[i])) {
-            System.out.println("File doesn't exist." + filename[i]);
+		for (i = 0; i < 1; i++) {
+			path = channelSftp.ls(filename ).toString();
+			 Thread.sleep(2000);
+			   Thread.sleep(2000);
+		        Thread.sleep(2000);
+        if (!path.contains(filename )) {
+            System.out.println("File doesn't exist." + filename );
         } else
         	//            System.out.println("");            
            // System.out.println("Case 2: File exist at the path -/opt/SP/mccm/SYSN/mccm_dataload/import/input.---  " + filename);
         dir  = channelSftp.pwd().toString();
-        System.out.println("File: " + filename[i] + " exist at the path ---  " + dir);        
+        System.out.println("File: " + filename  + " exist at the path ---  " + dir);        
            // System.out.println("---  " + filename[i]);
 		}
 

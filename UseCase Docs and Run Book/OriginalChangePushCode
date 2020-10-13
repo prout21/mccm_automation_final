@@ -23,3 +23,10 @@ System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromed
                  
     mccm_automation\configurationFile.properties : config file change for unix and api 
     commeted = workspace added proj path
+    
+    ------------
+    test input file excel -change
+    toupload change file 
+    to-oracle file name change
+    
+    
