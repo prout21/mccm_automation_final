@@ -1,0 +1,38 @@
+# Created on 2020-10-13T18:00:00.416
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created on 2020-10-13T18:00:00.985
+Unexpected IOException with stream: finished
+
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 100
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 
+
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 285825
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 
+
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 285825
+
+# Created on 2020-10-13T18:00:01.000
+Unexpected IOException with stream: 
+
+
+# Created on 2020-10-13T18:00:01.486
+Unexpected IOException with stream: The file [10]:CONTACTSTATUS UPLOAD done to the  ORACLE input folder
+
+

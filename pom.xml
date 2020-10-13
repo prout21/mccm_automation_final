@@ -41,7 +41,10 @@
 					<executable>/usr/bin/java</executable>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
+<<<<<<< HEAD
 						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles>
+=======
+>>>>>>> branch 'fb_develop' of git@github.dxc.com:DXC-VF/mccm_automation.git
 						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles>
 					</suiteXmlFiles>
 				</configuration>
