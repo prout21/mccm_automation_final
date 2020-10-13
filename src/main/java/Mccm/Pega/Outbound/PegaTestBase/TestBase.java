@@ -79,22 +79,16 @@ public class TestBase {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
-		String headLessMode = prop.getProperty("headless");
+	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
-<<<<<<< HEAD
 		 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
-=======
 			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
->>>>>>> branch 'fb_develop' of git@github.dxc.com:DXC-VF/mccm_automation.git
-    		String projectPath = System.getProperty("user.dir");
+    			String projectPath = System.getProperty("user.dir");
     		 
-<<<<<<< HEAD
 	 //pr	    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 //pr	     driver = new ChromeDriver();     
-=======
 	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 	    //driver = new ChromeDriver();     
->>>>>>> branch 'fb_develop' of git@github.dxc.com:DXC-VF/mccm_automation.git
 			if(headLessMode.equals("true")) {
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
