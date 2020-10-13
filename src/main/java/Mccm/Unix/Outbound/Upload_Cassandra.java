@@ -27,15 +27,15 @@ import com.jcraft.jsch.SftpProgressMonitor;
 //	public static String user;
 //	public static String host;	
 	private static XSSFWorkbook wb;
+	public static String UnixInputFilePath;
 	
 	@Test
 	
 		
 	   // static String name = " ";
 
-    public static void main( String[] args )
-	    	    {
-
+    public static void main( String[] args )   {
+		UnixInputFilePath=general_ReadProperty("UnixInputFilePath");
 	    	    		    	
 	    	 try { 	
 	        //Object myObject = null;
@@ -67,7 +67,8 @@ import com.jcraft.jsch.SftpProgressMonitor;
 //	           		}
 	           //String curDir=("C:\\oracle\\");
 	             File f = null;
-	           File curDir = new File("C:\\toupload_cassandra");
+	             File curDir = new File(UnixInputFilePath+"/NBA_Outbound/toupload_cassandra"); 
+	         //  File curDir = new File("C:\\toupload_cassandra");
 	           File[] filesList1 = curDir.listFiles();
 	           for(File f1 : filesList1){
 //	               if(f.isDirectory())
@@ -87,7 +88,8 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	           {
 	        	   boolean  filefound = false;
 	            int k;
-		           File curDir2 = new File("C:\\toupload_cassandra");
+		    //       File curDir2 = new File("C:\\toupload_cassandra");
+	            File curDir2 = new File(UnixInputFilePath+"/NBA_Outbound/toupload_cassandra"); 
 		           File[] filesList2 = curDir2.listFiles();
 		           //File f2 = new File(".");
 //	            String filename1 = "";

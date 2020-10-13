@@ -30,14 +30,19 @@ import com.jcraft.jsch.SftpProgressMonitor;
  //	public static String host;	
 	private static XSSFWorkbook wb;
 	
+	public static String UnixInputFilePath;
+	
+	  
+	
 	@Test
 	
 		
 	   // static String name = " ";
 
-    public static void main( String[] args )
-	    	    {
- 	
+    public static void main( String[] args )   {
+ 	  
+		
+		UnixInputFilePath=general_ReadProperty("UnixInputFilePath");
 	    	    		    	
 	    	 try { 	
 	        //Object myObject = null;
@@ -76,7 +81,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 //	           		}
 	           //String curDir=("C:\\oracle\\");
 	             File f = null;
-	           File curDir = new File("C:\\NBA_Inbound\\DMP");  
+	            
+	         //   File curDir = new File("C:\\NBA_Inbound\\DMP");  
+	            File curDir = new File(UnixInputFilePath+"/NBA_Inbound/DMP");  
 	           File[] filesList1 = curDir.listFiles();
 	           for(File f1 : filesList1){
 //	               if(f.isDirectory())
@@ -87,7 +94,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	               }
 	           }   
 	        //   String[] name = {"custdata1", "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
-		     String[] name = {"TESTCYCL_1669_TC001_Validate_DMP_Response"};
+	     String[] name = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};
+		     
+		//     String  name = general_ReadProperty("UnixInputFilePath");
 	           
 	    //      String[] name = {"BUILDING"};//, "BUILDING", "CALENDAR", "CLINTVIEWEXPORTREVENUEEST", "CLINTVIEWEXPORTREVENUE", "CLINTVIEWREFOPTPRODUCT", "CLINTVIEWVWOPTRUN", "CONTACTLIST", "CONTACTOFFER", "CONTACTSTATUS", "CONTRACT", "CUSTOMER", "CUSTREL", "FLAGS", "GEOFOOTPRINT", "HOUSEHOLD", "LEGPPRCRATE", "LEGPRODUCT", "LEGSOCDISCOUNT", "LEGVOTYPE", "MEMOTYPE", "PERMISSIONS", "PRODUCT", "REPORTINGSERVICEPRODUCT", "SALESCHANNEL", "SALESORGANIZATION", "SCHIERARCHY", "SCORES", "SUBSCRIPTION", "TOHIERARCHY"};
 	           
@@ -96,7 +105,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	           {
 	        	   boolean  filefound = false;
 	            int k;
-		           File curDir2 = new File("C:\\NBA_Inbound\\DMP");
+	             
+		     //     File curDir2 = new File("C:\\NBA_Inbound\\DMP");
+	           File curDir2 = new File(UnixInputFilePath+"/NBA_Inbound/DMP");
 		           File[] filesList2 = curDir2.listFiles();
 		           //File f2 = new File(".");
 //	            String filename1 = "";

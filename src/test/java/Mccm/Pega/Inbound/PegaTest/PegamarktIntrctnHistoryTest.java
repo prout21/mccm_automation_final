@@ -53,6 +53,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();
+	 pegaMarketIntrctnHistry.Validation();
 	 
 	 
  }

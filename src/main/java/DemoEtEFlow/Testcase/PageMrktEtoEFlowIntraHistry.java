@@ -1,6 +1,7 @@
 package DemoEtEFlow.Testcase;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -39,7 +40,7 @@ public class PageMrktEtoEFlowIntraHistry  {
 
 @Test  
      public void NBABatchCampaignInboundSuccessfull() throws InterruptedException, AWTException {
-	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\Downloads\\chromedriver_win32\\chromedriver.exe");  
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\git\\mccm_automation\\chromedriver\\chromedriver.exe");  
 	 WebDriver driver = new ChromeDriver();
 	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
 	 driver.findElement(By.xpath("//input[@id='txtUserID']")).sendKeys("prafulla" );
@@ -84,8 +85,35 @@ public class PageMrktEtoEFlowIntraHistry  {
 
 			 Thread.sleep(8000);
 			 driver.findElement(By.xpath("//span[text()='Recent interactions']")).click( );
-  
+			 
+			 driver.manage().window().maximize();
+			    
+			 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+			 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+		     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+		     Thread.sleep(8000);
+		    
+ 						String getTextOnPage1 = "";
+
+							 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
+							 WebElement element11 =  driver.findElement(By.xpath(xpath11));
+
+							getTextOnPage1 = element11.getText();
+							 System.out.println(getTextOnPage1);
+					 							 
+							 boolean result = getTextOnPage1.equals("O") ||
+									 getTextOnPage1.equals("J") ||
+									 getTextOnPage1.equals("C") ||
+									 getTextOnPage1.equals("B");
+					assertTrue(result);
+					 System.out.println("Test Case Passed");
+							 
+							
+ 
+				}
+		 }
+	 }
 }
-}
-}
-}
+ 
+ 
+ 

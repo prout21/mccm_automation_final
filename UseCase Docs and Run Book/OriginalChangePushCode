@@ -19,3 +19,7 @@ System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromed
 //			}
 
                  driver = new ChromeDriver();  -ADDED for dev
+                 
+                 
+    mccm_automation\configurationFile.properties : config file change for unix and api 
+    commeted = workspace added proj path

@@ -1,5 +1,7 @@
 package Mccm.Pega.Inbound.InteractionHistory;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -90,6 +92,30 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(6000);
 		ClkRecentIntrctnHstry.click( );
         Thread.sleep(6000);
+	}
+	public void Validation() throws InterruptedException
+	{
+		driver.manage().window().maximize();
+		Thread.sleep(6000);
+		 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+	     Thread.sleep(8000);
+	    
+		String getTextOnPage1 = "";
+
+			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
+			 WebElement element11 =  driver.findElement(By.xpath(xpath11));
+
+			getTextOnPage1 = element11.getText();
+			 System.out.println(getTextOnPage1);
+			 Thread.sleep(6000);			 
+			 boolean result = getTextOnPage1.equals("O") ||
+					 getTextOnPage1.equals("J") ||
+					 getTextOnPage1.equals("C") ||
+					 getTextOnPage1.equals("B");
+				assertTrue(result);
+				 System.out.println("Test Case Passed");
 	}
 	
 }	 

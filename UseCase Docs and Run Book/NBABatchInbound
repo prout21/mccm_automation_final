@@ -1,0 +1,23 @@
+NBA Batch Outbound E2E Flow :
+url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
+--------------------------------------------------------------------
+Step-1: Dataload -3 interface with correct data file.
+       class name="Mccm.Unix.Outbound.App_Unix_Inbound_Test"
+       
+Step-2: Go to PEGA market and report->intraction histry->recent history  
+         class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest
+
+
+
+-----------------------------------------------------------------------------------
+Test Suite Name:RegressionSuite.Inbound.xml
+Pre-condition and Data setup:
+-----------------------------
+1.External  Input  test data file setup in path location: 
+
+2.Config file: setup for the input test file name used in the unix script.
+
+  Config location:user.dir(in Config file)MCCM\src\main\java\Mccm\Pega\ConfigPega\Config.properties
+                 :user.dir(in Config file)MCCM\configurationFile.properties
+  Used Step No:1 and 2
+3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html

@@ -1,5 +1,6 @@
 package Mccm.Unix.Inbound;
 
+import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.ChannelSftp.*;
 import com.jcraft.jsch.ChannelSftp.LsEntry;
@@ -33,7 +34,7 @@ import org.testng.annotations.Test;
 
 
 
-/**	
+/**	Author Prout21
  *
  */
 //public class App extends MyAutomationConstants
@@ -53,6 +54,8 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 	public static String pass;
 	public static String host;
 	public static XSSFWorkbook wb;
+	
+	 public static String name;
 
    // static String name = " ";
 
@@ -60,14 +63,9 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 //	 {
 	
 	      public void VerifyDMPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
-		//   public void main() throws InterruptedException, AWTException, SftpException {
-	//		public static void main() throws InterruptedException, AWTException {
-	
-//    	try
-//		{
-			//Create page objects and set the test result path
-		//	SFDC_LoginPage sfdcLoginPageObject = new SFDC_LoginPage(getDriver());
-		//	sfdcLoginPageObject.setResultPath(getOutputDirectory());
+	 
+	    	
+	    	  
         	System.out.println("Case 1:");        	
         	System.out.println("PROJECT_FOLDER_PATH:");  
         	System.out.println("ENV_WIKI:");  
@@ -90,20 +88,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 			pass= readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
 			host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
 
-//			sfdcLoginPageObject.salesForce_Login(readFile.getCellValue("EnvDetails", rowIndex, userNameColIndex), readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex));
-//		//	Assert.assertTrue(true, "Login Successful");
-
-//		}catch(Exception e)
-//		{
-//		//	result.setAttribute("ERROR", e.toString());
-//			e.printStackTrace();
-//		//Assert.fail("Login Not Successful");
-//		}   	
-//    	
-    	
-    	
-    	
-    	
+	
     	
     	try { 	
         //Object myObject = null;
@@ -152,23 +137,59 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
            for (int i = 0; i < fileList.size(); i++) {
                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
                System.out.println(lsEntry.getFilename()); 
-           		}              
-           String[] name = {"TESTCYCL_1669_TC001_Validate_DMP_Response"};
+         		}              
            
-           for (int i = 0; i < name.length; i++) 
+       //  ----------------------------------------------  
+           String  name  = general_ReadProperty("File_NameDMP");
+           
+           System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
+          for (int i = 0; i < name.length(); i++) 
+          {
+          	 filefound = false;
+           for (int j = 0; j < fileList.size(); j++) 
            {
-           	 filefound = false;
-            for (int j = 0; j < fileList.size(); j++) 
-            {
-                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
-                name11 = (lsEntry.getFilename()); 
- //                if (lsEntry.getFilename()).contains(name[i]) { 
-                if (name11.contains(name[i])) { 
-                 	 filefound = true;
-                 	 k=i+1;
-                	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
-                	}
-                 
+               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
+               name11 = (lsEntry.getFilename()); 
+ 
+               if (name11.contains(name)) { 
+                	 filefound = true;
+                	 k=i+1;
+               	 System.out.println("The file [" + k +"]:" + name  + " is found in the input folder");
+               	}
+           }
+           
+           if (!filefound)
+           {
+
+ 
+           	 k=i+1;
+          	 System.out.println("The file [" + k +"]: " + name  + " is NOT found in the input folder");            	
+ 
+         	 
+           }
+          }
+          System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+           //----------------------------------------------------------------
+         //IMPLEMENTED NEW TEST//////////////10.08.2020///////////
+//         
+//       String [] name = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};
+//           
+//        
+//           
+//           for (int i = 0; i < name.length; i++) 
+//           {
+//           	 filefound = false;
+//            for (int j = 0; j < fileList.size(); j++) 
+//            {
+//                ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
+//                name11 = (lsEntry.getFilename()); 
+// /////////                if (lsEntry.getFilename()).contains(name[i]) { 
+//                if (name11.contains(name[i])) { 
+//                 	 filefound = true;
+//                 	 k=i+1;
+//                	 System.out.println("The file [" + k +"]:" + name[i] + " is found in the input folder");
+//                	}
+         //IMPLEMENTED NEW TEST//////////////10.08.2020///////////
           
               //   If (true) {
              //        name = (lsEntry.getFilename()); 
@@ -218,19 +239,20 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
               //   if name	.contains(name1){
             //     Then 
               //   System.out.println("exist fifle  " + name1);                   
-
-        }
-            
-            if (!filefound)
-            {
- 
-//                 System.out.println("The Keyword :file_list_oracle: is not found in the path");
-            	 k=i+1;
-           	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");            	
-           //	 System.out.println("The file :" + name[i] + ": is not found in given path");
-          	 
-            }
-           }
+//---------------------------------------------------------------------------
+//        }
+//            
+//            if (!filefound)
+//            {
+// 
+//           // System.out.println("The Keyword :file_list_oracle: is not found in the path");
+//            	 k=i+1;
+//           	 System.out.println("The file [" + k +"]: " + name[i] + " is NOT found in the input folder");            	
+//           //	 System.out.println("The file :" + name[i] + ": is not found in given path");
+//          	 
+//            }
+//           }
+//---------------------------------------------------------------------	      
     	// }           
             //fileList = channelSftp.ls("C:\\ToUpload");
            //String dir = "C:\\ToUpload";
@@ -279,7 +301,8 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 
         channelSftp.disconnect();
         session.disconnect();
-    }
+ 
+    	}
     catch (Exception e){
      e.printStackTrace();
     }
