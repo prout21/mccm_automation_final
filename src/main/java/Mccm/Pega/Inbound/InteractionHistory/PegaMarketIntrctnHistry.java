@@ -102,7 +102,9 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
 	     Thread.sleep(8000);
 	    
-		String getTextOnPage1 = "";
+	    	String getTextOnPage1 = "";
+	    	 Thread.sleep(8000);
+	    	 Thread.sleep(8000);
 
 			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 			 WebElement element11 =  driver.findElement(By.xpath(xpath11));

@@ -343,7 +343,7 @@ String  name  = general_ReadProperty("File_ONLINE_SHOP");
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 		   Thread.sleep(8000);
 		   Thread.sleep(2000);
-		  FileExistChk_Inbound_OnlineShop.main(null);
+		//pr  FileExistChk_Inbound_OnlineShop.main(null);
 		 
 			
      		  System.out.println(""); System.out.println("Case 3:"); //

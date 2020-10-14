@@ -4,6 +4,7 @@
 	import com.jcraft.jsch.ChannelSftp.LsEntry;
 	import com.jcraft.jsch.JSch;
 	import com.jcraft.jsch.Session;
+	import Mccm.Unix.Inbound.progressMonitor;
 
 import java.io.File;
 import java.io.File.*;

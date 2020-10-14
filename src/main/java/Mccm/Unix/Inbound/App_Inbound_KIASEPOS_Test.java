@@ -347,7 +347,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 
 		Thread.sleep(8000);
 
-		FileExistChk_Inbound_KIASEPOS.main(null);
+	//pr	FileExistChk_Inbound_KIASEPOS.main(null);
 
 
 		System.out.println(""); System.out.println("Case 3:"); //
