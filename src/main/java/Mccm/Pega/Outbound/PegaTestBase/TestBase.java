@@ -84,17 +84,17 @@ public class TestBase {
 
     		 //pr	 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
-    		 		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+    		//pr	 		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
     		String projectPath = System.getProperty("user.dir");
 
-    		//pr   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+    		   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 //pr	     driver = new ChromeDriver();     
 
 	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 	    //driver = new ChromeDriver();     
 
-			if(headLessMode.equals("true")) {
+			if(headLessMode.equals("false")) {
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
