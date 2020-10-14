@@ -27,8 +27,10 @@ import org.testng.annotations.Test;
 public class Page2ScaleEndToEndFlow {
    
    @Test  
+   
    public void RunNBACampaignEndToEndFlow() throws InterruptedException, AWTException {
-	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\Downloads\\chromedriver_win32\\chromedriver.exe");  
+	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\git\\mccm_automation\\chromedriver\\chromedriver.exe");  
+	//   System.setProperty("webdriver.chrome.driver", "C:\\Users\\prout21\\Downloads\\chromedriver_win32\\chromedriver.exe");  
 	   WebDriver driver = new ChromeDriver();
 	   driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8575/prweb/");
 	   driver.findElement(By.xpath("//input[@id='txtUserID']")).sendKeys("prafulla" );
