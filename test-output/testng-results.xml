@@ -2,26 +2,26 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="177299" started-at="2020-10-14T18:14:56 IST" finished-at="2020-10-14T18:17:53 IST">
+  <suite name="Default suite" duration-ms="189456" started-at="2020-10-15T18:12:45 IST" finished-at="2020-10-15T18:15:54 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="177299" started-at="2020-10-14T18:14:56 IST" finished-at="2020-10-14T18:17:53 IST">
+    <test name="Default test" duration-ms="189456" started-at="2020-10-15T18:12:45 IST" finished-at="2020-10-15T18:15:54 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="setup" is-config="true" duration-ms="38796" started-at="2020-10-14T18:14:56 IST" finished-at="2020-10-14T18:15:35 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="setup" is-config="true" duration-ms="45650" started-at="2020-10-15T18:12:45 IST" finished-at="2020-10-15T18:13:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="136986" started-at="2020-10-14T18:15:35 IST" finished-at="2020-10-14T18:17:52 IST">
+        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="142279" started-at="2020-10-15T18:13:30 IST" finished-at="2020-10-15T18:15:52 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[contains(.,'PR-')])[3]"}
   (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INSGH045PMS0', ip: '10.218.211.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INSGH045PMS0', ip: '10.218.163.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56916}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: c2818cf4b6116151ecb84d19ab10f8d2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 34eade8696efc9c53283e68ac7f072dd
 *** Element info: {Using=xpath, value=(//span[contains(.,'PR-')])[3]}]]>
             </message>
             <full-stacktrace>
@@ -29,10 +29,10 @@ Session ID: c2818cf4b6116151ecb84d19ab10f8d2
   (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INSGH045PMS0', ip: '10.218.211.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INSGH045PMS0', ip: '10.218.163.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56916}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: c2818cf4b6116151ecb84d19ab10f8d2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 34eade8696efc9c53283e68ac7f072dd
 *** Element info: {Using=xpath, value=(//span[contains(.,'PR-')])[3]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -87,7 +87,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyNBABatchProcessCompletedSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="teardown" is-config="true" duration-ms="1443" started-at="2020-10-14T18:17:52 IST" finished-at="2020-10-14T18:17:53 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@52f759d7]" name="teardown" is-config="true" duration-ms="1474" started-at="2020-10-15T18:15:52 IST" finished-at="2020-10-15T18:15:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -48,9 +48,9 @@ public class ExtractChannelFileTest extends TestBase {
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 ExtractChannelFile1.ActionClkGetDataExtractDetails();
 	 ExtractChannelFile1.RunActionClk();
-	 ExtractChannelFile1.FileNameClk();
-	 ExtractChannelFile1.FileNameSerach();
-	 ExtractChannelFile1.EXTFLAGCheck();
+	// ExtractChannelFile1.FileNameClk();
+	// ExtractChannelFile1.FileNameSerach();
+	// ExtractChannelFile1.EXTFLAGCheck();
  
  }
  

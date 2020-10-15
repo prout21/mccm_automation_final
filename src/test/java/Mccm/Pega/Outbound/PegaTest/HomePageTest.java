@@ -70,15 +70,17 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.ActionClkDmccmsetting();
 	 HomePageDetails1.RunActionClk();
 	 HomePageDetails1.FulshRunClick();
-//   HomePageDetails1.OverrideCampSrch();
-//	 HomePageDetails1.OverrideCampSrchClk();
-//	 HomePageDetails1.OverrideCampBlockrClk();
-//	 testutil.SwitcTodefaultContent();
-//	 testutil.SwitchToFrame("PegaGadget2Ifr");
-//	 HomePageDetails1.OverrideCampActClk();
-//	 HomePageDetails1.RunOverideBlkClk();
-//	 HomePageDetails1.OverridCampBlkRun();
-//	 
+	 
+	 //Override 
+   HomePageDetails1.OverrideCampSrch();
+	 HomePageDetails1.OverrideCampSrchClk();
+	 HomePageDetails1.OverrideCampBlockrClk();
+	 testutil.SwitcTodefaultContent();
+	 testutil.SwitchToFrame("PegaGadget2Ifr");
+	 HomePageDetails1.OverrideCampActClk();
+	 HomePageDetails1.RunOverideBlkClk();
+	 HomePageDetails1.OverridCampBlkRun();
+	 
 	
  }
  

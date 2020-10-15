@@ -1,33 +1,22 @@
 commeted:test base
 
-//	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);  --commted from dxc-vf GIT
- String projectPath = System.getProperty("user.dir");  -ADDED for dev
+ PDXC Env. :System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);   
+
     		 
-System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  -ADDED for dev
+Loc Env :System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");   
 	 	    
 	 	    commeted:test base
 	 	    
-	 	    //			if(headLessMode.equals("true")) {
-//				ChromeOptions chromeOptions = new ChromeOptions();
-//				chromeOptions.addArguments("--no-sandbox");
-//				chromeOptions.addArguments("--disable-dev-shm-usage");
-//				chromeOptions.addArguments("--headless");
-//				driver = new ChromeDriver(chromeOptions);
-//			}
-//			else{
-//				driver = new ChromeDriver();
-//			}
+PDXC Env. 	    			if(headLessMode.equals("true")) {
 
-                 driver = new ChromeDriver();  -ADDED for dev
-                 
-                 
-    mccm_automation\configurationFile.properties : config file change for unix and api 
-    commeted = workspace added proj path
+Loc Env. 	    			if(headLessMode.equals("false")) {
+  
+PDXC Env. : {workspace} 
+
+  mccm_automation\configurationFile.properties : config file change for unix and api 
     
     ------------
-    test input file excel -change
-    toupload change file 
-    to-oracle file name change
+   Push to PDXC Env.
     
 cd "C:\Users\prout21\git\Automation_Framework\MCCM\MCCM"
 git remote add fb_develop https://github.com/prout21/MCCM-Automation.git

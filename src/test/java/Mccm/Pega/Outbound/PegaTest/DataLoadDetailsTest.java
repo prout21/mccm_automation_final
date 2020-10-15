@@ -54,14 +54,14 @@ public class DataLoadDetailsTest extends TestBase {
  }
  
  
- @AfterMethod
- 
-      public void teardown() {
-	
-      driver.quit();
-	 
-      
- 	 System.out.println("DSS seting Started");  
- }
+// @AfterMethod
+// 
+//      public void teardown() {
+//	
+// //     driver.quit();
+//	 
+//      
+// 	 System.out.println("DSS seting Started");  
+// }
     
 }

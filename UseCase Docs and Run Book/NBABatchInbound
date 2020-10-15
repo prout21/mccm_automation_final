@@ -11,9 +11,10 @@ Step-2: Go to PEGA market and report->intraction histry->recent history
 
 -----------------------------------------------------------------------------------
 Test Suite Name:RegressionSuite.Inbound.xml
+
 Pre-condition and Data setup:
 -----------------------------
-1.External  Input  test data file setup in path location: 
+1.External  Input test data file setup in path location: mccm_automation\DBLoadInputFile\NBA_Inbound
 
 2.Config file: setup for the input test file name used in the unix script.
 
