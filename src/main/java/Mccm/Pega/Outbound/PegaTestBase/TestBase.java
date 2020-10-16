@@ -79,22 +79,35 @@ public class TestBase {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
-		String headLessMode = prop.getProperty("headless");
+	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
+ 
 
-    		 //pr	 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+    		 	 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
     		//pr	 		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
     		String projectPath = System.getProperty("user.dir");
 
-    		   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+    	//   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 //pr	     driver = new ChromeDriver();     
 
 	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 	    //driver = new ChromeDriver();     
 
-			if(headLessMode.equals("false")) {
+	//		if(headLessMode.equals("true")) {
+ 
+		// 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+	//		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+    	 
+    		 
+	 //pr	    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+	 //pr	     driver = new ChromeDriver();     
+	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+	 	    //driver = new ChromeDriver(); 
+    		
+			if(headLessMode.equals("true")) {
+ 
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
@@ -111,8 +124,8 @@ public class TestBase {
       driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
       driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
       driver.get(prop.getProperty("url"));
-     
-    }
+    	}
+  
     
   //*******************************************************************************************
   	//*Function:	general_ReadProperty														*

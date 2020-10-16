@@ -119,7 +119,11 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
         String name11= " ";
         int k;
         //String host1 = "46.190.224.85";
+        
+    //upload script                                                              ////script
         Upload.main(null);//main();
+        
+        
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
         //Session session = jSch.getSession(user1,host1,22);
@@ -140,9 +144,11 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 //        for (int i = 0; i < fileList.size(); i++) {
 //            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 //            System.out.println(lsEntry.getFilename());
-            
-        //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-        fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
+         //pr change below one    
+       fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
+       
+    //pr    fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
+       
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
           
         	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
@@ -288,7 +294,8 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
    	 Object args = null;
 	
 	  System.out.println(""); 
-	  //System.out.println("Case 1:");
+	  //System.out.println("Case 1:");////////////////////////script here
+	  
 	  ZippingFiles.main(args); 
 		
 		

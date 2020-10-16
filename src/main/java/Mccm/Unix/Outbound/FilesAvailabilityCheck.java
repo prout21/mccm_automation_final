@@ -2,14 +2,18 @@
 package Mccm.Unix.Outbound;
 
 
+import java.io.File;
 import java.util.ArrayList;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
-public class FilesAvailabilityCheck {
+public class FilesAvailabilityCheck extends App_Unix_Outbound_Test {
 
 ChannelExec channelExec = null;
 static Channel channel = null;
@@ -19,12 +23,21 @@ static String host = "localhost";
 static String user = "mccm02";
 static String password = "unix11";
 
+public static XSSFWorkbook wb;
+
+public static String UnixInputFilePath;
+
 public static void main(Object	 args) {
 //String filename = "file_list_oracle1.lst";
-		String filename = "file_list_oracle.lst";
+		
+	 UnixInputFilePath=general_ReadProperty("UnixInputFilePath");
+	 
+         String filename = "file_list_oracle.lst";
+	 
+//	 String filename =  (UnixInputFilePath+"/NBA_Outbound/toupload_oracle/file_list_oracle.lst"); 
 
     String filepath = "/opt/SP/mccm/SYSN/mccm_dataload/import/input";
-    try {
+    try {              
     	
         Channel  channel = getChannelSftp(host, user, password);
         channel.connect();
