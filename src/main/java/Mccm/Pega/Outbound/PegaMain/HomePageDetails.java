@@ -132,15 +132,15 @@ public class HomePageDetails extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Recordclk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(6000);
+		 Thread.sleep(2000);
 		 SysAdmin.click( );
-		 Thread.sleep(6000);
+		 Thread.sleep(2000);
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -149,131 +149,131 @@ public class HomePageDetails extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		webelement4.click( );
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	}
 	public void FilterNBAcamp() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		FilterNBAcamp.click( );
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	}
 	public void NBACampaignName() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		NBACampaignName.sendKeys(NBACampaignNmValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ApplayNBAfilter() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ApplayNBAfilter.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ClikMCCM() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ClikMCCM.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void NBABatchCampaign() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		NBABatchCampaign.clear();
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		NBABatchCampaign.sendKeys(NBABthCmpignValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void SaveNBABatchCamp() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Save.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void CloseNBABatchCamp() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Close.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void FilterNotifyErrList() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		FilterNotifyErrList.click( );
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	}
 	
 	public void NotifyErrList() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		NotifyErrList.clear();
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		NotifyErrList.sendKeys(NotifyErrListValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ApplayNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ApplayNotifyErr.click( );
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	}
 	
 	public void ClikMCCMNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ClikMCCM.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void MailNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		MailNotifyErr.clear();
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		MailNotifyErr.sendKeys(MailNotifyErrValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void SaveNotifyErrLst() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Save.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void CloseNotifyErrLst() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Close.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void D_mccmsettings() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		D_mccmsettings.sendKeys(D_mccmsettingsValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		SerchClick.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void Clickdmccmsetting() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Clickdmccmsetting.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ActionClkDmccmsetting() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ActionClkDmccmsetting.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -293,12 +293,12 @@ public class HomePageDetails extends TestBase {
       if(!mainWindow.equals(childWindow)){
      driver.switchTo().window(childWindow);
 
-      Thread.sleep(6000);
+      Thread.sleep(2000);
       FlushClk.click();
 
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 RunFlushClk.click( );
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 
     driver.close();
     }
@@ -308,31 +308,31 @@ public class HomePageDetails extends TestBase {
 	}
 	public void OverrideCampSrch() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		OverrideCampSrch.clear();
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		OverrideCampSrch.sendKeys(OverrideCampSrchValue);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void OverrideCampSrchClk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		OverrideCampSrchClk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void OverrideCampBlockrClk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		OverrideCampBlockrClk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void OverrideCampActClk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		OverrideCampActClk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void RunOverideBlkClk() throws InterruptedException
@@ -349,13 +349,13 @@ public class HomePageDetails extends TestBase {
       // Switch to child window
       driver.switchTo().window(winHandle);
     }
-	 Thread.sleep(6000); 
+	 Thread.sleep(2000); 
      OverridCampBlk.clear();       
 	 OverridCampBlk.sendKeys(OverridCampBlkvalue); 
 	 
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 RunOverideBlk.click( );
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 
 	 String winHandleAfter = driver.getWindowHandle();
 	 for(String winChildHandle : driver.getWindowHandles()) {
@@ -365,15 +365,15 @@ public class HomePageDetails extends TestBase {
 		    driver.switchTo().window(winChildHandle);
 		   }
 		 }
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 driver.close();
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 driver.switchTo().window(winHandleAfter);
 	 
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	// to close the child window.
 	driver.close();
-	Thread.sleep(6000);
+	Thread.sleep(2000);
 	// to switch to parent window.
 	driver.switchTo().window(winHandleBefore);
 	

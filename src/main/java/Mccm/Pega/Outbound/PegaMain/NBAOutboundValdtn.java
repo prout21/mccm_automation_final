@@ -98,15 +98,15 @@ public class NBAOutboundValdtn extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		Recordclk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(6000);
+		 Thread.sleep(8000);
 		 SysAdmin.click( );
-		 Thread.sleep(6000);
+		 Thread.sleep(8000);
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -115,37 +115,37 @@ public class NBAOutboundValdtn extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		webelement4.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 	}
 		
 	public void D_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		D_LatestNBACampaignFlag.sendKeys(DLatestNBACampaignFlagIN);
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		SerchClick.click( );
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	public void ClickD_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		ClickDataPage.click();
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		ClickD_LatestNBACampaignFlag.click( );
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	public void ActionClkD_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		ActionClkD_LatestNBACampaignFlag.click( );
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -165,12 +165,12 @@ public class NBAOutboundValdtn extends TestBase {
       if(!mainWindow.equals(childWindow)){
      driver.switchTo().window(childWindow);
 
-      Thread.sleep(6000);
+      Thread.sleep(8000);
       FlushClk.click();
 
-	 Thread.sleep(6000);
+	 Thread.sleep(8000);
 	 RunFlushClk.click( );
-	 Thread.sleep(6000);
+	 Thread.sleep(8000);
       }
   
 	}

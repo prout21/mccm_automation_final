@@ -69,15 +69,15 @@ public class DBConfigValdtn extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		Recordclk.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(6000);
+		 Thread.sleep(2000);
 		 SysAdmin.click( );
-		 Thread.sleep(6000);
+		 Thread.sleep(2000);
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -86,37 +86,37 @@ public class DBConfigValdtn extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		webelement4.click( );
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 	}
 		
 	public void MCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		MCCMLCOutbound.sendKeys(MCCMLCOutboundIN);
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		SerchClick.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ClickMCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ClickDataSet.click();
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ClickMCCMLCOutbound.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	public void ActionClkMCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		ActionClkMCCMLCOutbound.click( );
-        Thread.sleep(6000);
+        Thread.sleep(2000);
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -131,14 +131,14 @@ public class DBConfigValdtn extends TestBase {
 	for (String winHandle : driver.getWindowHandles()) {
 		driver.switchTo().window(winHandle);
 	}
-	Thread.sleep(6000); 
+	Thread.sleep(2000); 
 	WebElement element6 = BrowseClk;
 	//WebElement element6 = driver.findElement(By.xpath("//select[@name='$PD_pzRunRecord$ppxRunWindow$gTABTHREAD1$ppxRunParameters$ppyTestInputs$ppyOperationIndex']"));
-	Thread.sleep(6000); 
+	Thread.sleep(2000); 
 	element6.sendKeys("Browse");
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 RunClk.click( );
-	 Thread.sleep(6000);
+	 Thread.sleep(2000);
 	 String winHandleAfter = driver.getWindowHandle();
 		for(String winChildHandle : driver.getWindowHandles()) {
 			if(!winChildHandle.equals(winHandleBefore) 
