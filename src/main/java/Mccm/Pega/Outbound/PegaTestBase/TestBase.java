@@ -79,17 +79,17 @@ public class TestBase {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
-	String headLessMode = prop.getProperty("headless");
+    	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
  
 
     		 	 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
-
-    		//pr	 		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+    		 	 	
+       	 	    	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
     		String projectPath = System.getProperty("user.dir");
 
-    	//   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+    	   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 	 //pr	     driver = new ChromeDriver();     
 
 	 	    //System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
