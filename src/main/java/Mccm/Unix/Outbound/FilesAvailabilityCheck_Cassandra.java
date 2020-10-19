@@ -83,6 +83,32 @@ try {
     e.printStackTrace();
 }
 
+String filenameClose = general_ReadProperty("File_NameClose");
+
+//String filepath1 = "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/";
+
+try {
+	
+  Channel  channel = getChannelSftp(host, user, password);
+  channel.connect();
+  ChannelSftp channelSftp = (ChannelSftp) channel;
+  channelSftp.cd(filepath);
+  String path = channelSftp.ls(filenameClose).toString();
+  if (!path.contains(filenameClose)) {
+      System.out.println("File doesn't exist." + filenameClose);
+  } else
+  	//            System.out.println("");            
+   	System.out.println("Case 2:");     	
+     // System.out.println("Case 2: File exist at the path -/opt/SP/mccm/SYSN/mccm_dataload/import/input.---  " + filename);
+  String dir= channelSftp.pwd().toString();
+  System.out.println("File exist at the path ---  " + dir);        
+      System.out.println("---  " + filenameClose);
+
+
+} catch (Exception e) {
+  e.printStackTrace();
+}
+
 }
 
 private static Channel getChannelSftp(String host, String user, String password) 

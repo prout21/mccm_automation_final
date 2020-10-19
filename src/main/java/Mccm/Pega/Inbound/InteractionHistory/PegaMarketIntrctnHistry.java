@@ -117,7 +117,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 					 getTextOnPage1.equals("C") ||
 					 getTextOnPage1.equals("B");
 				assertTrue(result);
-				 System.out.println("Test Case Passed");
+				 System.out.println("MCCM Inbound Use Cases Passed");
 	}
 	
 }	 

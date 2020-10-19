@@ -90,9 +90,9 @@ Pre-condition and Data setup:
 3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html
  
   =======================
-  /opt/SP/data/mccm02/logs/temp/temp/cassandra
-/opt/SP/data/mccm02/temp/cassandra.sh
-/opt/SP/data/mccm02/temp/oracle.sh
+/opt/SP/data/mccm02/logs/temp/temp/cassandra   - no need to change
+/opt/SP/data/mccm02/temp/cassandra.sh ---       sql query script
+/opt/SP/data/mccm02/temp/oracle.sh   -----      sql query script
 /opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh
 /opt/SP/data/mccm02/temp/zip.sh
 /opt/SP/data/mccm02/temp/zip_csv.sh

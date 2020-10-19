@@ -39,6 +39,7 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 
 	  public static String FCA;
 	  public static String SCA;
+	  public static String Close;
 	  
 	/**
 	 	 */
@@ -59,6 +60,7 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
         
         String FCA = general_ReadProperty("File_NameFCA");
         String SCA = general_ReadProperty("File_NameSCA");
+        String Close = general_ReadProperty("File_NameClose");
         
 	   String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
 	 
