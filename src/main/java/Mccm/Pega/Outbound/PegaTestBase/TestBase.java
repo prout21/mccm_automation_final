@@ -91,6 +91,9 @@ public class TestBase {
      //    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
     		
+
+    	    System.setProperty("java.awt.headless", "false");
+     
 			if(headLessMode.equals("true")) {
  
 				ChromeOptions chromeOptions = new ChromeOptions();
