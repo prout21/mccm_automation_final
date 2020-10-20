@@ -198,7 +198,7 @@
 		}
 		public void Create() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			Thread.sleep(2000);
 			Create.click( );
 			Thread.sleep(6000);
 			System.out.println("Headless 3");
