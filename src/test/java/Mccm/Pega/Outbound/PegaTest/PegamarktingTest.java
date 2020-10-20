@@ -43,7 +43,7 @@ public class PegamarktingTest extends TestBase {
 	homepage.Pegamrklunch();
 	 pegamarketpage.pegamarkting();
 	 testutil.WindowHandling();
-//	 pegamarketpage.ExpandPegMrkPage();
+     pegamarketpage.ExpandPegMrkPage();
 	 pegamarketpage.Campaigns();
  	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
