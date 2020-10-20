@@ -174,105 +174,105 @@
 	
 		public void pegamarkting() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			pegamrkting1.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 	
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ExpandPegMrkPage.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void Campaigns() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Campaigns.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void Create() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Create.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			MultiChannelCampaign.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void Campaigncode() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Campaigncode.sendKeys(Campaigncd);
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void Build() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Build.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void MrktStrtgyConfig() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			MrktStrtgyConfig.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void SrchMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			SrchMrkStrtgy.sendKeys(ConfigMrkStrtgy);
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ClkSrchMrkStrtgy.click();
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void AddMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			AddMrkStrtgy.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 	
 		}
 		public void Applay() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Applay.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 	
 		}    
 	
 		public void AudianceConfig() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			AudianceConfig.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void SrchConfigAudience() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			SrchConfigAudience.sendKeys(ConfigAudience);
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ClkSrchConfigAudience.click();
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void AddAdinceconfig() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			AddAdinceconfig.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void ApplayAdience() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ApplayAdience.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void javaexictor2() throws InterruptedException
@@ -283,57 +283,57 @@
 	
 		public void Engagementconfig() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Engagementconfig.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void Campaignschdul() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Campaignschdul.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void Recurring() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Recurring.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void databasetemplate() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			databasetemplate.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void configtemplate() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			configtemplate.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void SrchConfigEngagment() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			SrchConfigEngagment.sendKeys(ConfigEngagment);
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ClkConfigEngagment.click();
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void Addmcclbound() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			Addmcclbound.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void Javascriptserch() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			boolean searchIconPresence = Addtemplete.isDisplayed();
 			boolean searchIconEnabled =  Addtemplete.isEnabled();
 	
@@ -343,42 +343,42 @@
 				WebElement element9 = Addtemplete;
 				JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 				executor3.executeScript("arguments[0].click();", element9);
-				Thread.sleep(2000);
+				Thread.sleep(8000);
 			}
 		}
 	
 		public void ApplayEngagement() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ApplayEngagement.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void SaveCampgn() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			SaveCampgn.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void RunCampgn() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			RunCampgn.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 		public void ConfirmCampgn() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			ConfirmCampgn.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 		public void RefreshCampgn() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 			RefreshCampgn.click( );
-			Thread.sleep(2000);
+			Thread.sleep(8000);
 		}
 	
 	
@@ -390,14 +390,14 @@
 			for(int i=0;i<50;i++)
 			{
 	
-				Thread.sleep(2000);
+				Thread.sleep(8000);
 	
 				try
 				{
-					Thread.sleep(2000);
+					Thread.sleep(8000);
 				//	driver.findElement(By.xpath("//*[@class='pi pi-refresh']")).click( );
 					RefreshCampgn.click( );
-					Thread.sleep(2000);
+					Thread.sleep(8000);
 					JavascriptExecutor js6 = (JavascriptExecutor) driver;
 					WebElement element7 =Runschedule;
 					//WebElement element7 = driver.findElement(By.xpath("//h2[text()='Run schedule']"));

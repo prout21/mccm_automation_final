@@ -76,15 +76,15 @@ public class ExtractChannelFile extends TestBase {
 
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		Recordclk.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		SysAdmin.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -93,37 +93,37 @@ public class ExtractChannelFile extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		webelement4.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 
 	public void GetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		GetDataExtractDetails.sendKeys(GetDataExtractDetailsIN);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		SerchClick.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 	public void ClickGetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		ClickReportdeftion.click();
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		ClickGetDataExtractDetails.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		ActionClkGetDataExtractDetails.click( );
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 	}
 
 	public void RunActionClk() throws InterruptedException
@@ -146,19 +146,19 @@ public class ExtractChannelFile extends TestBase {
 				driver.switchTo().window(childWindow);
 				driver.manage().window().maximize();
 
-				Thread.sleep(2000); 
+				Thread.sleep(8000); 
 				FileNameClk.click( );
-				Thread.sleep(2000);
+				Thread.sleep(8000);
 				FilterClk.click( );
-				Thread.sleep(2000);
+				Thread.sleep(8000);
 			}
 		}
 	}
 	public void FileNameSerach() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		FileNameSerach.sendKeys(ChanelFileNameIN);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		FilterApplayClk.click( );
 	}
 
@@ -167,9 +167,9 @@ public class ExtractChannelFile extends TestBase {
 
 	public void EXTFLAGCheck() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		WebElement w4= EXTFLAGChk;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		String EXTFLAG = w4.getText();
 
 		System.out.println(w4.getText());

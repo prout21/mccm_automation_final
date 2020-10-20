@@ -93,13 +93,21 @@ Pre-condition and Data setup:
 /opt/SP/data/mccm02/logs/temp/temp/cassandra   - no need to change
 /opt/SP/data/mccm02/temp/cassandra.sh ---       sql query script
 /opt/SP/data/mccm02/temp/oracle.sh   -----      sql query script
-/opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh
-/opt/SP/data/mccm02/temp/zip.sh
-/opt/SP/data/mccm02/temp/zip_csv.sh
+/opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh---  need to update file name
+/opt/SP/data/mccm02/temp/zip.sh---------------------------------need to update file name
+/opt/SP/data/mccm02/temp/zip_csv.sh----------------------------need to update file name
 ==============
+1.Test base change ---usr/bin   , true/false
+2.Excel input -test data
+3.configuration file-path/file name
+4.fca , sca file change to date in config/folder
+5.Temp file change unix box
+6.Truncate the histry table -background setup
+7.Casndra closing file change ..inside current date 
+=============================================
 port:3.120.110.152    port -18881
 dxc_dev
 ssh mccm02@10.0.4.99 
-psword=unix11
+psword=unix1-------
 
 

@@ -37,9 +37,7 @@ public class PegamarktingTest extends TestBase {
 	     pegamarketpage =new PegaMarketPage();
 	     pegamarketpage=homepage.Pegamrklunch();
 	    }
- 
-
- 
+  
 @Test (priority=1)
  public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
 	 homepage.Pegamrklunch();
@@ -47,7 +45,7 @@ public class PegamarktingTest extends TestBase {
 	 testutil.WindowHandling();
 	 pegamarketpage.ExpandPegMrkPage();
 	 pegamarketpage.Campaigns();
-	 testutil.SwitcToFrame(1);
+ 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
 	 pegamarketpage.Create();
 	 pegamarketpage.MultiChannelCampaign(); 
