@@ -176,7 +176,7 @@
 		{
 			Thread.sleep(6000); 
 			pegamrkting1.click( );
-			 
+			Thread.sleep(6000);  
 		}
 	
 	
@@ -184,7 +184,7 @@
 		{
 			Thread.sleep(6000);
 			ExpandPegMrkPage.click( );
-			 
+			Thread.sleep(6000); 
 		}
 	
 		public void Campaigns() throws InterruptedException
