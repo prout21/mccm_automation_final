@@ -174,17 +174,17 @@
 	
 		public void pegamarkting() throws InterruptedException
 		{
-			Thread.sleep(3000);
+			 
 			pegamrkting1.click( );
-			Thread.sleep(3000);
+			 
 		}
 	
 	
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
-			Thread.sleep(3000);
+			 
 			ExpandPegMrkPage.click( );
-			Thread.sleep(3000);
+			 
 		}
 	
 		public void Campaigns() throws InterruptedException
