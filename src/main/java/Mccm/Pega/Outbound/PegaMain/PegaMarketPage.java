@@ -185,6 +185,8 @@
 			Thread.sleep(6000);
 			ExpandPegMrkPage.click( );
 			Thread.sleep(6000); 
+			System.out.println("Headless 1");
+			
 		}
 	
 		public void Campaigns() throws InterruptedException
@@ -192,18 +194,21 @@
 			Thread.sleep(6000);
 			Campaigns.click( );
 			Thread.sleep(6000);
+			System.out.println("Headless 2");
 		}
 		public void Create() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			Create.click( );
 			Thread.sleep(6000);
+			System.out.println("Headless 3");
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			MultiChannelCampaign.click( );
 			Thread.sleep(6000);
+			System.out.println("Headless 4");
 		}
 		public void Campaigncode() throws InterruptedException
 		{

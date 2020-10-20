@@ -40,7 +40,7 @@ public class PegamarktingTest extends TestBase {
   
 @Test (priority=1)
  public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
-  	homepage.Pegamrklunch();
+     homepage.Pegamrklunch();
 	 pegamarketpage.pegamarkting();
 	 testutil.WindowHandling();
      pegamarketpage.ExpandPegMrkPage();
