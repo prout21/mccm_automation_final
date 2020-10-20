@@ -174,7 +174,7 @@
 	
 		public void pegamarkting() throws InterruptedException
 		{
-			 
+			Thread.sleep(6000); 
 			pegamrkting1.click( );
 			 
 		}
@@ -182,7 +182,7 @@
 	
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
-			 
+			Thread.sleep(6000);
 			ExpandPegMrkPage.click( );
 			 
 		}
