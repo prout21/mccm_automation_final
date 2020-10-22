@@ -52,11 +52,11 @@ public class PegamarktingTest extends TestBase {
      pegamarketpage.ExpandPegMrkPage();
 	 pegamarketpage.Campaigns();
   	 testutil.SwitcToFrame(1);
-     pegamarketpage.javaexecutor();
-     driver.manage().window().maximize();
+  //   pegamarketpage.javaexecutor();
+  //   driver.manage().window().maximize();
    // driver.switchTo().frame("PegaGadget1Ifr");	
-	  //testutil.RobertAction();
-     pegamarketpage.Create1();
+	  testutil.RobertAction();
+  //   pegamarketpage.Create1();
 	 pegamarketpage.Create();
 	 pegamarketpage.MultiChannelCampaign(); 
 	 testutil.SwitcTodefaultContent();

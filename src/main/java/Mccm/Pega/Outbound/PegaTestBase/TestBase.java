@@ -92,7 +92,7 @@ public class TestBase {
 
     		
 
-    	//    System.setProperty("java.awt.headless", "true");
+    	     System.setProperty("java.awt.headless", "true");
      
 			if(headLessMode.equals("true")) {
  

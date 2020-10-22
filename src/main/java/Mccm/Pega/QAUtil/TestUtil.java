@@ -4,6 +4,10 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.util.Iterator;
 import java.util.Set;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -58,11 +62,13 @@ public void RobertAction() throws AWTException
 
     Robot robot = new Robot();
 
-    robot.mouseMove(50,50);
+  //  robot.mouseMove(50,50);
+    robot.mouseMove(30,30);
 
     actions.click().build().perform();
 
-    robot.mouseMove(200,70);
+  //  robot.mouseMove(200,70);
+    robot.mouseMove(100,20);
 
     actions.click().build().perform();
 }
