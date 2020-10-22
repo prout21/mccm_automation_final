@@ -219,13 +219,12 @@ import org.openqa.selenium.support.FindBy;
 		}
 		public void Create1() throws InterruptedException
 		{
-			Thread.sleep(2000);
-			 String xpath111 = "//span[text()='Multi-Channel Campaign']";
+		   String xpath111 = "//span[text()='Multi-Channel Campaign']";
 			 WebElement element111 =  driver.findElement(By.xpath(xpath111));
 		     Actions  action111 = new Actions(driver);
 		     action111.moveToElement(element111).click().build().perform();
 			Thread.sleep(6000);
-			System.out.println("Headless 3");
+			System.out.println("Headless 34");
 	 
 		}
 		public void Create() throws InterruptedException
