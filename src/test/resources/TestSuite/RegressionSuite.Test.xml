@@ -11,10 +11,6 @@
       <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest"/>  
     </classes>
   </test> <!-- Test -->
-  <test name="Unix Extract NBA Channel File Regression Test">
-    <classes>
-      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test"/> 
-    </classes>
-  </test> <!-- Test -->
+  
     
 </suite> <!-- Suite -->

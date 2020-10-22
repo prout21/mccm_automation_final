@@ -48,10 +48,10 @@ public class PegamarktingTest extends TestBase {
 	 testutil.WindowHandling();
      pegamarketpage.ExpandPegMrkPage();
 	 pegamarketpage.Campaigns();
-	 Thread.sleep(2000);
- 	 testutil.SwitcToFrame(1);
+  	 testutil.SwitcToFrame(1);
  	 pegamarketpage.javaexecutor();
 	// testutil.RobertAction();
+	 pegamarketpage.Create1();
 	 pegamarketpage.Create();
 	 pegamarketpage.MultiChannelCampaign(); 
 	 testutil.SwitcTodefaultContent();
