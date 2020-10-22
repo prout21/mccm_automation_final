@@ -1,7 +1,10 @@
 package Mccm.Pega.Outbound.PegaTest;
 
 import java.awt.AWTException;
-
+ 
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -49,11 +52,11 @@ public class PegamarktingTest extends TestBase {
      pegamarketpage.ExpandPegMrkPage();
 	 pegamarketpage.Campaigns();
   	 testutil.SwitcToFrame(1);
- 	 pegamarketpage.javaexecutor();
-    driver.manage().window().maximize();
-    driver.switchTo().frame("PegaGadget1Ifr");	
-	// testutil.RobertAction();
-	 pegamarketpage.Create1();
+ //	 pegamarketpage.javaexecutor();
+ //   driver.manage().window().maximize();
+   // driver.switchTo().frame("PegaGadget1Ifr");	
+	  testutil.RobertAction();
+//	 pegamarketpage.Create1();
 	 pegamarketpage.Create();
 	 pegamarketpage.MultiChannelCampaign(); 
 	 testutil.SwitcTodefaultContent();
