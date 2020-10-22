@@ -50,6 +50,7 @@ public class PegamarktingTest extends TestBase {
 	 pegamarketpage.Campaigns();
   	 testutil.SwitcToFrame(1);
  	 pegamarketpage.javaexecutor();
+   	driver.manage().window().maximize();
 	// testutil.RobertAction();
 	 pegamarketpage.Create1();
 	 pegamarketpage.Create();
