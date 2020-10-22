@@ -94,7 +94,7 @@ public class TestBase {
 
 //    		System.setProperty("java.awt.headless", "false");
      
-			if(headLessMode.equals("false")) {
+			if(headLessMode.equals("true")) {
  
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
