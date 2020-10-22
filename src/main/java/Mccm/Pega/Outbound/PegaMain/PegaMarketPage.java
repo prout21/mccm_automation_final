@@ -219,7 +219,8 @@ import org.openqa.selenium.support.FindBy;
 		}
 		public void Create1() throws InterruptedException
 		{
-		   String xpath111 = "//span[text()='Multi-Channel Campaign']";
+			Thread.sleep(2000);
+		    String xpath111 = "//span[text()='Multi-Channel Campaign']";
 			 WebElement element111 =  driver.findElement(By.xpath(xpath111));
 		     Actions  action111 = new Actions(driver);
 		     action111.moveToElement(element111).click().build().perform();
