@@ -16,7 +16,8 @@
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.chrome.ChromeDriver;
-	import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
 	import org.openqa.selenium.support.ui.FluentWait;
 	import org.testng.Assert;
@@ -196,25 +197,52 @@
 			Thread.sleep(6000);
 			System.out.println("Headless 2");
 		}
+		public void javaexecutor() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			boolean searchIconPresence11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isDisplayed();
+		     boolean searchIconEnabled11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isEnabled();
+
+		     if (searchIconPresence11==true && searchIconEnabled11==true)
+
+		     {
+		     // click on the search button
+		    	 System.out.println("i am in if----------------------");
+		    	 Thread.sleep(6000);
+		    	 WebElement element19 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']"));
+		    	 JavascriptExecutor executor13 = (JavascriptExecutor)driver;
+		    	 executor13.executeScript("arguments[0].click();", element19);
+		     Thread.sleep(6000);
+		     System.out.println("i am in if---search-------------------");
+		     
+		     }
+		     String xpath111 = "//span[text()='Multi-Channel Campaign']";
+			 WebElement element111 =  driver.findElement(By.xpath(xpath111));
+		     Actions  action111 = new Actions(driver);
+		     action111.moveToElement(element111).click().build().perform();
+			Thread.sleep(6000);
+			System.out.println("Headless 3");
+		}
 		public void Create() throws InterruptedException
 		{
 			Thread.sleep(2000);
 			Create.click( );
 			Thread.sleep(6000);
-			System.out.println("Headless 3");
+			System.out.println("Headless 4");
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			MultiChannelCampaign.click( );
 			Thread.sleep(6000);
-			System.out.println("Headless 4");
+			System.out.println("Headless 5");
 		}
 		public void Campaigncode() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			Campaigncode.sendKeys(Campaigncd);
 			Thread.sleep(6000);
+			System.out.println("Headless 6");
 		}
 		public void Build() throws InterruptedException
 		{

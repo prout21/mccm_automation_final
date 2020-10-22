@@ -79,19 +79,61 @@ public class PageMrktEtoEFlowFinal extends TestBase  {
 	 System.out.println(size);
   
      driver.switchTo().frame(1);
+  // driver.switchTo().frame("PegaGadget1Ifr");
      
-     Actions actions = new Actions(driver);
+   //  driver.switchTo().frame("PegaGadget0Ifr");
+     
+     boolean searchIconPresence11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isDisplayed();
+     boolean searchIconEnabled11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isEnabled();
 
-     Robot robot = new Robot();
+     if (searchIconPresence11==true && searchIconEnabled11==true)
 
-     robot.mouseMove(50,50);
-
-     actions.click().build().perform();
-
-     robot.mouseMove(200,70);
-
-     actions.click().build().perform();
-
+     {
+     // click on the search button
+    	 System.out.println("i am in if----------------------");
+    	 Thread.sleep(6000);
+    	 WebElement element19 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']"));
+    	 JavascriptExecutor executor13 = (JavascriptExecutor)driver;
+    	 executor13.executeScript("arguments[0].click();", element19);
+     Thread.sleep(6000);
+     System.out.println("i am in if---search-------------------");
+     
+     }
+     
+//     boolean searchIconPresence21 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")).isDisplayed();
+//     boolean searchIconEnabled21 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")).isEnabled();
+//
+//     if (searchIconPresence21==true && searchIconEnabled21==true)
+//
+//     {
+//     // click on the search button
+//    	 System.out.println("i am in if----------------------");
+//    	 Thread.sleep(6000);
+//    	 WebElement element29 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
+//    	 JavascriptExecutor executor23 = (JavascriptExecutor)driver;
+//    	 executor23.executeScript("arguments[0].click();", element29);
+//     Thread.sleep(6000);
+//     System.out.println("i am in if---search-------------------");
+//     
+//     }
+     String xpath111 = "//span[text()='Multi-Channel Campaign']";
+	 WebElement element111 =  driver.findElement(By.xpath(xpath111));
+     Actions  action111 = new Actions(driver);
+     action111.moveToElement(element111).click().build().perform();
+     
+//     Actions actions = new Actions(driver);
+//
+//     Robot robot = new Robot();
+//
+//     robot.mouseMove(50,50);
+//
+//     actions.click().build().perform();
+//
+//     robot.mouseMove(200,70);
+//
+//     actions.click().build().perform();
+     
+//      driver.switchTo().frame(1);
       Thread.sleep(8000);
  	  driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).click( );
  	  Thread.sleep(8000);
