@@ -100,6 +100,7 @@ public class TestBase {
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
+				chromeOptions.addArguments("window-size=1024,768");
 				driver = new ChromeDriver(chromeOptions);
 			}
 			else{
