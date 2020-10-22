@@ -1,7 +1,7 @@
 package Mccm.Pega.Outbound.PegaTest;
 
 import java.awt.AWTException;
- 
+
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
@@ -24,81 +24,81 @@ public class PegamarktingTest extends TestBase {
 	HomePage  homepage;
 	PegaMarketPage pegamarketpage;
 	TestUtil testutil;
-	
+
 
 	public PegamarktingTest()
 	{
 		super();
 	}
- @BeforeMethod
- 
-    public void setup() throws InterruptedException {
-	    initialization();
-	     loginpage = new LoginPage();
-	     homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	     testutil=new TestUtil();
-	     pegamarketpage =new PegaMarketPage();
-	     pegamarketpage=homepage.Pegamrklunch();
-	    }
- public void setUpHeadlessMode() {
-	    System.setProperty("java.awt.headless", "false");
+	@BeforeMethod
+
+	public void setup() throws InterruptedException {
+		initialization();
+		loginpage = new LoginPage();
+		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
+		testutil=new TestUtil();
+		pegamarketpage =new PegaMarketPage();
+		pegamarketpage=homepage.Pegamrklunch();
 	}
-  
-@Test (priority=1)
- public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
-     homepage.Pegamrklunch();
-	 pegamarketpage.pegamarkting();
-	 testutil.WindowHandling();
-     pegamarketpage.ExpandPegMrkPage();
-	 pegamarketpage.Campaigns();
-  	 testutil.SwitcToFrame(1);
-  //   pegamarketpage.javaexecutor();
-  //   driver.manage().window().maximize();
-   // driver.switchTo().frame("PegaGadget1Ifr");	
-	  testutil.RobertAction();
-  //   pegamarketpage.Create1();
-	 pegamarketpage.Create();
-	 pegamarketpage.MultiChannelCampaign(); 
-	 testutil.SwitcTodefaultContent();
-	 testutil.SwitcToFrame(2);
-	 pegamarketpage.Campaigncode();
-	 pegamarketpage.Build();
-	 pegamarketpage.MrktStrtgyConfig();
-	 pegamarketpage.SrchMrkStrtgy();
-	 pegamarketpage.AddMrkStrtgy();
-	 pegamarketpage.Applay();
-	 pegamarketpage.AudianceConfig();
-	 pegamarketpage.SrchConfigAudience();
-	 pegamarketpage.AddAdinceconfig();
-	 pegamarketpage.ApplayAdience(); 
-	 pegamarketpage.javaexictor2();
-	 pegamarketpage.Engagementconfig();
-	 pegamarketpage.Campaignschdul();
-	 pegamarketpage.Recurring();
-	 pegamarketpage.databasetemplate();
-	 pegamarketpage.configtemplate();
-	 pegamarketpage.SrchConfigEngagment();
-	 pegamarketpage.Addmcclbound();
-	 pegamarketpage.Javascriptserch();
-	 pegamarketpage.ApplayEngagement();
-	 pegamarketpage.SaveCampgn();
-	 pegamarketpage.RunCampgn();
-	 pegamarketpage.ConfirmCampgn();
-	 pegamarketpage.RefreshCampgn();
-	 pegamarketpage.Runstatus();
-	 pegamarketpage.CampRunIDCaptured();
+	// public void setUpHeadlessMode() {
+	//	    System.setProperty("java.awt.headless", "false");
+	//	}
+
+	@Test (priority=1)
+	public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
+		homepage.Pegamrklunch();
+		pegamarketpage.pegamarkting();
+		testutil.WindowHandling();
+		pegamarketpage.ExpandPegMrkPage();
+		pegamarketpage.Campaigns();
+		testutil.SwitcToFrame(1);
+		pegamarketpage.javaexecutor();
+		driver.manage().window().maximize();
+		// driver.switchTo().frame("PegaGadget1Ifr");	
+		//  testutil.RobertAction();
+		pegamarketpage.Create1();
+		pegamarketpage.Create();
+		pegamarketpage.MultiChannelCampaign(); 
+		testutil.SwitcTodefaultContent();
+		testutil.SwitcToFrame(2);
+		pegamarketpage.Campaigncode();
+		pegamarketpage.Build();
+		pegamarketpage.MrktStrtgyConfig();
+		pegamarketpage.SrchMrkStrtgy();
+		pegamarketpage.AddMrkStrtgy();
+		pegamarketpage.Applay();
+		pegamarketpage.AudianceConfig();
+		pegamarketpage.SrchConfigAudience();
+		pegamarketpage.AddAdinceconfig();
+		pegamarketpage.ApplayAdience(); 
+		pegamarketpage.javaexictor2();
+		pegamarketpage.Engagementconfig();
+		pegamarketpage.Campaignschdul();
+		pegamarketpage.Recurring();
+		pegamarketpage.databasetemplate();
+		pegamarketpage.configtemplate();
+		pegamarketpage.SrchConfigEngagment();
+		pegamarketpage.Addmcclbound();
+		pegamarketpage.Javascriptserch();
+		pegamarketpage.ApplayEngagement();
+		pegamarketpage.SaveCampgn();
+		pegamarketpage.RunCampgn();
+		pegamarketpage.ConfirmCampgn();
+		pegamarketpage.RefreshCampgn();
+		pegamarketpage.Runstatus();
+		pegamarketpage.CampRunIDCaptured();
 	}
-	 
-@AfterMethod
 
- public void teardown() {
+	@AfterMethod
 
-    driver.quit();
+	public void teardown() {
+
+		driver.quit();
 
 
-     System.out.println("Pega Markting Finished");  
-}	 
- }
- 
+		System.out.println("Pega Markting Finished");  
+	}	 
+}
+
 
 

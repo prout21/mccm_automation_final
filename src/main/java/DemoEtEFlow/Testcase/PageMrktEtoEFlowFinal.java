@@ -77,8 +77,7 @@ public class PageMrktEtoEFlowFinal extends TestBase  {
  	 Thread.sleep(8000);
  	 int size = driver.findElements(By.tagName("iframe")).size();
 	 System.out.println(size);
-  
-     driver.switchTo().frame(1);
+      driver.switchTo().frame(1);
   // driver.switchTo().frame("PegaGadget1Ifr");
      
    //  driver.switchTo().frame("PegaGadget0Ifr");
@@ -99,7 +98,9 @@ public class PageMrktEtoEFlowFinal extends TestBase  {
      System.out.println("i am in if---search-------------------");
      
      }
-     
+//     Thread.sleep(8000);
+//	  driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).click( );
+//	  Thread.sleep(8000);
 //     boolean searchIconPresence21 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")).isDisplayed();
 //     boolean searchIconEnabled21 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")).isEnabled();
 //
@@ -134,6 +135,8 @@ public class PageMrktEtoEFlowFinal extends TestBase  {
 //     actions.click().build().perform();
      
 //      driver.switchTo().frame(1);
+     
+     
       Thread.sleep(8000);
  	  driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).click( );
  	  Thread.sleep(8000);
