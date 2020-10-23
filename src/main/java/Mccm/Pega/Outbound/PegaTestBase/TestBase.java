@@ -83,12 +83,12 @@ public class TestBase {
     	if(browserName.equals("chrome")) {
  
 
-    System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+        System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 
     		String projectPath = System.getProperty("user.dir");
 
-  //  System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+   // System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
     		
 
@@ -100,7 +100,7 @@ public class TestBase {
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
-				chromeOptions.addArguments("window-size=1024,768");
+				chromeOptions.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"); 
 				driver = new ChromeDriver(chromeOptions);
 			}
 			else{
