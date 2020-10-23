@@ -13,13 +13,13 @@
 <!--   </test> Test -->
        
   
-  <test name="Pega Dynamic System Setting Regression Test">
-    <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest"/> 
-      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest"/> 
-      <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest"/>    
-    </classes>
-  </test> <!-- Test -->
+<!--   <test name="Pega Dynamic System Setting Regression Test"> -->
+<!--     <classes> -->
+<!--       <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest"/>  -->
+<!--       <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest"/>  -->
+<!--       <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest"/>     -->
+<!--     </classes> -->
+<!--   </test> Test -->
   
   <test name="Pega NBACampaign Run Marketing Completed Regression Test">
     <classes>
