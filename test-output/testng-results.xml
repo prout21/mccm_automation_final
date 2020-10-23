@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="79767" started-at="2020-10-22T18:32:22 IST" finished-at="2020-10-22T18:33:41 IST">
+  <suite name="Default suite" duration-ms="37128" started-at="2020-10-23T14:30:46 IST" finished-at="2020-10-23T14:31:23 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="79767" started-at="2020-10-22T18:32:22 IST" finished-at="2020-10-22T18:33:41 IST">
+    <test name="Default test" duration-ms="37128" started-at="2020-10-23T14:30:46 IST" finished-at="2020-10-23T14:31:23 IST">
       <class name="DemoEtEFlow.Testcase.PageMrktRobrtAAAA">
-        <test-method status="FAIL" signature="NBABatchCampaignSuccessfull()[pri:0, instance:DemoEtEFlow.Testcase.PageMrktRobrtAAAA@69b0fd6f]" name="NBABatchCampaignSuccessfull" duration-ms="79702" started-at="2020-10-22T18:32:22 IST" finished-at="2020-10-22T18:33:41 IST">
+        <test-method status="FAIL" signature="NBABatchCampaignSuccessfull()[pri:0, instance:DemoEtEFlow.Testcase.PageMrktRobrtAAAA@69b0fd6f]" name="NBABatchCampaignSuccessfull" duration-ms="37070" started-at="2020-10-23T14:30:46 IST" finished-at="2020-10-23T14:31:23 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='pi pi-caret-down']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class='menu-item-title'])[5]"}
   (Session info: chrome=86.0.4240.111)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INSGH045PMS0', ip: '10.218.174.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INSGH045PMS0', ip: '10.218.245.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3c9bc64f3d91d55a622f6393aab99bc
-*** Element info: {Using=xpath, value=//*[@class='pi pi-caret-down']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63538}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dccc743dcd3d1700cbc0a134f9cd6d4
+*** Element info: {Using=xpath, value=(//span[@class='menu-item-title'])[5]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='pi pi-caret-down']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class='menu-item-title'])[5]"}
   (Session info: chrome=86.0.4240.111)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INSGH045PMS0', ip: '10.218.174.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INSGH045PMS0', ip: '10.218.245.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d3c9bc64f3d91d55a622f6393aab99bc
-*** Element info: {Using=xpath, value=//*[@class='pi pi-caret-down']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63538}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dccc743dcd3d1700cbc0a134f9cd6d4
+*** Element info: {Using=xpath, value=(//span[@class='menu-item-title'])[5]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -44,7 +44,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at DemoEtEFlow.Testcase.PageMrktRobrtAAAA.NBABatchCampaignSuccessfull(PageMrktRobrtAAAA.java:98)
+at DemoEtEFlow.Testcase.PageMrktRobrtAAAA.NBABatchCampaignSuccessfull(PageMrktRobrtAAAA.java:58)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

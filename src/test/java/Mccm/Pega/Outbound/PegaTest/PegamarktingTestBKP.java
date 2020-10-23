@@ -18,7 +18,7 @@ import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
-public class PegamarktingTest extends TestBase {
+public class PegamarktingTestBKP extends TestBase {
 	private static final String priorty = null;
 	LoginPage loginpage;
 	HomePage  homepage;
@@ -26,7 +26,7 @@ public class PegamarktingTest extends TestBase {
 	TestUtil testutil;
 
 
-	public PegamarktingTest()
+	public PegamarktingTestBKP()
 	{
 		super();
 	}
@@ -52,9 +52,7 @@ public class PegamarktingTest extends TestBase {
 		 pegamarketpage.ExpandPegMrkPage();
 		 pegamarketpage.Campaigns();
 		 testutil.SwitcToFrame(1);
-	//	 testutil.RobertAction();
-		 pegamarketpage.javaexecutor();
-		 pegamarketpage.CreateMulti();
+		 testutil.RobertAction();
 		 pegamarketpage.Create();
 		 pegamarketpage.MultiChannelCampaign(); 
 		 testutil.SwitcTodefaultContent();
