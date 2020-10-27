@@ -228,20 +228,24 @@ import org.openqa.selenium.JavascriptExecutor;
 		     Thread.sleep(6000);
 		     System.out.println("i am in if---search-------------------");
 		     System.out.println("Headless 22");
-		     driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
-		     System.out.println("Headless 23");
+		    // driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
+		  //   System.out.println("Headless 23");
 		     }
 		    
 		}
 		public void CreateMulti() throws InterruptedException
 		{
-			driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
+		//	driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));.
+			
+			WebElement element29 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
+	    	 JavascriptExecutor executor23 = (JavascriptExecutor)driver;
+	    	 executor23.executeScript("arguments[0].click();", element29);
 			
 			Thread.sleep(2000);
-			String xpath111 = "//span[text()='Multi-Channel Campaign']";
-			  WebElement element111 =  driver.findElement(By.xpath(xpath111));
-		     Actions  action111 = new Actions(driver);
-		     action111.moveToElement(element111).click().build().perform();
+//			String xpath111 = "//span[text()='Multi-Channel Campaign']";
+//			  WebElement element111 =  driver.findElement(By.xpath(xpath111));
+//		     Actions  action111 = new Actions(driver);
+//		     action111.moveToElement(element111).click().build().perform();
 			System.out.println("Headless 34");
 	 
 		}
