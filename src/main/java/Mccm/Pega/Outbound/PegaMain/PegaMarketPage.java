@@ -251,11 +251,30 @@ import org.openqa.selenium.JavascriptExecutor;
 //		     Actions  action111 = new Actions(driver);
 //		     action111.moveToElement(element111).click().build().perform();
 			System.out.println("Headless 35");
-			WebElement element31 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
+			 WebElement element31 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
 	    	 JavascriptExecutor executor31 = (JavascriptExecutor)driver;
 	    	 executor31.executeScript("arguments[0].click();", element31);
 	    	 System.out.println("Headless 36");
+	    	 
+	    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
+	    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
+	    	 executor32.executeScript("arguments[0].click();", element32);
+	    	 System.out.println("Headless 37");
 	 
+	    	 driver.switchTo().defaultContent();
+	    	  System.out.println("I am in outer frame.......................");
+	    	  int size1 = driver.findElements(By.tagName("iframe")).size();
+	    	  System.out.println(size1);
+	    	  driver.switchTo().frame(2);
+	    	  System.out.println("i am ineer frame no ");
+	    	  Thread.sleep(8000);
+	    	  
+	    	 driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']")).sendKeys("NBABathCampaig1023");
+	   	    Thread.sleep(8000);
+	    	 System.out.println("Headless 38");
+	         driver.findElement(By.xpath("//span[text()='Build']")).click( );
+	         Thread.sleep(8000);
+	         System.out.println("Headless 39");
 		}
 		public void Laptop() throws InterruptedException
 		{
