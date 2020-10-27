@@ -49,9 +49,10 @@ public class PegamarktingTest extends TestBase {
 		homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
-	//	pegamarketpage.ExpandPegMrkPage();
-	//	pegamarketpage.Campaigns();
-		pegamarketpage.Laptop();
+     	pegamarketpage.ExpandPegMrkPage();
+     	pegamarketpage.Laptop();
+    	pegamarketpage.Campaigns();
+	//	pegamarketpage.Laptop();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();
 		pegamarketpage.Create();
