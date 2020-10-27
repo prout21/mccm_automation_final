@@ -240,13 +240,21 @@ import org.openqa.selenium.JavascriptExecutor;
 			WebElement element29 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
 	    	 JavascriptExecutor executor23 = (JavascriptExecutor)driver;
 	    	 executor23.executeScript("arguments[0].click();", element29);
+	    	 System.out.println("Headless 34");
+	    	 WebElement element30 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']"));
+	    	 JavascriptExecutor executor30 = (JavascriptExecutor)driver;
+	    	 executor30.executeScript("arguments[0].click();", element30);
 			
 			Thread.sleep(2000);
 //			String xpath111 = "//span[text()='Multi-Channel Campaign']";
 //			  WebElement element111 =  driver.findElement(By.xpath(xpath111));
 //		     Actions  action111 = new Actions(driver);
 //		     action111.moveToElement(element111).click().build().perform();
-			System.out.println("Headless 34");
+			System.out.println("Headless 35");
+			WebElement element31 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
+	    	 JavascriptExecutor executor31 = (JavascriptExecutor)driver;
+	    	 executor31.executeScript("arguments[0].click();", element31);
+	    	 System.out.println("Headless 36");
 	 
 		}
 		public void Laptop() throws InterruptedException
