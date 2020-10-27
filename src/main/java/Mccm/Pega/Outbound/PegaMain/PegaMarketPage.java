@@ -256,11 +256,7 @@ import org.openqa.selenium.JavascriptExecutor;
 	    	 executor31.executeScript("arguments[0].click();", element31);
 	    	 System.out.println("Headless 36");
 	    	 
-//	    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
-//	    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
-//	    	 executor32.executeScript("arguments[0].click();", element32);
-//	    	 System.out.println("Headless 37");
-	 
+
 	    	 driver.switchTo().defaultContent();
 	    	  System.out.println("I am in outer frame.......................");
 	    	  int size1 = driver.findElements(By.tagName("iframe")).size();
@@ -269,11 +265,16 @@ import org.openqa.selenium.JavascriptExecutor;
 	    	  System.out.println("i am ineer frame no ");
 	    	  Thread.sleep(8000);
 	    	  
-	    	 driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']")).sendKeys("NBABathCampaig1023");
-	   	    Thread.sleep(8000);
-	    	 System.out.println("Headless 38");
-	         driver.findElement(By.xpath("//span[text()='Build']")).click( );
-	         Thread.sleep(8000);
+ 		    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
+ 		    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
+ 		    	 executor32.executeScript("arguments[0].value='"+ Campaigncd +"';", element32);
+ 	    	     System.out.println("Headless 37");
+ 		
+	    	 System.out.println(Campaigncd);
+	    	 WebElement element33 = driver.findElement(By.xpath("//span[text()='Build']"));
+	    	 JavascriptExecutor executor33 = (JavascriptExecutor)driver;
+	    	 executor33.executeScript("arguments[0].click();", element33);
+	        
 	         System.out.println("Headless 39");
 		}
 		public void Laptop() throws InterruptedException
