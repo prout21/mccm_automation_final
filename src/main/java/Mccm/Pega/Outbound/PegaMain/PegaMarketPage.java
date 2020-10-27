@@ -232,6 +232,12 @@
 			System.out.println("Headless 34");
 	 
 		}
+		public void Laptop() throws InterruptedException
+		{
+			    Thread.sleep(8000);
+			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
+			     driver.findElement(By.xpath(s5)).click();
+		}
 		public void Create() throws InterruptedException
 		{
 	 
