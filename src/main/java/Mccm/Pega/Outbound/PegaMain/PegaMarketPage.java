@@ -190,7 +190,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		 System.out.println(driver.manage().window().getSize());
 
 	//	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
-		 driver.manage().window().setSize(new Dimension(1024, 768));
+		 driver.manage().window().setSize(new Dimension(1920,1080));
 
 		 System.out.println(driver.manage().window().getSize());
 		}
@@ -227,7 +227,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		    	 executor13.executeScript("arguments[0].click();", element19);
 		     Thread.sleep(6000);
 		     System.out.println("i am in if---search-------------------");
-		     
+		     System.out.println("Headless 22");
 		     }
 		    
 		}
