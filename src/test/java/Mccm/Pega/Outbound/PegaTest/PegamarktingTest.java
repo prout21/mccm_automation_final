@@ -69,6 +69,7 @@ public class PegamarktingTest extends TestBase {
 		 pegamarketpage.javaexecutor();
 		 pegamarketpage.CreateMulti();
 	//	 driver.switchTo().frame("PegaGadget1Ifr");
+		 driver.switchTo().defaultContent();
 		 pegamarketpage.Driversize();
 		 pegamarketpage.Create();
 		 pegamarketpage.MultiChannelCampaign(); 
