@@ -256,10 +256,10 @@ import org.openqa.selenium.JavascriptExecutor;
 	    	 executor31.executeScript("arguments[0].click();", element31);
 	    	 System.out.println("Headless 36");
 	    	 
-	    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
-	    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
-	    	 executor32.executeScript("arguments[0].click();", element32);
-	    	 System.out.println("Headless 37");
+//	    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
+//	    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
+//	    	 executor32.executeScript("arguments[0].click();", element32);
+//	    	 System.out.println("Headless 37");
 	 
 	    	 driver.switchTo().defaultContent();
 	    	  System.out.println("I am in outer frame.......................");
