@@ -49,12 +49,12 @@ public class PegamarktingTest extends TestBase {
 		homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
-		pegamarketpage.Driversize();
-     	pegamarketpage.ExpandPegMrkPage();
+		pegamarketpage.ExpandPegMrkPage();
      	pegamarketpage.Laptop();
     	pegamarketpage.Campaigns();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();
+		pegamarketpage.Driversize();
 		pegamarketpage.Create();
 		pegamarketpage.MultiChannelCampaign(); 
 		testutil.SwitcTodefaultContent();
