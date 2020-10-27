@@ -228,11 +228,15 @@ import org.openqa.selenium.JavascriptExecutor;
 		     Thread.sleep(6000);
 		     System.out.println("i am in if---search-------------------");
 		     System.out.println("Headless 22");
+		     driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
+		     System.out.println("Headless 23");
 		     }
 		    
 		}
 		public void CreateMulti() throws InterruptedException
 		{
+			driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
+			
 			Thread.sleep(2000);
 			String xpath111 = "//span[text()='Multi-Channel Campaign']";
 			  WebElement element111 =  driver.findElement(By.xpath(xpath111));
