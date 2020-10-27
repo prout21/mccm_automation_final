@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -48,7 +49,15 @@ public class PageMrktRobrtAAAA extends TestBase  {
 	 driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("rules" );
 	 driver.findElement(By.xpath("//span[@class='loginButtonText']")).click( );
 	 Thread.sleep(8000);
-	 
+	 ////////////////////////////
+	 WebDriver driver1 = new ChromeDriver();
+	 System.out.println(driver.manage().window().getSize());
+
+	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
+	 driver.manage().window().setSize(new Dimension(1024, 768));
+
+	 System.out.println(driver.manage().window().getSize());
+	 /////////////////////////////////
 	 String xpath = "(//i[@class='pi pi-caret-down'])[2]";
 	 WebElement element =  driver.findElement(By.xpath(xpath));
      Actions  action = new Actions(driver);

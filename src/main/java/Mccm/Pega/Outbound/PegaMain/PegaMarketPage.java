@@ -11,7 +11,8 @@
     import org.apache.poi.xssf.usermodel.XSSFSheet;
     import org.apache.poi.xssf.usermodel.XSSFWorkbook;
     import org.openqa.selenium.By;
-	import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 	import org.openqa.selenium.NoSuchElementException;
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
@@ -183,8 +184,16 @@
 			pegamrkting1.click( );
 			Thread.sleep(6000);  
 		}
-	
-	
+		public void Driversize() throws InterruptedException
+		{
+	  // 	WebDriver driver1 = new ChromeDriver();
+		 System.out.println(driver.manage().window().getSize());
+
+	//	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
+		 driver.manage().window().setSize(new Dimension(1024, 768));
+
+		 System.out.println(driver.manage().window().getSize());
+		}
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
 			Thread.sleep(6000);
@@ -237,6 +246,7 @@
 			    Thread.sleep(8000);
 			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
 			     driver.findElement(By.xpath(s5)).click();
+			     
 		}
 		public void Create() throws InterruptedException
 		{
