@@ -100,7 +100,7 @@ public class TestBase {
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
-				chromeOptions.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"); 
+				chromeOptions.addArguments("--disable-gpu", "--window-size=1024,768","--ignore-certificate-errors"); 
 				driver = new ChromeDriver(chromeOptions);
 			}
 			else{
@@ -115,7 +115,7 @@ public class TestBase {
       driver.get(prop.getProperty("url"));
     	}
   
-    
+  //  chromeOptions.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
   //*******************************************************************************************
   	//*Function:	general_ReadProperty														*
   	//*Arguments:	Property Key as String													 	*
