@@ -190,7 +190,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		 System.out.println(driver.manage().window().getSize());
 
 	//	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
-		 driver.manage().window().setSize(new Dimension(1024, 768));
+		 driver.manage().window().setSize(new Dimension(1000, 700));
 
 		 System.out.println(driver.manage().window().getSize());
 		}
