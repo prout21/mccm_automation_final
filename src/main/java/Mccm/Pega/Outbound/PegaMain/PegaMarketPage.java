@@ -199,7 +199,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			ExpandPegMrkPage.click( );
 			Thread.sleep(6000); 
-			System.out.println("Headless 1");
+			 
 			
 		}
 	
@@ -208,74 +208,10 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			Campaigns.click( );
 			Thread.sleep(6000);
-			System.out.println("Headless 2");
+			 
 		}
-		public void javaexecutor() throws InterruptedException
-		{
-		 
-			boolean searchIconPresence11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isDisplayed();
-		     boolean searchIconEnabled11 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']")).isEnabled();
-
-		     if (searchIconPresence11==true && searchIconEnabled11==true)
-
-		     {
-		     // click on the search button
-		    	 System.out.println("i am in if----------------------");
-		    	 Thread.sleep(6000);
-		    	 WebElement element19 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']"));
-		    	 JavascriptExecutor executor13 = (JavascriptExecutor)driver;
-		    	 executor13.executeScript("arguments[0].click();", element19);
-		     Thread.sleep(6000);
-		     System.out.println("i am in if---search-------------------");
-		     System.out.println("Headless 22");
-		    // driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));
-		  //   System.out.println("Headless 23");
-		     }
-		    
-		}
-		public void CreateMulti() throws InterruptedException
-		{
-		//	driver.switchTo().frame(driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']")));.
-			
-			WebElement element29 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
-	    	 JavascriptExecutor executor23 = (JavascriptExecutor)driver;
-	    	 executor23.executeScript("arguments[0].click();", element29);
-	    	 System.out.println("Headless 34");
-	    	 WebElement element30 = driver.findElement(By.xpath("//*[@class='pi pi-caret-down']"));
-	    	 JavascriptExecutor executor30 = (JavascriptExecutor)driver;
-	    	 executor30.executeScript("arguments[0].click();", element30);
-			
-//			String xpath111 = "//span[text()='Multi-Channel Campaign']";
-//			  WebElement element111 =  driver.findElement(By.xpath(xpath111));
-//		     Actions  action111 = new Actions(driver);
-//		     action111.moveToElement(element111).click().build().perform();
-		  	System.out.println("Headless 35");
-			 WebElement element31 = driver.findElement(By.xpath("//span[text()='Multi-Channel Campaign']"));
-	    	 JavascriptExecutor executor31 = (JavascriptExecutor)driver;
-	    	 executor31.executeScript("arguments[0].click();", element31);
-	    	 System.out.println("Headless 36");
-	    	 
-
-	    	  driver.switchTo().defaultContent();
-	    	  System.out.println("I am in outer frame.......................");
-	    	  int size1 = driver.findElements(By.tagName("iframe")).size();
-	    	  System.out.println(size1);
-	    	  driver.switchTo().frame(2);
-	    	  System.out.println("i am ineer frame no ");
-	    	  Thread.sleep(8000);
-	    	  
- 		    	 WebElement element32= driver.findElement(By.xpath("//input[@type='text'][@name='$PpyWorkPage$ppyLabel']"));
- 		    	 JavascriptExecutor executor32 = (JavascriptExecutor)driver;
- 		    	 executor32.executeScript("arguments[0].value='"+ Campaigncd +"';", element32);
- 	    	     System.out.println("Headless 37");
- 		
-	    	 System.out.println(Campaigncd);
-	    	 WebElement element33 = driver.findElement(By.xpath("//span[text()='Build']"));
-	    	 JavascriptExecutor executor33 = (JavascriptExecutor)driver;
-	    	 executor33.executeScript("arguments[0].click();", element33);
-	        
-	         System.out.println("Headless 39");
-		}
+		
+		
 		public void Laptop() throws InterruptedException
 		{
 			    Thread.sleep(8000);
@@ -288,14 +224,14 @@ import org.openqa.selenium.JavascriptExecutor;
 	 
 			Create.click( );
 			Thread.sleep(6000);
-			System.out.println("Headless 4");
+			 
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			MultiChannelCampaign.click( );
 			Thread.sleep(6000);
-			System.out.println("Headless 5");
+			 
 		}
 		public void Campaigncode() throws InterruptedException
 		{
@@ -546,7 +482,7 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 	
 						System.out.println("Test Case Passed");
-						 System.out.println("Headless 36");
+						  
 						break;
 					}
  		
@@ -561,7 +497,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			Completed.click();
 		//	driver.findElement(By.xpath("//span[text()='Completed']")).click( );
 			Thread.sleep(6000);
-			 System.out.println("Headless 37");
+			  
 			JavascriptExecutor js7 = (JavascriptExecutor) driver;
 			WebElement element8 =Completed;
 			//WebElement element8 = driver.findElement(By.xpath("//span[text()='Completed']"));
@@ -604,7 +540,7 @@ import org.openqa.selenium.JavascriptExecutor;
 					}catch (Exception e) {
 
 					}
-					 System.out.println("Headless 38");
+					 
 		}
 	
 	}
