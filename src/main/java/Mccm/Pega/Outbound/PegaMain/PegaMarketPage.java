@@ -480,7 +480,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		public void Runstatus() throws InterruptedException
 		{
 	
-			for(int i=0;i<50;i++)
+			for(int i=0;i<100;i++)
 			{
 	
 				Thread.sleep(6000);
@@ -546,7 +546,7 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 	
 						System.out.println("Test Case Passed");
-		
+						 System.out.println("Headless 36");
 						break;
 					}
  		
@@ -561,7 +561,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			Completed.click();
 		//	driver.findElement(By.xpath("//span[text()='Completed']")).click( );
 			Thread.sleep(6000);
-
+			 System.out.println("Headless 37");
 			JavascriptExecutor js7 = (JavascriptExecutor) driver;
 			WebElement element8 =Completed;
 			//WebElement element8 = driver.findElement(By.xpath("//span[text()='Completed']"));
@@ -604,7 +604,7 @@ import org.openqa.selenium.JavascriptExecutor;
 					}catch (Exception e) {
 
 					}
-			
+					 System.out.println("Headless 38");
 		}
 	
 	}
