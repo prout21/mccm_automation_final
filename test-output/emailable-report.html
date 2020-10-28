@@ -8,11 +8,91 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">753,293</td><td></td><td></td></tr>
+<tr><th colspan="8">Mccm NBA Outbound Automation Regression Suite</th></tr>
+<tr><td><a href="#t0">Unix filechk and DB loaded Regression Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">215,296</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Pega Dynamic System Setting Regression Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">383,089</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Pega NBACampaign Run Marketing Completed Regression Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">382,574</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Pega NBA DB Config Completed Regression Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">250,725</td><td></td><td></td></tr>
+<tr><td><a href="#t4">Unix Extract NBA Channel File Regression Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,049</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">Pega Generated Extract Channel File Regression Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">156,975</td><td></td><td></td></tr>
+<tr><td><a href="#t6">Pega NBACampaign Batch Process Completed Regression Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">182,158</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num attn">5</th><th class="num">1,571,866</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.PegamarktingTest</td><td><a href="#m0">VerifyNBACampaignRunSuccessfully</a></td><td rowspan="1">1603865912319</td><td rowspan="1">730756</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Mccm NBA Outbound Automation Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Unix filechk and DB loaded Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mccm.Unix.Outbound.App_Unix_Outbound_Test</td><td><a href="#m0">VerifyDBDataLoadedSuccessfully</a></td><td rowspan="1">1603897258428</td><td rowspan="1">215220</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Pega Dynamic System Setting Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest</td><td><a href="#m1">VerifyOracleCansadraDataLoadedSuccessfully</a></td><td rowspan="1">1603897534420</td><td rowspan="1">117533</td></tr><tr><th colspan="4">Pega Dynamic System Setting Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.HomePageTest</td><td><a href="#m2">VerifyDynamicSystemSettingSuccessfully</a></td><td rowspan="1">1603897684685</td><td rowspan="1">171363</td></tr><tr class="passedodd"><td rowspan="3">Mccm.Pega.Outbound.PegaTest.LoginPageTest</td><td><a href="#m3">VerifyLoginPageTitleTest</a></td><td rowspan="1">1603897480518</td><td rowspan="1">50</td></tr><tr class="passedodd"><td><a href="#m4">VerifyLoginSuccessfulTest</a></td><td rowspan="1">1603897494138</td><td rowspan="1">9118</td></tr><tr class="passedodd"><td><a href="#m5">VerifyPegaLogoTest</a></td><td rowspan="1">1603897487314</td><td rowspan="1">119</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Pega NBACampaign Run Marketing Completed Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.PegamarktingTest</td><td><a href="#m6">VerifyNBACampaignRunSuccessfully</a></td><td rowspan="1">1603897870776</td><td rowspan="1">368050</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Pega NBA DB Config Completed Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest</td><td><a href="#m7">VerifyDBConfigurationSuccessfully</a></td><td rowspan="1">1603898279387</td><td rowspan="1">210110</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">Unix Extract NBA Channel File Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test</td><td><a href="#m8">VerifyExtracDataLoadedSuccessfully</a></td><td rowspan="1">1603898490981</td><td rowspan="1">1043</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">Pega Generated Extract Channel File Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest</td><td><a href="#m9">VerifyExtractChannelFileCheckSuccessfully</a></td><td rowspan="1">1603898523967</td><td rowspan="1">123953</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">Pega NBACampaign Batch Process Completed Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest</td><td><a href="#m10">VerifyNBABatchProcessCompletedSuccessfully</a></td><td rowspan="1">1603898679382</td><td rowspan="1">150851</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Mccm.Pega.Outbound.PegaTest.PegamarktingTest#VerifyNBACampaignRunSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Unix filechk and DB loaded Regression Test</h2><h3 id="m0">Mccm.Unix.Outbound.App_Unix_Outbound_Test#VerifyDBDataLoadedSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pega Dynamic System Setting Regression Test</h2><h3 id="m1">Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest#VerifyOracleCansadraDataLoadedSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Y] but found [N]
+	at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.DataLoadCmpltdOracle(DataLoadDetails.java:184)
+	at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:51)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Mccm.Pega.Outbound.PegaTest.HomePageTest#VerifyDynamicSystemSettingSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Mccm.Pega.Outbound.PegaTest.LoginPageTest#VerifyLoginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Mccm.Pega.Outbound.PegaTest.LoginPageTest#VerifyLoginSuccessfulTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Mccm.Pega.Outbound.PegaTest.LoginPageTest#VerifyPegaLogoTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pega NBACampaign Run Marketing Completed Regression Test</h2><h3 id="m6">Mccm.Pega.Outbound.PegaTest.PegamarktingTest#VerifyNBACampaignRunSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Run&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;INSGH045PMS0&apos;, ip: &apos;10.218.191.220&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63951}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0d67126acacf2abc998566d9a7fde866
+*** Element info: {Using=xpath, value=//button[text()=&apos;Run&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at Mccm.Pega.Outbound.PegaMain.PegaMarketPage.RunCampgn(PegaMarketPage.java:387)
+	at Mccm.Pega.Outbound.PegaTest.PegamarktingTest.VerifyNBACampaignRunSuccessfully(PegamarktingTest.java:79)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pega NBA DB Config Completed Regression Test</h2><h3 id="m7">Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest#VerifyDBConfigurationSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [PR-11378] but found [PR-11451]
+	at Mccm.Pega.Outbound.PegaMain.DBConfigValdtn.CampRunidValidation(DBConfigValdtn.java:174)
+	at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.VerifyDBConfigurationSuccessfully(DBConfigValdtnTest.java:52)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Unix Extract NBA Channel File Regression Test</h2><h3 id="m8">Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test#VerifyExtracDataLoadedSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349)
+	at com.jcraft.jsch.Session.connect(Session.java:215)
+	at com.jcraft.jsch.Session.connect(Session.java:183)
+	at Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test.VerifyExtracDataLoadedSuccessfully(App_Unix_Outbound_Extract_Test.java:82)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at java.net.Socket.&lt;init&gt;(Socket.java:451)
+	at java.net.Socket.&lt;init&gt;(Socket.java:228)
+	at com.jcraft.jsch.Util.createSocket(Util.java:343)
+	... 31 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pega Generated Extract Channel File Regression Test</h2><h3 id="m9">Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest#VerifyExtractChannelFileCheckSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pega NBACampaign Batch Process Completed Regression Test</h2><h3 id="m10">Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest#VerifyNBABatchProcessCompletedSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [PR-11378] but found [PR-11414]
+	at Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn.CampRUNid(NBAOutboundValdtn.java:193)
+	at Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest.VerifyNBABatchProcessCompletedSuccessfully(NBAOutboundValdtnTest.java:51)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
