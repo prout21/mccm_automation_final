@@ -186,10 +186,9 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void Driversize() throws InterruptedException
 		{
-	  // 	WebDriver driver1 = new ChromeDriver();
+	  
 		 System.out.println(driver.manage().window().getSize());
-
-	//	 driver.get("http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb");
+ 
 		 driver.manage().window().setSize(new Dimension(1920,1080));
 
 		 System.out.println(driver.manage().window().getSize());
@@ -199,8 +198,6 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			ExpandPegMrkPage.click( );
 			Thread.sleep(6000); 
-			 
-			
 		}
 	
 		public void Campaigns() throws InterruptedException
@@ -208,30 +205,25 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			Campaigns.click( );
 			Thread.sleep(6000);
-			 
 		}
-		
-		
+				
 		public void Laptop() throws InterruptedException
 		{
 			    Thread.sleep(8000);
 			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
 			     driver.findElement(By.xpath(s5)).click();
-			     
 		}
 		public void Create() throws InterruptedException
 		{
-	 
+			Thread.sleep(6000);
 			Create.click( );
 			Thread.sleep(6000);
-			 
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
 			Thread.sleep(6000);
 			MultiChannelCampaign.click( );
 			Thread.sleep(6000);
-			 
 		}
 		public void Campaigncode() throws InterruptedException
 		{
@@ -273,7 +265,6 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			Applay.click( );
 			Thread.sleep(6000);
-	
 		}    
 	
 		public void AudianceConfig() throws InterruptedException
@@ -540,7 +531,6 @@ import org.openqa.selenium.JavascriptExecutor;
 					}catch (Exception e) {
 
 					}
-					 
 		}
 	
 	}

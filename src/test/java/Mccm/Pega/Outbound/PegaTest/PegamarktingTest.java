@@ -40,9 +40,7 @@ public class PegamarktingTest extends TestBase {
 		pegamarketpage =new PegaMarketPage();
 		pegamarketpage=homepage.Pegamrklunch();
 	}
-	// public void setUpHeadlessMode() {
-	//	    System.setProperty("java.awt.headless", "false");
-	//	}
+	
 
 	@Test (priority=1)
 	public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
