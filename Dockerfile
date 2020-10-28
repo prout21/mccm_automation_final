@@ -6,7 +6,10 @@ ARG SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
 # Install chrome driver and maven
-RUN apt update && apt install -yq chromium=83.0.4103.116-1~deb10u3 \
+RUN apt-get update && curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
+  && apt-get -y update \
+  && apt-get -y install google-chrome-stable xvfb libxi6 libgconf-2-4 \
   && mkdir -p /usr/share/maven /usr/share/maven/ref \
   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c - \
@@ -15,7 +18,7 @@ RUN apt update && apt install -yq chromium=83.0.4103.116-1~deb10u3 \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 # Install Cromedriver
-RUN cd /tmp && wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip \
+RUN cd /tmp && wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip \
   && mv /tmp/chromedriver /usr/bin/chromedriver
 

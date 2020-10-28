@@ -53,6 +53,7 @@ pipeline {
             environment {
                 // These are user defined environment variables.
                 REMOTE_MACHINE = "10.0.4.99"
+                REST_API_ENDPOINT_HOST = "10.0.4.159"
                 BASTION_MACHINE = "3.120.110.152"
                 REMOTE_USER = "dxc_dev"
             }
@@ -62,11 +63,14 @@ pipeline {
                         sshagent (credentials: ['DEV_MACHINE_SSH_KEY']) {
                             sh '''
                                 ssh -N -o StrictHostKeyChecking=no -L 9022:${REMOTE_MACHINE}:22 dxc_dev@${BASTION_MACHINE} -p 18881 &
+                                ssh -N -o StrictHostKeyChecking=no -L 18576:${REST_API_ENDPOINT_HOST}:8002 dxc_dev@${BASTION_MACHINE} -p 18881 &
                                 cd ${WORKSPACE}
                                 # Update properties file with actual WORKSPACE.
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' configurationFile.properties
+                                # Port fordwaring to rest endpoint.
+                                sed -i -e 's|192.57.138.25|localhost|g' configurationFile.properties
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' src/main/java/Mccm/Pega/ConfigPega/Config.properties
-                                mvn test
+                                xvfb-run --server-args="-screen 0 1024x768x24" mvn test
                             '''
                         }
                         stash name: "TestReport" , includes: "**/TestReport/Test-Automaton-Report.html"
