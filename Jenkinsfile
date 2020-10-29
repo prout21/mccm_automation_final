@@ -64,6 +64,7 @@ pipeline {
                             sh '''
                                 # setting ssh timeout.
                                 if [ ! -f ~/.ssh/config ];then
+                                    mkdir ~/.ssh
                                     touch ~/.ssh/config
                                 fi
                                 echo "Host *" >>~/.ssh/config
