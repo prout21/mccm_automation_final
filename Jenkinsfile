@@ -62,6 +62,12 @@ pipeline {
                         echo "Testing...."
                         sshagent (credentials: ['DEV_MACHINE_SSH_KEY']) {
                             sh '''
+                                # setting ssh timeout.
+                                echo "Host *" >>~/.ssh/config
+                                echo "  ClientAliveInterval 300" >>~/.ssh/config
+                                echo "  ClientAliveCountMax 5" >>~/.ssh/config
+                                cat ~/.ssh/config
+                                
                                 ssh -N -o StrictHostKeyChecking=no -L 9022:${REMOTE_MACHINE}:22 dxc_dev@${BASTION_MACHINE} -p 18881 &
                                 ssh -N -o StrictHostKeyChecking=no -L 18576:${REST_API_ENDPOINT_HOST}:8002 dxc_dev@${BASTION_MACHINE} -p 18881 &
                                 cd ${WORKSPACE}
