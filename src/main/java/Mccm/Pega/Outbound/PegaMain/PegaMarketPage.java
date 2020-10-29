@@ -230,7 +230,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 			Campaigncode.sendKeys(Campaigncd);
 			Thread.sleep(6000);
-			System.out.println("Headless 6");
+			System.out.println("Enter Campaigncode");
 		}
 		public void Build() throws InterruptedException
 		{
@@ -383,9 +383,11 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 		public void RunCampgn() throws InterruptedException
 		{
+			System.out.println("Check Campaign code Already use or not");
 			Thread.sleep(6000);
 			RunCampgn.click( );
 			Thread.sleep(6000);
+			//span[text()='Name is already in use.']		 
 		}
 	
 		public void ConfirmCampgn() throws InterruptedException
