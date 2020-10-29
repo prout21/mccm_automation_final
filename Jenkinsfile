@@ -68,8 +68,8 @@ pipeline {
                                     touch ~/.ssh/config
                                 fi
                                 echo "Host *" >>~/.ssh/config
-                                echo "  ClientAliveInterval 300" >>~/.ssh/config
-                                echo "  ClientAliveCountMax 5" >>~/.ssh/config
+                                echo "  ServerAliveInterval 300" >>~/.ssh/config
+                                echo "  ServerAliveCountMax 5" >>~/.ssh/config
                                 cat ~/.ssh/config
                                 
                                 ssh -N -o StrictHostKeyChecking=no -L 9022:${REMOTE_MACHINE}:22 dxc_dev@${BASTION_MACHINE} -p 18881 &
