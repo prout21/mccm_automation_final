@@ -83,7 +83,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     	if(browserName.equals("chrome")) {
  
 
-         System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+          System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 
     		String projectPath = System.getProperty("user.dir");
@@ -100,7 +100,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
-				chromeOptions.addArguments("window-size=1920,1080");
+			//	chromeOptions.addArguments("--window-size=1920,1080");
 			//	chromeOptions.addArguments("--disable-gpu", "--window-size=1024,768","--ignore-certificate-errors"); 
 				driver = new ChromeDriver(chromeOptions);
 			}
