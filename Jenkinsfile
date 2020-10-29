@@ -121,7 +121,13 @@ pipeline {
         }
 
         success {
-            echo 'I succeeded!!!!!!!!!!!!!!'              
+            echo 'I succeeded!!!!!!!!!!!!!!'
+            script {
+                if(env.BRANCH_NAME == "fb_develop" && nightlyBuild) {
+                    office365ConnectorSend message: "Build: Failed" , status: "Nightly build Failed", webhookUrl: 'https://outlook.office.com/webhook/a1e5ba23-63a3-4537-977e-e2191201fb75@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/40afd56bba6442a490c90b645147cd87/19011347-d504-4b65-9a0a-0b676f0b9762'
+                }
+                // emailext body: '"Log Url: (<${env.BUILD_URL}|Open>)"', subject: 'Build Failed', to: 'someemail@dxc.com'
+            }   
         }
 
         unstable {
