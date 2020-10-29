@@ -74,6 +74,7 @@ pipeline {
                                 echo "xvfb-run --server-args=\"-screen 0 1024x768x24\" mvn test " >runTest.sh
                                 echo "exit 0" >>runTest.sh
                                 chmod +x runTest.sh
+                                cat runTest.sh
                                 ./runTest.sh
                                 #xvfb-run --server-args="-screen 0 1024x768x24" mvn test
                             '''
