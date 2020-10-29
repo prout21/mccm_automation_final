@@ -70,7 +70,12 @@ pipeline {
                                 # Port fordwaring to rest endpoint.
                                 sed -i -e 's|192.57.138.25|localhost|g' configurationFile.properties
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' src/main/java/Mccm/Pega/ConfigPega/Config.properties
-                                xvfb-run --server-args="-screen 0 1024x768x24" mvn test
+                                # Run inside a script 
+                                echo "xvfb-run --server-args=\"-screen 0 1024x768x24\" mvn test " >runTest.sh
+                                echo "exit 0" >>runTest.sh
+                                chmod +x runTest.sh
+                                ./runTest.sh
+                                #xvfb-run --server-args="-screen 0 1024x768x24" mvn test
                             '''
                         }
                         stash name: "TestReport" , includes: "**/TestReport/Test-Automaton-Report.html"
