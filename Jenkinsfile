@@ -9,7 +9,7 @@ def nightlyBuild = false
 pkg_repos = "DXC-VF"
 
 // Cron job setting for nightly build. Branch fb-test* will be included for nightlybuild.
-def schedule = env.BRANCH_NAME.contains('fb_develop')  ? "0 08 * * 1-5" : ""
+def schedule = env.BRANCH_NAME.contains('fb_develop')  ? "0 10 * * 1-5" : ""
 
 pipeline {
     agent {dockerfile true}
