@@ -106,7 +106,7 @@ pipeline {
         stage('Send message MS TEAMS'){
             when { 
                 allOf {
-                    triggeredBy cause: "UserIdCause"
+                    triggeredBy cause: "TimerTrigger"
                     expression { BRANCH_NAME ==~ /(fb_develop)/ }
                 }  
             }
@@ -122,7 +122,7 @@ pipeline {
                     def others  = sh(returnStdout: true, script: ''' grep "test(s) failed" TestReport/Test-Automaton-Report.html |awk -F">" '{print $4}'|awk -F"<" '{print $1}' ''')
 
                     def msg = "<pre><h2>MCCM-Automation Test Results</h2><b>Passed     " + passed + "</b><b>Failed     " + failed + "</b><b>Others     " + others + "</b></pre>"
-                    office365ConnectorSend message: msg , status: "Nightly build Success", webhookUrl: 'https://outlook.office.com/webhook/a1e5ba23-63a3-4537-977e-e2191201fb75@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/40afd56bba6442a490c90b645147cd87/19011347-d504-4b65-9a0a-0b676f0b9762'
+                    office365ConnectorSend message: msg , status: "Nightly build Success", webhookUrl: 'https://teams.microsoft.com/l/channel/19%3a2ff6e6e0924247aeabfad54f0bc89ead%40thread.skype/33%2520MCCM%2520Automated%2520Regression%2520Test%2520Reporting?groupId=a1e5ba23-63a3-4537-977e-e2191201fb75&tenantId=93f33571-550f-43cf-b09f-cd331338d086'
                 }     
             }
             //steps
@@ -137,13 +137,7 @@ pipeline {
         }
 
         success {
-            echo 'I succeeded!!!!!!!!!!!!!!'
-            script {
-                if(env.BRANCH_NAME == "fb_develop" && nightlyBuild) {
-                    office365ConnectorSend message: "Build: Failed" , status: "Nightly build Failed", webhookUrl: 'https://teams.microsoft.com/l/channel/19%3a2ff6e6e0924247aeabfad54f0bc89ead%40thread.skype/33%2520MCCM%2520Automated%2520Regression%2520Test%2520Reporting?groupId=a1e5ba23-63a3-4537-977e-e2191201fb75&tenantId=93f33571-550f-43cf-b09f-cd331338d086'
-                }
-                // emailext body: '"Log Url: (<${env.BUILD_URL}|Open>)"', subject: 'Build Failed', to: 'someemail@dxc.com'
-            }   
+            echo 'I succeeded!!!!!!!!!!!!!!'   
         }
 
         unstable {
