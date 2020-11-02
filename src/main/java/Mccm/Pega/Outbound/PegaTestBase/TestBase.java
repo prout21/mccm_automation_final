@@ -21,6 +21,7 @@ import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
 import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
 import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
+import Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd;
 import Mccm.Pega.Outbound.PegaMain.PreChkNBACampValu;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn;
@@ -65,6 +66,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 	   
 	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
 	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
+	   PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
 	 
   	      
 		} catch (FileNotFoundException e) {
@@ -83,12 +85,12 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     	if(browserName.equals("chrome")) {
  
 
-          System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+        System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 
     		String projectPath = System.getProperty("user.dir");
 
-   //       System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+   //      System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
     	
 

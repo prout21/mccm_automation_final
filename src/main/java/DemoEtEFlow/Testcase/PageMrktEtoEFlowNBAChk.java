@@ -101,9 +101,9 @@ public class PageMrktEtoEFlowNBAChk   {
 				driver.findElement(By.xpath("//*[@name='PortalCardListingHeader_pyLanding_264']")).click( );
 				Thread.sleep(3000);
 				
-				Excel_Reader obj= new Excel_Reader("C:\\Users\\prout21\\git\\Automation_Framework\\MCCM\\MCCM\\src\\main\\java\\Mccm\\Pega\\TestData\\PegaOutputData1.xlsx");
+				Excel_Reader obj= new Excel_Reader("C:\\Users\\prout21\\git\\mccm_automation\\src\\main\\java\\Mccm\\Pega\\TestData\\PegaOutputData1.xlsx");
 
-				String NBACampValue = obj.getCellValue("PegaOutputData", 1, 0);
+				String NBACampValue = obj.getCellValue("PegaOutputData1", 1, 0);
 				
 				Thread.sleep(3000);
 				System.out.print(NBACampValue);

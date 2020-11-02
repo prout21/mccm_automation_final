@@ -81,6 +81,12 @@ public class HomePage extends TestBase {
 	   	  Thread.sleep(8000);
 	   	  return new PreChkNBACampValu();
 	   }
+   public PegaPreChkValidCampCd Pegamrklunch3()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	   	  return new PegaPreChkValidCampCd();
+	   }
          
  
 }
