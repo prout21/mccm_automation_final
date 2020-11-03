@@ -67,7 +67,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 	
    driver.quit();
 
-    System.out.println("NBACampaig Code Validation Done");
+    System.out.println("NBA Campaign Code Validation Done");
 }	 
  }
  
