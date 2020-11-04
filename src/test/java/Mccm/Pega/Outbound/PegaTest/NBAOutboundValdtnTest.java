@@ -66,7 +66,7 @@ public class NBAOutboundValdtnTest extends TestBase {
  
       public void teardown() {
 	
-      driver.quit();
+       driver.quit();
 	 
       
  	 System.out.println("NBA Batch process completed");  
