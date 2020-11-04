@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110810" started-at="2020-11-02T18:36:54 IST" finished-at="2020-11-02T18:38:45 IST">
+  <suite name="Default suite" duration-ms="31957" started-at="2020-11-04T15:28:35 IST" finished-at="2020-11-04T15:29:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="110810" started-at="2020-11-02T18:36:54 IST" finished-at="2020-11-02T18:38:45 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@64f6106c]" name="setup" is-config="true" duration-ms="19683" started-at="2020-11-02T18:36:54 IST" finished-at="2020-11-02T18:37:14 IST">
+    <test name="Default test" duration-ms="31957" started-at="2020-11-04T15:28:35 IST" finished-at="2020-11-04T15:29:07 IST">
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
+        <test-method status="PASS" signature="VerifyExtracDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test@69b0fd6f]" name="VerifyExtracDataLoadedSuccessfully" duration-ms="31896" started-at="2020-11-04T15:28:35 IST" finished-at="2020-11-04T15:29:07 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyPreCheckNBACampCodeValueValidSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@64f6106c]" name="VerifyPreCheckNBACampCodeValueValidSuccessfully" duration-ms="91068" started-at="2020-11-02T18:37:14 IST" finished-at="2020-11-02T18:38:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyPreCheckNBACampCodeValueValidSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@64f6106c]" name="teardown" is-config="true" duration-ms="1" started-at="2020-11-02T18:38:45 IST" finished-at="2020-11-02T18:38:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest -->
+        </test-method> <!-- VerifyExtracDataLoadedSuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

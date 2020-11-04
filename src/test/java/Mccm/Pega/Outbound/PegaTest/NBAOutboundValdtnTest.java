@@ -49,15 +49,15 @@ public class NBAOutboundValdtnTest extends TestBase {
 	 NBAOutboundValdtn1.RunActionClk();
 	 NBAOutboundValdtn1.FulshRunClick();
 	 NBAOutboundValdtn1.CampRUNid();
-	 NBAOutboundValdtn1.ActiveOfferCountCmpltd();
-	 NBAOutboundValdtn1.CmpgnDailyCycleCmpltd();
+	// NBAOutboundValdtn1.ActiveOfferCountCmpltd();
+	// NBAOutboundValdtn1.CmpgnDailyCycleCmpltd();
 	 NBAOutboundValdtn1.DataExpCmpltdDMP();
-	 NBAOutboundValdtn1.DataExpCmpltdEDWH();
+	// NBAOutboundValdtn1.DataExpCmpltdEDWH();
 	 NBAOutboundValdtn1.DataExpCmpltdKIASEPOS();
-	 NBAOutboundValdtn1.DataExpCmpltdMAMODB();
-	 NBAOutboundValdtn1.DataExpCmpltdOS();
-	 NBAOutboundValdtn1.IsCmpgnSuccess();
-	 NBAOutboundValdtn1.SaveLCSSCmpltd();
+//	 NBAOutboundValdtn1.DataExpCmpltdMAMODB();
+//	 NBAOutboundValdtn1.DataExpCmpltdOS();
+//	 NBAOutboundValdtn1.IsCmpgnSuccess();
+//	 NBAOutboundValdtn1.SaveLCSSCmpltd();
 	 
  }
  

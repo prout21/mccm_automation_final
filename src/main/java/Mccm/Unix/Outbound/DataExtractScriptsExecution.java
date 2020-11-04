@@ -43,7 +43,7 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		pass= readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
 		host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
 
-		String command="ksh /opt/SP/mccm/SYSN/Extract/Data_Extract_wrapper.ksh NBA_ONB";
+		String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");
@@ -81,7 +81,7 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 			e.printStackTrace();
 		}	
 		
-		String command1="ksh /opt/SP/mccm/SYSN/Extract/Data_Extract_wrapper.ksh NBA_KIASEPOS";
+		String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_KIASEPOS";
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");
@@ -118,7 +118,7 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		}catch(Exception e){
 			e.printStackTrace();
 		}	
-		String command2="ksh /opt/SP/mccm/SYSN/Extract/Data_Extract_wrapper.ksh NBA_DMP";
+		String command2="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_DMP";
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");
@@ -155,80 +155,80 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		String command3="ksh /opt/SP/mccm/SYSN/Extract/Data_Extract_wrapper.ksh NBA_MAMODB";
-		try{
-			java.util.Properties config = new java.util.Properties(); 
-			config.put("StrictHostKeyChecking", "no");
-			JSch jsch = new JSch();
-			Session session=jsch.getSession(user, host, 9022);
-			session.setPassword(pass);
-			session.setConfig(config);
-			session.connect();
-			System.out.println("Connected");
-			Channel channel=session.openChannel("exec");
-			((ChannelExec)channel).setCommand(command3);
-
-			channel.setInputStream(null);
-			((ChannelExec)channel).setErrStream(System.err);
-
-			InputStream in=channel.getInputStream();
-			channel.connect();
-			byte[] tmp=new byte[1024];
-			while(true){
-				while(in.available()>0){
-					int i=in.read(tmp, 0, 1024);
-					if(i<0)break;
-					System.out.print(new String(tmp, 0, i));
-				}
-				if(channel.isClosed()){
-					System.out.println("exit-status: "+channel.getExitStatus());
-					break;
-				}
-				try{Thread.sleep(3000);}catch(Exception ee){}
-			}
-			channel.disconnect();
-			session.disconnect();
-			System.out.println("DONE");
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		String command4="ksh /opt/SP/mccm/SYSN/Extract/Data_Extract_wrapper.ksh NBA_EDWH";
-		try{
-			java.util.Properties config = new java.util.Properties(); 
-			config.put("StrictHostKeyChecking", "no");
-			JSch jsch = new JSch();
-			Session session=jsch.getSession(user, host, 9022);
-			session.setPassword(pass);
-			session.setConfig(config);
-			session.connect();
-			System.out.println("Connected");
-			Channel channel=session.openChannel("exec");
-			((ChannelExec)channel).setCommand(command4);
-
-			channel.setInputStream(null);
-			((ChannelExec)channel).setErrStream(System.err);
-
-			InputStream in=channel.getInputStream();
-			channel.connect();
-			byte[] tmp=new byte[1024];
-			while(true){
-				while(in.available()>0){
-					int i=in.read(tmp, 0, 1024);
-					if(i<0)break;
-					System.out.print(new String(tmp, 0, i));
-				}
-				if(channel.isClosed()){
-					System.out.println("exit-status: "+channel.getExitStatus());
-					break;
-				}
-				try{Thread.sleep(3000);}catch(Exception ee){}
-			}
-			channel.disconnect();
-			session.disconnect();
-			System.out.println("DONE");
-		}catch(Exception e){
-			e.printStackTrace();
-		}	    
+//		String command3="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_MAMODB";
+//		try{
+//			java.util.Properties config = new java.util.Properties(); 
+//			config.put("StrictHostKeyChecking", "no");
+//			JSch jsch = new JSch();
+//			Session session=jsch.getSession(user, host, 9022);
+//			session.setPassword(pass);
+//			session.setConfig(config);
+//			session.connect();
+//			System.out.println("Connected");
+//			Channel channel=session.openChannel("exec");
+//			((ChannelExec)channel).setCommand(command3);
+//
+//			channel.setInputStream(null);
+//			((ChannelExec)channel).setErrStream(System.err);
+//
+//			InputStream in=channel.getInputStream();
+//			channel.connect();
+//			byte[] tmp=new byte[1024];
+//			while(true){
+//				while(in.available()>0){
+//					int i=in.read(tmp, 0, 1024);
+//					if(i<0)break;
+//					System.out.print(new String(tmp, 0, i));
+//				}
+//				if(channel.isClosed()){
+//					System.out.println("exit-status: "+channel.getExitStatus());
+//					break;
+//				}
+//				try{Thread.sleep(3000);}catch(Exception ee){}
+//			}
+//			channel.disconnect();
+//			session.disconnect();
+//			System.out.println("DONE");
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+//		String command4="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_EDWH";
+//		try{
+//			java.util.Properties config = new java.util.Properties(); 
+//			config.put("StrictHostKeyChecking", "no");
+//			JSch jsch = new JSch();
+//			Session session=jsch.getSession(user, host, 9022);
+//			session.setPassword(pass);
+//			session.setConfig(config);
+//			session.connect();
+//			System.out.println("Connected");
+//			Channel channel=session.openChannel("exec");
+//			((ChannelExec)channel).setCommand(command4);
+//
+//			channel.setInputStream(null);
+//			((ChannelExec)channel).setErrStream(System.err);
+//
+//			InputStream in=channel.getInputStream();
+//			channel.connect();
+//			byte[] tmp=new byte[1024];
+//			while(true){
+//				while(in.available()>0){
+//					int i=in.read(tmp, 0, 1024);
+//					if(i<0)break;
+//					System.out.print(new String(tmp, 0, i));
+//				}
+//				if(channel.isClosed()){
+//					System.out.println("exit-status: "+channel.getExitStatus());
+//					break;
+//				}
+//				try{Thread.sleep(3000);}catch(Exception ee){}
+//			}
+//			channel.disconnect();
+//			session.disconnect();
+//			System.out.println("DONE");
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}	    
 	}
 
 }

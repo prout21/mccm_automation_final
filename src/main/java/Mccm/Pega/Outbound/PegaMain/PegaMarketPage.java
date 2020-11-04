@@ -383,7 +383,7 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 		public void RunCampgn() throws InterruptedException
 		{
-			System.out.println("Check Campaign code Already use or not");
+			System.out.println("Check Campaign Code");
 			Thread.sleep(6000);
 			RunCampgn.click( );
 			Thread.sleep(6000);
