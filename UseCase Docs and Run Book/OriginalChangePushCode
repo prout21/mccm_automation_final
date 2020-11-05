@@ -19,12 +19,11 @@ PDXC Env. : {workspace}
    Push to PDXC Env.
     
 cd "C:\Users\prout21\git\Automation_Framework\MCCM\MCCM"
-git remote add fb_develop https://github.com/prout21/MCCM-Automation.git
+git remote add fb_develop https://github.dxc.com/DXC-VF/mccm_automation 
 git remote
 git status
 git add .
 git status
 git commit -m "gittest push"
-git push -u origin master
-    
+git push -u origin
     
