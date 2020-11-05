@@ -4,14 +4,23 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega Intraction Recent History Regression Test(failed)">
+  <test thread-count="5" name="Unix Filecheck Inbound Interface Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest">
+      <class name="Mccm.Unix.Inbound.App_Inbound_KIASEPOS_Test">
         <methods>
-          <include name="VerifyIntractionHistoryRunSuccessfully"/>
-          <include name="setup"/>
+          <include name="VerifyKIASEPOSFileLoadSuccessfully"/>
         </methods>
-      </class> <!-- Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest -->
+      </class> <!-- Mccm.Unix.Inbound.App_Inbound_KIASEPOS_Test -->
+      <class name="Mccm.Unix.Inbound.App_Inbound_DMP_Test">
+        <methods>
+          <include name="VerifyDMPFileLoadSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Unix.Inbound.App_Inbound_DMP_Test -->
+      <class name="Mccm.Unix.Inbound.App_Inbound_OnlineShop_Test">
+        <methods>
+          <include name="VerifyONLINESHOPFileLoadSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Unix.Inbound.App_Inbound_OnlineShop_Test -->
     </classes>
-  </test> <!-- Pega Intraction Recent History Regression Test(failed) -->
+  </test> <!-- Unix Filecheck Inbound Interface Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm Automation Regression Suite] -->
