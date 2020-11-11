@@ -77,7 +77,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 	
 	}
 
-    public static void initialization() {
+    public static void initialization() throws InterruptedException {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
@@ -104,6 +104,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 				chromeOptions.addArguments("--headless");
 		 		chromeOptions.addArguments("--disable-gpu"); 
 				driver = new ChromeDriver(chromeOptions);
+				TimeUnit.SECONDS.sleep(2);
 			}
 			else{
 				driver = new ChromeDriver();
