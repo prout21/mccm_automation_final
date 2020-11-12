@@ -90,7 +90,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 
     		String projectPath = System.getProperty("user.dir");
 
-   //      System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+   //    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
     	
 
@@ -104,7 +104,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 				chromeOptions.addArguments("--headless");
 		 		chromeOptions.addArguments("--disable-gpu"); 
 				driver = new ChromeDriver(chromeOptions);
-				TimeUnit.SECONDS.sleep(1);
+			//	TimeUnit.SECONDS.sleep(1);
 			}
 			else{
 				driver = new ChromeDriver();
