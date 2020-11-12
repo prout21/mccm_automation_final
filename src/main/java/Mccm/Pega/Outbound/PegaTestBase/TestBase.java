@@ -104,7 +104,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 				chromeOptions.addArguments("--headless");
 		 		chromeOptions.addArguments("--disable-gpu"); 
 				driver = new ChromeDriver(chromeOptions);
-				TimeUnit.SECONDS.sleep(2);
+				TimeUnit.SECONDS.sleep(1);
 			}
 			else{
 				driver = new ChromeDriver();
