@@ -77,7 +77,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 	
 	}
 
-    public static void initialization() throws InterruptedException {
+    public static void initialization() {
     	String browserName = prop.getProperty("browser");
     	String chromedriverPath = prop.getProperty("chromedriver.dir");
     	String chromeDriver = prop.getProperty("chromedriver");
@@ -91,8 +91,6 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     		String projectPath = System.getProperty("user.dir");
 
    //    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
-
-    	
 
 //    		System.setProperty("java.awt.headless", "false");
      
