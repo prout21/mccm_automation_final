@@ -100,7 +100,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
-		 		chromeOptions.addArguments("--disable-gpu"); 
+		 	//	chromeOptions.addArguments("--disable-gpu"); 
 				driver = new ChromeDriver(chromeOptions);
 			//	TimeUnit.SECONDS.sleep(1);
 			}
