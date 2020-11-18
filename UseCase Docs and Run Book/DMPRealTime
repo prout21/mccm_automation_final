@@ -1,0 +1,25 @@
+DMP Real Time E2E Flow :
+url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
+--------------------------------------------------------------------
+Step-1: Go to PEGA market and run the DMP Real time
+         class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest.java
+         
+Step-2: API POST Call for NextBatchAction
+         class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest.java
+Step-3: API POST Call ProcessOfferResults
+         class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest.java              
+    
+-----------------------------------------------------------------------------------
+Test Suite Name:RegressionSuite.DMPRealTime.xml
+
+Pre-condition and Data setup:
+-----------------------------
+1. Input test data in Excel file setup for DMP
+    path location: mccm_automation\src\main\java\Mccm\Pega\TestData\PegaTestData.xlsx
+  Used Step No:1
+2.Config file: setup for the input test data for API POST CALL
+
+  Config location:user.dir(in Config file)MCCM\configurationFile.properties
+  
+  Used Step No:2 and 3
+3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html

@@ -15,10 +15,10 @@
   </test> <!-- Test -->
   
 
-<!--   <test name="Pega Intraction Recent History Regression Test"> -->
-<!--     <classes> -->
-<!--       <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest"/>   -->
-<!--     </classes> -->
-<!--   </test> Test -->
+  <test name="Pega Intraction Recent History Regression Test">
+    <classes>
+      <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest"/>  
+    </classes>
+  </test> Test
 
 </suite> <!-- Suite -->

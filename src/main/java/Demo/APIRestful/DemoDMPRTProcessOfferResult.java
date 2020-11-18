@@ -35,10 +35,19 @@ public class DemoDMPRTProcessOfferResult {
          System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-        String json = "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"Pega\"}]}}}]";
+      //  String json = "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"Pega\"}]}}}]";
         
-    //    String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
+   //   String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
+ //     String json = "[{\"roles\": {\"subscriber\": {\"id\": [{\"schemeID\": \"Pega\",\"value\": \"45189091\"}]}}, \"name\": \"UpsellOffer1GB\"}]";
+//  String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"name\": \"UpsellOffer1GB\",\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
          
+  String json = "[{\"roles\":{\"subscriber\":{\"id\":[{\"schemeID\":\"Pega\",\"value\":\"45189091\"}]}},\"parts\":{\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
+  
+  
+  
+  
+  
+  
          // Create all-trusting host name verifier
          HostnameVerifier allHostsValid = new HostnameVerifier() {
                public boolean verify(String hostname, SSLSession session) {
@@ -71,7 +80,7 @@ public class DemoDMPRTProcessOfferResult {
          in.close();
          System.out.println("response: " + response.toString());
          
-         Assert.assertEquals(responseCode, 200, "Status code is not 200");
+         Assert.assertEquals(responseCode, 200, "Status code is not 200,");
                      
               } catch (Exception e) {
                      e.printStackTrace();

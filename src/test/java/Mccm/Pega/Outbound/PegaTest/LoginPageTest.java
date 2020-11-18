@@ -20,7 +20,7 @@ public class LoginPageTest extends TestBase {
 	}
  @BeforeMethod
  
-    public void setup()  {
+    public void setup() throws InterruptedException {
 	    initialization();
 	    loginpage = new LoginPage();
 	    
