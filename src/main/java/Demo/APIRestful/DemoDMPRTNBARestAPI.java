@@ -29,13 +29,13 @@ public class DemoDMPRTNBARestAPI {
 //         URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 //                 + "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
          String readLine = null;
-         System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/MCCM/keystore/css1identity.jks");
+         System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/git/mccm_automation/keystore/css1identity.jks");
                  
                                                             
    
          System.setProperty("javax.net.ssl.keyStorePassword", "password");
          System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-         System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/MCCM/keystore/mccminternaltrust.jks");
+         System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/git/mccm_automation/keystore/mccminternaltrust.jks");
          System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
          
