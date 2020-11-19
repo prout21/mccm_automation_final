@@ -35,16 +35,17 @@ public class DemoDMPRTProcessOfferResult {
          System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-      //  String json = "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"Pega\"}]}}}]";
-        
-   //   String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
- //     String json = "[{\"roles\": {\"subscriber\": {\"id\": [{\"schemeID\": \"Pega\",\"value\": \"45189091\"}]}}, \"name\": \"UpsellOffer1GB\"}]";
-//  String json =  "[{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"name\": \"UpsellOffer1GB\",\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
-         
-  String json = "[{\"roles\":{\"subscriber\":{\"id\":[{\"schemeID\":\"Pega\",\"value\":\"45189091\"}]}},\"parts\":{\"campaign\":{\"container\":\"CSM\",\"id\":[{\"value\":\"P-287\"}]},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}]";
   
-  
-  
+  String json = "[{\"name\":\"MCC_9110;74G_SWAP\",\"status\":\"Accepted\",\"details\":{\"behaviour\":\"Positive\",\"issue\":\"Treatment\"," +
+ " \"group\":\"Web\"},\"roles\":{\"subscriber\":{\"id\":[{\"value\":\"45189091\",\"schemeID\":\"Pega\"}]}}," + 
+ " \"parts\":{\"channel\":[{\"name\":\"DMP\",\"type\":\"Inbound\"}],\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\","+
+ " \"schemeID\":\"MobileHashed\"}]},\"campaign\":{\"id\":[{\"value\":\"P-364\"}],\"container\":\"CSM\"},"+
+  "\"customerInteraction\":[{\"id\":[{\"value\":\"-992339829578690100\"}]}]}},"+
+ " {\"name\":\"MCC_9111;73G_SWAP\",\"status\":\"Accepted\",\"details\":{\"behaviour\":\"Positive\",\"issue\":\"Treatment\","+
+  "\"group\":\"Web\"},\"roles\":{\"subscriber\":{\"id\":[{\"value\":\"45189091\",\"schemeID\":\"Pega\"}]}},\"parts\":{"+
+ " \"channel\":[{\"name\":\"DMP\",\"type\":\"Inbound\"}],\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\","+
+ " \"schemeID\":\"MobileHashed\"}]},\"campaign\":{\"id\":[{\"value\":\"P-364\"}],\"container\":\"CSM\"},"+
+  "\"customerInteraction\":[{\"id\":[{\"value\":\"-992339829579690200\"}]}]}}]";
   
   
   

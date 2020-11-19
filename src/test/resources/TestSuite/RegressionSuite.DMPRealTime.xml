@@ -16,6 +16,7 @@
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest"/>  
       <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest"/>  
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest"/> 
     </classes>
   </test> <!-- Test -->
    

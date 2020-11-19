@@ -123,7 +123,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 	
-	String Campaigncd = obj.getCellValue("PegaTestData", 1, 0);
+	String DMPCampaigncd = obj.getCellValue("PegaTestData", 1, 18);
 		
 	String ConfigMrkStrtgy = obj.getCellValue("PegaTestData", 1, 8);
 				
@@ -144,7 +144,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		pegamrkting1.click( );
         Thread.sleep(6000);
 	}
@@ -156,7 +156,12 @@ public class PegaMarktDMPRealTime extends TestBase  {
 		ExpandPegMrkPage.click( );
         Thread.sleep(6000);
 	}
-	
+	public void LaptopResolation() throws InterruptedException
+	{
+		    Thread.sleep(8000);
+		    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
+		     driver.findElement(By.xpath(s5)).click();
+	}
 	public void Campaigns() throws InterruptedException
 	{
 		Thread.sleep(6000);
@@ -177,8 +182,8 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	}
 	public void Campaigncode() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		Campaigncode.sendKeys(Campaigncd);
+		Thread.sleep(10000);
+		Campaigncode.sendKeys(DMPCampaigncd);
         Thread.sleep(6000);
 	}
 	public void Build() throws InterruptedException

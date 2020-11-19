@@ -85,14 +85,14 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     	if(browserName.equals("chrome")) {
  
 
-       System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+      System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 
     		String projectPath = System.getProperty("user.dir");
 
   //   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
-//    		System.setProperty("java.awt.headless", "false");
+
      
 			if(headLessMode.equals("true")) {
  

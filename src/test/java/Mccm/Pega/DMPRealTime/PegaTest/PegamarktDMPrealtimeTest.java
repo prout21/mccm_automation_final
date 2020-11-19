@@ -3,6 +3,7 @@ package Mccm.Pega.DMPRealTime.PegaTest;
 import java.awt.AWTException;
 
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -76,6 +77,14 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	// pegamarktDMPrealtime.RefreshCampgn();
 	 
  }
- 
+@AfterMethod
+
+public void teardown() {
+
+ driver.quit();
+
+
+	System.out.println("DMP Real Time Containers  Run Done");
+}
 
 }

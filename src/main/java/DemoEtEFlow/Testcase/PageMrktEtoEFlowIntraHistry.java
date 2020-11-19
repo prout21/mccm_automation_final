@@ -100,12 +100,20 @@ public class PageMrktEtoEFlowIntraHistry  {
 
 							getTextOnPage1 = element11.getText();
 							 System.out.println(getTextOnPage1);
-					 							 
-							 boolean result = getTextOnPage1.equals("O") ||
-									 getTextOnPage1.equals("J") ||
-									 getTextOnPage1.equals("C") ||
-									 getTextOnPage1.equals("B");
-					assertTrue(result);
+					 					
+					//		 Assert.assertEquals(getTextOnPage1,"DMP");  
+							 
+							 
+							 boolean result = getTextOnPage1.equals("DMP")|| 
+       			  	                    getTextOnPage1.equals("Online"); 
+		                       assertTrue(result);
+							 
+//							 boolean result = getTextOnPage1.equals("O");  
+////									 getTextOnPage1.equals("J") ||
+////									 getTextOnPage1.equals("C") ||
+////									 getTextOnPage1.equals("B");
+//					assertTrue(result);
+		
 					 System.out.println("Test Case Passed");
 							 
 							

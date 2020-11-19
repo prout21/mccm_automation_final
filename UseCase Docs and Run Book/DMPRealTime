@@ -7,19 +7,30 @@ Step-1: Go to PEGA market and run the DMP Real time
 Step-2: API POST Call for NextBatchAction
          class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest.java
 Step-3: API POST Call ProcessOfferResults
-         class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest.java              
+         class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest.java  
+Step-4: API POST Call ProcessOfferResults Validation
+         class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest.java               
     
 -----------------------------------------------------------------------------------
 Test Suite Name:RegressionSuite.DMPRealTime.xml
 
 Pre-condition and Data setup:
 -----------------------------
-1. Input test data in Excel file setup for DMP
+Step-1:Input test data setup in Excel file for DMP
     path location: mccm_automation\src\main\java\Mccm\Pega\TestData\PegaTestData.xlsx
-  Used Step No:1
-2.Config file: setup for the input test data for API POST CALL
+    Column:DMPCampCd, DMPRealtimecontainers,ConfigMrkStrtgy
+    
+Step-2:Config file: setup for the input test data for API POST CALL NextBatchAction
 
-  Config location:user.dir(in Config file)MCCM\configurationFile.properties
+  Config location: configurationFile.properties
   
-  Used Step No:2 and 3
-3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html
+Step-3:Config file: setup for the input test data for API POST CALL Process Offer Results
+
+   Channel name change either  DMP  or Online input test data in config file as per the requirement
+
+  Config location: configurationFile.properties
+  
+Step-4: Validation will occur based on the below setup in the config file.
+   Channel name  is either  DMP  or Online input test data in config file
+
+  Config location: configurationFile.properties  

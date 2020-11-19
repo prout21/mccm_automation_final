@@ -207,7 +207,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			Thread.sleep(6000);
 		}
 				
-		public void Laptop() throws InterruptedException
+		public void LaptopResolation() throws InterruptedException
 		{
 			    Thread.sleep(8000);
 			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
@@ -227,7 +227,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void Campaigncode() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			Thread.sleep(8000);
 			Campaigncode.sendKeys(Campaigncd);
 			Thread.sleep(6000);
 			System.out.println("Enter Campaigncode");
@@ -246,7 +246,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void SrchMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			Thread.sleep(8000);
 			SrchMrkStrtgy.sendKeys(ConfigMrkStrtgy);
 			Thread.sleep(6000);
 			ClkSrchMrkStrtgy.click();
@@ -275,7 +275,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void SrchConfigAudience() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			Thread.sleep(8000);
 			SrchConfigAudience.sendKeys(ConfigAudience);
 			Thread.sleep(6000);
 			ClkSrchConfigAudience.click();

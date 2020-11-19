@@ -26,7 +26,7 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyDMPRTPNBAMobHashedAPIcallSuccessfully() {
+	public void VerifyDMPRTProcessOffResltsAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -50,12 +50,10 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-
-	      //  String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
-            
-			 json = general_ReadProperty("NBA_json_offer");
+           
+		  json = general_ReadProperty("NBA_json_offer");
 	
-		 
+
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
