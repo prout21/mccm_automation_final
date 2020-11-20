@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import Demo.APIRestful.DemoDMPRTNBARestAPIGitTest;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
+import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
@@ -67,6 +68,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
 	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
 	   PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
+	   PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
 	 
   	      
 		} catch (FileNotFoundException e) {
@@ -90,7 +92,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 
     		String projectPath = System.getProperty("user.dir");
 
-  //   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+   //   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 
      

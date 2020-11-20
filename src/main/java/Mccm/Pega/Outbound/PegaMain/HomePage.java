@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
+import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -86,6 +87,12 @@ public class HomePage extends TestBase {
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
 	   	  return new PegaPreChkValidCampCd();
+	   }
+   public PegaPreChkValidDMPCampCd Pegamrklunch4()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	   	  return new PegaPreChkValidDMPCampCd();
 	   }
          
  
