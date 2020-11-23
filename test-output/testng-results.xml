@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3671" started-at="2020-11-23T15:06:54 IST" finished-at="2020-11-23T15:06:57 IST">
+  <suite name="Mccm CalcNBAandStartOfferFlow Automation Regression Suite" duration-ms="1285" started-at="2020-11-23T16:46:42 IST" finished-at="2020-11-23T16:46:44 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3671" started-at="2020-11-23T15:06:54 IST" finished-at="2020-11-23T15:06:57 IST">
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.CalcNBAandStartOfferFlowTest">
-        <test-method status="PASS" signature="VerifyDMPRTPNBAMobHashedAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.CalcNBAandStartOfferFlowTest@4671e53b]" name="VerifyDMPRTPNBAMobHashedAPIcallSuccessfully" duration-ms="3617" started-at="2020-11-23T15:06:54 IST" finished-at="2020-11-23T15:06:57 IST">
+    <test name="Pega CalcNBAandStartOfferFlow API Call Regression Test" duration-ms="1285" started-at="2020-11-23T16:46:42 IST" finished-at="2020-11-23T16:46:44 IST">
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest">
+        <test-method status="PASS" signature="VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest@2db7a79b]" name="VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully" duration-ms="1220" started-at="2020-11-23T16:46:43 IST" finished-at="2020-11-23T16:46:44 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDMPRTPNBAMobHashedAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.CalcNBAandStartOfferFlowTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest -->
+    </test> <!-- Pega CalcNBAandStartOfferFlow API Call Regression Test -->
+  </suite> <!-- Mccm CalcNBAandStartOfferFlow Automation Regression Suite -->
 </testng-results>

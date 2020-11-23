@@ -1,4 +1,4 @@
-package Mccm.Pega.DMPRealTime.PegaTest;
+package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,7 +26,7 @@ public class CalcNBAandStartOfferFlowTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyDMPRTPNBAMobHashedAPIcallSuccessfully() {
+	public void VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
