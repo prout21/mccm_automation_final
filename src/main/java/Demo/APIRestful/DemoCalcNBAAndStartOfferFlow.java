@@ -17,50 +17,34 @@ import org.testng.annotations.Test;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
-public class DemoDMPRTNBARestAPIGitTest extends TestBase {
+public class DemoCalcNBAAndStartOfferFlow {
 	
-	public static String ExcelFilePath;
-//	public static String KeystorePath;
-	public static String hostName;
-	public static String port;
-	public static String Keystorepassword;
-	public static String json;
-	
+
 	@Test
 	
- public void test() {
+ public void test11() {
 
-   //   public static void main(String[] args) {
-
+  //   public static void main(String[] args) {
   try {
-        // // String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
-     //    String hostName = "192.57.138.25";
-    //     String port = "18576";// 8573
+         // String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
 	  
-		hostName=general_ReadProperty("NBA_hostName");
-		port=general_ReadProperty("NBA_port");
-	//	KeystorePath=general_ReadProperty("KeystorePath");
-		Keystorepassword=general_ReadProperty("Keystorepassword");
+	//  https://192.57.138.25:18576/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult
+         String hostName = "192.57.138.25";
+         String port = "18576";// 8573
 
          URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-                      + "/prweb/PRRestService/CSM/customerMarketingProductAPI/processNextBestAction");
+                      + "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
          String readLine = null;
-       //  System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/MCCM/keystore/css1identity.jks");
-         
-         System.setProperty("javax.net.ssl.keyStore",ExcelFilePath+"/keystore/css1identity.jks");
-                 
-                                                            
-   
-         System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
+         System.setProperty("javax.net.ssl.keyStore","C:/Users/prout21/MCCM/keystore/css1identity.jks");
+         System.setProperty("javax.net.ssl.keyStorePassword", "password");
          System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-        // System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/MCCM/keystore/mccminternaltrust.jks");
-         System.setProperty("javax.net.ssl.trustStore", ExcelFilePath+"/keystore/mccminternaltrust.jks");
-         System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
+         System.setProperty("javax.net.ssl.trustStore", "C:/Users/prout21/MCCM/keystore/mccminternaltrust.jks");
+         System.setProperty("javax.net.ssl.trustStorePassword", "password");
          System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-
-      //   String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"3ed536db3457\",\"schemeID\":\"MobileHashed\"}]}}}";
+		         
+         String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
   
-         json = general_ReadProperty("NBA_json");
+     //    json = general_ReadProperty("NBA_json");
          
          // Create all-trusting host name verifier
          HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -93,6 +77,8 @@ public class DemoDMPRTNBARestAPIGitTest extends TestBase {
          }
          in.close();
          System.out.println("response: " + response.toString());
+         
+         System.out.println(responseCode);
          
          Assert.assertEquals(responseCode, 200, "Status code is not 200");
                      

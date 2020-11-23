@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class DMPRTPNBAProOffRltsTest extends TestBase  {
+public class CalcNBAandStartOfferFlowTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyDMPRTProcessOffResltsAPIcallSuccessfully() {
+	public void VerifyDMPRTPNBAMobHashedAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -41,8 +41,8 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
-			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-		 			+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
+		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -50,10 +50,12 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-           
-		  json = general_ReadProperty("NBA_json_offer");
-	
 
+			 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
+			              
+			// json = general_ReadProperty("NBA_json");
+	
+		 
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -87,9 +89,7 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			in.close();
 			System.out.println("response: " + response.toString());
 			
-		         System.out.println(responseCode);
-		         
-		         Assert.assertEquals(responseCode, 200 );
+			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {
 			e.printStackTrace();

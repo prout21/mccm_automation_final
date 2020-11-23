@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import Demo.APIRestful.DemoDMPRTNBARestAPIGitTest;
+import Demo.APIRestful.DemoCalcNBAAndStartOfferFlow;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
@@ -86,13 +86,12 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
  
-
-      System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 
     		String projectPath = System.getProperty("user.dir");
 
-   //   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+     //   System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 
      
