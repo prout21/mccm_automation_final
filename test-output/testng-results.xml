@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="780" started-at="2020-11-23T17:07:59 IST" finished-at="2020-11-23T17:08:00 IST">
+  <suite name="Default suite" duration-ms="753" started-at="2020-11-24T13:27:06 IST" finished-at="2020-11-24T13:27:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="780" started-at="2020-11-23T17:07:59 IST" finished-at="2020-11-23T17:08:00 IST">
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest">
-        <test-method status="PASS" signature="VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest@4671e53b]" name="VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully" duration-ms="733" started-at="2020-11-23T17:07:59 IST" finished-at="2020-11-23T17:08:00 IST">
+    <test name="Default test" duration-ms="753" started-at="2020-11-24T13:27:06 IST" finished-at="2020-11-24T13:27:07 IST">
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest">
+        <test-method status="PASS" signature="VerifyCalcNBAandStartOfferFlowCableAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest@4671e53b]" name="VerifyCalcNBAandStartOfferFlowCableAPIcallSuccessfully" duration-ms="657" started-at="2020-11-24T13:27:06 IST" finished-at="2020-11-24T13:27:07 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAandStartOfferFlowTest -->
+        </test-method> <!-- VerifyCalcNBAandStartOfferFlowCableAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

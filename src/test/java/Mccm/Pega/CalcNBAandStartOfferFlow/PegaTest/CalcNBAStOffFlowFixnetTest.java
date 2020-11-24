@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class CalcNBAandStartOfferFlowTest extends TestBase  {
+public class CalcNBAStOffFlowFixnetTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class CalcNBAandStartOfferFlowTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyCalcNBAandStartOfferFlowAPIcallSuccessfully() {
+	public void VerifyCalcNBAandStartOfferFlowFixnetAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -53,7 +53,7 @@ public class CalcNBAandStartOfferFlowTest extends TestBase  {
 
 		//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-			  json = general_ReadProperty("NBA_json_Start");
+			  json = general_ReadProperty("NBA_json_Fixnet");
 	
 		 
 			
