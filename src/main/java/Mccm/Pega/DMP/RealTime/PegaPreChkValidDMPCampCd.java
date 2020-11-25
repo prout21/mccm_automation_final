@@ -66,15 +66,6 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 
 
-
-
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
- 	
-	String DMPCampValue = obj.getCellValue("PegaTestData", 1, 18);
-
-
-
-
 	public PegaPreChkValidDMPCampCd( ) {
 		PageFactory.initElements(driver, this);
 	}
@@ -102,49 +93,65 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 	}
 
 
-	public void Filter() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		Filter.click( );
-		Thread.sleep(6000);
-	}
+//	public void Filter() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		Filter.click( );
+//		Thread.sleep(6000);
+//	}
 
-	public void CampaignVlSrch() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		CampaignVlSrch.sendKeys(DMPCampValue);
-		Thread.sleep(6000);
-		System.out.println(DMPCampValue);
-	}
-	public void View() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		View.click( );
-		Thread.sleep(6000);
-	}
+//	public void CampaignVlSrch() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		CampaignVlSrch.sendKeys(NBACampValue);
+//		Thread.sleep(6000);
+//		System.out.println(NBACampValue);
+//	}
+//	public void View() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		View.click( );
+//		Thread.sleep(6000);
+//	}
 	public void PreChkValdDMPCampCd() throws InterruptedException
 	{
-		for(int i=0;i<1;i++){
+		for(int i=1;i<10;i++){
+			
+			Thread.sleep(6000);
+			Filter.click( );
+			Thread.sleep(2000);
+			CampaignVlSrch.clear();
+			Thread.sleep(6000);
+			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+		 	String NBACampValue1 = obj.getCellValue("PegaTestDataDMP", 1, 0);
+			Thread.sleep(6000);
+ 			CampaignVlSrch.sendKeys(NBACampValue1);
+ 			Thread.sleep(6000);
+ 			System.out.println(NBACampValue1);
+			Thread.sleep(6000);
+ 			View.click( );
+ 			Thread.sleep(6000);
 
-			String DMPCampCodeExits = "";
+			String NBACampCodeExits1 = "";
 
 			try
 			{
 				WebElement w2=driver.findElement(By.xpath("//div[text()='There are no results returned, please try a new search term.']"));
 				Thread.sleep(8000);
-				DMPCampCodeExits= w2.getText();
+				NBACampCodeExits1= w2.getText();
 
-				System.out.println(DMPCampCodeExits);
+				System.out.println(NBACampCodeExits1);
 
 				//			Assert.assertEquals(NBACampValueExits, "There are no results returned, please try a new search term.");
 
-				System.out.println(DMPCampValue   +  " is Valid DMP Camp Code ");
-
+				
 			}catch(Exception e){
 
 			}
 
-			if (DMPCampCodeExits.equals("There are no results returned, please try a new search term.")) {
+			if (NBACampCodeExits1.equals("There are no results returned, please try a new search term.")) {
+				
+				System.out.println(NBACampValue1   +  " is Valid Camp Code ");
 
 				break;
 			}
@@ -153,9 +160,9 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 				Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 
-				String DMPCampCode = obj1.getCellValue("PegaTestData", 2, 18);
+				String CampCode1 = obj1.getCellValue("PegaTestDataDMP", i+1, 0);
 
-				System.out.print(DMPCampCode + "  ");
+				System.out.print(CampCode1 + "  ");
 
 				try {
 
@@ -164,15 +171,15 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 					//	Workbook wb = WorkbookFactory.create(inp);
 					XSSFWorkbook wb = new XSSFWorkbook(inp);
-					XSSFSheet sheet = wb.getSheet("PegaTestData");
+					XSSFSheet sheet = wb.getSheet("PegaTestDataDMP");
 					Row row = sheet.getRow(1);
-					Cell cell = row.getCell(18);
+					Cell cell = row.getCell(0);
 					if (cell == null)
-						cell = row.createCell(18);
+						cell = row.createCell(0);
 					cell.setCellType(Cell.CELL_TYPE_STRING);
-					cell.setCellValue(DMPCampCode);
+					cell.setCellValue(CampCode1);
 
-					// Write the output to a file
+				 	// Write the output to a file
 					FileOutputStream fileOut = new FileOutputStream(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 					wb.write(fileOut);
 					fileOut.close();
@@ -187,7 +194,6 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 		}
 	}
-
 }
 
 

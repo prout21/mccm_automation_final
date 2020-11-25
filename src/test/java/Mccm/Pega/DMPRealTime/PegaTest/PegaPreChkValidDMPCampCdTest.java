@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+ 
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
@@ -55,9 +56,9 @@ public class PegaPreChkValidDMPCampCdTest extends TestBase {
 	pegaPreChkValidDMPCampCd.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
-	pegaPreChkValidDMPCampCd.Filter();
-	pegaPreChkValidDMPCampCd.CampaignVlSrch();
-	pegaPreChkValidDMPCampCd.View();
+//	pegaPreChkValidDMPCampCd.Filter();
+//	pegaPreChkValidDMPCampCd.CampaignVlSrch();
+//	pegaPreChkValidDMPCampCd.View();
 	pegaPreChkValidDMPCampCd.PreChkValdDMPCampCd();
 
 	}

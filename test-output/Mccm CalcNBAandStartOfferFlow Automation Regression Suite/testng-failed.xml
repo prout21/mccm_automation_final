@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm CalcNBAandStartOfferFlow Automation Regression Suite]">
+  <listeners>
+    <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Pega CalcNBAandStartOfferFlow API Call Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowFixnetTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferFlowFixnetAPIcallSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowFixnetTest -->
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobSubTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobSubTest -->
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferFlowCableAPIcallSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest -->
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobBANTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferFlowMobBANAPIcallSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobBANTest -->
+    </classes>
+  </test> <!-- Pega CalcNBAandStartOfferFlow API Call Regression Test(failed) -->
+</suite> <!-- Failed suite [Mccm CalcNBAandStartOfferFlow Automation Regression Suite] -->

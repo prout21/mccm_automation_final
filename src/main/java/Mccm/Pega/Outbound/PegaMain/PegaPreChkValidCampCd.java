@@ -68,9 +68,9 @@ public class PegaPreChkValidCampCd extends TestBase  {
 
 
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
- 	
-	String NBACampValue = obj.getCellValue("PegaTestData", 1, 0);
+//	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+// 	
+//	String NBACampValue = obj.getCellValue("PegaTestData", 1, 0);
 
 
 
@@ -102,29 +102,43 @@ public class PegaPreChkValidCampCd extends TestBase  {
 	}
 
 
-	public void Filter() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		Filter.click( );
-		Thread.sleep(6000);
-	}
+//	public void Filter() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		Filter.click( );
+//		Thread.sleep(6000);
+//	}
 
-	public void CampaignVlSrch() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		CampaignVlSrch.sendKeys(NBACampValue);
-		Thread.sleep(6000);
-		System.out.println(NBACampValue);
-	}
-	public void View() throws InterruptedException
-	{
-		Thread.sleep(6000);
-		View.click( );
-		Thread.sleep(6000);
-	}
+//	public void CampaignVlSrch() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		CampaignVlSrch.sendKeys(NBACampValue);
+//		Thread.sleep(6000);
+//		System.out.println(NBACampValue);
+//	}
+//	public void View() throws InterruptedException
+//	{
+//		Thread.sleep(6000);
+//		View.click( );
+//		Thread.sleep(6000);
+//	}
 	public void PreChkValdCampCd() throws InterruptedException
 	{
-		for(int i=0;i<1;i++){
+		for(int i=1;i<10;i++){
+			Thread.sleep(6000);
+			Filter.click( );
+			Thread.sleep(2000);
+			CampaignVlSrch.clear();
+			Thread.sleep(6000);
+			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+		 	String NBACampValue = obj.getCellValue("PegaTestData", 1, 0);
+			Thread.sleep(6000);
+ 			CampaignVlSrch.sendKeys(NBACampValue);
+ 			Thread.sleep(6000);
+ 			System.out.println(NBACampValue);
+			Thread.sleep(6000);
+ 			View.click( );
+ 			Thread.sleep(6000);
 
 			String NBACampCodeExits = "";
 
@@ -138,13 +152,14 @@ public class PegaPreChkValidCampCd extends TestBase  {
 
 				//			Assert.assertEquals(NBACampValueExits, "There are no results returned, please try a new search term.");
 
-				System.out.println(NBACampValue   +  " is Valid Camp Code ");
-
+				
 			}catch(Exception e){
 
 			}
 
 			if (NBACampCodeExits.equals("There are no results returned, please try a new search term.")) {
+				
+			//	System.out.println(NBACampValue   +  " is Valid Camp Code ");
 
 				break;
 			}
@@ -153,7 +168,7 @@ public class PegaPreChkValidCampCd extends TestBase  {
 
 				Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 
-				String CampCode = obj1.getCellValue("PegaTestData", 2, 0);
+				String CampCode = obj1.getCellValue("PegaTestData", i+1, 0);
 
 				System.out.print(CampCode + "  ");
 

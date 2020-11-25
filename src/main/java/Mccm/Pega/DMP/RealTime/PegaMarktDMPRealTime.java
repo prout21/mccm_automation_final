@@ -123,11 +123,11 @@ public class PegaMarktDMPRealTime extends TestBase  {
 
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 	
-	String DMPCampaigncd = obj.getCellValue("PegaTestData", 1, 18);
+	String DMPCampaigncd = obj.getCellValue("PegaTestDataDMP", 1, 0);
 		
-	String ConfigMrkStrtgy = obj.getCellValue("PegaTestData", 1, 8);
+	String ConfigMrkStrtgy = obj.getCellValue("PegaTestDataDMP", 1, 1);
 				
-	String DMPRealtimecontainers = obj.getCellValue("PegaTestData", 1, 11);
+	String DMPRealtimecontainers = obj.getCellValue("PegaTestDataDMP", 1, 2);
 	
 	
 		
@@ -182,7 +182,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	}
 	public void Campaigncode() throws InterruptedException
 	{
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		Campaigncode.sendKeys(DMPCampaigncd);
         Thread.sleep(6000);
 	}

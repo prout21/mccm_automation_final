@@ -227,7 +227,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void Campaigncode() throws InterruptedException
 		{
-			Thread.sleep(8000);
+			Thread.sleep(2000);
 			Campaigncode.sendKeys(Campaigncd);
 			Thread.sleep(6000);
 			System.out.println("Enter Campaigncode");

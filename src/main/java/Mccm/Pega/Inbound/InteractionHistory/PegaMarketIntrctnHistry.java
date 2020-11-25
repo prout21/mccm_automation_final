@@ -71,7 +71,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(1000);
 		ExpandPegMrkPage.click( );
         Thread.sleep(6000);
 	}
@@ -96,15 +96,15 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	public void Validation() throws InterruptedException
 	{
 		driver.manage().window().maximize();
-		Thread.sleep(8000);
+		Thread.sleep(1000);
 		 JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
 	     Thread.sleep(8000);
 	    
 	    	String getTextOnPage1 = "";
-	    	 Thread.sleep(8000);
-	    	 Thread.sleep(8000);
+	    	 Thread.sleep(2000);
+	    	 
 
 			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 			 WebElement element11 =  driver.findElement(By.xpath(xpath11));
@@ -122,15 +122,15 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	public void DMPRealTimeVlidtion() throws InterruptedException
 	{
 		driver.manage().window().maximize();
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		 JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
 	     Thread.sleep(8000);
 	    
 	    	String getTextOnPage1 = "";
-	    	 Thread.sleep(8000);
-	    	 Thread.sleep(8000);
+	    	 Thread.sleep(2000);
+	    	 
 
 			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 			 WebElement element11 =  driver.findElement(By.xpath(xpath11));

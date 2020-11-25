@@ -98,14 +98,14 @@ public class Excel_Reader extends TestBase {
 		
 	}
 	
-	public String getCellValue(String sheetName, int rowIndex, int cellIndex) {
+	public String getCellValue(String sheetName, int row1, int cellIndex) {
 		XSSFSheet sheet = wb.getSheet(sheetName);
 		if (sheet == null) {
 			return "sheet doesn't exist for sheet name : " + sheetName;
 		}
-		XSSFRow row = sheet.getRow(rowIndex);
+		XSSFRow row = sheet.getRow(row1);
 		if (row == null) {
-			return "row doesn't exist for index : " + rowIndex;
+			return "row doesn't exist for index : " + row1;
 		}
 		XSSFCell cell = row.getCell(cellIndex);
 		if (cell == null) {
@@ -162,5 +162,10 @@ public class Excel_Reader extends TestBase {
 			cell = row.createCell(cellIndex);
 		}
 		return cell;
+	}
+
+	public XSSFSheet getSheet(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Demo.APIRestful.DemoDMPRTProcessOfferResult">
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest">
         <methods>
-          <include name="test"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="VerifyPreCheckDMPRTCampCodeValueValidSuccessfully"/>
         </methods>
-      </class> <!-- Demo.APIRestful.DemoDMPRTProcessOfferResult -->
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

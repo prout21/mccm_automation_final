@@ -54,9 +54,9 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 	 pegaPreChkValidCampCd.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
-	 pegaPreChkValidCampCd.Filter();
-	 pegaPreChkValidCampCd.CampaignVlSrch();
-	 pegaPreChkValidCampCd.View();
+	// pegaPreChkValidCampCd.Filter();
+//	 pegaPreChkValidCampCd.CampaignVlSrch();
+//	 pegaPreChkValidCampCd.View();
 	 pegaPreChkValidCampCd.PreChkValdCampCd();
 
 	}
@@ -65,7 +65,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 
  public void teardown() {
 	
-   driver.quit();
+//   driver.quit();
 
     System.out.println("NBA Campaign Code Validation Done");
 }	 
