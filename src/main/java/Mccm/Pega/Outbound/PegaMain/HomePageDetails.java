@@ -123,6 +123,18 @@ public class HomePageDetails extends TestBase {
 	
 	String OverridCampBlkvalue = obj.getCellValue("PegaTestData", 1, 7);
 	
+	String NBACampDefaultAudienceCountValue = obj.getCellValue("PegaTestData", 1, 11);
+	
+	String NBACampMaxAudThresholdPercentValue = obj.getCellValue("PegaTestData", 1, 18);
+	
+	String NBACampMinAudThresholdPercentValue = obj.getCellValue("PegaTestData", 1, 19);
+	
+	String NBACampDefaultAudCountName = obj.getCellValue("PegaTestData", 1, 20);
+	
+	String NBACampMaxAudThresholdPercentName = obj.getCellValue("PegaTestData", 1, 21);
+	
+	String NBACampMinAudThresholdPercentName = obj.getCellValue("PegaTestData", 1, 22);
+	
 	
 	
 	
@@ -153,6 +165,7 @@ public class HomePageDetails extends TestBase {
 		webelement4.click( );
 		Thread.sleep(2000);
 	}
+	 //NBANBACampaignName
 	public void FilterNBAcamp() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -198,7 +211,163 @@ public class HomePageDetails extends TestBase {
 		Close.click( );
         Thread.sleep(2000);
 	}
+	 //NBANBACampaignName
 	
+	 //NBADefultAudCount
+		public void FilterNBADefultAudCount() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			FilterNotifyErrList.click( );
+			Thread.sleep(2000);
+		}
+		public void NBADefultAudCountName() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBACampaignName.clear();
+			Thread.sleep(2000);
+			NBACampaignName.sendKeys(NBACampDefaultAudCountName);
+	        Thread.sleep(2000);
+		}
+		public void ApplayNBADefultAudCountfilter() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ApplayNBAfilter.click( );
+	        Thread.sleep(2000);
+		}
+		public void ClikMCCMDefultAudCount() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ClikMCCM.click( );
+	        Thread.sleep(2000);
+		}
+		public void NBADefultAudCountValue() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBABatchCampaign.clear();
+			Thread.sleep(2000);
+			NBABatchCampaign.sendKeys(NBACampDefaultAudienceCountValue);
+	        Thread.sleep(2000);
+		}
+		
+		public void SaveDefultAudCount() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Save.click( );
+	        Thread.sleep(2000);
+		}
+		public void CloseDefultAudCount() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Close.click( );
+	        Thread.sleep(2000);
+		}
+		 //NBADefultAudCount
+		
+		 //NBADefultMaxAudCountPercentage
+		public void FilterMaxAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			FilterNotifyErrList.click( );
+			Thread.sleep(2000);
+		}
+		public void NBACampMaxAudThresholdPercentName() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBACampaignName.clear();
+			Thread.sleep(2000);
+			NBACampaignName.sendKeys(NBACampMaxAudThresholdPercentName);
+	        Thread.sleep(2000);
+		}
+		public void ApplayMaxAudThresholdPercentfilter() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ApplayNBAfilter.click( );
+	        Thread.sleep(2000);
+		}
+		public void ClikMCCMMaxAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ClikMCCM.click( );
+	        Thread.sleep(2000);
+		}
+		public void NBAMaxAudThresholdPercentValue() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBABatchCampaign.clear();
+			Thread.sleep(2000);
+			NBABatchCampaign.sendKeys(NBACampMaxAudThresholdPercentValue);
+	        Thread.sleep(2000);
+		}
+		
+		public void SaveMaxAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Save.click( );
+	        Thread.sleep(2000);
+		}
+		public void CloseMaxAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Close.click( );
+	        Thread.sleep(2000);
+		}
+	 
+		 //NBADefultMaxAudCountPercentage
+//		<--------------------------------------------->
+		
+		 //NBADefultMaxAudCountPercentage
+		public void FilterMinAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			FilterNotifyErrList.click( );
+			Thread.sleep(2000);
+		}
+		public void NBACampMinAudThresholdPercentName() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBACampaignName.clear();
+			Thread.sleep(2000);
+			NBACampaignName.sendKeys(NBACampMinAudThresholdPercentName);
+	        Thread.sleep(2000);
+		}
+		public void ApplayMinAudThresholdPercentfilter() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ApplayNBAfilter.click( );
+	        Thread.sleep(2000);
+		}
+		public void ClikMCCMMinAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			ClikMCCM.click( );
+	        Thread.sleep(2000);
+		}
+		public void NBAMinAudThresholdPercentValue() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			NBABatchCampaign.clear();
+			Thread.sleep(2000);
+			NBABatchCampaign.sendKeys(NBACampMinAudThresholdPercentValue);
+	        Thread.sleep(2000);
+		}
+		
+		public void SaveMinAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Save.click( );
+	        Thread.sleep(2000);
+		}
+		public void CloseMinAudThresholdPercent() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Close.click( );
+	        Thread.sleep(2000);
+		}
+	 
+		 //NBADefultMinAudCountPercentage
+//		<--------------------------------------------->
+		 //NBANotifyErrList
+		
 	public void FilterNotifyErrList() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -249,7 +418,8 @@ public class HomePageDetails extends TestBase {
 		Close.click( );
         Thread.sleep(2000);
 	}
-	
+	//NBANotifyErrList
+	//D_mccmsettings
 	public void D_mccmsettings() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -306,6 +476,8 @@ public class HomePageDetails extends TestBase {
     driver.switchTo().window(mainWindow);
 	
 	}
+	//D_mccmsettings
+	//OverrideCampSrch
 	public void OverrideCampSrch() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -378,5 +550,5 @@ public class HomePageDetails extends TestBase {
 	driver.switchTo().window(winHandleBefore);
 	
 }
-
+	//OverrideCampSrch
 }

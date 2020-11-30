@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3868" started-at="2020-11-30T12:51:55 IST" finished-at="2020-11-30T12:51:59 IST">
+  <suite name="Default suite" duration-ms="853999" started-at="2020-11-30T19:31:46 IST" finished-at="2020-11-30T19:46:00 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3868" started-at="2020-11-30T12:51:55 IST" finished-at="2020-11-30T12:51:59 IST">
-      <class name="Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test">
-        <test-method status="PASS" signature="VerifyPreDatasetupDBLoadsuccessfully()[pri:0, instance:Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test@612679d6]" name="VerifyPreDatasetupDBLoadsuccessfully" duration-ms="3813" started-at="2020-11-30T12:51:55 IST" finished-at="2020-11-30T12:51:59 IST">
+    <test name="Default test" duration-ms="853999" started-at="2020-11-30T19:31:46 IST" finished-at="2020-11-30T19:46:00 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@43bd930a]" name="setup" is-config="true" duration-ms="27302" started-at="2020-11-30T19:31:46 IST" finished-at="2020-11-30T19:32:14 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyPreDatasetupDBLoadsuccessfully -->
-      </class> <!-- Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyNBACampaignRunSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@43bd930a]" name="VerifyNBACampaignRunSuccessfully" duration-ms="826638" started-at="2020-11-30T19:32:14 IST" finished-at="2020-11-30T19:46:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyNBACampaignRunSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@43bd930a]" name="teardown" is-config="true" duration-ms="1" started-at="2020-11-30T19:46:00 IST" finished-at="2020-11-30T19:46:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.PegamarktingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

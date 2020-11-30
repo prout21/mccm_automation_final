@@ -41,6 +41,7 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.SysAdmin();
 	 HomePageDetails1.javaexictor4();
 	 HomePageDetails1.DynamicSystemSettins();
+	 //NBANBACampaignName
 	 testutil.SwitcToFrame(0);
 	 HomePageDetails1.FilterNBAcamp();
 	 HomePageDetails1.NBACampaignName();
@@ -51,6 +52,47 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.NBABatchCampaign();
 	 HomePageDetails1.SaveNBABatchCamp();
 	 HomePageDetails1.CloseNBABatchCamp();
+	 //NBANBACampaignName
+	 //NBADefultAudCount
+	 testutil.SwitcTodefaultContent();
+	 testutil.SwitchToFrame("PegaGadget0Ifr");
+	 HomePageDetails1.FilterNBADefultAudCount();
+	 HomePageDetails1.NBADefultAudCountName();
+	 HomePageDetails1.ApplayNBADefultAudCountfilter();
+	 HomePageDetails1.ClikMCCMDefultAudCount();
+	 testutil.SwitcTodefaultContent();
+	 testutil.SwitchToFrame("PegaGadget1Ifr");
+	 HomePageDetails1.NBADefultAudCountValue();
+	 HomePageDetails1.SaveDefultAudCount();
+	 HomePageDetails1.CloseDefultAudCount();
+	 ////NBADefultAudCount
+	//NBADefultMaxAudCountPercentage
+	 testutil.SwitcTodefaultContent();
+	 testutil.SwitchToFrame("PegaGadget0Ifr");
+	 HomePageDetails1.FilterMaxAudThresholdPercent();
+	 HomePageDetails1.NBACampMaxAudThresholdPercentName();
+	 HomePageDetails1.ApplayMaxAudThresholdPercentfilter();
+	 HomePageDetails1.ClikMCCMMaxAudThresholdPercent();
+	 testutil.SwitcTodefaultContent();
+	 testutil.SwitchToFrame("PegaGadget1Ifr");
+	 HomePageDetails1.NBAMaxAudThresholdPercentValue();
+	 HomePageDetails1.SaveMaxAudThresholdPercent();
+	 HomePageDetails1.CloseMaxAudThresholdPercent();
+	//NBADefultMaxAudCountPercentage
+	     //NBADefultMinAudCountPercentage
+		 testutil.SwitcTodefaultContent();
+		 testutil.SwitchToFrame("PegaGadget0Ifr");
+		 HomePageDetails1.FilterMinAudThresholdPercent();
+		 HomePageDetails1.NBACampMinAudThresholdPercentName();
+		 HomePageDetails1.ApplayMinAudThresholdPercentfilter();
+		 HomePageDetails1.ClikMCCMMinAudThresholdPercent();
+		 testutil.SwitcTodefaultContent();
+		 testutil.SwitchToFrame("PegaGadget1Ifr");
+		 HomePageDetails1.NBAMinAudThresholdPercentValue();
+		 HomePageDetails1.SaveMinAudThresholdPercent();
+		 HomePageDetails1.CloseMinAudThresholdPercent();
+		//NBADefultMinAudCountPercentage
+		 //NBANotifyErrList
 	 testutil.SwitcTodefaultContent();
 	 testutil.SwitchToFrame("PegaGadget0Ifr");
 	 HomePageDetails1.FilterNotifyErrList();
@@ -62,6 +104,7 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.MailNotifyErr();
 	 HomePageDetails1.SaveNotifyErrLst();
 	 HomePageDetails1.CloseNotifyErrLst();
+	 //NBANotifyErrList
 	 HomePageDetails1.D_mccmsettings();
 	 HomePageDetails1.SerchClick();
 	 HomePageDetails1.Clickdmccmsetting();
@@ -71,8 +114,9 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.RunActionClk();
 	 HomePageDetails1.FulshRunClick();
 	 
-	 //Override 
-   HomePageDetails1.OverrideCampSrch();
+	 //<----Override -remove commented during prod env run ------>
+	//OverrideCampSrch
+     HomePageDetails1.OverrideCampSrch();
 	 HomePageDetails1.OverrideCampSrchClk();
 	 HomePageDetails1.OverrideCampBlockrClk();
 	 testutil.SwitcTodefaultContent();
@@ -80,7 +124,7 @@ public class HomePageTest extends TestBase {
 	 HomePageDetails1.OverrideCampActClk();
 	 HomePageDetails1.RunOverideBlkClk();
 	 HomePageDetails1.OverridCampBlkRun();
-	 
+	//OverrideCampSrch
 	
  }
  
@@ -89,10 +133,10 @@ public class HomePageTest extends TestBase {
  
       public void teardown() {
 	
-      driver.quit();
+    driver.quit();
 	 
       
- 	 System.out.println("Pega Markting Started");  
+ 	 System.out.println("Pega Dynamic System Setting Done");  
  }
     
 }

@@ -180,9 +180,9 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 		public void pegamarkting() throws InterruptedException
 		{
-			Thread.sleep(6000); 
+			Thread.sleep(8000); 
 			pegamrkting1.click( );
-			Thread.sleep(6000);  
+			Thread.sleep(8000); 
 		}
 		public void Driversize() throws InterruptedException
 		{
@@ -195,9 +195,9 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			Thread.sleep(8000);
 			ExpandPegMrkPage.click( );
-			Thread.sleep(6000); 
+			Thread.sleep(8000);
 		}
 	
 		public void Campaigns() throws InterruptedException
@@ -209,7 +209,7 @@ import org.openqa.selenium.JavascriptExecutor;
 				
 		public void LaptopResolation() throws InterruptedException
 		{
-			    Thread.sleep(8000);
+			    Thread.sleep(6000);
 			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
 			     driver.findElement(By.xpath(s5)).click();
 		}
@@ -222,12 +222,12 @@ import org.openqa.selenium.JavascriptExecutor;
 		public void MultiChannelCampaign() throws InterruptedException
 		{
 			Thread.sleep(6000);
-			MultiChannelCampaign.click( );
-			Thread.sleep(6000);
+		 	MultiChannelCampaign.click( );
+		 //	driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 		}
 		public void Campaigncode() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			Thread.sleep(6000);
 			Campaigncode.sendKeys(Campaigncd);
 			Thread.sleep(6000);
 			System.out.println("Enter Campaigncode");
@@ -246,7 +246,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void SrchMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(8000);
+			Thread.sleep(6000);
 			SrchMrkStrtgy.sendKeys(ConfigMrkStrtgy);
 			Thread.sleep(6000);
 			ClkSrchMrkStrtgy.click();
@@ -275,7 +275,7 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void SrchConfigAudience() throws InterruptedException
 		{
-			Thread.sleep(8000);
+			Thread.sleep(6000);
 			SrchConfigAudience.sendKeys(ConfigAudience);
 			Thread.sleep(6000);
 			ClkSrchConfigAudience.click();

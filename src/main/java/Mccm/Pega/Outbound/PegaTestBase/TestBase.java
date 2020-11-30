@@ -86,14 +86,15 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
     	String headLessMode = prop.getProperty("headless");
     	if(browserName.equals("chrome")) {
  
-     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+        System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
-
+            System.setProperty("webdriver.chrome.silentOutput","true");
+            
     		String projectPath = System.getProperty("user.dir");
 
      //    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
-
+        
      
 			if(headLessMode.equals("true")) {
  
@@ -114,6 +115,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
       driver.manage().deleteAllCookies();
       driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
       driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+      driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
       driver.get(prop.getProperty("url"));
     	}
   
