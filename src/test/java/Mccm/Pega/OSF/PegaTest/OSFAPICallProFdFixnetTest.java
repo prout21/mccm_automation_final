@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.OSF.PegaTest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class CalcNBAStOffFlowFixnetTest extends TestBase  {
+public class OSFAPICallProFdFixnetTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class CalcNBAStOffFlowFixnetTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyCalcNBAandStartOfferFlowFixnetAPIcallSuccessfully() {
+	public void VerifyOSFACCOUNTMAPPING_Fixnet_FixnetBundleId_IHAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -42,7 +42,7 @@ public class CalcNBAStOffFlowFixnetTest extends TestBase  {
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
 		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
+					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -51,11 +51,10 @@ public class CalcNBAStOffFlowFixnetTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-			  json = general_ReadProperty("NBA_json_Fixnet");
+		 	  json = general_ReadProperty("OSF_Json_Fixnet");
 	
-		 
+	 // String   json =  "{   \"CustomerID\":\"82123848\",   \"ContainerName\":\"OSF\",   \"Channel\":\"OSF\",   \"Direction\":\"Inbound\",   \"OriginAccount\":{       \"AccountID\":\"12343254\",  \"SubscriptionID\":\"GSM1721234567\",    \"SI\":\"MobileSubscr\"   },   \"Name\":\"SG4\",   \"Issue\":\"Sales\",   \"Group\":\"Mobile\",   \"CampaignID\":\"P-12345\",   \"InteractionID\":\"-56033434234234255\",   \"Outcome\":\"Accepted\",   \"FeedbackCode\":\"Accepted\",   \"CommissionPoints\":5,   \"VOID\":\"2343\",   \"NBAOfferID\":\"PAPs12344777\"}";
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -88,6 +87,8 @@ public class CalcNBAStOffFlowFixnetTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
+			
+			System.out.println(responseCode);
 			
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 

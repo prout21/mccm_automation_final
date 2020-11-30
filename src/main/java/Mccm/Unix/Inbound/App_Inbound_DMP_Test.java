@@ -146,7 +146,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
        //  ----------------------------------------------  
            String  name  = general_ReadProperty("File_DMP");
            
-           System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
+        //   System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
           for (int i = 0; i <1; i++) 
           {
           	 filefound = false;
@@ -172,7 +172,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
          	 
            }
           }
-          System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+    //      System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
            //----------------------------------------------------------------
          //IMPLEMENTED NEW TEST//////////////10.08.2020///////////
 //         

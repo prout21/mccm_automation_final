@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.OSF.PegaTest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class CalcNBAStOffFlowCableTest extends TestBase  {
+public class OSFAPICallGetNBAAddFbCdStgyTest_FAILED extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class CalcNBAStOffFlowCableTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyCalcNBAandStartOfferFlowCableAPIcallSuccessfully() {
+	public void VerifyOSFAddingFeedbackCodesStrategyAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -42,7 +42,7 @@ public class CalcNBAStOffFlowCableTest extends TestBase  {
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
 		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
+					+ "/prweb/PRRestService/MCCMOSF/Services/GetNBA");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -51,11 +51,10 @@ public class CalcNBAStOffFlowCableTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-			  json = general_ReadProperty("NBA_json_Cable");
+		 //	  json = general_ReadProperty("OSF_Json_AddFbCd");
 	
-		 
+	   String   json = "{\"Accounts\":[{\"AccountID\":\"123456\",\"SI\":\"MobileBAN\"},],\"VOID\":\"12345678\",\"SCClassification\":\"SK\"}";
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -88,6 +87,8 @@ public class CalcNBAStOffFlowCableTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
+			
+			System.out.println(responseCode);
 			
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 

@@ -53,7 +53,7 @@ public class DMPRTPNBAProOfferRlts extends TestBase  {
 
 	      //  String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
             
-			 json = general_ReadProperty("NBA_json_offer");
+			 json = general_ReadProperty("NBA_json_offerRslts");
 	
 		 
 			
@@ -88,8 +88,8 @@ public class DMPRTPNBAProOfferRlts extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
-			Assert.assertEquals(responseCode, 200, "Status code is not 200,");
+			System.out.println(responseCode);
+			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {
 			e.printStackTrace();

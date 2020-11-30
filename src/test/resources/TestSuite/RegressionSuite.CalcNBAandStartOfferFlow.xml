@@ -8,10 +8,10 @@
  
       <test name="Pega CalcNBAandStartOfferFlow API Call Regression Test">
     <classes>
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobSubTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowMobBANTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowFixnetTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.CalcNBAStOffFlowCableTest"/>  
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowMobSubTest"/> 
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowMobBANTest"/> 
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowFixnetTest"/> 
+      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowCableTest"/>  
     </classes>
   </test> <!-- Test -->
      

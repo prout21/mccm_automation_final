@@ -157,7 +157,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 			 Thread.sleep(2000);
 			String  name  = general_ReadProperty("File_KIASEPOS");
 
-			System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
+		//	System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
 			for (int i = 0; i < 1; i++) 
 			//pr	for (int i = 0; i < name.length(); i++) 
 			{
@@ -184,7 +184,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 
 				}
 			}
-			System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+	//		System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
 
 			//      new code 10.13.2020
 			//pr change       String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};

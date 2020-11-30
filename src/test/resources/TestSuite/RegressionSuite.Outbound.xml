@@ -6,9 +6,15 @@
 		<listener class-name="Mccm.Pega.ExtentReportListner.TestListener" />
 	</listeners>
 	
-	<test name="Pre Check Valid Camp Code Regression Test">
+	<test name="Pre Data Setup for Valid Camp Code Regression Test">
     <classes>
      <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest"/>    
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Pre Data Setup for DB Load Regression Test">
+    <classes>
+     <class name="Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test"/>   
     </classes>
   </test> <!-- Test -->
   

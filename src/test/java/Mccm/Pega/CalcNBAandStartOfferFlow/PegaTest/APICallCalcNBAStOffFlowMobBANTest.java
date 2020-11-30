@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class CalcNBAStOffFlowMobBANTest extends TestBase  {
+public class APICallCalcNBAStOffFlowMobBANTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -88,7 +88,7 @@ public class CalcNBAStOffFlowMobBANTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
+			System.out.println(responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {

@@ -88,7 +88,7 @@ public class DMPRTPNBAMobHashTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
+			System.out.println(responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {

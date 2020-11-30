@@ -159,7 +159,7 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
            
 String  name  = general_ReadProperty("File_ONLINE_SHOP");
            
-           System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
+      //     System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
           for (int i = 0; i <1; i++) 
           {
           	 filefound = false;
@@ -185,7 +185,7 @@ String  name  = general_ReadProperty("File_ONLINE_SHOP");
          	 
            }
           }
-          System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+      //    System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
           //NEW CODE
           
 //PR           String[] name = {"TESTCYCL_1704_TC096_Validate_Onlineshop_Response_IP_Correct.txt"};

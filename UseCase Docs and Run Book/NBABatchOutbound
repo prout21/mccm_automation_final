@@ -90,7 +90,7 @@ Pre-condition and Data setup:
 3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html
  
   =======================
-/opt/SP/data/mccm02/logs/temp/temp/cassandra   - no need to change
+/opt/SP/data/mccm02/logs/temp/temp/cassandra   
 /opt/SP/data/mccm02/temp/cassandra.sh ---       sql query script
 /opt/SP/data/mccm02/temp/oracle.sh   -----      sql query script
 /opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh   
@@ -101,13 +101,11 @@ Pre-condition and Data setup:
 2.Excel input -test data
 3.configuration file-path/file name
 4.fca , sca file change to date in config/folder
- 
-6.Truncate the histry table -background setup
-7.Casndra closing file change ..inside current date 
+5.Casndra closing file change ..inside current date 
 =============================================
 port:3.120.110.152    port -18881
 dxc_dev
 ssh mccm02@10.0.4.99 
-psword=unix1-------
+psword=unix11-------
 
 
