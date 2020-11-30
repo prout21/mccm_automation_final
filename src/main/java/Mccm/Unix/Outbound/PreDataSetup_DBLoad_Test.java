@@ -134,7 +134,7 @@ public class PreDataSetup_DBLoad_Test  {
 //	   			}            
 	        channel.disconnect();
 	        session.disconnect();
-	        System.out.println("DONE");
+	        System.out.println("Data setup Done DB Load");
 	    }catch(Exception e){
 	    	e.printStackTrace();
 	    }
