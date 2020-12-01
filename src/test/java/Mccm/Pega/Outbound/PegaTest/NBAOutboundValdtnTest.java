@@ -48,6 +48,7 @@ public class NBAOutboundValdtnTest extends TestBase {
 	 NBAOutboundValdtn1.ActionClkD_LatestNBACampaignFlag();
 	 NBAOutboundValdtn1.RunActionClk();
 	 NBAOutboundValdtn1.FulshRunClick();
+//<--Below are used dynamic xpath --Any modify functional need to check location xpath--->
 	 NBAOutboundValdtn1.CampRUNid();
 	// NBAOutboundValdtn1.ActiveOfferCountCmpltd();
 	// NBAOutboundValdtn1.CmpgnDailyCycleCmpltd();
@@ -55,7 +56,7 @@ public class NBAOutboundValdtnTest extends TestBase {
 	// NBAOutboundValdtn1.DataExpCmpltdEDWH();
 	 NBAOutboundValdtn1.DataExpCmpltdKIASEPOS();
 //	 NBAOutboundValdtn1.DataExpCmpltdMAMODB();
-//	 NBAOutboundValdtn1.DataExpCmpltdOS();
+	 NBAOutboundValdtn1.DataExpCmpltdOS();
 //	 NBAOutboundValdtn1.IsCmpgnSuccess();
 //	 NBAOutboundValdtn1.SaveLCSSCmpltd();
 	 
