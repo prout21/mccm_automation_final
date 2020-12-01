@@ -36,7 +36,7 @@ public class DBConfigValdtnTest extends TestBase {
 	    DBConfigValdtn1=homepage.DBConfigValidation();
  }
  @Test (priority=1)
- public void VerifyDBConfigurationSuccessfully() throws InterruptedException { 
+ public void VerifyDBConfigurationCampRunidValidationSuccessfully() throws InterruptedException { 
 	 DBConfigValdtn1.Recordclk();
 	 DBConfigValdtn1.SysAdmin();
 	 DBConfigValdtn1.javaexictor4();

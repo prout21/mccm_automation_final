@@ -55,31 +55,31 @@ public class NBAOutboundValdtn extends TestBase {
 	@FindBy(xpath="(//span[contains(.,'PR-')])[3]")
 	WebElement CampRUNid;
 	
-	@FindBy(xpath="(//a[@href='#'])[3]//following::span[28]")
+	@FindBy(xpath="(//a[@href='#'])[3]//following::span[30]")
 	WebElement ActiveOfferCountCmpltd;
 	
-	@FindBy(xpath="(//a[@href='#'])[5]//following::span[30]")
+	@FindBy(xpath="(//a[@href='#'])[5]//following::span[36]")
 	WebElement CmpgnDailyCycleCmpltd;
 	
-	@FindBy(xpath="(//a[@href='#'])[25]//following::span[50]")
+	@FindBy(xpath="(//a[@href='#'])[25]//following::span[58]")
 	WebElement DataExpCmpltdDMP;
 	
-	@FindBy(xpath="(//a[@href='#'])[27]//following::span[52]")
+	@FindBy(xpath="(//a[@href='#'])[27]//following::span[60]")
 	WebElement DataExpCmpltdEDWH;
 	
-	@FindBy(xpath="(//a[@href='#'])[29]//following::span[54]")
+	@FindBy(xpath="(//a[@href='#'])[29]//following::span[62]")
 	WebElement DataExpCmpltdKIASEPOS;
 	
-	@FindBy(xpath="(//a[@href='#'])[31]//following::span[56]")
+	@FindBy(xpath="(//a[@href='#'])[31]//following::span[64]")
 	WebElement DataExpCmpltdMAMODB;
 	
-	@FindBy(xpath="(//a[@href='#'])[33]//following::span[58]")
+	@FindBy(xpath="(//a[@href='#'])[33]//following::span[66]")
 	WebElement DataExpCmpltdOS;
 	
-	@FindBy(xpath="(//a[@href='#'])[37]//following::span[62]")
+	@FindBy(xpath="(//a[@href='#'])[37]//following::span[74]")
 	WebElement IsCmpgnSuccess;
 	
-	@FindBy(xpath="(//a[@href='#'])[41]//following::span[66]")
+	@FindBy(xpath="(//a[@href='#'])[41]//following::span[78]")
 	WebElement SaveLCSSCmpltd;
 	
 	 	
@@ -182,9 +182,7 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 		WebElement w2=CampRUNid;
 		
-	//	w2=driver.findElement(By.xpath("(//span[contains(.,'PR-')])[3]"));
-
-		String CampRunID = w2.getText();
+			String CampRunID = w2.getText();
 
 		System.out.println(CampRunID);
   
@@ -198,9 +196,7 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 		WebElement w3=ActiveOfferCountCmpltd;
 
-	//	w3=driver.findElement(By.xpath("(//a[@href='#'])[3]//following::span[28]"));
-
-		String ActiveOfferCountCmpltd = w3.getText();
+			String ActiveOfferCountCmpltd = w3.getText();
 
 		System.out.println(w3.getText());
 
@@ -211,8 +207,6 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 
 		WebElement w4= CmpgnDailyCycleCmpltd;
-
-	//	w4=driver.findElement(By.xpath("(//a[@href='#'])[5]//following::span[30]"));
 
 		String CmpgnDailyCycleCmpltd = w4.getText();
 
@@ -225,8 +219,6 @@ public class NBAOutboundValdtn extends TestBase {
 	public void DataExpCmpltdDMP() throws InterruptedException
 	{
 		WebElement w5=DataExpCmpltdDMP;
-
-	//	w5=driver.findElement(By.xpath("(//a[@href='#'])[25]//following::span[50]"));
 
 		String DataExpCmpltdDMP = w5.getText();
 
@@ -241,8 +233,6 @@ public class NBAOutboundValdtn extends TestBase {
 
 		WebElement w6=DataExpCmpltdEDWH;
 
-	//	w6=driver.findElement(By.xpath("(//a[@href='#'])[27]//following::span[52]"));
-
 		String DataExpCmpltdEDWH = w6.getText();
 
 		System.out.println(w6.getText());
@@ -254,8 +244,6 @@ public class NBAOutboundValdtn extends TestBase {
 	public void DataExpCmpltdKIASEPOS() throws InterruptedException
 	{
 		WebElement w7=DataExpCmpltdKIASEPOS;
-
-//		w7=driver.findElement(By.xpath("(//a[@href='#'])[29]//following::span[54]"));
 
 		String DataExpCmpltdKIASEPOS = w7.getText();
 
@@ -269,8 +257,6 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 		WebElement w8=DataExpCmpltdMAMODB;
 
-	//	w8=driver.findElement(By.xpath("(//a[@href='#'])[31]//following::span[56]"));
-
 		String DataExpCmpltdMAMODB = w8.getText();
 
 		System.out.println(w8.getText());
@@ -282,8 +268,6 @@ public class NBAOutboundValdtn extends TestBase {
 	public void DataExpCmpltdOS() throws InterruptedException
 	{
 		WebElement w9=DataExpCmpltdOS;
-
-		//w9=driver.findElement(By.xpath("(//a[@href='#'])[33]//following::span[58]"));
 
 		String DataExpCmpltdOS = w9.getText();
 
@@ -297,9 +281,7 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 		WebElement w10=IsCmpgnSuccess;
 
-	//	w10=driver.findElement(By.xpath("(//a[@href='#'])[37]//following::span[62]"));
-
-		String IsCmpgnSuccess = w10.getText();
+	   String IsCmpgnSuccess = w10.getText();
 
 		System.out.println(w10.getText());
 
@@ -311,9 +293,7 @@ public class NBAOutboundValdtn extends TestBase {
 	{
 		WebElement w11=SaveLCSSCmpltd;
 
-	//	w11=driver.findElement(By.xpath("(//a[@href='#'])[41]//following::span[66]"));
-
-		String SaveLCSSCmpltd = w11.getText();
+	 	String SaveLCSSCmpltd = w11.getText();
 
 		System.out.println(w11.getText());
 
