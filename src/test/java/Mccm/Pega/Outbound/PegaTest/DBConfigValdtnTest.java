@@ -58,7 +58,7 @@ public class DBConfigValdtnTest extends TestBase {
  
       public void teardown() {
 	
-      driver.quit();
+//      driver.quit();
 	 
       
  	 System.out.println("DB Config Runid Check Done");  

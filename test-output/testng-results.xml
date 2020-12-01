@@ -2,29 +2,29 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="193013" started-at="2020-12-01T11:52:51 IST" finished-at="2020-12-01T11:56:04 IST">
+  <suite name="Default suite" duration-ms="254109" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:45:56 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="193013" started-at="2020-12-01T11:52:51 IST" finished-at="2020-12-01T11:56:04 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@43bd930a]" name="setup" is-config="true" duration-ms="38325" started-at="2020-12-01T11:52:51 IST" finished-at="2020-12-01T11:53:30 IST">
+    <test name="Default test" duration-ms="254109" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:45:56 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="setup" is-config="true" duration-ms="34077" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:42:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@43bd930a]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="152646" started-at="2020-12-01T11:53:30 IST" finished-at="2020-12-01T11:56:02 IST">
+        <test-method status="FAIL" signature="VerifyDBConfigurationCampRunidValidationSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="VerifyDBConfigurationCampRunidValidationSuccessfully" duration-ms="219967" started-at="2020-12-01T13:42:16 IST" finished-at="2020-12-01T13:45:56 IST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [PR-14894] but found [PR-14902]]]>
+              <![CDATA[expected [PR-14894] but found [PR-14930]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PR-14894] but found [PR-14902]
+              <![CDATA[java.lang.AssertionError: expected [PR-14894] but found [PR-14930]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
 at org.testng.Assert.assertEquals(Assert.java:585)
-at Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn.CampRUNid(NBAOutboundValdtn.java:191)
-at Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest.VerifyNBABatchProcessCompletedSuccessfully(NBAOutboundValdtnTest.java:51)
+at Mccm.Pega.Outbound.PegaMain.DBConfigValdtn.CampRunidValidation(DBConfigValdtn.java:175)
+at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.VerifyDBConfigurationCampRunidValidationSuccessfully(DBConfigValdtnTest.java:52)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,12 +58,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyNBABatchProcessCompletedSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@43bd930a]" name="teardown" is-config="true" duration-ms="1957" started-at="2020-12-01T11:56:02 IST" finished-at="2020-12-01T11:56:04 IST">
+        </test-method> <!-- VerifyDBConfigurationCampRunidValidationSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="teardown" is-config="true" duration-ms="10" started-at="2020-12-01T13:45:56 IST" finished-at="2020-12-01T13:45:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

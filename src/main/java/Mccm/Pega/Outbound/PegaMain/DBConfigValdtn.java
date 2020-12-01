@@ -55,7 +55,7 @@ public class DBConfigValdtn extends TestBase {
 	@FindBy(xpath="//span[contains(.,'PR-')]")
 	WebElement CampRunidValidation;
 	
- 
+	 
 	 	
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 			
@@ -158,13 +158,14 @@ public class DBConfigValdtn extends TestBase {
 	
 	public void  CampRunidValidation() throws InterruptedException
 	{
+		Thread.sleep(8000);
 		WebElement w4 = CampRunidValidation;
-	//	w4=driver.findElement(By.xpath("//span[contains(.,'PR-')]"));
+		Thread.sleep(6000);
 
 		String CAMPAIGNRUNID = w4.getText();
-
+      
 		System.out.println(CAMPAIGNRUNID);
-
+		Thread.sleep(6000);
 		Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
 
 		String CampaigRUNid = obj.getCellValue("PegaOutputData", 1, 0);
