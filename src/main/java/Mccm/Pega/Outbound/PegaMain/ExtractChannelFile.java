@@ -128,12 +128,15 @@ public class ExtractChannelFile extends TestBase {
 
 	public void RunActionClk() throws InterruptedException
 	{
+		Thread.sleep(8000);
 		TestUtil obj=new TestUtil();
 		obj.ActionMouseMov(RunActionClk);
+		Thread.sleep(8000);
 	}	
 
 	public void FileNameClk() throws InterruptedException
 	{
+		Thread.sleep(8000);
 		String mainWindow=driver.getWindowHandle();
 		Set<String> set =driver.getWindowHandles();
 		// Using Iterator to iterate with in windows
@@ -144,6 +147,7 @@ public class ExtractChannelFile extends TestBase {
 			// Compare whether the main windows is not equal to child window. If not equal, we will close.
 			if(!mainWindow.equals(childWindow)){
 				driver.switchTo().window(childWindow);
+				Thread.sleep(8000);
 				driver.manage().window().maximize();
 
 				Thread.sleep(8000); 

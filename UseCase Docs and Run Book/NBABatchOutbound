@@ -102,6 +102,7 @@ Pre-condition and Data setup:
 3.configuration file-path/file name
 4.fca , sca file change to date in config/folder
 5.Casndra closing file change ..inside current date 
+mccm02@ip-10-0-4-99:/opt/SP/mccm/SYSN/mccm_dataload/data $ rm -i *
 =============================================
 port:3.120.110.152    port -18881
 dxc_dev

@@ -58,10 +58,10 @@ public class DataLoadDetailsTest extends TestBase {
  
       public void teardown() {
 	
-     driver.quit();
+    driver.quit();
 	 
       
- 	 System.out.println("DSS seting Started");  
+ 	 System.out.println("DB Data loaded Validation Done");  
  }
     
 }

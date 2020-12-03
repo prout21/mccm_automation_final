@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Pega Dynamic System Setting Regression Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 28 20:34:34 IST 2020</td>
+<td>Started on:</td><td>Wed Dec 02 17:45:53 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>383 seconds (383089 ms)</td>
+<tr><td>Total time:</td><td>57 seconds (57721 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,54 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully()'><b>VerifyOracleCansadraDataLoadedSuccessfully</b><br>Test class: Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest</td>
-<td><div><pre>java.lang.AssertionError: expected [Y] but found [N]
-	at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.DataLoadCmpltdOracle(DataLoadDetails.java:184)
-	at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:51)
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;INSGH045PMS0&apos;, ip: &apos;10.218.211.167&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ecb4fd318a5c5e98fa36e01b04308a5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.Recordclk(DataLoadDetails.java:75)
+	at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:39)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1516759394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1516759394'><pre>java.lang.AssertionError: expected [Y] but found [N]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at org.testng.Assert.assertEquals(Assert.java:585)
-	at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.DataLoadCmpltdOracle(DataLoadDetails.java:184)
-	at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:51)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1625939772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1625939772'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;INSGH045PMS0&apos;, ip: &apos;10.218.211.167&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ecb4fd318a5c5e98fa36e01b04308a5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.Recordclk(DataLoadDetails.java:75)
+	at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,36 +153,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>117</td>
-<td>Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@eb21112</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Mccm.Pega.Outbound.PegaTest.HomePageTest.VerifyDynamicSystemSettingSuccessfully()'><b>VerifyDynamicSystemSettingSuccessfully</b><br>Test class: Mccm.Pega.Outbound.PegaTest.HomePageTest</td>
-<td></td>
-<td>171</td>
-<td>Mccm.Pega.Outbound.PegaTest.HomePageTest@2eda0940</td></tr>
-<tr>
-<td title='Mccm.Pega.Outbound.PegaTest.LoginPageTest.VerifyLoginPageTitleTest()'><b>VerifyLoginPageTitleTest</b><br>Test class: Mccm.Pega.Outbound.PegaTest.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>Mccm.Pega.Outbound.PegaTest.LoginPageTest@43a0cee9</td></tr>
-<tr>
-<td title='Mccm.Pega.Outbound.PegaTest.LoginPageTest.VerifyLoginSuccessfulTest()'><b>VerifyLoginSuccessfulTest</b><br>Test class: Mccm.Pega.Outbound.PegaTest.LoginPageTest</td>
-<td></td>
-<td>9</td>
-<td>Mccm.Pega.Outbound.PegaTest.LoginPageTest@43a0cee9</td></tr>
-<tr>
-<td title='Mccm.Pega.Outbound.PegaTest.LoginPageTest.VerifyPegaLogoTest()'><b>VerifyPegaLogoTest</b><br>Test class: Mccm.Pega.Outbound.PegaTest.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>Mccm.Pega.Outbound.PegaTest.LoginPageTest@43a0cee9</td></tr>
+<td>16</td>
+<td>Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@954b04f</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,30 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="254109" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:45:56 IST">
+  <suite name="Mccm NBA Outbound Automation Regression Suite" duration-ms="337117" started-at="2020-12-02T17:41:13 IST" finished-at="2020-12-02T17:46:50 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="254109" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:45:56 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="setup" is-config="true" duration-ms="34077" started-at="2020-12-01T13:41:42 IST" finished-at="2020-12-01T13:42:16 IST">
+    <test name="Pre Data Setup for DB Load Regression Test" duration-ms="4128" started-at="2020-12-02T17:41:13 IST" finished-at="2020-12-02T17:41:17 IST">
+      <class name="Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test">
+        <test-method status="PASS" signature="VerifyPreDatasetupDBLoadsuccessfully()[pri:0, instance:Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test@e720b71]" name="VerifyPreDatasetupDBLoadsuccessfully" duration-ms="4071" started-at="2020-12-02T17:41:13 IST" finished-at="2020-12-02T17:41:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPreDatasetupDBLoadsuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test -->
+    </test> <!-- Pre Data Setup for DB Load Regression Test -->
+    <test name="Unix filechk and DB loaded Regression Test" duration-ms="274693" started-at="2020-12-02T17:41:18 IST" finished-at="2020-12-02T17:45:52 IST">
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
+        <test-method status="PASS" signature="VerifyDBDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Test@a74868d]" name="VerifyDBDataLoadedSuccessfully" duration-ms="274688" started-at="2020-12-02T17:41:18 IST" finished-at="2020-12-02T17:45:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDBDataLoadedSuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
+    </test> <!-- Unix filechk and DB loaded Regression Test -->
+    <test name="Pega Dynamic System Setting Regression Test" duration-ms="57721" started-at="2020-12-02T17:45:53 IST" finished-at="2020-12-02T17:46:50 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@954b04f]" name="setup" is-config="true" duration-ms="40597" started-at="2020-12-02T17:45:53 IST" finished-at="2020-12-02T17:46:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyDBConfigurationCampRunidValidationSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="VerifyDBConfigurationCampRunidValidationSuccessfully" duration-ms="219967" started-at="2020-12-01T13:42:16 IST" finished-at="2020-12-01T13:45:56 IST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="VerifyOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@954b04f]" name="VerifyOracleCansadraDataLoadedSuccessfully" duration-ms="16076" started-at="2020-12-02T17:46:33 IST" finished-at="2020-12-02T17:46:49 IST">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[expected [PR-14894] but found [PR-14930]]]>
+              <![CDATA[element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INSGH045PMS0', ip: '10.218.211.167', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ecb4fd318a5c5e98fa36e01b04308a5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PR-14894] but found [PR-14930]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at Mccm.Pega.Outbound.PegaMain.DBConfigValdtn.CampRunidValidation(DBConfigValdtn.java:175)
-at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.VerifyDBConfigurationCampRunidValidationSuccessfully(DBConfigValdtnTest.java:52)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INSGH045PMS0', ip: '10.218.211.167', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ecb4fd318a5c5e98fa36e01b04308a5
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy9.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.Recordclk(DataLoadDetails.java:75)
+at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,15 +96,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDBConfigurationCampRunidValidationSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@43bd930a]" name="teardown" is-config="true" duration-ms="10" started-at="2020-12-01T13:45:56 IST" finished-at="2020-12-01T13:45:56 IST">
+        </test-method> <!-- VerifyOracleCansadraDataLoadedSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@954b04f]" name="teardown" is-config="true" duration-ms="1029" started-at="2020-12-02T17:46:49 IST" finished-at="2020-12-02T17:46:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
+    </test> <!-- Pega Dynamic System Setting Regression Test -->
+  </suite> <!-- Mccm NBA Outbound Automation Regression Suite -->
 </testng-results>
