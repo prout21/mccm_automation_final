@@ -6,17 +6,17 @@
 		<listener class-name="Mccm.Pega.ExtentReportListner.TestListener" />
 	</listeners>
  
-      <test name="Pega DMP Real Time Camp Code Validation Regression Test">
-    <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest"/>  
-    </classes>
-  </test> <!-- Test -->
+<!--       <test name="Pega DMP Real Time Camp Code Validation Regression Test"> -->
+<!--     <classes> -->
+<!--       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest"/>   -->
+<!--     </classes> -->
+<!--   </test> Test -->
   
-     <test name="Pega DMP Real Time Regression Test">
-    <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest"/>  
-    </classes>
-  </test> <!-- Test -->
+<!--      <test name="Pega DMP Real Time Regression Test"> -->
+<!--     <classes> -->
+<!--       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest"/>   -->
+<!--     </classes> -->
+<!--   </test> Test -->
   
     <test name="RestAPI POST Call NBA Regression Test">
     <classes>
