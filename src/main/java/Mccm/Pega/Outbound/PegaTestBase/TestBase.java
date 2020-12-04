@@ -88,7 +88,7 @@ import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
  
            System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
-      //      System.setProperty("webdriver.chrome.silentOutput","true");
+          System.setProperty("webdriver.chrome.silentOutput","true");
             
     		String projectPath = System.getProperty("user.dir");
 
