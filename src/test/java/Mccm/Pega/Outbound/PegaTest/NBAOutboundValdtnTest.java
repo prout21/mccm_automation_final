@@ -59,7 +59,7 @@ public class NBAOutboundValdtnTest extends TestBase {
 	 NBAOutboundValdtn1.DataExpCmpltdOS();
 //	 NBAOutboundValdtn1.IsCmpgnSuccess();
 //	 NBAOutboundValdtn1.SaveLCSSCmpltd();
-	 
+	 System.out.println("Incase failed Check dynamic xpath");  
  }
  
  
