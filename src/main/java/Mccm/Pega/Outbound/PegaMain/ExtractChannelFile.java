@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -76,15 +77,15 @@ public class ExtractChannelFile extends TestBase {
 
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(Recordclk));
 		Recordclk.click( );
-		Thread.sleep(8000);
+		 
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		Thread.sleep(6000);
 		SysAdmin.click( );
-		Thread.sleep(8000);
+		 
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -93,50 +94,50 @@ public class ExtractChannelFile extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		Thread.sleep(8000);
+		 
 	}
 
 	public void GetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(GetDataExtractDetails));
 		GetDataExtractDetails.sendKeys(GetDataExtractDetailsIN);
-		Thread.sleep(8000);
+		 
 	}
 
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-		Thread.sleep(8000);
+		 
 	}
 	public void ClickGetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
+	//	Thread.sleep(1000);
 		ClickReportdeftion.click();
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
-		Thread.sleep(8000);
+		 
 	}
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
 		ActionClkGetDataExtractDetails.click( );
-		Thread.sleep(8000);
 	}
 
 	public void RunActionClk() throws InterruptedException
 	{
-		Thread.sleep(8000);
-		TestUtil obj=new TestUtil();
+		 
+	 	TestUtil obj=new TestUtil();
 		obj.ActionMouseMov(RunActionClk);
-		Thread.sleep(8000);
+	 
 	}	
 
 	public void FileNameClk() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		 
 		String mainWindow=driver.getWindowHandle();
 		Set<String> set =driver.getWindowHandles();
 		// Using Iterator to iterate with in windows
@@ -147,22 +148,22 @@ public class ExtractChannelFile extends TestBase {
 			// Compare whether the main windows is not equal to child window. If not equal, we will close.
 			if(!mainWindow.equals(childWindow)){
 				driver.switchTo().window(childWindow);
-				Thread.sleep(8000);
+			 
 				driver.manage().window().maximize();
 
-				Thread.sleep(8000); 
+				wait.until(ExpectedConditions.visibilityOf(FileNameClk));
 				FileNameClk.click( );
-				Thread.sleep(8000);
+				wait.until(ExpectedConditions.visibilityOf(FilterClk));
 				FilterClk.click( );
-				Thread.sleep(8000);
+				 
 			}
 		}
 	}
 	public void FileNameSerach() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
 		FileNameSerach.sendKeys(ChanelFileNameIN);
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
 		FilterApplayClk.click( );
 	}
 
@@ -171,9 +172,9 @@ public class ExtractChannelFile extends TestBase {
 
 	public void EXTFLAGCheck() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(EXTFLAGChk));
 		WebElement w4= EXTFLAGChk;
-		Thread.sleep(8000);
+		 
 		String EXTFLAG = w4.getText();
 
 		System.out.println(w4.getText());

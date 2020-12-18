@@ -44,5 +44,6 @@
 	<classpathentry kind="lib" path="jarfiles/simplefan-19.3.0.0.jar"/>
 	<classpathentry kind="lib" path="jarfiles/ucp-19.3.0.0.jar"/>
 	<classpathentry kind="lib" path="jarfiles/jsch-0.1.55.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prout21/Downloads/jar_files (1)/ashot-1.5.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

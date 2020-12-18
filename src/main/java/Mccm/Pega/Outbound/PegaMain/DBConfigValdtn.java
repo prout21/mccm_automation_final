@@ -6,8 +6,10 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.json.JsonException;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -55,6 +57,8 @@ public class DBConfigValdtn extends TestBase {
 	@FindBy(xpath="//span[contains(.,'PR-')]")
 	WebElement CampRunidValidation;
 	
+	@FindBy(xpath="(//div[@class='pzbtn-mid'])[4]")
+	WebElement Refresh;
 	 
 	 	
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
@@ -69,15 +73,16 @@ public class DBConfigValdtn extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(Recordclk));
 		Recordclk.click( );
-        Thread.sleep(8000);
+        
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(8000);
+		//wait.until(ExpectedConditions.visibilityOf(SysAdmin));
+		Thread.sleep(3000);
 		 SysAdmin.click( );
-		 Thread.sleep(8000);
+		  
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -86,37 +91,39 @@ public class DBConfigValdtn extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		Thread.sleep(8000);
+		 
 	}
 		
 	public void MCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(MCCMLCOutbound));
 		MCCMLCOutbound.sendKeys(MCCMLCOutboundIN);
-        Thread.sleep(8000);
+        
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-        Thread.sleep(8000);
+        
 	}
 	public void ClickMCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(8000);
-		ClickDataSet.click();
-		Thread.sleep(8000);
-		ClickMCCMLCOutbound.click( );
-        Thread.sleep(8000);
+ 	//	wait.until(ExpectedConditions.elementToBeClickable(ClickDataSet));
+    	Thread.sleep(1000);
+ 		ClickDataSet.click();
+	// 	wait.until(ExpectedConditions.elementToBeClickable(ClickMCCMLCOutbound));
+ 		  Thread.sleep(1000);
+		 ClickMCCMLCOutbound.click( );
+        
 	}
 	public void ActionClkMCCMLCOutbound() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(ActionClkMCCMLCOutbound));
 		ActionClkMCCMLCOutbound.click( );
-        Thread.sleep(8000);
+        
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -131,14 +138,13 @@ public class DBConfigValdtn extends TestBase {
 	for (String winHandle : driver.getWindowHandles()) {
 		driver.switchTo().window(winHandle);
 	}
-	Thread.sleep(8000); 
+	Thread.sleep(6000); 
 	WebElement element6 = BrowseClk;
 	//WebElement element6 = driver.findElement(By.xpath("//select[@name='$PD_pzRunRecord$ppxRunWindow$gTABTHREAD1$ppxRunParameters$ppyTestInputs$ppyOperationIndex']"));
-	Thread.sleep(8000); 
-	element6.sendKeys("Browse");
-	 Thread.sleep(8000);
+	 element6.sendKeys("Browse");
+	 Thread.sleep(3000);
 	 RunClk.click( );
-	 Thread.sleep(8000);
+	 Thread.sleep(3000);
 	 String winHandleAfter = driver.getWindowHandle();
 		for(String winChildHandle : driver.getWindowHandles()) {
 			if(!winChildHandle.equals(winHandleBefore) 
@@ -158,14 +164,13 @@ public class DBConfigValdtn extends TestBase {
 	
 	public void  CampRunidValidation() throws InterruptedException
 	{
-		Thread.sleep(8000);
 		WebElement w4 = CampRunidValidation;
-		Thread.sleep(6000);
+	//	w4=driver.findElement(By.xpath("//span[contains(.,'PR-')]"));
 
 		String CAMPAIGNRUNID = w4.getText();
-      
+
 		System.out.println(CAMPAIGNRUNID);
-		Thread.sleep(6000);
+
 		Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
 
 		String CampaigRUNid = obj.getCellValue("PegaOutputData", 1, 0);
@@ -177,4 +182,4 @@ public class DBConfigValdtn extends TestBase {
 	}
 	
 	
-}
+} 

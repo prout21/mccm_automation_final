@@ -20,7 +20,8 @@ import org.openqa.selenium.JavascriptExecutor;
     import org.openqa.selenium.interactions.Actions;
     import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
-	import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 	import org.testng.Assert;
 	
 	import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -195,165 +196,167 @@ import org.openqa.selenium.JavascriptExecutor;
 		}
 		public void ExpandPegMrkPage() throws InterruptedException
 		{
-			Thread.sleep(8000);
+		//	wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
 			ExpandPegMrkPage.click( );
-			Thread.sleep(8000);
+			 
 		}
 	
 		public void Campaigns() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Campaigns));
 			Campaigns.click( );
-			Thread.sleep(6000);
+			 
 		}
 				
 		public void LaptopResolation() throws InterruptedException
 		{
-			    Thread.sleep(6000);
+			    
 			    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
 			     driver.findElement(By.xpath(s5)).click();
 		}
 		public void Create() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Create));
 			Create.click( );
-			Thread.sleep(6000);
+			 
 		}
 		public void MultiChannelCampaign() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		 	MultiChannelCampaign.click( );
 		 //	driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 		}
 		public void Campaigncode() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 			Campaigncode.sendKeys(Campaigncd);
-			Thread.sleep(6000);
 			System.out.println("Enter Campaigncode");
 		}
 		public void Build() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Build));
 			Build.click( );
-			Thread.sleep(6000);
+			 
 		}
 		public void MrktStrtgyConfig() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(MrktStrtgyConfig));
 			MrktStrtgyConfig.click( );
-			Thread.sleep(6000);
+			 
 		}
 		public void SrchMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(SrchMrkStrtgy));
 			SrchMrkStrtgy.sendKeys(ConfigMrkStrtgy);
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(ClkSrchMrkStrtgy));
 			ClkSrchMrkStrtgy.click();
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void AddMrkStrtgy() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		 	wait.until(ExpectedConditions.visibilityOf(AddMrkStrtgy));
 			AddMrkStrtgy.click( );
-			Thread.sleep(6000);
+			 
 	
 		}
 		public void Applay() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(Applay));
 			Applay.click( );
-			Thread.sleep(6000);
+			 Thread.sleep(6000);
 		}    
 	
 		public void AudianceConfig() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(AudianceConfig));
 			AudianceConfig.click( );
-			Thread.sleep(6000);
+			 
 		}
 		public void SrchConfigAudience() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(SrchConfigAudience));
 			SrchConfigAudience.sendKeys(ConfigAudience);
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(ClkSrchConfigAudience));
 			ClkSrchConfigAudience.click();
-			Thread.sleep(6000);
+			 
 		}
 		public void AddAdinceconfig() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(AddAdinceconfig));
 			AddAdinceconfig.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void ApplayAdience() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(ApplayAdience));
 			ApplayAdience.click( );
 			Thread.sleep(6000);
 		}
 	
 		public void javaexictor2() throws InterruptedException
 		{
+			wait.until(ExpectedConditions.visibilityOf(webelement2)); 
 			TestUtil obj=new TestUtil();
 			obj.JavascriptExecutor(webelement2);
 		}
 	
 		public void Engagementconfig() throws InterruptedException
 		{
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(Engagementconfig));
+			Thread.sleep(3000);
 			Engagementconfig.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void Campaignschdul() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Campaignschdul));
 			Campaignschdul.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void Recurring() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Recurring));
 			Recurring.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void databasetemplate() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(databasetemplate));
 			databasetemplate.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void configtemplate() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(configtemplate));
 			configtemplate.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void SrchConfigEngagment() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(SrchConfigEngagment));
 			SrchConfigEngagment.sendKeys(ConfigEngagment);
-			Thread.sleep(6000);
+		//	wait.until(ExpectedConditions.visibilityOf(ClkConfigEngagment));
+			Thread.sleep(2000);
 			ClkConfigEngagment.click();
-			Thread.sleep(6000);
+			 
 		}
 		public void Addmcclbound() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Addmcclbound));
 			Addmcclbound.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void Javascriptserch() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			 
 			boolean searchIconPresence = Addtemplete.isDisplayed();
 			boolean searchIconEnabled =  Addtemplete.isEnabled();
 	
@@ -363,44 +366,45 @@ import org.openqa.selenium.JavascriptExecutor;
 				WebElement element9 = Addtemplete;
 				JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 				executor3.executeScript("arguments[0].click();", element9);
-				Thread.sleep(6000);
+				 
 			}
 		}
 	
 		public void ApplayEngagement() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 			ApplayEngagement.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void SaveCampgn() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
+			Thread.sleep(3000);
 			SaveCampgn.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 		public void RunCampgn() throws InterruptedException
 		{
 			System.out.println("Check Campaign Code");
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(RunCampgn));
 			RunCampgn.click( );
-			Thread.sleep(6000);
+			 
 			//span[text()='Name is already in use.']		 
 		}
 	
 		public void ConfirmCampgn() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(ConfirmCampgn));
 			ConfirmCampgn.click( );
-			Thread.sleep(6000);
+			 
 		}
 		public void RefreshCampgn() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(RefreshCampgn));
 			RefreshCampgn.click( );
-			Thread.sleep(6000);
+			 
 		}
 	
 	
@@ -416,10 +420,10 @@ import org.openqa.selenium.JavascriptExecutor;
 	
 				try
 				{
-					Thread.sleep(6000);
+					Thread.sleep(2000);
 				//	driver.findElement(By.xpath("//*[@class='pi pi-refresh']")).click( );
 					RefreshCampgn.click( );
-					Thread.sleep(6000);
+					Thread.sleep(2000);
 					JavascriptExecutor js6 = (JavascriptExecutor) driver;
 					WebElement element7 =Runschedule;
 					//WebElement element7 = driver.findElement(By.xpath("//h2[text()='Run schedule']"));
@@ -486,20 +490,20 @@ import org.openqa.selenium.JavascriptExecutor;
 		
 		public void CampRunIDCaptured() throws InterruptedException
 		{
-			Thread.sleep(6000);
+			 Thread.sleep(2000);
 			Completed.click();
 		//	driver.findElement(By.xpath("//span[text()='Completed']")).click( );
-			Thread.sleep(6000);
+			 
 			  
 			JavascriptExecutor js7 = (JavascriptExecutor) driver;
 			WebElement element8 =Completed;
 			//WebElement element8 = driver.findElement(By.xpath("//span[text()='Completed']"));
 			js7.executeScript("arguments[0].scrollIntoView();", element8);	
 
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(RunDetails));
 			RunDetails.click();
 		//	driver.findElement(By.xpath("//*[@name='DataFlowRunDetails_pyWorkPage_3']")).click( );
-			Thread.sleep(6000);
+			 
 
 			JavascriptExecutor js8 = (JavascriptExecutor) driver;
 			WebElement element9 =CampaignrunID;
@@ -514,6 +518,8 @@ import org.openqa.selenium.JavascriptExecutor;
 			//Print the text of the searched element
 
 			String CampRunID = w.getText();
+			 Thread.sleep(2000);
+			System.out.println(CampRunID);
 
 			System.out.println(w.getText());
 

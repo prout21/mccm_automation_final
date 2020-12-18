@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class OSFAPICallGetNBRmovSomeFbCdStgyTestFAILD extends TestBase  {
+public class OSFAPICallGetNBRmovSomeFbCdStgyTest_Rechk extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;

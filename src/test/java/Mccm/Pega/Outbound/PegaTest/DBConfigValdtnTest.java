@@ -49,7 +49,7 @@ public class DBConfigValdtnTest extends TestBase {
 	 DBConfigValdtn1.ActionClkMCCMLCOutbound();
 	 DBConfigValdtn1.RunActionClk();
 	 DBConfigValdtn1.RunClick();
-	 DBConfigValdtn1.CampRunidValidation();
+ 	 DBConfigValdtn1.CampRunidValidation();
  
  }
  
@@ -58,7 +58,7 @@ public class DBConfigValdtnTest extends TestBase {
  
       public void teardown() {
 	
-//      driver.quit();
+    driver.quit();
 	 
       
  	 System.out.println("DB Config Runid Check Done");  

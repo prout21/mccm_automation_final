@@ -5,9 +5,12 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -17,6 +20,7 @@ import Mccm.Pega.excel.utility.Excel_Reader;
 public class DataLoadDetails extends TestBase {
 	
 	public static String ExcelFilePath;
+
 	
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -68,18 +72,21 @@ public class DataLoadDetails extends TestBase {
 	public DataLoadDetails( ) {
     	PageFactory.initElements(driver, this);
     }
-	
+
+
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Recordclk));
 		Recordclk.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(6000);
+		//wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
+	//	waitVisibility(SysAdmin);
+		Thread.sleep(6000);
 		 SysAdmin.click( );
-		 Thread.sleep(6000);
+		  
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -88,37 +95,37 @@ public class DataLoadDetails extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		Thread.sleep(6000);
+		 
 	}
 		
 	public void d_latestdataloadFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(d_latestdataloadFlag));
 		d_latestdataloadFlag.sendKeys(dlatestdataloadFlag);
-        Thread.sleep(6000);
+         
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void Clickd_latestdataloadFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ClickDataPage));
 		ClickDataPage.click();
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Clickd_latestdataloadFlag));
 		Clickd_latestdataloadFlag.click( );
-        Thread.sleep(6000);
+       
 	}
 	public void ActionClkd_latestdataloadFlag() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ActionClkd_latestdataloadFlag));
 		ActionClkd_latestdataloadFlag.click( );
-        Thread.sleep(6000);
+       
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -138,12 +145,12 @@ public class DataLoadDetails extends TestBase {
       if(!mainWindow.equals(childWindow)){
      driver.switchTo().window(childWindow);
 
-      Thread.sleep(6000);
+     wait.until(ExpectedConditions.visibilityOf(FlushClk));
       FlushClk.click();
 
-	 Thread.sleep(6000);
+      wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
 	 RunFlushClk.click( );
-	 Thread.sleep(6000);
+	 
       }
   
 	}
@@ -171,9 +178,9 @@ public class DataLoadDetails extends TestBase {
 	public void DataLoadCmpltdOracle() throws InterruptedException
 	{
 
-	WebElement w4;
+	//WebElement w4;
 	
-	w4=DataLoadCmpltdOracle;
+	WebElement w4=DataLoadCmpltdOracle;
 
 //	w4=driver.findElement(By.xpath("(//a[@href='#'])[13]//following::span[33]"));
 

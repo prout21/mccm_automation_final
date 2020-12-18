@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
@@ -144,15 +145,15 @@ public class HomePageDetails extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Recordclk));
 		Recordclk.click( );
-        Thread.sleep(2000);
+         
 	}
 	public void SysAdmin() throws InterruptedException
 	{
 		 Thread.sleep(2000);
 		 SysAdmin.click( );
-		 Thread.sleep(2000);
+		  
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -161,155 +162,158 @@ public class HomePageDetails extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		Thread.sleep(2000);
+		 
 	}
 	 //NBANBACampaignName
 	public void FilterNBAcamp() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(FilterNBAcamp));
 		FilterNBAcamp.click( );
-		Thread.sleep(2000);
+		 
 	}
 	public void NBACampaignName() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(NBACampaignName));
 		NBACampaignName.sendKeys(NBACampaignNmValue);
-        Thread.sleep(2000);
+        
 	}
 	public void ApplayNBAfilter() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
 		ApplayNBAfilter.click( );
-        Thread.sleep(2000);
+        
 	}
 	public void ClikMCCM() throws InterruptedException
 	{
-		Thread.sleep(2000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
+		Thread.sleep(1000);
 		ClikMCCM.click( );
-        Thread.sleep(2000);
+        
 	}
 	public void NBABatchCampaign() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(NBABatchCampaign));
 		NBABatchCampaign.clear();
-		Thread.sleep(2000);
+		
 		NBABatchCampaign.sendKeys(NBABthCmpignValue);
-        Thread.sleep(2000);
+         
 	}
 	
 	public void SaveNBABatchCamp() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Save));
 		Save.click( );
-        Thread.sleep(2000);
+        
 	}
 	public void CloseNBABatchCamp() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Close));
 		Close.click( );
-        Thread.sleep(2000);
+         
 	}
 	 //NBANBACampaignName
 	
 	 //NBADefultAudCount
 		public void FilterNBADefultAudCount() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(FilterNotifyErrList));
 			FilterNotifyErrList.click( );
-			Thread.sleep(2000);
+			 
 		}
 		public void NBADefultAudCountName() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBACampaignName));
 			NBACampaignName.clear();
-			Thread.sleep(2000);
+			 
 			NBACampaignName.sendKeys(NBACampDefaultAudCountName);
-	        Thread.sleep(2000);
+	        
 		}
 		public void ApplayNBADefultAudCountfilter() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
 			ApplayNBAfilter.click( );
-	        Thread.sleep(2000);
+	        
 		}
 		public void ClikMCCMDefultAudCount() throws InterruptedException
 		{
-			Thread.sleep(2000);
+		//	wait.until(ExpectedConditions.visibilityOf(ClikMCCM));
+			Thread.sleep(1000);
 			ClikMCCM.click( );
-	        Thread.sleep(2000);
+	         
 		}
 		public void NBADefultAudCountValue() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBABatchCampaign));
 			NBABatchCampaign.clear();
-			Thread.sleep(2000);
+			 
 			NBABatchCampaign.sendKeys(NBACampDefaultAudienceCountValue);
-	        Thread.sleep(2000);
+	        
 		}
 		
 		public void SaveDefultAudCount() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Save));
 			Save.click( );
-	        Thread.sleep(2000);
+	        
 		}
 		public void CloseDefultAudCount() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Close));
 			Close.click( );
-	        Thread.sleep(2000);
+	        
 		}
 		 //NBADefultAudCount
 		
 		 //NBADefultMaxAudCountPercentage
 		public void FilterMaxAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(FilterNotifyErrList));
 			FilterNotifyErrList.click( );
-			Thread.sleep(2000);
+			 
 		}
 		public void NBACampMaxAudThresholdPercentName() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBACampaignName));
 			NBACampaignName.clear();
-			Thread.sleep(2000);
+			 
 			NBACampaignName.sendKeys(NBACampMaxAudThresholdPercentName);
-	        Thread.sleep(2000);
+	        
 		}
 		public void ApplayMaxAudThresholdPercentfilter() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
 			ApplayNBAfilter.click( );
-	        Thread.sleep(2000);
+	         
 		}
 		public void ClikMCCMMaxAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+		//	wait.until(ExpectedConditions.visibilityOf(ClikMCCM));
+			Thread.sleep(1000);
 			ClikMCCM.click( );
-	        Thread.sleep(2000);
+	       
 		}
 		public void NBAMaxAudThresholdPercentValue() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBABatchCampaign));
 			NBABatchCampaign.clear();
-			Thread.sleep(2000);
+		
 			NBABatchCampaign.sendKeys(NBACampMaxAudThresholdPercentValue);
-	        Thread.sleep(2000);
+	       
 		}
 		
 		public void SaveMaxAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Save));
 			Save.click( );
-	        Thread.sleep(2000);
+	        
 		}
 		public void CloseMaxAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Close));
 			Close.click( );
-	        Thread.sleep(2000);
+	       
 		}
 	 
 		 //NBADefultMaxAudCountPercentage
@@ -318,50 +322,51 @@ public class HomePageDetails extends TestBase {
 		 //NBADefultMaxAudCountPercentage
 		public void FilterMinAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(FilterNotifyErrList));
 			FilterNotifyErrList.click( );
-			Thread.sleep(2000);
+			
 		}
 		public void NBACampMinAudThresholdPercentName() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBACampaignName));
 			NBACampaignName.clear();
-			Thread.sleep(2000);
+			
 			NBACampaignName.sendKeys(NBACampMinAudThresholdPercentName);
-	        Thread.sleep(2000);
+	        
 		}
 		public void ApplayMinAudThresholdPercentfilter() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
 			ApplayNBAfilter.click( );
-	        Thread.sleep(2000);
+	       
 		}
 		public void ClikMCCMMinAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+		//	wait.until(ExpectedConditions.visibilityOf(ClikMCCM));
+			Thread.sleep(1000);
 			ClikMCCM.click( );
-	        Thread.sleep(2000);
+	       
 		}
 		public void NBAMinAudThresholdPercentValue() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(NBABatchCampaign));
 			NBABatchCampaign.clear();
-			Thread.sleep(2000);
+			
 			NBABatchCampaign.sendKeys(NBACampMinAudThresholdPercentValue);
-	        Thread.sleep(2000);
+	       
 		}
 		
 		public void SaveMinAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Save));
 			Save.click( );
-	        Thread.sleep(2000);
+	       
 		}
 		public void CloseMinAudThresholdPercent() throws InterruptedException
 		{
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(Close));
 			Close.click( );
-	        Thread.sleep(2000);
+	        
 		}
 	 
 		 //NBADefultMinAudCountPercentage
@@ -370,80 +375,81 @@ public class HomePageDetails extends TestBase {
 		
 	public void FilterNotifyErrList() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(FilterNotifyErrList));
 		FilterNotifyErrList.click( );
-		Thread.sleep(2000);
+		
 	}
 	
 	public void NotifyErrList() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(NotifyErrList));
 		NotifyErrList.clear();
-		Thread.sleep(2000);
+		
 		NotifyErrList.sendKeys(NotifyErrListValue);
-        Thread.sleep(2000);
+        
 	}
 	public void ApplayNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(ApplayNotifyErr));
 		ApplayNotifyErr.click( );
-		Thread.sleep(2000);
+		
 	}
 	
 	public void ClikMCCMNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		//wait.until(ExpectedConditions.visibilityOf(ClikMCCM));
+		Thread.sleep(1000);
 		ClikMCCM.click( );
-        Thread.sleep(2000);
+        
 	}
 	
 	public void MailNotifyErr() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(MailNotifyErr));
 		MailNotifyErr.clear();
-		Thread.sleep(2000);
+		
 		MailNotifyErr.sendKeys(MailNotifyErrValue);
-        Thread.sleep(2000);
+        
 	}
 	
 	public void SaveNotifyErrLst() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Save));
 		Save.click( );
-        Thread.sleep(2000);
+       
 	}
 	public void CloseNotifyErrLst() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Close));
 		Close.click( );
-        Thread.sleep(2000);
+        
 	}
 	//NBANotifyErrList
 	//D_mccmsettings
 	public void D_mccmsettings() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(D_mccmsettings));
 		D_mccmsettings.sendKeys(D_mccmsettingsValue);
-        Thread.sleep(2000);
+        
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-        Thread.sleep(2000);
+       
 	}
 	public void Clickdmccmsetting() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Clickdmccmsetting));
 		Clickdmccmsetting.click( );
-        Thread.sleep(2000);
+       
 	}
 	public void ActionClkDmccmsetting() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(ActionClkDmccmsetting));
 		ActionClkDmccmsetting.click( );
-        Thread.sleep(2000);
+       
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -463,12 +469,12 @@ public class HomePageDetails extends TestBase {
       if(!mainWindow.equals(childWindow)){
      driver.switchTo().window(childWindow);
 
-      Thread.sleep(2000);
+     wait.until(ExpectedConditions.visibilityOf(FlushClk));
       FlushClk.click();
 
-	 Thread.sleep(2000);
+      wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
 	 RunFlushClk.click( );
-	 Thread.sleep(2000);
+	 
 	 
     driver.close();
     }
@@ -480,31 +486,31 @@ public class HomePageDetails extends TestBase {
 	//OverrideCampSrch
 	public void OverrideCampSrch() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(OverrideCampSrch));
 		OverrideCampSrch.clear();
-		Thread.sleep(2000);
+		 
 		OverrideCampSrch.sendKeys(OverrideCampSrchValue);
-        Thread.sleep(2000);
+        
 	}
 	
 	public void OverrideCampSrchClk() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(OverrideCampSrchClk));
 		OverrideCampSrchClk.click( );
-        Thread.sleep(2000);
+        
 	}
 	
 	public void OverrideCampBlockrClk() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(OverrideCampBlockrClk));
 		OverrideCampBlockrClk.click( );
-        Thread.sleep(2000);
+        
 	}
 	public void OverrideCampActClk() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(OverrideCampActClk));
 		OverrideCampActClk.click( );
-        Thread.sleep(2000);
+        
 	}
 	
 	public void RunOverideBlkClk() throws InterruptedException
@@ -521,11 +527,11 @@ public class HomePageDetails extends TestBase {
       // Switch to child window
       driver.switchTo().window(winHandle);
     }
-	 Thread.sleep(2000); 
+    wait.until(ExpectedConditions.visibilityOf(OverridCampBlk));
      OverridCampBlk.clear();       
 	 OverridCampBlk.sendKeys(OverridCampBlkvalue); 
 	 
-	 Thread.sleep(2000);
+	 wait.until(ExpectedConditions.visibilityOf(RunOverideBlk));
 	 RunOverideBlk.click( );
 	 Thread.sleep(2000);
 	 
@@ -539,13 +545,13 @@ public class HomePageDetails extends TestBase {
 		 }
 	 Thread.sleep(2000);
 	 driver.close();
-	 Thread.sleep(2000);
+	 
 	 driver.switchTo().window(winHandleAfter);
 	 
-	 Thread.sleep(2000);
+	  
 	// to close the child window.
 	driver.close();
-	Thread.sleep(2000);
+	 
 	// to switch to parent window.
 	driver.switchTo().window(winHandleBefore);
 	

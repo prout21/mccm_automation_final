@@ -11,6 +11,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Demo.APIRestful.DemoCalcNBAAndStartOfferFlow;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
@@ -31,124 +45,155 @@ import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 
 
-    public class TestBase {
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
+
+
+public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
-	
-	 public static String CampRunID;
+
+	public static String CampRunID;
+	public static WebDriverWait wait;
 
 	
+
 	public TestBase()
 	{
 		try {
 			prop=new Properties();
-			
+
 			String projectPath = System.getProperty("user.dir");
-			
-							
-	  FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
-	      prop.load(ip);
-		   
-	   PegaMarketPage.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   HomePageDetails.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   PegaMarktDMPRealTime.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   DataLoadDetails.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   DBConfigValdtn.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   ExtractChannelFile.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   NBAOutboundValdtn.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
-	   
-	   PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
-	   PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
-	   PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
-	   PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
-	 
-  	      
+
+
+			FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
+			prop.load(ip);
+
+			PegaMarketPage.ExcelFilePath = System.getProperty("user.dir");
+
+			HomePageDetails.ExcelFilePath = System.getProperty("user.dir");
+
+			PegaMarktDMPRealTime.ExcelFilePath = System.getProperty("user.dir");
+
+			DataLoadDetails.ExcelFilePath = System.getProperty("user.dir");
+
+			DBConfigValdtn.ExcelFilePath = System.getProperty("user.dir");
+
+			ExtractChannelFile.ExcelFilePath = System.getProperty("user.dir");
+
+			NBAOutboundValdtn.ExcelFilePath = System.getProperty("user.dir");
+
+			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
+
+			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
+			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
+			PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
+			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
+
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}      
-	
+
 	}
 
-    public static void initialization() throws InterruptedException {
-    	String browserName = prop.getProperty("browser");
-    	String chromedriverPath = prop.getProperty("chromedriver.dir");
-    	String chromeDriver = prop.getProperty("chromedriver");
-    	String headLessMode = prop.getProperty("headless");
-    	if(browserName.equals("chrome")) {
- 
-           System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+	public static void initialization() throws InterruptedException {
+		String browserName = prop.getProperty("browser");
+		String chromedriverPath = prop.getProperty("chromedriver.dir");
+		String chromeDriver = prop.getProperty("chromedriver");
+		String headLessMode = prop.getProperty("headless");
+		if(browserName.equals("chrome")) {
 
-          System.setProperty("webdriver.chrome.silentOutput","true");
-            
-    		String projectPath = System.getProperty("user.dir");
+		      System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
-     //     System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+			//      System.setProperty("webdriver.chrome.silentOutput","true");
 
-        
-     
+			String projectPath = System.getProperty("user.dir");
+
+		//	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+
+
+
 			if(headLessMode.equals("true")) {
- 
+
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
 				chromeOptions.addArguments("--headless");
-		    	chromeOptions.addArguments("--disable-gpu"); 
+				chromeOptions.addArguments("--disable-gpu"); 
 				driver = new ChromeDriver(chromeOptions);
-			 //	TimeUnit.SECONDS.sleep(1);
+				wait =new WebDriverWait(driver , 60);
+				//	TimeUnit.SECONDS.sleep(1);
 			}
 			else{
 				driver = new ChromeDriver();
+				wait =new WebDriverWait(driver , 60);
 			}
-    	}
-    	
-      driver.manage().window().maximize();
-      driver.manage().deleteAllCookies();
-      driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-      driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-      driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
-      driver.get(prop.getProperty("url"));
-    	}
-  
-  //  chromeOptions.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
-  //*******************************************************************************************
-  	//*Function:	general_ReadProperty														*
-  	//*Arguments:	Property Key as String													 	*
-  	//*Return 		Poverty Value as String														*
-  	//*Descriptions: 																			*
-  	//*	This function will read the Properties file and return property value to based on key.	*
-  	//*Author: 														*
-  	//*******************************************************************************************
-  	public static String general_ReadProperty(String propertyKey)
-  	{
-  		String propertyValue="";
-  		File cfgfile = new File("configurationFile.properties");
-  		
-  		if(cfgfile.exists())
-  		{
-  			  Properties propties = new Properties();
-  			  FileInputStream propFile;
+		}
 
-  			  try {
-  				  propFile = new FileInputStream(cfgfile);
-  				  propties.load(propFile);
-  				  propertyValue=propties.getProperty(propertyKey);
-  				  } catch (Exception e1) {
-  					  
-  					  e1.printStackTrace();
-  				  } 
-  		 }
-  		return propertyValue;
-  		
-  	    
-  }
- }
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		//    driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("url"));
+
+		//    wait =new WebDriverWait(driver , 60);
+	}
+
+	public WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return driver;
+	}
+
+	//  chromeOptions.addArguments("--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+	//*******************************************************************************************
+	//*Function:	general_ReadProperty														*
+	//*Arguments:	Property Key as String													 	*
+	//*Return 		Poverty Value as String														*
+	//*Descriptions: 																			*
+	//*	This function will read the Properties file and return property value to based on key.	*
+	//*Author: 														*
+	//*******************************************************************************************
+	public static String general_ReadProperty(String propertyKey)
+	{
+		String propertyValue="";
+		File cfgfile = new File("configurationFile.properties");
+
+		if(cfgfile.exists())
+		{
+			Properties propties = new Properties();
+			FileInputStream propFile;
+
+			try {
+				propFile = new FileInputStream(cfgfile);
+				propties.load(propFile);
+				propertyValue=propties.getProperty(propertyKey);
+			} catch (Exception e1) {
+
+				e1.printStackTrace();
+			} 
+		}
+		return propertyValue;
+
+
+	}
+
+
+
+}

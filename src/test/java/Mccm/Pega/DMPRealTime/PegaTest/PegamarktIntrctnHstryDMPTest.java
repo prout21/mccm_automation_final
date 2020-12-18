@@ -64,6 +64,6 @@ public void teardown() {
  driver.quit();
 
 
-	System.out.println("DMP API Process Offer Rslts Valdtn Done");
+	System.out.println("DMP API Process Offer Results Validation Done");
 }
 }

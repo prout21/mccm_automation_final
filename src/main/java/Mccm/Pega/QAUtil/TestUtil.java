@@ -19,8 +19,8 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 public class TestUtil extends TestBase {
 	
 	private static final By By = null;
-	public static long PAGE_LOAD_TIMEOUT = 20;
-	public static long IMPLICIT_WAIT = 10;
+	public static long PAGE_LOAD_TIMEOUT = 60;
+	public static long IMPLICIT_WAIT = 60;
 	
 	
 	public void WindowHandling()
@@ -90,6 +90,7 @@ public void ActionMouseMov(WebElement webelement)
 
 
 }
+ 
 
 }
 	

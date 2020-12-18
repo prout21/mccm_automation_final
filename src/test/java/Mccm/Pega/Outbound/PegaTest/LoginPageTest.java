@@ -5,6 +5,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -14,6 +17,8 @@ public class LoginPageTest extends TestBase {
 	private static final String priorty = null;
 	LoginPage loginpage;
 	HomePage  Homepage;
+//	ExtentReports extent;
+//	ExtentTest logger;
 	public LoginPageTest()
 	{
 		super();
@@ -30,7 +35,7 @@ public class LoginPageTest extends TestBase {
  @Test (priority=1)
  public void VerifyLoginPageTitleTest() { 
 	 String title = loginpage.PageTitle();
-	 Assert.assertEquals(title, "Pega Platform");
+	 Assert.assertEquals(title, "Pega Platform1");
 	
 	 
  }

@@ -41,10 +41,9 @@
 					<executable>/usr/bin/java</executable>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-					<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles>
-					<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles>
-					<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.DMPRealTime.xml</suiteXmlFiles>
-<!--                <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.CalcNBAandStartOfferFlow.xml</suiteXmlFiles> -->
+						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles>
+ 						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles>
+						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.DMPRealTime.xml</suiteXmlFiles>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -366,6 +365,20 @@
 			<artifactId>keystore-api</artifactId>
 			<version>0.1.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.github.yev/screenshot -->
+		<dependency>
+			<groupId>com.github.yev</groupId>
+			<artifactId>screenshot</artifactId>
+			<version>0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ru.yandex.qatools.ashot</groupId>
+			<artifactId>ashot</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
 
 
 

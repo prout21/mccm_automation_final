@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -98,15 +99,15 @@ public class NBAOutboundValdtn extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(Recordclk));
 		Recordclk.click( );
-        Thread.sleep(8000);
+        
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(8000);
+		 Thread.sleep(3000);
 		 SysAdmin.click( );
-		 Thread.sleep(8000);
+		 
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -115,37 +116,37 @@ public class NBAOutboundValdtn extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		Thread.sleep(8000);
+		 
 	}
 		
 	public void D_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(D_LatestNBACampaignFlag));
 		D_LatestNBACampaignFlag.sendKeys(DLatestNBACampaignFlagIN);
-        Thread.sleep(8000);
+         
 	}
 	
 	public void SerchClick() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-        Thread.sleep(8000);
+        
 	}
 	public void ClickD_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.elementToBeClickable(ClickDataPage));
 		ClickDataPage.click();
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.elementToBeClickable(ClickD_LatestNBACampaignFlag));
 		ClickD_LatestNBACampaignFlag.click( );
         Thread.sleep(8000);
 	}
 	public void ActionClkD_LatestNBACampaignFlag() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOf(ActionClkD_LatestNBACampaignFlag));
 		ActionClkD_LatestNBACampaignFlag.click( );
-        Thread.sleep(8000);
+         
 	}
 	
 	public void RunActionClk() throws InterruptedException
@@ -165,12 +166,12 @@ public class NBAOutboundValdtn extends TestBase {
       if(!mainWindow.equals(childWindow)){
      driver.switchTo().window(childWindow);
 
-      Thread.sleep(8000);
+     wait.until(ExpectedConditions.visibilityOf(FlushClk));
       FlushClk.click();
 
-	 Thread.sleep(8000);
+      wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
 	 RunFlushClk.click( );
-	 Thread.sleep(8000);
+	 
       }
   
 	}

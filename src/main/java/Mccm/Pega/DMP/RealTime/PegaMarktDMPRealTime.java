@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 
@@ -146,15 +147,15 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	{
 		Thread.sleep(8000);
 		pegamrkting1.click( );
-        Thread.sleep(6000);
+        Thread.sleep(8000);
 	}
 	
 
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
 		ExpandPegMrkPage.click( );
-        Thread.sleep(6000);
+       
 	}
 	public void LaptopResolation() throws InterruptedException
 	{
@@ -164,123 +165,124 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	}
 	public void Campaigns() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void Create() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Create));
 		Create.click( );
-        Thread.sleep(6000);
+         
 	}
 	public void MultiChannelCampaign() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void Campaigncode() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 		Campaigncode.sendKeys(DMPCampaigncd);
-        Thread.sleep(6000);
+        
 	}
 	public void Build() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Build));
 		Build.click( );
-        Thread.sleep(6000);
+         
 	}
 	public void MrktStrtgyConfig() throws InterruptedException
 	{
-		Thread.sleep(6000);
+	//	wait.until(ExpectedConditions.visibilityOf(MrktStrtgyConfig)); 
+	//	Thread.sleep(3000);
 		MrktStrtgyConfig.click( );
-        Thread.sleep(6000);
+         
 	}
 	public void SrchMrkStrtgy() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(SrchMrkStrtgy));
 		SrchMrkStrtgy.sendKeys(ConfigMrkStrtgy);
-        Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ClkSrchMrkStrtgy));
         ClkSrchMrkStrtgy.click();
-        Thread.sleep(6000);
+      
 	}
 		
 	public void AddMrkStrtgy() throws InterruptedException
 	{
-		Thread.sleep(6000);
+	//	wait.until(ExpectedConditions.visibilityOf(AddMrkStrtgy));
 		AddMrkStrtgy.click( );
-        Thread.sleep(6000);
-	
+        
 	}
 	public void Applay() throws InterruptedException
 	{
-		Thread.sleep(6000);
+	//	wait.until(ExpectedConditions.visibilityOf(Applay)); 
 		Applay.click( );
-        Thread.sleep(6000);
-        
+		 Thread.sleep(6000);
 	}    
 	
 	public void javaexictor2() throws InterruptedException
 	{
+		wait.until(ExpectedConditions.visibilityOf(webelement2)); 
 		TestUtil obj=new TestUtil();
 		obj.JavascriptExecutor(webelement2);
 	}
 	
 	public void Engagementconfig() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(3000);
+	//	wait.until(ExpectedConditions.visibilityOf(Engagementconfig)); 
 		Engagementconfig.click( );
-        Thread.sleep(6000);
+        
 	}
 	
 	public void Realtimecontainers() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Realtimecontainers)); 
 		Realtimecontainers.click( );
-        Thread.sleep(6000);
+        
 	}
 	
 	public void Calender() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Calender)); 
 		Calender.click( );
-        Thread.sleep(6000);
+        
 	}
 	
 	public void Currentdate() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Currentdate)); 
 		Currentdate.click( );
-        Thread.sleep(6000);
+        
 	}
 	
 	public void ConfigureContainers() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		ConfigureContainers.click( );
-        Thread.sleep(6000);
+	 	wait.until(ExpectedConditions.visibilityOf(ConfigureContainers)); 
+	 	ConfigureContainers.click( );
+        
 	}
 	
 	public void SrchConfigEngagment() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(SrchConfigEngagment)); 
 		SrchConfigEngagment.sendKeys(DMPRealtimecontainers);
-        Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ClkConfigEngagment)); 
         ClkConfigEngagment.click();
-        Thread.sleep(6000);
+         
 	}
 	public void AddConfigureContainers() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(AddConfigureContainers)); 
 		AddConfigureContainers.click( );
-        Thread.sleep(6000);
+        
 	}
 	
 	public void Javascriptserch() throws InterruptedException
 	{
-		 Thread.sleep(6000);
+		  
 		 boolean searchIconPresence = AddContainers.isDisplayed();
 	     boolean searchIconEnabled =  AddContainers.isEnabled();
 
@@ -290,42 +292,50 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	      	 WebElement element9 = AddContainers;
 	    	 JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 	    	 executor3.executeScript("arguments[0].click();", element9);
-	    	 Thread.sleep(6000);
+	    	
 	     }
 	}
 	     
 	public void ApplayEngagement() throws InterruptedException
 	 	{
-	 		Thread.sleep(6000);
+	  	wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
+	//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
+	//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
+	     	Thread.sleep(6000);
 	 		ApplayEngagement.click( );
-	         Thread.sleep(6000);
+	         
 	 	}
 	
 	public void SaveCampgn() throws InterruptedException
  	{
- 		Thread.sleep(6000);
+	// 	wait.until(ExpectedConditions.presenceOfElementLocated((By) SaveCampgn));
+	// 	wait.until(ExpectedConditions.elementToBeClickable(SaveCampgn));
+     	wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
+	// 	wait.until(ExpectedConditions.visibilityOfElementLocated((By) SaveCampgn));
+	 	Thread.sleep(3000);
  		SaveCampgn.click( );
-         Thread.sleep(6000);
+         
  	}
 	
 	public void RunCampgn() throws InterruptedException
  	{
- 		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(RunCampgn));
  		RunCampgn.click( );
-         Thread.sleep(6000);
+         
  	}
-	
+
+
 	public void ConfirmCampgn() throws InterruptedException
  	{
- 		Thread.sleep(6000);
+	 	wait.until(ExpectedConditions.elementToBeClickable(ConfirmCampgn));
  		ConfirmCampgn.click( );
-         Thread.sleep(6000);
+          
  	}
 	public void RefreshCampgn() throws InterruptedException
  	{
- 		Thread.sleep(6000);
+	 	wait.until(ExpectedConditions.elementToBeClickable(RefreshCampgn));
  		RefreshCampgn.click( );
-         Thread.sleep(6000);
+        
  	}
 	
 	}

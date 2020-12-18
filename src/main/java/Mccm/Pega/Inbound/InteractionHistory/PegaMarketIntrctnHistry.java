@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 
@@ -47,8 +48,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	@FindBy(xpath="//span[text()='Recent interactions']")
 	WebElement ClkRecentIntrctnHstry;
 	
-
+	@FindBy(xpath="//div[text()='Journey']")
+	WebElement Journey ;
 	
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]")
+	WebElement Channel ;
+	 
 		
 	public PegaMarketIntrctnHistry( ) {
     	PageFactory.initElements(driver, this);
@@ -63,55 +68,50 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		pegamrkting1.click( );
-        Thread.sleep(6000);
+		Thread.sleep(8000);
+	 	pegamrkting1.click( );
+		Thread.sleep(8000); 
 	}
 	
-
-	public void ExpandPegMrkPage() throws InterruptedException
-	{
-		Thread.sleep(1000);
-		ExpandPegMrkPage.click( );
-        Thread.sleep(6000);
-	}
 	public void ExpandReport() throws InterruptedException
 	{
-		Thread.sleep(6000);
+ 
 		ClkReport.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void ClkIntractionHstry() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ClkIntractionHstry));
 		ClkIntractionHstry.click( );
-        Thread.sleep(6000);
+        
 	}
 	public void ClkRecentIntrctnHstry() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(ClkRecentIntrctnHstry));
 		ClkRecentIntrctnHstry.click( );
-        Thread.sleep(6000);
+         
 	}
 	public void Validation() throws InterruptedException
 	{
 		driver.manage().window().maximize();
-		Thread.sleep(1000);
+		wait.until(ExpectedConditions.visibilityOf(Journey));
 		 JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	//	 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+		 WebElement element6 = Journey;
 	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
-	     Thread.sleep(8000);
+	    
 	    
 	    	String getTextOnPage1 = "";
-	    	 Thread.sleep(2000);
+	 
 	    	 
 
-			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
-			 WebElement element11 =  driver.findElement(By.xpath(xpath11));
-			 Thread.sleep(8000);
+		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
+		//	 WebElement element11 =  driver.findElement(By.xpath(xpath11));
+			 wait.until(ExpectedConditions.visibilityOf(Channel));
+			 WebElement element11 = Channel;
 			getTextOnPage1 = element11.getText();
 			 System.out.println(getTextOnPage1);
-			 Thread.sleep(8000);			 
+			  		 
 			 boolean result = getTextOnPage1.equals("O") ||
 					 getTextOnPage1.equals("J") ||
 					 getTextOnPage1.equals("C") ||
@@ -122,22 +122,21 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	public void DMPRealTimeVlidtion() throws InterruptedException
 	{
 		driver.manage().window().maximize();
-		Thread.sleep(8000);
-		 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
 	     Thread.sleep(8000);
 	    
 	    	String getTextOnPage1 = "";
-	    	 Thread.sleep(2000);
 	    	 
-
-			 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
-			 WebElement element11 =  driver.findElement(By.xpath(xpath11));
-			 Thread.sleep(8000);
+	    	 
+	    	 wait.until(ExpectedConditions.visibilityOf(Channel));
+		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
+			 WebElement element11 = Channel;
+			
 			getTextOnPage1 = element11.getText();
 			 System.out.println(getTextOnPage1);
-			 Thread.sleep(8000);			 
+		 			 
 			 boolean result = getTextOnPage1.equals("DMP")|| 
   	                    getTextOnPage1.equals("Online"); 
             assertTrue(result);

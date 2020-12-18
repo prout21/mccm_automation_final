@@ -21,6 +21,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -72,24 +73,24 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		pegamrkting1.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 	}
 
 
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
-		Thread.sleep(6000);
+	  
 		ExpandPegMrkPage.click( );
-		Thread.sleep(6000);
+		 
 	}
 
 	public void Campaigns() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-		Thread.sleep(6000);
+		 
 	}
 
 
@@ -115,29 +116,29 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 //	}
 	public void PreChkValdDMPCampCd() throws InterruptedException
 	{
-		for(int i=1;i<10;i++){
+		for(int i=1;i<1000;i++){
 			
-			Thread.sleep(6000);
+			wait.until(ExpectedConditions.visibilityOf(Filter));
 			Filter.click( );
-			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
 			CampaignVlSrch.clear();
-			Thread.sleep(6000);
+		 
 			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
 		 	String NBACampValue1 = obj.getCellValue("PegaTestDataDMP", 1, 0);
-			Thread.sleep(6000);
+		 	wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
  			CampaignVlSrch.sendKeys(NBACampValue1);
- 			Thread.sleep(6000);
+ 			 
  			System.out.println(NBACampValue1);
-			Thread.sleep(6000);
+ 			wait.until(ExpectedConditions.visibilityOf(View));
  			View.click( );
- 			Thread.sleep(6000);
+ 			 
 
 			String NBACampCodeExits1 = "";
 
 			try
 			{
 				WebElement w2=driver.findElement(By.xpath("//div[text()='There are no results returned, please try a new search term.']"));
-				Thread.sleep(8000);
+		 
 				NBACampCodeExits1= w2.getText();
 
 				System.out.println(NBACampCodeExits1);

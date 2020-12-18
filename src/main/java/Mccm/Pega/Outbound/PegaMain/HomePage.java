@@ -27,14 +27,14 @@ public class HomePage extends TestBase {
 	 public DataLoadDetails DataLoadValidation() throws InterruptedException {
    	  Thread.sleep(8000);
    	  Homepage.click();
-   	  Thread.sleep(8000);
+   	  
    	  return new DataLoadDetails();
    } 
     
     public HomePageDetails ClickHomepage() throws InterruptedException {
     	  Thread.sleep(8000);
     	  Homepage.click();
-    	  Thread.sleep(8000);
+    	 
     	  return new HomePageDetails();
     } 	
    public PegaMarketPage Pegamrklunch()throws InterruptedException {
@@ -47,19 +47,19 @@ public class HomePage extends TestBase {
    public DBConfigValdtn DBConfigValidation() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();
-	   	  Thread.sleep(8000);
+	   	  
 	   	  return new DBConfigValdtn();
 	   } 
    public ExtractChannelFile ExtractChannelFile() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();
-	   	  Thread.sleep(8000);
+	   	 
 	   	  return new ExtractChannelFile();
 	   } 
    public NBAOutboundValdtn NBAOutboundValdtn() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();
-	   	  Thread.sleep(8000);
+	   	  
 	   	  return new NBAOutboundValdtn();
 	   } 
    
@@ -79,7 +79,7 @@ public class HomePage extends TestBase {
    public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();
-	   	  Thread.sleep(8000);
+	   	 
 	   	  return new PreChkNBACampValu();
 	   }
    public PegaPreChkValidCampCd Pegamrklunch3()throws InterruptedException {
