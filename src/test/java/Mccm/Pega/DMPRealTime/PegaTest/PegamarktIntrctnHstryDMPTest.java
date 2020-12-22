@@ -61,7 +61,7 @@ public class PegamarktIntrctnHstryDMPTest extends TestBase {
 
 public void teardown() {
 
- driver.quit();
+// driver.quit();
 
 
 	System.out.println("DMP API Process Offer Results Validation Done");

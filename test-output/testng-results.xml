@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3924" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
+  <suite name="Default suite" duration-ms="66642" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T21:00:04 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3924" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest">
-        <test-method status="PASS" signature="VerifyDMPRTProcessOffResltsAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest@7cbd213e]" name="VerifyDMPRTProcessOffResltsAPIcallSuccessfully" duration-ms="3870" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
+    <test name="Default test" duration-ms="66642" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T21:00:04 IST">
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="setup" is-config="true" duration-ms="20938" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T20:59:19 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDMPRTProcessOffResltsAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully()[pri:1, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully" duration-ms="45646" started-at="2020-12-22T20:59:19 IST" finished-at="2020-12-22T21:00:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDMPAPIProcessOffRsultsValidtnSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="teardown" is-config="true" duration-ms="0" started-at="2020-12-22T21:00:04 IST" finished-at="2020-12-22T21:00:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

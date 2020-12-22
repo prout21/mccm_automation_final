@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest">
         <methods>
           <include name="teardown"/>
-          <include name="VerifyExtractChannelFileCheckSuccessfully"/>
+          <include name="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

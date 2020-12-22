@@ -136,7 +136,7 @@ public class PegaMarketPage extends TestBase  {
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement ConfirmCampgn;
 
-	@FindBy(xpath="//*[@class='pi pi-refresh']")
+	@FindBy(xpath="//*[@class='pi pi-refresh']")    
 	WebElement RefreshCampgn;
 
 	@FindBy(xpath="//h2[text()='Run schedule']")
@@ -414,6 +414,7 @@ public class PegaMarketPage extends TestBase  {
 	public void RefreshCampgn() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(RefreshCampgn));
+		Thread.sleep(2000);
 		RefreshCampgn.click( );
 		System.out.println("Submitted NBA Campaign");
 	}
