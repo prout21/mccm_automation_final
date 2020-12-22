@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51876" started-at="2020-12-22T16:26:53 IST" finished-at="2020-12-22T16:27:45 IST">
+  <suite name="Default suite" duration-ms="3924" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51876" started-at="2020-12-22T16:26:53 IST" finished-at="2020-12-22T16:27:45 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@cb0ed20]" name="setup" is-config="true" duration-ms="28939" started-at="2020-12-22T16:26:53 IST" finished-at="2020-12-22T16:27:22 IST">
+    <test name="Default test" duration-ms="3924" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest">
+        <test-method status="PASS" signature="VerifyDMPRTProcessOffResltsAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest@7cbd213e]" name="VerifyDMPRTProcessOffResltsAPIcallSuccessfully" duration-ms="3870" started-at="2020-12-22T18:11:14 IST" finished-at="2020-12-22T18:11:18 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyExtractChannelFileCheckSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@cb0ed20]" name="VerifyExtractChannelFileCheckSuccessfully" duration-ms="22881" started-at="2020-12-22T16:27:22 IST" finished-at="2020-12-22T16:27:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyExtractChannelFileCheckSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@cb0ed20]" name="teardown" is-config="true" duration-ms="1" started-at="2020-12-22T16:27:45 IST" finished-at="2020-12-22T16:27:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
+        </test-method> <!-- VerifyDMPRTProcessOffResltsAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

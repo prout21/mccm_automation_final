@@ -51,7 +51,8 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
            
-		  json = general_ReadProperty("NBA_json_offer");
+		 
+		  json = general_ReadProperty("NBA_json_offerRslts");
 	
 
 			

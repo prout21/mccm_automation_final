@@ -13,7 +13,7 @@ Step-3: Dev studio serch navigate the records->Sys admin-> Dynamic system settin
        from NBACampaignName->Launch pega markting->serch the NBACampaignName's value->
        if present navigate the reschedule script (after jump step-7)
        Else if not goto step 4.  
-       (Adhoc Request Run, it is not include in main flow currently)
+       (Adhoc Request Run, it is not include in main flow currently and applicable)
 Step-4:Dev DSS studio setup
       class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest" 
       class name="Mccm.Pega.Outbound.PegaTest.HomePageTest

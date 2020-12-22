@@ -53,7 +53,7 @@ public class DMPRTPNBAMobHashTest extends TestBase  {
 
 	      //  String json = "{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
             
-			 json = general_ReadProperty("NBA_json");
+			 json = general_ReadProperty("NBA_json_ProcNBA");
 	
 		 
 			
