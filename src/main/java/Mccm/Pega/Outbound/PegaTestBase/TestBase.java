@@ -61,7 +61,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-public class TestBase {
+    public class TestBase {
+    	
 	public static WebDriver driver;
 	public static Properties prop;
 
@@ -117,12 +118,14 @@ public class TestBase {
 		String chromeDriver = prop.getProperty("chromedriver");
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
+			
+ 		System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
-//		System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+  //		System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
-			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+		
 
 			if(headLessMode.equals("true")) {
 

@@ -152,8 +152,10 @@ public class ExtractChannelFile extends TestBase {
 				driver.manage().window().maximize();
 
 				wait.until(ExpectedConditions.visibilityOf(FileNameClk));
+				Thread.sleep(6000); 
 				FileNameClk.click( );
 				wait.until(ExpectedConditions.visibilityOf(FilterClk));
+				Thread.sleep(6000); 
 				FilterClk.click( );
 				 
 			}
@@ -162,19 +164,19 @@ public class ExtractChannelFile extends TestBase {
 	public void FileNameSerach() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
+		Thread.sleep(6000); 
 		FileNameSerach.sendKeys(ChanelFileNameIN);
 		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
+		Thread.sleep(6000); 
 		FilterApplayClk.click( );
 	}
-
-
 	// display validation of the Flag id data
 
 	public void EXTFLAGCheck() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(EXTFLAGChk));
 		WebElement w4= EXTFLAGChk;
-		 
+		Thread.sleep(6000); 
 		String EXTFLAG = w4.getText();
 
 		System.out.println(w4.getText());
