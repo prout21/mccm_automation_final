@@ -68,7 +68,7 @@ public class TestBase {
 	public static String CampRunID;
 	public static WebDriverWait wait;
 
-	
+
 
 	public TestBase()
 	{
@@ -118,15 +118,11 @@ public class TestBase {
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 
-	     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
-
-			//      System.setProperty("webdriver.chrome.silentOutput","true");
-
 			String projectPath = System.getProperty("user.dir");
 
-		 	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+//		System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
-
+			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			if(headLessMode.equals("true")) {
 
@@ -148,6 +144,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		//    driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		//      System.setProperty("webdriver.chrome.silentOutput","true");
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 
