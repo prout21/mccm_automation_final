@@ -54,9 +54,17 @@ import com.relevantcodes.extentreports.LogStatus;
 //			ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
 //		}
 
+//		public void onTestSkipped(ITestResult result) {
+//			System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
+//			ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
+//		}
+		
 		public void onTestSkipped(ITestResult result) {
-			System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
-			ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
+			if(result.getStatus() == ITestResult.SKIP){
+				ExtentTestManager.getTest().log(Status.SKIP, "Test Case Skipped is "+result.getName());
+				ExtentTestManager.getTest().log(Status.SKIP, "Test Case Skipped is "+result.getThrowable());
+		    	System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
+			}
 		}
 
 		public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

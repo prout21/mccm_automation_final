@@ -26,7 +26,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import Demo.APIRestful.DemoCalcNBAAndStartOfferFlow;
+
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
@@ -118,13 +118,13 @@ public class TestBase {
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 
-		      System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+	     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			//      System.setProperty("webdriver.chrome.silentOutput","true");
 
 			String projectPath = System.getProperty("user.dir");
 
-		//	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+		 	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 
 

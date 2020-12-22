@@ -35,7 +35,7 @@ public class LoginPageTest extends TestBase {
  @Test (priority=1)
  public void VerifyLoginPageTitleTest() { 
 	 String title = loginpage.PageTitle();
-	 Assert.assertEquals(title, "Pega Platform1");
+	 Assert.assertEquals(title, "Pega Platform");
 	
 	 
  }

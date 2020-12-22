@@ -68,14 +68,15 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(8000);
+	 	Thread.sleep(8000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
 	 	pegamrkting1.click( );
-		Thread.sleep(8000); 
+	 	Thread.sleep(8000);
 	}
 	
 	public void ExpandReport() throws InterruptedException
 	{
- 
+		wait.until(ExpectedConditions.elementToBeClickable(ClkReport));
 		ClkReport.click( );
         
 	}

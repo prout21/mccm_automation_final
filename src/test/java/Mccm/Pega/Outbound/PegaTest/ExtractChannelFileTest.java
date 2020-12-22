@@ -59,7 +59,7 @@ public class ExtractChannelFileTest extends TestBase {
  
       public void teardown() {
 	
-    driver.quit();
+   driver.quit();
 	 
       
  	 System.out.println("Extract file Check Done");  
