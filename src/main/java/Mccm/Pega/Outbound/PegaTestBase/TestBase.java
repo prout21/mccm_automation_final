@@ -26,7 +26,8 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-
+import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
+import Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
@@ -83,25 +84,21 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 			prop.load(ip);
 
 			PegaMarketPage.ExcelFilePath = System.getProperty("user.dir");
-
 			HomePageDetails.ExcelFilePath = System.getProperty("user.dir");
-
 			PegaMarktDMPRealTime.ExcelFilePath = System.getProperty("user.dir");
-
 			DataLoadDetails.ExcelFilePath = System.getProperty("user.dir");
-
 			DBConfigValdtn.ExcelFilePath = System.getProperty("user.dir");
-
 			ExtractChannelFile.ExcelFilePath = System.getProperty("user.dir");
-
 			NBAOutboundValdtn.ExcelFilePath = System.getProperty("user.dir");
-
 			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
-
 			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
 			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
+			PegaMarktCalcNBAandStartOff.ExcelFilePath = System.getProperty("user.dir");
+			CalcNBAStartOffDSS.ExcelFilePath=System.getProperty("user.dir");
+			
+		 
 
 
 		} catch (FileNotFoundException e) {
@@ -119,11 +116,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 			
- 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+ 	  System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
-   	// System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+   //  System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 		
 

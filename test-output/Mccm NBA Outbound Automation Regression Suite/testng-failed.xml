@@ -6,13 +6,44 @@
   </listeners>
   <test thread-count="5" name="Pega Dynamic System Setting Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
+      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
         <methods>
-          <include name="teardown"/>
-          <include name="VerifyLoginPageTitleTest"/>
           <include name="setup"/>
+          <include name="VerifyOracleCansadraDataLoadedSuccessfully"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
     </classes>
   </test> <!-- Pega Dynamic System Setting Regression Test(failed) -->
+  <test thread-count="5" name="Pega NBA DB Config Completed Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
+        <methods>
+          <include name="VerifyDBConfigurationCampRunidValidationSuccessfully"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
+    </classes>
+  </test> <!-- Pega NBA DB Config Completed Regression Test(failed) -->
+  <test thread-count="5" name="Unix Extract NBA Channel File Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
+        <methods>
+          <include name="VerifyExtracDataLoadedSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
+    </classes>
+  </test> <!-- Unix Extract NBA Channel File Regression Test(failed) -->
+  <test thread-count="5" name="Pega NBACampaign Batch Process Completed Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
+        <methods>
+          <include name="VerifyNBABatchProcessCompletedSuccessfully"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
+    </classes>
+  </test> <!-- Pega NBACampaign Batch Process Completed Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm NBA Outbound Automation Regression Suite] -->

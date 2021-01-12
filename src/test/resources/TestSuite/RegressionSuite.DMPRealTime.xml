@@ -10,7 +10,7 @@
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest"/>  
     </classes>
-  </test> <!-- Test -->
+   </test> <!-- Test -->
   
      <test name="Pega DMP Real Time Regression Test">
     <classes>
@@ -20,9 +20,9 @@
   
     <test name="RestAPI POST Call NBA Regression Test">
     <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest"/>  
       <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest"/>  
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest"/> 
+       <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest"/>  
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest"/> 
     </classes>
   </test> <!-- Test -->
    

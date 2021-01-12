@@ -11,6 +11,7 @@ import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
+import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
 
 public class HomePage extends TestBase {
 	//page factory - OR:
@@ -27,7 +28,6 @@ public class HomePage extends TestBase {
 	 public DataLoadDetails DataLoadValidation() throws InterruptedException {
    	  Thread.sleep(8000);
    	  Homepage.click();
-   	  
    	  return new DataLoadDetails();
    } 
     
@@ -79,8 +79,7 @@ public class HomePage extends TestBase {
    public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	  Homepage.click();
-	   	 
-	   	  return new PreChkNBACampValu();
+	   	   return new PreChkNBACampValu();
 	   }
    public PegaPreChkValidCampCd Pegamrklunch3()throws InterruptedException {
 		
@@ -94,6 +93,12 @@ public class HomePage extends TestBase {
 	     action.moveToElement(Pegalunch).click().build().perform();
 	   	  return new PegaPreChkValidDMPCampCd();
 	   }
-         
+   
+   public CalcNBAStartOffDSS CalcNBAStartOffDSS() throws InterruptedException {
+	   	  Thread.sleep(8000);
+	   	  Homepage.click();
+	   	  return new CalcNBAStartOffDSS();
+	   }
+  
  
 }

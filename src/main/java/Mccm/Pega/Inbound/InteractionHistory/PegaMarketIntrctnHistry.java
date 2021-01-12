@@ -53,8 +53,20 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]")
 	WebElement Channel ;
+	
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]")
+	WebElement BusinessIssue ;
 	 
-		
+	
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[7]/div[1]/span[1]")
+	WebElement Group ;
+	
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[8]/div[1]/span[1]")
+	WebElement Proposition ;
+	
+	
+	
+	
 	public PegaMarketIntrctnHistry( ) {
     	PageFactory.initElements(driver, this);
     }
@@ -68,8 +80,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-	 	Thread.sleep(8000);
-	//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
+	  	Thread.sleep(8000);
+	 //	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
 	 	pegamrkting1.click( );
 	 	Thread.sleep(8000);
 	}
@@ -142,6 +154,44 @@ public class PegaMarketIntrctnHistry extends TestBase  {
   	                    getTextOnPage1.equals("Online"); 
             assertTrue(result);
 				 System.out.println("MCCM DMP Real Time Use Cases Passed");
+	}
+	public void PegaCalcNBAandStartOffAPIVlidtion() throws InterruptedException
+	{
+		 driver.manage().window().maximize();
+	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+	     Thread.sleep(8000);
+	    
+	    	String getTextOnPage1 = "",getTextOnPage2="",getTextOnPage3="";
+	    	 
+	    	 
+	     	 wait.until(ExpectedConditions.visibilityOf(BusinessIssue));
+		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
+			 WebElement element12 = BusinessIssue;
+			 
+		 // 	 wait.until(ExpectedConditions.visibilityOf(Group));
+				// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
+					 WebElement element13 = Group;
+					 
+				//  	 wait.until(ExpectedConditions.visibilityOf(Proposition));
+						// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
+							 WebElement element14 = Proposition;
+			 
+			 
+			 
+			
+			 getTextOnPage1 = element12.getText();
+			 System.out.println(getTextOnPage1);
+			 getTextOnPage2 = element13.getText();
+			 System.out.println(getTextOnPage2);
+			 getTextOnPage3 = element14.getText();
+			 System.out.println(getTextOnPage3);
+		 			 
+			 boolean result = getTextOnPage1.equals("Sales") &&getTextOnPage2.equals("Mobile")&&
+  	                    getTextOnPage3.equals("UpsellOffer1GB"); 
+            assertTrue(result);
+				 System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
 	}
 	
 }	 

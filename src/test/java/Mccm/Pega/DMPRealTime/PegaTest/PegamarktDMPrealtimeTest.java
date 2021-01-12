@@ -77,14 +77,14 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	// pegamarktDMPrealtime.RefreshCampgn();
 	 
  }
-//@AfterMethod
-//
-//public void teardown() {
-//
-// driver.quit();
-//
-//
-//	System.out.println("DMP Real Time Containers  Run Done");
-//}
+@AfterMethod
+
+public void teardown() {
+
+ driver.quit();
+
+
+	System.out.println("DMP Real Time Containers  Run Done");
+}
 
 }

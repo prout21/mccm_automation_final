@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest">
+      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
         <methods>
+          <include name="VerifyNBABatchProcessCompletedSuccessfully"/>
           <include name="teardown"/>
-          <include name="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

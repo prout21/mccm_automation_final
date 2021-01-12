@@ -1,0 +1,10 @@
+https://10.0.4.159:8002/prweb/PRRestService/PegaMKTContainer/V2/Container
+
+  DSS SETTING :  
+Internal_REST_URL_OSF = https://10.0.4.159:8002/prweb/PRRestService/PegaMKTContainer/V2/Container
+ 
+    OSFDirection = Inbound
+ 
+    OSFChannel = OSF
+ 
+    OSFContainerName = OSF

@@ -1,25 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="4" ignored="0" total="13" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66642" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T21:00:04 IST">
+  <suite name="Mccm NBA Outbound Automation Regression Suite" duration-ms="2032599" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:52:44 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66642" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T21:00:04 IST">
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="setup" is-config="true" duration-ms="20938" started-at="2020-12-22T20:58:58 IST" finished-at="2020-12-22T20:59:19 IST">
+    <test name="Pre Data Setup for DB Load Regression Test" duration-ms="2322" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:18:54 IST">
+      <class name="Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test">
+        <test-method status="PASS" signature="VerifyPreDatasetupDBLoadsuccessfully()[pri:0, instance:Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test@39ba5a14]" name="VerifyPreDatasetupDBLoadsuccessfully" duration-ms="2244" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:18:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPreDatasetupDBLoadsuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test -->
+    </test> <!-- Pre Data Setup for DB Load Regression Test -->
+    <test name="Unix filechk and DB loaded Regression Test" duration-ms="15130" started-at="2021-01-12T12:18:55 IST" finished-at="2021-01-12T12:19:10 IST">
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
+        <test-method status="PASS" signature="VerifyDBDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Test@668bc3d5]" name="VerifyDBDataLoadedSuccessfully" duration-ms="15129" started-at="2021-01-12T12:18:55 IST" finished-at="2021-01-12T12:19:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDBDataLoadedSuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
+    </test> <!-- Unix filechk and DB loaded Regression Test -->
+    <test name="Pre Data Setup for Valid Camp Code Regression Test" duration-ms="818610" started-at="2021-01-12T12:19:11 IST" finished-at="2021-01-12T12:32:50 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="setup" is-config="true" duration-ms="33351" started-at="2021-01-12T12:19:11 IST" finished-at="2021-01-12T12:19:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully()[pri:1, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully" duration-ms="45646" started-at="2020-12-22T20:59:19 IST" finished-at="2020-12-22T21:00:04 IST">
+        <test-method status="PASS" signature="VerifyPreCheckNBACampCodeValueValidSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="VerifyPreCheckNBACampCodeValueValidSuccessfully" duration-ms="783756" started-at="2021-01-12T12:19:44 IST" finished-at="2021-01-12T12:32:48 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDMPAPIProcessOffRsultsValidtnSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest@cb0ed20]" name="teardown" is-config="true" duration-ms="0" started-at="2020-12-22T21:00:04 IST" finished-at="2020-12-22T21:00:04 IST">
+        </test-method> <!-- VerifyPreCheckNBACampCodeValueValidSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="teardown" is-config="true" duration-ms="1502" started-at="2021-01-12T12:32:48 IST" finished-at="2021-01-12T12:32:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegamarktIntrctnHstryDMPTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest -->
+    </test> <!-- Pre Data Setup for Valid Camp Code Regression Test -->
+    <test name="Pega Dynamic System Setting Regression Test" duration-ms="202012" started-at="2021-01-12T12:32:50 IST" finished-at="2021-01-12T12:36:12 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="setup" is-config="true" duration-ms="20266" started-at="2021-01-12T12:33:17 IST" finished-at="2021-01-12T12:33:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="VerifyOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="VerifyOracleCansadraDataLoadedSuccessfully" duration-ms="33265" started-at="2021-01-12T12:33:37 IST" finished-at="2021-01-12T12:34:11 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Y] but found [N]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Y] but found [N]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.DataLoadCmpltdOracle(DataLoadDetails.java:191)
+at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:87)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOracleCansadraDataLoadedSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="teardown" is-config="true" duration-ms="1399" started-at="2021-01-12T12:34:11 IST" finished-at="2021-01-12T12:34:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
+      <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="setup" is-config="true" duration-ms="20942" started-at="2021-01-12T12:34:12 IST" finished-at="2021-01-12T12:34:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyDynamicSystemSettingSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="VerifyDynamicSystemSettingSuccessfully" duration-ms="97524" started-at="2021-01-12T12:34:33 IST" finished-at="2021-01-12T12:36:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDynamicSystemSettingSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="teardown" is-config="true" duration-ms="1303" started-at="2021-01-12T12:36:11 IST" finished-at="2021-01-12T12:36:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
+      <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5621" started-at="2021-01-12T12:32:50 IST" finished-at="2021-01-12T12:32:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyLoginPageTitleTest()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyLoginPageTitleTest" duration-ms="10" started-at="2021-01-12T12:32:56 IST" finished-at="2021-01-12T12:32:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="1144" started-at="2021-01-12T12:32:56 IST" finished-at="2021-01-12T12:32:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5259" started-at="2021-01-12T12:32:57 IST" finished-at="2021-01-12T12:33:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyPegaLogoTest()[pri:2, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyPegaLogoTest" duration-ms="70" started-at="2021-01-12T12:33:02 IST" finished-at="2021-01-12T12:33:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPegaLogoTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="949" started-at="2021-01-12T12:33:02 IST" finished-at="2021-01-12T12:33:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5331" started-at="2021-01-12T12:33:03 IST" finished-at="2021-01-12T12:33:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyLoginSuccessfulTest()[pri:3, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyLoginSuccessfulTest" duration-ms="7108" started-at="2021-01-12T12:33:08 IST" finished-at="2021-01-12T12:33:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginSuccessfulTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="1815" started-at="2021-01-12T12:33:15 IST" finished-at="2021-01-12T12:33:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
+    </test> <!-- Pega Dynamic System Setting Regression Test -->
+    <test name="Pega NBACampaign Run Marketing Completed Regression Test" duration-ms="773713" started-at="2021-01-12T12:36:12 IST" finished-at="2021-01-12T12:49:06 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="setup" is-config="true" duration-ms="12904" started-at="2021-01-12T12:36:12 IST" finished-at="2021-01-12T12:36:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyNBACampaignRunSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="VerifyNBACampaignRunSuccessfully" duration-ms="759356" started-at="2021-01-12T12:36:25 IST" finished-at="2021-01-12T12:49:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyNBACampaignRunSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="teardown" is-config="true" duration-ms="1452" started-at="2021-01-12T12:49:04 IST" finished-at="2021-01-12T12:49:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.PegamarktingTest -->
+    </test> <!-- Pega NBACampaign Run Marketing Completed Regression Test -->
+    <test name="Pega NBA DB Config Completed Regression Test" duration-ms="103430" started-at="2021-01-12T12:49:06 IST" finished-at="2021-01-12T12:50:50 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="setup" is-config="true" duration-ms="23115" started-at="2021-01-12T12:49:06 IST" finished-at="2021-01-12T12:49:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="VerifyDBConfigurationCampRunidValidationSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="VerifyDBConfigurationCampRunidValidationSuccessfully" duration-ms="79129" started-at="2021-01-12T12:49:29 IST" finished-at="2021-01-12T12:50:48 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [PR-18801] but found [PR-18798]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [PR-18801] but found [PR-18798]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at Mccm.Pega.Outbound.PegaMain.DBConfigValdtn.CampRunidValidation(DBConfigValdtn.java:180)
+at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.VerifyDBConfigurationCampRunidValidationSuccessfully(DBConfigValdtnTest.java:52)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDBConfigurationCampRunidValidationSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="teardown" is-config="true" duration-ms="1184" started-at="2021-01-12T12:50:48 IST" finished-at="2021-01-12T12:50:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
+    </test> <!-- Pega NBA DB Config Completed Regression Test -->
+    <test name="Unix Extract NBA Channel File Regression Test" duration-ms="1027" started-at="2021-01-12T12:50:50 IST" finished-at="2021-01-12T12:50:51 IST">
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
+        <test-method status="FAIL" signature="VerifyExtracDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test@61a485d2]" name="VerifyExtracDataLoadedSuccessfully" duration-ms="1027" started-at="2021-01-12T12:50:50 IST" finished-at="2021-01-12T12:50:51 IST">
+          <exception class="com.jcraft.jsch.JSchException">
+            <message>
+              <![CDATA[java.net.ConnectException: Connection refused: connect]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+at com.jcraft.jsch.Util.createSocket(Util.java:349)
+at com.jcraft.jsch.Session.connect(Session.java:215)
+at com.jcraft.jsch.Session.connect(Session.java:183)
+at Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test.VerifyExtracDataLoadedSuccessfully(App_Unix_Outbound_Extract_Test.java:82)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at java.net.Socket.<init>(Unknown Source)
+at java.net.Socket.<init>(Unknown Source)
+at com.jcraft.jsch.Util.createSocket(Util.java:343)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.jcraft.jsch.JSchException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyExtracDataLoadedSuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
+    </test> <!-- Unix Extract NBA Channel File Regression Test -->
+    <test name="Pega Generated Extract Channel File Regression Test" duration-ms="50146" started-at="2021-01-12T12:50:51 IST" finished-at="2021-01-12T12:51:41 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="setup" is-config="true" duration-ms="20686" started-at="2021-01-12T12:50:51 IST" finished-at="2021-01-12T12:51:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="VerifyExtractChannelFileCheckSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="VerifyExtractChannelFileCheckSuccessfully" duration-ms="27755" started-at="2021-01-12T12:51:12 IST" finished-at="2021-01-12T12:51:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyExtractChannelFileCheckSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="teardown" is-config="true" duration-ms="1703" started-at="2021-01-12T12:51:39 IST" finished-at="2021-01-12T12:51:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
+    </test> <!-- Pega Generated Extract Channel File Regression Test -->
+    <test name="Pega NBACampaign Batch Process Completed Regression Test" duration-ms="62601" started-at="2021-01-12T12:51:41 IST" finished-at="2021-01-12T12:52:44 IST">
+      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="setup" is-config="true" duration-ms="20508" started-at="2021-01-12T12:51:41 IST" finished-at="2021-01-12T12:52:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="40929" started-at="2021-01-12T12:52:02 IST" finished-at="2021-01-12T12:52:43 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [PR-18801] but found [PR-18791]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [PR-18801] but found [PR-18791]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn.CampRUNid(NBAOutboundValdtn.java:192)
+at Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest.VerifyNBABatchProcessCompletedSuccessfully(NBAOutboundValdtnTest.java:52)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyNBABatchProcessCompletedSuccessfully -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="teardown" is-config="true" duration-ms="1164" started-at="2021-01-12T12:52:43 IST" finished-at="2021-01-12T12:52:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
+    </test> <!-- Pega NBACampaign Batch Process Completed Regression Test -->
+  </suite> <!-- Mccm NBA Outbound Automation Regression Suite -->
 </testng-results>
