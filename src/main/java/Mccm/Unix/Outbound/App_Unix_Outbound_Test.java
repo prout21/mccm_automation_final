@@ -102,9 +102,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 //		//Assert.fail("Login Not Successful");
 //		}   	
 //    	
-    	
-    	
-    	
+      	
     	
     	
     	try { 	
@@ -364,7 +362,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 	public static String general_ReadProperty(String propertyKey)
 	{
 		String propertyValue="";
-		File cfgfile = new File("configurationFile.properties");
+		File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
 		
 		if(cfgfile.exists())
 		{

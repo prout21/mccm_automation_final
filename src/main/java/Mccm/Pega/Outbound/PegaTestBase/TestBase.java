@@ -79,8 +79,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 			String projectPath = System.getProperty("user.dir");
 
-
-			FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
+		//	FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
+			FileInputStream ip=new FileInputStream(projectPath+"/UseCaseConfigFile/Config.properties");
 			prop.load(ip);
 
 			PegaMarketPage.ExcelFilePath = System.getProperty("user.dir");
@@ -170,7 +170,31 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 	public static String general_ReadProperty(String propertyKey)
 	{
 		String propertyValue="";
-		File cfgfile = new File("configurationFile.properties");
+		File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
+
+		if(cfgfile.exists())
+		{
+			Properties propties = new Properties();
+			FileInputStream propFile;
+
+			try {
+				propFile = new FileInputStream(cfgfile);
+				propties.load(propFile);
+				propertyValue=propties.getProperty(propertyKey);
+			} catch (Exception e1) {
+
+				e1.printStackTrace();
+			} 
+		}
+		return propertyValue;
+
+
+	}
+	
+	public static String general_ReadProperty_UseCase(String propertyKey)
+	{
+		String propertyValue="";
+		File cfgfile = new File("UseCaseConfigFile/UseCaseConfigFile.properties");
 
 		if(cfgfile.exists())
 		{

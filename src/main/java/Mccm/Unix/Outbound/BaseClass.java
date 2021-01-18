@@ -52,10 +52,10 @@ public class BaseClass extends MyFrameWorkLibrary  {
 //		GRIDURL=general_ReadProperty("GRIDURL");
 		TEST_ENV=general_ReadProperty("TEST_ENV");
 		ENV_WIKI=general_ReadProperty("ENV_WIKI");
-		VF_DO_INPUT=general_ReadProperty("VF_DO_INPUT");
-		VF_DO_ATTACHMENTS=general_ReadProperty("VF_DO_ATTACHMENTS");
-		VF_DO_REFERENCE_FILES=general_ReadProperty("VF_DO_REFERENCE_FILES");
-		VF_DO_RESULTS=general_ReadProperty("VF_DO_RESULTS");
+//		VF_DO_INPUT=general_ReadProperty("VF_DO_INPUT");
+//		VF_DO_ATTACHMENTS=general_ReadProperty("VF_DO_ATTACHMENTS");
+//		VF_DO_REFERENCE_FILES=general_ReadProperty("VF_DO_REFERENCE_FILES");
+//		VF_DO_RESULTS=general_ReadProperty("VF_DO_RESULTS");
 		CHROME_DRIVER=general_ReadProperty("CHROME_DRIVER");
 		IE_DRIVER=general_ReadProperty("IE_DRIVER");
 		GECKO_DRIVER=general_ReadProperty("GECKO_DRIVER");

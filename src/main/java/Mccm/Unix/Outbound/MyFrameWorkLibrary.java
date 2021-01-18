@@ -72,7 +72,7 @@ public class MyFrameWorkLibrary extends MyAutomationConstants{
 	public String general_ReadProperty(String propertyKey)
 	{
 		String propertyValue="";
-		File cfgfile = new File("configurationFile.properties");
+		File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
 		
 		if(cfgfile.exists())
 		{

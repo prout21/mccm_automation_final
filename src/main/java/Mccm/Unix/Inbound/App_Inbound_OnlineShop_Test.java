@@ -392,7 +392,7 @@ String  name  = general_ReadProperty("File_ONLINE_SHOP");
 	public static String general_ReadProperty(String propertyKey)
 	{
 		String propertyValue="";
-		File cfgfile = new File("configurationFile.properties");
+		File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
 		
 		if(cfgfile.exists())
 		{

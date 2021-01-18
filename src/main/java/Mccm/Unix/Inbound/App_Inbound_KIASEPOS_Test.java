@@ -398,7 +398,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 	public static String general_ReadProperty(String propertyKey)
 	{
 		String propertyValue="";
-		File cfgfile = new File("configurationFile.properties");
+		File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
 
 		if(cfgfile.exists())
 		{

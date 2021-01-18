@@ -15,10 +15,10 @@ public class MyAutomationConstants {
 	public static String PROJECT_FOLDER_PATH;
 	public static String TEST_ENV;
 	public static String ENV_WIKI;
-	public static String VF_DO_INPUT;
-	public static String VF_DO_ATTACHMENTS;
-	public static String VF_DO_REFERENCE_FILES;
-	public static String VF_DO_RESULTS;
+//	public static String VF_DO_INPUT;
+//	public static String VF_DO_ATTACHMENTS;
+//	public static String VF_DO_REFERENCE_FILES;
+//	public static String VF_DO_RESULTS;
 	public static String CHROME_DRIVER;
 	public static String IE_DRIVER;
 	public static String GECKO_DRIVER;
