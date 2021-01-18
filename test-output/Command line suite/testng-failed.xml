@@ -5,7 +5,9 @@
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
         <methods>
+          <include name="VerifyPegaLogoTest"/>
           <include name="teardown"/>
+          <include name="VerifyLoginPageTitleTest"/>
           <include name="setup"/>
           <include name="VerifyLoginSuccessfulTest"/>
         </methods>

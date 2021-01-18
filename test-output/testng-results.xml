@@ -1,49 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="13" passed="9">
+<testng-results skipped="2" failed="6" ignored="0" total="13" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Mccm NBA Outbound Automation Regression Suite" duration-ms="2032599" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:52:44 IST">
+  <suite name="Mccm NBA Outbound Automation Regression Suite" duration-ms="636317" started-at="2021-01-18T12:50:19 IST" finished-at="2021-01-18T13:00:56 IST">
     <groups>
     </groups>
-    <test name="Pre Data Setup for DB Load Regression Test" duration-ms="2322" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:18:54 IST">
+    <test name="Pre Data Setup for DB Load Regression Test" duration-ms="17828" started-at="2021-01-18T12:50:19 IST" finished-at="2021-01-18T12:50:37 IST">
       <class name="Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test">
-        <test-method status="PASS" signature="VerifyPreDatasetupDBLoadsuccessfully()[pri:0, instance:Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test@39ba5a14]" name="VerifyPreDatasetupDBLoadsuccessfully" duration-ms="2244" started-at="2021-01-12T12:18:51 IST" finished-at="2021-01-12T12:18:54 IST">
+        <test-method status="PASS" signature="VerifyPreDatasetupDBLoadsuccessfully()[pri:0, instance:Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test@129a8472]" name="VerifyPreDatasetupDBLoadsuccessfully" duration-ms="1295" started-at="2021-01-18T12:50:36 IST" finished-at="2021-01-18T12:50:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyPreDatasetupDBLoadsuccessfully -->
       </class> <!-- Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test -->
     </test> <!-- Pre Data Setup for DB Load Regression Test -->
-    <test name="Unix filechk and DB loaded Regression Test" duration-ms="15130" started-at="2021-01-12T12:18:55 IST" finished-at="2021-01-12T12:19:10 IST">
+    <test name="Unix filechk and DB loaded Regression Test" duration-ms="13342" started-at="2021-01-18T12:50:38 IST" finished-at="2021-01-18T12:50:51 IST">
       <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
-        <test-method status="PASS" signature="VerifyDBDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Test@668bc3d5]" name="VerifyDBDataLoadedSuccessfully" duration-ms="15129" started-at="2021-01-12T12:18:55 IST" finished-at="2021-01-12T12:19:10 IST">
+        <test-method status="PASS" signature="VerifyDBDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Test@3d24753a]" name="VerifyDBDataLoadedSuccessfully" duration-ms="13335" started-at="2021-01-18T12:50:38 IST" finished-at="2021-01-18T12:50:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyDBDataLoadedSuccessfully -->
       </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
     </test> <!-- Unix filechk and DB loaded Regression Test -->
-    <test name="Pre Data Setup for Valid Camp Code Regression Test" duration-ms="818610" started-at="2021-01-12T12:19:11 IST" finished-at="2021-01-12T12:32:50 IST">
+    <test name="Pre Data Setup for Valid Camp Code Regression Test" duration-ms="109208" started-at="2021-01-18T12:50:51 IST" finished-at="2021-01-18T12:52:41 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="setup" is-config="true" duration-ms="33351" started-at="2021-01-12T12:19:11 IST" finished-at="2021-01-12T12:19:44 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@4e04a765]" name="setup" is-config="true" duration-ms="24033" started-at="2021-01-18T12:50:51 IST" finished-at="2021-01-18T12:51:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyPreCheckNBACampCodeValueValidSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="VerifyPreCheckNBACampCodeValueValidSuccessfully" duration-ms="783756" started-at="2021-01-12T12:19:44 IST" finished-at="2021-01-12T12:32:48 IST">
+        <test-method status="FAIL" signature="VerifyPreCheckNBACampCodeValueValidSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@4e04a765]" name="VerifyPreCheckNBACampCodeValueValidSuccessfully" duration-ms="83872" started-at="2021-01-18T12:51:15 IST" finished-at="2021-01-18T12:52:39 IST">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (d88a2a0e774d470afc95a29dda61de38)] -> xpath: //span[text()='Campaigns']] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55702}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d88a2a0e774d470afc95a29dda61de38]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (d88a2a0e774d470afc95a29dda61de38)] -> xpath: //span[text()='Campaigns']] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55702}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d88a2a0e774d470afc95a29dda61de38
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd.Campaigns(PegaPreChkValidCampCd.java:100)
+at Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest.VerifyPreCheckNBACampCodeValueValidSuccessfully(PegaPreChkValidCampCdTest.java:54)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyPreCheckNBACampCodeValueValidSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@3a03464]" name="teardown" is-config="true" duration-ms="1502" started-at="2021-01-12T12:32:48 IST" finished-at="2021-01-12T12:32:50 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest@4e04a765]" name="teardown" is-config="true" duration-ms="1292" started-at="2021-01-18T12:52:39 IST" finished-at="2021-01-18T12:52:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest -->
     </test> <!-- Pre Data Setup for Valid Camp Code Regression Test -->
-    <test name="Pega Dynamic System Setting Regression Test" duration-ms="202012" started-at="2021-01-12T12:32:50 IST" finished-at="2021-01-12T12:36:12 IST">
+    <test name="Pega Dynamic System Setting Regression Test" duration-ms="217059" started-at="2021-01-18T12:52:41 IST" finished-at="2021-01-18T12:56:18 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="setup" is-config="true" duration-ms="20266" started-at="2021-01-12T12:33:17 IST" finished-at="2021-01-12T12:33:37 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1e67b872]" name="setup" is-config="true" duration-ms="29278" started-at="2021-01-18T12:53:17 IST" finished-at="2021-01-18T12:53:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="VerifyOracleCansadraDataLoadedSuccessfully" duration-ms="33265" started-at="2021-01-12T12:33:37 IST" finished-at="2021-01-12T12:34:11 IST">
+        <test-method status="FAIL" signature="VerifyOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1e67b872]" name="VerifyOracleCansadraDataLoadedSuccessfully" duration-ms="51152" started-at="2021-01-18T12:53:46 IST" finished-at="2021-01-18T12:54:37 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Y] but found [N]]]>
@@ -58,172 +107,398 @@ at org.testng.Assert.assertEquals(Assert.java:585)
 at Mccm.Pega.Outbound.PegaMain.DataLoadDetails.DataLoadCmpltdOracle(DataLoadDetails.java:191)
 at Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest.VerifyOracleCansadraDataLoadedSuccessfully(DataLoadDetailsTest.java:87)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOracleCansadraDataLoadedSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@36f6e879]" name="teardown" is-config="true" duration-ms="1399" started-at="2021-01-12T12:34:11 IST" finished-at="2021-01-12T12:34:12 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1e67b872]" name="teardown" is-config="true" duration-ms="1546" started-at="2021-01-18T12:54:37 IST" finished-at="2021-01-18T12:54:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
       <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="setup" is-config="true" duration-ms="20942" started-at="2021-01-12T12:34:12 IST" finished-at="2021-01-12T12:34:33 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@60addb54]" name="setup" is-config="true" duration-ms="24138" started-at="2021-01-18T12:54:39 IST" finished-at="2021-01-18T12:55:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyDynamicSystemSettingSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="VerifyDynamicSystemSettingSuccessfully" duration-ms="97524" started-at="2021-01-12T12:34:33 IST" finished-at="2021-01-12T12:36:11 IST">
+        <test-method status="FAIL" signature="VerifyDynamicSystemSettingSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@60addb54]" name="VerifyDynamicSystemSettingSuccessfully" duration-ms="73866" started-at="2021-01-18T12:55:03 IST" finished-at="2021-01-18T12:56:17 IST">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=87.0.4280.141)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 36ceed349647364fd58d01404a6e90a5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=87.0.4280.141)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 36ceed349647364fd58d01404a6e90a5
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy7.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.HomePageDetails.ClikMCCMNotifyErr(HomePageDetails.java:402)
+at Mccm.Pega.Outbound.PegaTest.HomePageTest.VerifyDynamicSystemSettingSuccessfully(HomePageTest.java:101)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyDynamicSystemSettingSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@5a61f5df]" name="teardown" is-config="true" duration-ms="1303" started-at="2021-01-12T12:36:11 IST" finished-at="2021-01-12T12:36:12 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.HomePageTest@60addb54]" name="teardown" is-config="true" duration-ms="1289" started-at="2021-01-18T12:56:17 IST" finished-at="2021-01-18T12:56:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
       <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5621" started-at="2021-01-12T12:32:50 IST" finished-at="2021-01-12T12:32:56 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="setup" is-config="true" duration-ms="6654" started-at="2021-01-18T12:52:41 IST" finished-at="2021-01-18T12:52:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyLoginPageTitleTest()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyLoginPageTitleTest" duration-ms="10" started-at="2021-01-12T12:32:56 IST" finished-at="2021-01-12T12:32:56 IST">
+        <test-method status="PASS" signature="VerifyLoginPageTitleTest()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="VerifyLoginPageTitleTest" duration-ms="14" started-at="2021-01-18T12:52:48 IST" finished-at="2021-01-18T12:52:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="1144" started-at="2021-01-12T12:32:56 IST" finished-at="2021-01-12T12:32:57 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="teardown" is-config="true" duration-ms="1177" started-at="2021-01-18T12:52:48 IST" finished-at="2021-01-18T12:52:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5259" started-at="2021-01-12T12:32:57 IST" finished-at="2021-01-12T12:33:02 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="setup" is-config="true" duration-ms="7361" started-at="2021-01-18T12:52:49 IST" finished-at="2021-01-18T12:52:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyPegaLogoTest()[pri:2, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyPegaLogoTest" duration-ms="70" started-at="2021-01-12T12:33:02 IST" finished-at="2021-01-12T12:33:02 IST">
+        <test-method status="PASS" signature="VerifyPegaLogoTest()[pri:2, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="VerifyPegaLogoTest" duration-ms="150" started-at="2021-01-18T12:52:56 IST" finished-at="2021-01-18T12:52:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyPegaLogoTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="949" started-at="2021-01-12T12:33:02 IST" finished-at="2021-01-12T12:33:03 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="teardown" is-config="true" duration-ms="1421" started-at="2021-01-18T12:52:56 IST" finished-at="2021-01-18T12:52:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="setup" is-config="true" duration-ms="5331" started-at="2021-01-12T12:33:03 IST" finished-at="2021-01-12T12:33:08 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="setup" is-config="true" duration-ms="5383" started-at="2021-01-18T12:52:58 IST" finished-at="2021-01-18T12:53:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyLoginSuccessfulTest()[pri:3, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="VerifyLoginSuccessfulTest" duration-ms="7108" started-at="2021-01-12T12:33:08 IST" finished-at="2021-01-12T12:33:15 IST">
+        <test-method status="PASS" signature="VerifyLoginSuccessfulTest()[pri:3, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="VerifyLoginSuccessfulTest" duration-ms="11493" started-at="2021-01-18T12:53:03 IST" finished-at="2021-01-18T12:53:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLoginSuccessfulTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@54a097cc]" name="teardown" is-config="true" duration-ms="1815" started-at="2021-01-12T12:33:15 IST" finished-at="2021-01-12T12:33:17 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.LoginPageTest@5d624da6]" name="teardown" is-config="true" duration-ms="2107" started-at="2021-01-18T12:53:15 IST" finished-at="2021-01-18T12:53:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
     </test> <!-- Pega Dynamic System Setting Regression Test -->
-    <test name="Pega NBACampaign Run Marketing Completed Regression Test" duration-ms="773713" started-at="2021-01-12T12:36:12 IST" finished-at="2021-01-12T12:49:06 IST">
+    <test name="Pega NBACampaign Run Marketing Completed Regression Test" duration-ms="126715" started-at="2021-01-18T12:56:18 IST" finished-at="2021-01-18T12:58:25 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="setup" is-config="true" duration-ms="12904" started-at="2021-01-12T12:36:12 IST" finished-at="2021-01-12T12:36:25 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@6be46e8f]" name="setup" is-config="true" duration-ms="19055" started-at="2021-01-18T12:56:18 IST" finished-at="2021-01-18T12:56:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyNBACampaignRunSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="VerifyNBACampaignRunSuccessfully" duration-ms="759356" started-at="2021-01-12T12:36:25 IST" finished-at="2021-01-12T12:49:04 IST">
+        <test-method status="FAIL" signature="VerifyNBACampaignRunSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@6be46e8f]" name="VerifyNBACampaignRunSuccessfully" duration-ms="106042" started-at="2021-01-18T12:56:37 IST" finished-at="2021-01-18T12:58:23 IST">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2e0c552c50a7fff72bfe0ce5ed8a003f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2e0c552c50a7fff72bfe0ce5ed8a003f
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:872)
+at Mccm.Pega.QAUtil.TestUtil.SwitcToFrame(TestUtil.java:46)
+at Mccm.Pega.Outbound.PegaTest.PegamarktingTest.VerifyNBACampaignRunSuccessfully(PegamarktingTest.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyNBACampaignRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@234bef66]" name="teardown" is-config="true" duration-ms="1452" started-at="2021-01-12T12:49:04 IST" finished-at="2021-01-12T12:49:06 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.PegamarktingTest@6be46e8f]" name="teardown" is-config="true" duration-ms="1614" started-at="2021-01-18T12:58:23 IST" finished-at="2021-01-18T12:58:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.PegamarktingTest -->
     </test> <!-- Pega NBACampaign Run Marketing Completed Regression Test -->
-    <test name="Pega NBA DB Config Completed Regression Test" duration-ms="103430" started-at="2021-01-12T12:49:06 IST" finished-at="2021-01-12T12:50:50 IST">
+    <test name="Pega NBA DB Config Completed Regression Test" duration-ms="49360" started-at="2021-01-18T12:58:25 IST" finished-at="2021-01-18T12:59:14 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="setup" is-config="true" duration-ms="23115" started-at="2021-01-12T12:49:06 IST" finished-at="2021-01-12T12:49:29 IST">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@6b143ee9]" name="setup" is-config="true" duration-ms="49349" started-at="2021-01-18T12:58:25 IST" finished-at="2021-01-18T12:59:14 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 964b565c8f60c59f7d7c4ac226ad5d03]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 964b565c8f60c59f7d7c4ac226ad5d03
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy7.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.HomePage.DBConfigValidation(HomePage.java:49)
+at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.setup(DBConfigValdtnTest.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyDBConfigurationCampRunidValidationSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="VerifyDBConfigurationCampRunidValidationSuccessfully" duration-ms="79129" started-at="2021-01-12T12:49:29 IST" finished-at="2021-01-12T12:50:48 IST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="SKIP" signature="VerifyDBConfigurationCampRunidValidationSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@6b143ee9]" name="VerifyDBConfigurationCampRunidValidationSuccessfully" duration-ms="0" started-at="2021-01-18T12:59:14 IST" finished-at="2021-01-18T12:59:14 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[expected [PR-18801] but found [PR-18798]]]>
+              <![CDATA[element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 964b565c8f60c59f7d7c4ac226ad5d03]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PR-18801] but found [PR-18798]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at Mccm.Pega.Outbound.PegaMain.DBConfigValdtn.CampRunidValidation(DBConfigValdtn.java:180)
-at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.VerifyDBConfigurationCampRunidValidationSuccessfully(DBConfigValdtnTest.java:52)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 964b565c8f60c59f7d7c4ac226ad5d03
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy7.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.HomePage.DBConfigValidation(HomePage.java:49)
+at Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest.setup(DBConfigValdtnTest.java:36)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyDBConfigurationCampRunidValidationSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@3dd3bcd]" name="teardown" is-config="true" duration-ms="1184" started-at="2021-01-12T12:50:48 IST" finished-at="2021-01-12T12:50:50 IST">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest@6b143ee9]" name="teardown" is-config="true" duration-ms="-1610954954988" started-at="2021-01-18T12:59:14 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
     </test> <!-- Pega NBA DB Config Completed Regression Test -->
-    <test name="Unix Extract NBA Channel File Regression Test" duration-ms="1027" started-at="2021-01-12T12:50:50 IST" finished-at="2021-01-12T12:50:51 IST">
+    <test name="Unix Extract NBA Channel File Regression Test" duration-ms="1053" started-at="2021-01-18T12:59:15 IST" finished-at="2021-01-18T12:59:16 IST">
       <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
-        <test-method status="FAIL" signature="VerifyExtracDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test@61a485d2]" name="VerifyExtracDataLoadedSuccessfully" duration-ms="1027" started-at="2021-01-12T12:50:50 IST" finished-at="2021-01-12T12:50:51 IST">
+        <test-method status="FAIL" signature="VerifyExtracDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test@366e2eef]" name="VerifyExtracDataLoadedSuccessfully" duration-ms="1029" started-at="2021-01-18T12:59:15 IST" finished-at="2021-01-18T12:59:16 IST">
           <exception class="com.jcraft.jsch.JSchException">
             <message>
               <![CDATA[java.net.ConnectException: Connection refused: connect]]>
@@ -235,43 +510,43 @@ at com.jcraft.jsch.Session.connect(Session.java:215)
 at com.jcraft.jsch.Session.connect(Session.java:183)
 at Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test.VerifyExtracDataLoadedSuccessfully(App_Unix_Outbound_Extract_Test.java:82)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
 Caused by: java.net.ConnectException: Connection refused: connect
 at java.net.DualStackPlainSocketImpl.connect0(Native Method)
-at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-at java.net.PlainSocketImpl.connect(Unknown Source)
-at java.net.SocksSocketImpl.connect(Unknown Source)
-at java.net.Socket.connect(Unknown Source)
-at java.net.Socket.connect(Unknown Source)
-at java.net.Socket.<init>(Unknown Source)
-at java.net.Socket.<init>(Unknown Source)
+at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+at java.net.Socket.connect(Socket.java:606)
+at java.net.Socket.connect(Socket.java:555)
+at java.net.Socket.<init>(Socket.java:451)
+at java.net.Socket.<init>(Socket.java:228)
 at com.jcraft.jsch.Util.createSocket(Util.java:343)
 ... 29 more
 ]]>
@@ -282,35 +557,175 @@ at com.jcraft.jsch.Util.createSocket(Util.java:343)
         </test-method> <!-- VerifyExtracDataLoadedSuccessfully -->
       </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
     </test> <!-- Unix Extract NBA Channel File Regression Test -->
-    <test name="Pega Generated Extract Channel File Regression Test" duration-ms="50146" started-at="2021-01-12T12:50:51 IST" finished-at="2021-01-12T12:51:41 IST">
+    <test name="Pega Generated Extract Channel File Regression Test" duration-ms="28373" started-at="2021-01-18T12:59:16 IST" finished-at="2021-01-18T12:59:45 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="setup" is-config="true" duration-ms="20686" started-at="2021-01-12T12:50:51 IST" finished-at="2021-01-12T12:51:12 IST">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@5a61f5df]" name="setup" is-config="true" duration-ms="28368" started-at="2021-01-18T12:59:16 IST" finished-at="2021-01-18T12:59:45 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cc30faa6078ae48fa4356368b81ff7ce]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cc30faa6078ae48fa4356368b81ff7ce
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy7.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.HomePage.ExtractChannelFile(HomePage.java:55)
+at Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest.setup(ExtractChannelFileTest.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyExtractChannelFileCheckSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="VerifyExtractChannelFileCheckSuccessfully" duration-ms="27755" started-at="2021-01-12T12:51:12 IST" finished-at="2021-01-12T12:51:39 IST">
+        <test-method status="SKIP" signature="VerifyExtractChannelFileCheckSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@5a61f5df]" name="VerifyExtractChannelFileCheckSuccessfully" duration-ms="0" started-at="2021-01-18T12:59:45 IST" finished-at="2021-01-18T12:59:45 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cc30faa6078ae48fa4356368b81ff7ce]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="#" onclick="pd(event);" class="nav-toggle-one" id="appview-nav-toggle-one" aria-label="Toggle Left Navigation" role="button" aria-collapsed="true" aria-controls="sidebar-region-one"></a> is not clickable at point (10, 17). Other element would receive the click: <div id="pega_ui_mask" class="pega_ui_masking" style="position: fixed; display: block; top: 0px; left: 0px; height: 613px; width: 1024px;">...</div>
+  (Session info: chrome=87.0.4280.141)
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'INSGH045PMS0', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cc30faa6078ae48fa4356368b81ff7ce
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy7.click(Unknown Source)
+at Mccm.Pega.Outbound.PegaMain.HomePage.ExtractChannelFile(HomePage.java:55)
+at Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest.setup(ExtractChannelFileTest.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyExtractChannelFileCheckSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@4590c9c3]" name="teardown" is-config="true" duration-ms="1703" started-at="2021-01-12T12:51:39 IST" finished-at="2021-01-12T12:51:41 IST">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest@5a61f5df]" name="teardown" is-config="true" duration-ms="-1610954985086" started-at="2021-01-18T12:59:45 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
     </test> <!-- Pega Generated Extract Channel File Regression Test -->
-    <test name="Pega NBACampaign Batch Process Completed Regression Test" duration-ms="62601" started-at="2021-01-12T12:51:41 IST" finished-at="2021-01-12T12:52:44 IST">
+    <test name="Pega NBACampaign Batch Process Completed Regression Test" duration-ms="70749" started-at="2021-01-18T12:59:45 IST" finished-at="2021-01-18T13:00:56 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="setup" is-config="true" duration-ms="20508" started-at="2021-01-12T12:51:41 IST" finished-at="2021-01-12T12:52:02 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@737996a0]" name="setup" is-config="true" duration-ms="32155" started-at="2021-01-18T12:59:45 IST" finished-at="2021-01-18T13:00:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="40929" started-at="2021-01-12T12:52:02 IST" finished-at="2021-01-12T12:52:43 IST">
+        <test-method status="FAIL" signature="VerifyNBABatchProcessCompletedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@737996a0]" name="VerifyNBABatchProcessCompletedSuccessfully" duration-ms="36603" started-at="2021-01-18T13:00:17 IST" finished-at="2021-01-18T13:00:54 IST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [PR-18801] but found [PR-18791]]]>
+              <![CDATA[expected [PR-18801] but found [PR-19158]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PR-18801] but found [PR-18791]
+              <![CDATA[java.lang.AssertionError: expected [PR-18801] but found [PR-19158]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
@@ -319,38 +734,38 @@ at org.testng.Assert.assertEquals(Assert.java:585)
 at Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn.CampRUNid(NBAOutboundValdtn.java:192)
 at Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest.VerifyNBABatchProcessCompletedSuccessfully(NBAOutboundValdtnTest.java:52)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at TestRuner.MccmTestRunner.main(MccmTestRunner.java:30)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at ExecutionUSECase.MainClass.main(MainClass.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyNBABatchProcessCompletedSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@6a024a67]" name="teardown" is-config="true" duration-ms="1164" started-at="2021-01-12T12:52:43 IST" finished-at="2021-01-12T12:52:44 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest@737996a0]" name="teardown" is-config="true" duration-ms="1988" started-at="2021-01-18T13:00:54 IST" finished-at="2021-01-18T13:00:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

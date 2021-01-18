@@ -2,11 +2,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>MCCM</groupId>
-	<artifactId>MCCM</artifactId>
+	<groupId>mccm_automation</groupId>
+	<artifactId>mccm_automation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MCCM</name>
+	<name>mccm_automation</name>
 	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jre.level>1.8</jre.level>
@@ -17,9 +18,49 @@
 		<annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
 	</properties>
 
+	<!-- All the build dependencies here below -->
 
 	<build>
 		<plugins>
+
+			<!-- JAR plug-in -->
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>Main.MainExe</mainClass>
+							<mainClass>ExecutionUSECase.MainClass</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>ExecutionUSECase.MainClass</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
 			<!-- Compiler plug-in -->
 
 			<plugin>
@@ -39,75 +80,71 @@
 				<version>2.21.0</version>
 				<configuration>
 					<executable>/usr/bin/java</executable>
-					<suiteXmlFiles>
-						<!-- TestNG suite XML files -->
-						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles>
- 						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles>
-						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.DMPRealTime.xml</suiteXmlFiles>
-					</suiteXmlFiles>
+					<!-- <suiteXmlFiles> -->
+					<!-- TestNG suite XML files -->
+					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles> -->
+					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles> -->
+					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.DMPRealTime.xml</suiteXmlFiles> -->
+					<!-- </suiteXmlFiles> -->
 				</configuration>
 			</plugin>
 
-			<!-- -Unix plug-in here -->
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.2.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.9.1</version>
 				<configuration>
-					<mainClass>com.mccm.automation.App</mainClass>
-					<arguments>
-						<argument>argument1</argument>
-					</arguments>
+					<dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+					<dependencyLocationsEnabled>true</dependencyLocationsEnabled>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<transformers>
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.mccm.automation.App</mainClass>
-								</transformer>
-							</transformers>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<!-- This plugin will set the properties values using dependency information -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.3</version>
-			</plugin>
+
+
+			<!-- -Unix plug-in here -->
+
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
+				<version>1.2.1</version> <executions> <execution> <goals> <goal>java</goal> 
+				</goals> </execution> </executions> <configuration> <mainClass>TestRuner.Test22</mainClass> 
+				<arguments> <argument>argument1</argument> </arguments> </configuration> 
+				</plugin> -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-shade-plugin</artifactId> 
+				<version>2.1</version> <executions> <execution> <phase>package</phase> <goals> 
+				<goal>shade</goal> </goals> <configuration> <transformers> <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"> 
+				<mainClass>com.mccm.automation.App</mainClass> <mainClass>TestRuner.Test22</mainClass> 
+				</transformer> </transformers> </configuration> </execution> </executions> 
+				</plugin> -->
+
+			<!-- <plugin> -->
+			<!-- This plugin will set the properties values using dependency information -->
+			<!-- <groupId>org.apache.maven.plugins</groupId> -->
+			<!-- <artifactId>maven-dependency-plugin</artifactId> -->
+			<!-- <version>2.3</version> -->
+			<!-- </plugin> -->
+
 			<!-- <plugin> <artifactId>maven-compiler-plugin</artifactId> <configuration> 
 				<source>1.8</source> <target>1.8</target> <fork>true</fork> Add all the checkers 
 				you want to enable here -->
 			<!-- <annotationProcessors> <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor> 
 				</annotationProcessors> <compilerArgs> -->
 			<!-- location of the annotated JDK, which comes from a Maven dependency -->
-			<!-- <arg>-Xbootclasspath/p:${annotatedJdk}</arg> </compilerArgs> </configuration> 
-				</plugin> -->
+			<!-- <arg>-Xbootclasspath/p:${annotatedJdk}</arg> </compilerArgs> </configuration> -->
+			<!-- </plugin> -->
+
+			<!-- -Unix plug-in here -->
 
 		</plugins>
 	</build>
 
-	<dependencies>
 
+
+	<!-- All the dependencies here below -->
+	<dependencies>
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.11</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -120,7 +157,6 @@
 			<artifactId>selenium-chrome-driver</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -157,8 +193,6 @@
 			<version>2.6</version>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -173,8 +207,6 @@
 			<version>4.4.1</version>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
@@ -187,7 +219,6 @@
 			<artifactId>json</artifactId>
 			<version>20180813</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>commons-codec</groupId>
@@ -206,7 +237,6 @@
 			<artifactId>jsch</artifactId>
 			<version>0.1.55</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -274,8 +304,6 @@
 			<version>1.17.1</version>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
@@ -338,7 +366,6 @@
 			<version>1.2.1</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna-platform -->
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
@@ -378,16 +405,18 @@
 			<artifactId>ashot</artifactId>
 			<version>1.5.4</version>
 		</dependency>
-		<!-- Thanks for using https://jar-download.com -->
-
-
-
 
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-resources-plugin</artifactId>
 			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.2.3</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 </project>

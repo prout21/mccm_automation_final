@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
+      <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
         <methods>
-          <include name="VerifyNBABatchProcessCompletedSuccessfully"/>
-          <include name="teardown"/>
+          <include name="VerifyDBConfigurationCampRunidValidationSuccessfully"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

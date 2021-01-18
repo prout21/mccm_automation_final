@@ -20,8 +20,9 @@ public class MccmTestRunner extends TestBase {
 		TestNG	testNG = new TestNG();
 
 		List<String> suites = new ArrayList<String>();
-		suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
 		
+		suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
+	
 		testNG.setTestSuites(suites);
 
 		testNG.addListener(ext);
@@ -29,3 +30,5 @@ public class MccmTestRunner extends TestBase {
 		testNG.run();
 	}
 }
+
+
