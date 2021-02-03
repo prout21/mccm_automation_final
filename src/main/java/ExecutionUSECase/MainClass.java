@@ -19,13 +19,15 @@ public class MainClass extends TestBase {
 
 		TestNG	testNG = new TestNG();
 		
+		String projectPath = System.getProperty("user.dir");
+		
 		 TestSuite_UseCase = general_ReadProperty_UseCase("UseCase_Name");
 
 		List<String> suites = new ArrayList<String>();
 		
 	//	suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
 		
-		suites.add(TestSuite_UseCase);
+		suites.add(projectPath+"/TestSuite_UseCase");
 	
 		testNG.setTestSuites(suites);
 

@@ -159,8 +159,11 @@ public class PegaMarketPage extends TestBase  {
 
 	@FindBy(xpath="//span[.='Campaign run ID']/..//span[contains(.,'PR-')]")
 	WebElement CampaignRunID;
+	
+	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
+	WebElement CampaignImage;
 
-
+	
 
 
 
@@ -207,6 +210,33 @@ public class PegaMarketPage extends TestBase  {
 		wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
 
+	}
+
+	
+	public void ExpandPegMrkPage1() throws InterruptedException
+	{
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+		System.out.println("hi 5");
+	}
+
+
+public void CampaignImage() throws InterruptedException
+	{
+
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
+		System.out.println("hi 4");
 	}
 
 	public void LaptopResolation() throws InterruptedException
