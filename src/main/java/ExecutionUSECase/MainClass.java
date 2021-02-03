@@ -27,7 +27,9 @@ public class MainClass extends TestBase {
 		
 	//	suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
 		
-		suites.add(projectPath+"/TestSuite_UseCase");
+	//suites.add(projectPath+/TestSuite_UseCase);
+		
+    	suites.add(TestSuite_UseCase);
 	
 		testNG.setTestSuites(suites);
 

@@ -81,13 +81,13 @@
 				<version>2.21.0</version>
 				<configuration>
 					<executable>/usr/bin/java</executable>
-					  <suiteXmlFiles>  
-					  TestNG suite XML files  
-			    <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound2.xml</suiteXmlFiles>
+<!-- 					  <suiteXmlFiles>   -->
+<!-- 					  TestNG suite XML files   -->
+			 
 					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Inbound.xml</suiteXmlFiles> -->
 					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.Outbound.xml</suiteXmlFiles> -->
 					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.DMPRealTime.xml</suiteXmlFiles> -->
-					 </suiteXmlFiles>  
+<!-- 					 </suiteXmlFiles>   -->
 				</configuration>
 			</plugin>
 
