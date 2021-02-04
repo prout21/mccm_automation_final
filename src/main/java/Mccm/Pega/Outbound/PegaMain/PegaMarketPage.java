@@ -162,10 +162,13 @@ public class PegaMarketPage extends TestBase  {
 	
 	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
 	WebElement CampaignImage;
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 
-
+	
 
 
 
@@ -240,6 +243,7 @@ public class PegaMarketPage extends TestBase  {
 
 		if (searchIconPresence==true && searchIconEnabled==true)
 
+<<<<<<< HEAD
 		{
 			WebElement element19 = Campaigns;
 			JavascriptExecutor executor13 = (JavascriptExecutor)driver;
@@ -249,6 +253,36 @@ public class PegaMarketPage extends TestBase  {
 	}
 		
 	public void CampaignImage() throws InterruptedException
+=======
+	
+	public void ExpandPegMrkPage1() throws InterruptedException
+	{
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+		System.out.println("hi 5");
+	}
+
+
+public void CampaignImage() throws InterruptedException
+	{
+
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
+		System.out.println("hi 4");
+	}
+
+	public void LaptopResolation() throws InterruptedException
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 	{
 
 	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));

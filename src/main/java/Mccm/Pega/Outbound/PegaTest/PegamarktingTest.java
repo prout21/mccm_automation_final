@@ -40,16 +40,22 @@ public class PegamarktingTest extends TestBase {
 		pegamarketpage =new PegaMarketPage();
 		pegamarketpage=homepage.Pegamrklunch();
 	}
-	
+
 
 	@Test (priority=1)
 	public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
 		homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
+<<<<<<< HEAD
 		pegamarketpage.ExpandPegMrkPage1();
     	pegamarketpage.CampaignImage();
    	//	pegamarketpage.CampaignsJavascriptserch();
+=======
+		//pegamarketpage.ExpandPegMrkPage();
+		pegamarketpage.ExpandPegMrkPage1();
+		pegamarketpage.CampaignImage();
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 		pegamarketpage.Campaigns();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();
@@ -89,7 +95,11 @@ public class PegamarktingTest extends TestBase {
 
 	public void teardown() {
 
+<<<<<<< HEAD
   //   driver.quit();
+=======
+		driver.quit();
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 
 
 		System.out.println("Pega Markting NBA Camp Run Finished");  

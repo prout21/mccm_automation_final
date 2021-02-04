@@ -102,9 +102,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 //		//Assert.fail("Login Not Successful");
 //		}   	
 //    	
-      	
-    	
-    	
+      	    	
     	try { 	
         //Object myObject = null;
        // String user = "mccm02";
@@ -357,7 +355,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 	//*Return 		Poverty Value as String														*
 	//*Descriptions: 																			*
 	//*	This function will read the Properties file and return property value to based on key.	*
-	//*Author: 														*
+	//*Author: 														                            *
 	//*******************************************************************************************
 	public static String general_ReadProperty(String propertyKey)
 	{

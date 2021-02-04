@@ -3,13 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest">
+=======
+      <class name="PegamarktingTest">
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
         <methods>
           <include name="teardown"/>
           <include name="VerifyNBACampaignRunSuccessfully"/>
           <include name="setup"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- Mccm.Pega.Outbound.PegaTest.PegamarktingTest -->
+=======
+      </class> <!-- PegamarktingTest -->
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

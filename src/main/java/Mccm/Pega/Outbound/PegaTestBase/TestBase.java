@@ -26,6 +26,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import ExecutionUSECase.MainClass;
 import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
 import Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
@@ -97,7 +98,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaMarktCalcNBAandStartOff.ExcelFilePath = System.getProperty("user.dir");
 			CalcNBAStartOffDSS.ExcelFilePath=System.getProperty("user.dir");
-			
+		
 		 
 
 
@@ -116,6 +117,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 			
+<<<<<<< HEAD
  	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
@@ -124,6 +126,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 		
 
+=======
+   System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+
+			String projectPath = System.getProperty("user.dir");
+
+   //  System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+
+		
+>>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 			if(headLessMode.equals("true")) {
 
 				ChromeOptions chromeOptions = new ChromeOptions();
