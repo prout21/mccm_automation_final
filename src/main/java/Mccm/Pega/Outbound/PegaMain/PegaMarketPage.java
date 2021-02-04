@@ -159,6 +159,11 @@ public class PegaMarketPage extends TestBase  {
 
 	@FindBy(xpath="//span[.='Campaign run ID']/..//span[contains(.,'PR-')]")
 	WebElement CampaignRunID;
+	
+	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
+	WebElement CampaignImage;
+	
+	
 
 
 
@@ -185,6 +190,7 @@ public class PegaMarketPage extends TestBase  {
 		Thread.sleep(8000); 
 		pegamrkting1.click( );
 		Thread.sleep(8000); 
+		
 	}
 	public void Driversize() throws InterruptedException
 	{
@@ -199,22 +205,57 @@ public class PegaMarketPage extends TestBase  {
 	{
 		//	wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
 		ExpandPegMrkPage.click( );
-
+		System.out.println("hi 2");
 	}
+	
+	public void ExpandPegMrkPage1() throws InterruptedException
+	{
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+		System.out.println("hi 5");
+	}
+
 
 	public void Campaigns() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigns));
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-
+		Thread.sleep(8000); 
 	}
-
-	public void LaptopResolation() throws InterruptedException
+	public void CampaignsJavascriptserch() throws InterruptedException
 	{
 
-		String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
-		driver.findElement(By.xpath(s5)).click();
+		boolean searchIconPresence = Campaigns.isDisplayed();
+		boolean searchIconEnabled =  Campaigns.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element19 = Campaigns;
+			JavascriptExecutor executor13 = (JavascriptExecutor)driver;
+			executor13.executeScript("arguments[0].click();", element19);
+
+		}
 	}
+		
+	public void CampaignImage() throws InterruptedException
+	{
+
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
+		System.out.println("hi 4");
+	}
+	
 	public void Create() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Create));

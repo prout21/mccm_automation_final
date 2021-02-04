@@ -23,8 +23,6 @@ public class MainClass extends TestBase {
 
 		List<String> suites = new ArrayList<String>();
 		
-	//	suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
-		
 		suites.add(TestSuite_UseCase);
 	
 		testNG.setTestSuites(suites);
