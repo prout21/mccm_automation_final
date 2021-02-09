@@ -121,8 +121,12 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	@FindBy(xpath="//h2[text()='Run schedule']")
 	WebElement Runschedule;
 	
+	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
+	WebElement CampaignImage;
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	
+	
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 	
 	String DMPCampaigncd = obj.getCellValue("PegaTestDataDMP", 1, 0);
 		
@@ -157,17 +161,38 @@ public class PegaMarktDMPRealTime extends TestBase  {
 		ExpandPegMrkPage.click( );
        
 	}
-	public void LaptopResolation() throws InterruptedException
+	public void ExpandPegMrkPage1() throws InterruptedException
 	{
-		    Thread.sleep(8000);
-		    String s5 = "(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]";
-		     driver.findElement(By.xpath(s5)).click();
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+
 	}
+
+
 	public void Campaigns() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-        
+		Thread.sleep(8000); 
+	}
+
+
+	public void CampaignImage() throws InterruptedException
+	{
+
+		//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
+
 	}
 	public void Create() throws InterruptedException
 	{

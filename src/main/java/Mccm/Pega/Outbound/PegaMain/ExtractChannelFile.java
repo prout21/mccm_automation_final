@@ -65,7 +65,7 @@ public class ExtractChannelFile extends TestBase {
 
 
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 
 	String ChanelFileNameIN = obj.getCellValue("PegaTestData", 1, 16);
 
@@ -123,10 +123,12 @@ public class ExtractChannelFile extends TestBase {
 	}
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+		Thread.sleep(8000);
+		// wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
 		ActionClkGetDataExtractDetails.click( );
+		
 	}
-
+	 
 	public void RunActionClk() throws InterruptedException
 	{
 		 

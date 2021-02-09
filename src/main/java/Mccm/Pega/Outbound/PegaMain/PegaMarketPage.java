@@ -159,20 +159,17 @@ public class PegaMarketPage extends TestBase  {
 
 	@FindBy(xpath="//span[.='Campaign run ID']/..//span[contains(.,'PR-')]")
 	WebElement CampaignRunID;
-	
+
 	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
 	WebElement CampaignImage;
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
-
-	
 
 
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+
+
+
+	//	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 
 	String Campaigncd = obj.getCellValue("PegaTestData", 1, 0);
 
@@ -188,29 +185,22 @@ public class PegaMarketPage extends TestBase  {
 		PageFactory.initElements(driver, this);
 	}
 
+	//*click the pega marketing option
 	public void pegamarkting() throws InterruptedException
 	{
 		Thread.sleep(8000); 
 		pegamrkting1.click( );
 		Thread.sleep(8000); 
-		
+
 	}
-	public void Driversize() throws InterruptedException
-	{
 
-		System.out.println(driver.manage().window().getSize());
-
-		driver.manage().window().setSize(new Dimension(1920,1080));
-
-		System.out.println(driver.manage().window().getSize());
-	}
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
 		//	wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
 		ExpandPegMrkPage.click( );
-		System.out.println("hi 2");
+
 	}
-	
+
 	public void ExpandPegMrkPage1() throws InterruptedException
 	{
 
@@ -225,71 +215,28 @@ public class PegaMarketPage extends TestBase  {
 			executor14.executeScript("arguments[0].click();", element20);
 
 		}
-		System.out.println("hi 5");
+
 	}
 
 
 	public void Campaigns() throws InterruptedException
 	{
-	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
 		Thread.sleep(8000); 
 	}
-	public void CampaignsJavascriptserch() throws InterruptedException
-	{
 
-		boolean searchIconPresence = Campaigns.isDisplayed();
-		boolean searchIconEnabled =  Campaigns.isEnabled();
 
-		if (searchIconPresence==true && searchIconEnabled==true)
-
-<<<<<<< HEAD
-		{
-			WebElement element19 = Campaigns;
-			JavascriptExecutor executor13 = (JavascriptExecutor)driver;
-			executor13.executeScript("arguments[0].click();", element19);
-
-		}
-	}
-		
 	public void CampaignImage() throws InterruptedException
-=======
-	
-	public void ExpandPegMrkPage1() throws InterruptedException
 	{
 
-		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
-		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
-
-		if (searchIconPresence==true && searchIconEnabled==true)
-
-		{
-			WebElement element20 = ExpandPegMrkPage;
-			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
-			executor14.executeScript("arguments[0].click();", element20);
-
-		}
-		System.out.println("hi 5");
-	}
-
-
-public void CampaignImage() throws InterruptedException
-	{
-
-	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
-		System.out.println("hi 4");
+
 	}
 
-	public void LaptopResolation() throws InterruptedException
->>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
-	{
 
-	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
-		CampaignImage.click( );
-		System.out.println("hi 4");
-	}
-	
+
 	public void Create() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Create));
@@ -404,18 +351,18 @@ public void CampaignImage() throws InterruptedException
 	public void databasetemplate() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(databasetemplate));
-		 Thread.sleep(4000);  
+		Thread.sleep(4000);  
 		databasetemplate.click( );
 
 	}
 
 	public void configtemplate() throws InterruptedException
 	{
-	 
+
 		wait.until(ExpectedConditions.visibilityOf(configtemplate));
 		Thread.sleep(4000); 
 		configtemplate.click( );
-	 
+
 	}
 
 	public void SrchConfigEngagment() throws InterruptedException
@@ -429,10 +376,10 @@ public void CampaignImage() throws InterruptedException
 	}
 	public void Addmcclbound() throws InterruptedException
 	{
-	//	wait.until(ExpectedConditions.visibilityOf(Addmcclbound));
-		 Thread.sleep(3000); 
-		 Addmcclbound.click( );
-		
+		//	wait.until(ExpectedConditions.visibilityOf(Addmcclbound));
+		Thread.sleep(3000); 
+		Addmcclbound.click( );
+
 	}
 
 	public void Javascriptserch() throws InterruptedException
@@ -450,19 +397,19 @@ public void CampaignImage() throws InterruptedException
 
 		}
 	}
-	
- 	 
+
+
 	public void ApplayEngagement() throws InterruptedException
 	{
-		  
+
 		//	wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 		//ApplayEngagement.click( );
-		 Thread.sleep(8000); 
-	//	wait.until(ExpectedConditions.stalenessOf(ApplayEngagement));
+		Thread.sleep(8000); 
+		//	wait.until(ExpectedConditions.stalenessOf(ApplayEngagement));
 		ApplayEngagement.click( );
-		 Thread.sleep(8000); 
+		Thread.sleep(8000); 
 	}
- 
+
 	public void SaveCampgn() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
@@ -588,7 +535,7 @@ public void CampaignImage() throws InterruptedException
 		//WebElement element8 = driver.findElement(By.xpath("//span[text()='Completed']"));
 		js7.executeScript("arguments[0].scrollIntoView();", element8);	
 		Thread.sleep(8000);
-	//	wait.until(ExpectedConditions.visibilityOf(RunDetails));
+		//	wait.until(ExpectedConditions.visibilityOf(RunDetails));
 		RunDetails.click();
 		//	driver.findElement(By.xpath("//*[@name='DataFlowRunDetails_pyWorkPage_3']")).click( );
 
@@ -607,11 +554,12 @@ public void CampaignImage() throws InterruptedException
 		//Print the text of the searched element
 
 		String CampRunID = w.getText();
-	 
+
 		System.out.println(w.getText());
 
-		File file = new File(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
-		//	File file = new File("C:\\Users\\prout21\\git\\Automation_Framework\\MCCM\\MCCM\\src\\main\\java\\Mccm\\Pega\\TestData\\PegaOutputData.xlsx");
+		File file = new File(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData.xlsx");
+
+
 		XSSFWorkbook wb = new XSSFWorkbook();
 
 		XSSFSheet sh = wb.createSheet("PegaOutputData");

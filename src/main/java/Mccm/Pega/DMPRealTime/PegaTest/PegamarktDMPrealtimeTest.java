@@ -47,7 +47,8 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	 loginpageDMPrealtime.Pegamrklunch3();
 	 pegamarktDMPrealtime.pegamarkting();
 	 testutil.WindowHandling();
-	 pegamarktDMPrealtime.ExpandPegMrkPage();
+	 pegamarktDMPrealtime.ExpandPegMrkPage1();
+	 pegamarktDMPrealtime.CampaignImage();
 	 pegamarktDMPrealtime.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();

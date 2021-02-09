@@ -48,7 +48,8 @@ public class PegaMrktNBAReSchdTest extends TestBase {
 	 homepage.Pegamrklunch2();
 	 pegaMrktNBAReSchd.pegamarkting();
 	 testutil.WindowHandling();
-	 pegaMrktNBAReSchd.ExpandPegMrkPage();
+	 pegaMrktNBAReSchd.ExpandPegMrkPage1();
+	 pegaMrktNBAReSchd.CampaignImage();
 	 pegaMrktNBAReSchd.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
@@ -71,7 +72,7 @@ public class PegaMrktNBAReSchdTest extends TestBase {
 
  public void teardown() {
 
-    driver.quit();
+ //   driver.quit();
 
 
      System.out.println("NBACamp ReSchedule Run Successfully Done");  

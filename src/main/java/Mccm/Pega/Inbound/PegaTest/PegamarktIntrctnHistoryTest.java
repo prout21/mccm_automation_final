@@ -7,9 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import Mccm.Pega.Inbound.InteractionHistory.LoginPageInbound;
-import Mccm.Pega.Inbound.InteractionHistory.PegaMarketIntrctnHistry;
-
+import Mccm.Pega.Inbound.PegaMain.LoginPageInbound;
+import Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
@@ -52,7 +51,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();
-	 pegaMarketIntrctnHistry.Validation();
+	 pegaMarketIntrctnHistry.InboundValidation();
 	 
 	 
  }

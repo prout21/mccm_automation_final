@@ -25,15 +25,11 @@ public class MainClass extends TestBase {
 
 		List<String> suites = new ArrayList<String>();
 		
-<<<<<<< HEAD
+ 
 		suites.add(TestSuite_UseCase);
-=======
-	//	suites.add("src/test/resources/TestSuite/RegressionSuite.Outbound.xml");
-		
-	//suites.add(projectPath+/TestSuite_UseCase);
-		
+  
     	suites.add(TestSuite_UseCase);
->>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
+ 
 	
 		testNG.setTestSuites(suites);
 

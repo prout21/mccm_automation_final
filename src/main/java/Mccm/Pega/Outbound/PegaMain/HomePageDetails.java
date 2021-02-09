@@ -108,7 +108,7 @@ public class HomePageDetails extends TestBase {
    
 	
 	
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 			
 	String NBACampaignNmValue = obj.getCellValue("PegaTestData", 1, 1);
 	

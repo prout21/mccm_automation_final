@@ -7,9 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-import Mccm.Pega.Inbound.InteractionHistory.LoginPageInbound;
-import Mccm.Pega.Inbound.InteractionHistory.PegaMarketIntrctnHistry;
+import Mccm.Pega.Inbound.PegaMain.LoginPageInbound;
+import Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
@@ -50,7 +49,7 @@ public class PegaCalcNBAandStartOffAPIVldtTest extends TestBase {
 	 loginpageinbound.Pegamrklunch3();
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 testutil.WindowHandling();
-	 pegaMarketIntrctnHistry.ExpandReport();;
+	 pegaMarketIntrctnHistry.ExpandReport();
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();

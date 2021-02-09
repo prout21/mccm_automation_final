@@ -52,7 +52,8 @@ public class PegaPreChkValidDMPCampCdTest extends TestBase {
 		homepage.Pegamrklunch1();
 		pegaPreChkValidDMPCampCd.pegamarkting();
 		testutil.WindowHandling();
-		pegaPreChkValidDMPCampCd.ExpandPegMrkPage();
+		pegaPreChkValidDMPCampCd.ExpandPegMrkPage1();
+		pegaPreChkValidDMPCampCd.CampaignImage();
 		pegaPreChkValidDMPCampCd.Campaigns();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();

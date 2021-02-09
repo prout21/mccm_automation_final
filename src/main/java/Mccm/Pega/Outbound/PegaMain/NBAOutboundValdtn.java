@@ -84,11 +84,11 @@ public class NBAOutboundValdtn extends TestBase {
 	WebElement SaveLCSSCmpltd;
 	
 	 	
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 			
 	String DLatestNBACampaignFlagIN = obj.getCellValue("PegaTestData", 1, 17);
 	
-	Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
+	Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData.xlsx");
 
 	String CampaigRUNid = obj1.getCellValue("PegaOutputData", 1, 0);
 	

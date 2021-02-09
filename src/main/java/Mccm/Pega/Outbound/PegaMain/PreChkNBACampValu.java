@@ -46,7 +46,7 @@ public class PreChkNBACampValu extends TestBase {
 	@FindBy(xpath="//input[@type='text'][@name='$PRH_1$ppySetting']")
 	WebElement NBACampaignNamevalue;
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 
 	String NBACampaignNmValue = obj.getCellValue("PegaTestData", 1, 1);
 
@@ -114,7 +114,7 @@ public class PreChkNBACampValu extends TestBase {
 
 		System.out.println(NBACampaignNamevalue);
 
-		File file = new File(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData1.xlsx");
+		File file = new File(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData1.xlsx");
 
 		XSSFWorkbook wb = new XSSFWorkbook();
 

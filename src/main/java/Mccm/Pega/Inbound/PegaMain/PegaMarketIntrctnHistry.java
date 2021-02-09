@@ -1,4 +1,4 @@
-package Mccm.Pega.Inbound.InteractionHistory;
+package Mccm.Pega.Inbound.PegaMain;
 
 import static org.testng.Assert.assertTrue;
 
@@ -86,6 +86,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	 	Thread.sleep(8000);
 	}
 	
+	
 	public void ExpandReport() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(ClkReport));
@@ -104,7 +105,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		ClkRecentIntrctnHstry.click( );
          
 	}
-	public void Validation() throws InterruptedException
+	public void InboundValidation() throws InterruptedException
 	{
 		driver.manage().window().maximize();
 		wait.until(ExpectedConditions.visibilityOf(Journey));

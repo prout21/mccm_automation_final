@@ -1,0 +1,39 @@
+commeted:test base
+
+ PDXC Env. :System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);   
+	    
+	 	    commeted:test base
+	 	    
+PDXC Env. 	    			if(headLessMode.equals("true")) {
+
+
+  
+PDXC Env. : {workspace} 
+
+Only change the value based on the data setup for below excel file.
+mccm_automation\UseCaseConfigFile\TestData\PegaTestData.xlsx
+
+Do not touch (no need to change it is handle by script as write file.) in below.
+mccm_automation\UseCaseConfigFile\TestData\PegaOutputData.xlsx
+mccm_automation\UseCaseConfigFile\TestData\PegaOutputData1.xlsx
+
+
+
+mccm_automation\UseCaseConfigFile\Config.properties
+
+mccm_automation\UseCaseConfigFile\UseCaseConfigFile.properties   -used for run time , pass the use case name for particular scenarios
+
+ mccm_automation\UseCaseConfigFile\configurationFile.properties: config file change for unix and api 
+    
+    ------------
+   Push to PDXC Env.
+    
+cd "C:\Users\prout21\git\Automation_Framework\MCCM\MCCM"
+git remote add fb_develop https://github.dxc.com/DXC-VF/mccm_automation 
+git remote
+git status
+git add .
+git status
+git commit -m "gittest push"
+git push -u origin
+    

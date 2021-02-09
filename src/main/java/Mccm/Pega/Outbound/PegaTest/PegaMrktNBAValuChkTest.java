@@ -48,7 +48,8 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 	 homepage.Pegamrklunch1();
 	 pegaMrktNBAValuChk.pegamarkting();
 	 testutil.WindowHandling();
-	 pegaMrktNBAValuChk.ExpandPegMrkPage();
+	 pegaMrktNBAValuChk.ExpandPegMrkPage1();
+	 pegaMrktNBAValuChk.CampaignImage();
 	 pegaMrktNBAValuChk.Campaigns();
 	 testutil.SwitcToFrame(1);
 	 testutil.RobertAction();
@@ -63,7 +64,7 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 
  public void teardown() {
 
-    driver.quit();
+   // driver.quit();
 
     System.out.println("NBACampaignName Value is not Present..Goto Main Flow");
 }	 

@@ -53,7 +53,7 @@ public class CalcNBAStartOffDSS extends TestBase {
    
 	
 	
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 			
 	String Internal_REST_URL_OSF = obj.getCellValue("PegaTestDataCalcNBA", 1, 3);
 	

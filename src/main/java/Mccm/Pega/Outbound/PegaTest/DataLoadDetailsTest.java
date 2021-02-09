@@ -91,7 +91,7 @@ public class DataLoadDetailsTest extends TestBase {
  @AfterMethod
        public void teardown() {
 	
-       driver.quit();
+    driver.quit();
 	      
  	 System.out.println("DB Data loaded Validation Done");  
  }

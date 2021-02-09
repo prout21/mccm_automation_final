@@ -61,7 +61,7 @@ public class DBConfigValdtn extends TestBase {
 	WebElement Refresh;
 	 
 	 	
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 			
 	String MCCMLCOutboundIN = obj.getCellValue("PegaTestData", 1, 13);
 	
@@ -171,7 +171,7 @@ public class DBConfigValdtn extends TestBase {
 
 		System.out.println(CAMPAIGNRUNID);
 
-		Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
+		Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData.xlsx");
 
 		String CampaigRUNid = obj.getCellValue("PegaOutputData", 1, 0);
 

@@ -47,15 +47,8 @@ public class PegamarktingTest extends TestBase {
 		homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
-<<<<<<< HEAD
-		pegamarketpage.ExpandPegMrkPage1();
+ 		pegamarketpage.ExpandPegMrkPage1();
     	pegamarketpage.CampaignImage();
-   	//	pegamarketpage.CampaignsJavascriptserch();
-=======
-		//pegamarketpage.ExpandPegMrkPage();
-		pegamarketpage.ExpandPegMrkPage1();
-		pegamarketpage.CampaignImage();
->>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
 		pegamarketpage.Campaigns();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();
@@ -95,11 +88,10 @@ public class PegamarktingTest extends TestBase {
 
 	public void teardown() {
 
-<<<<<<< HEAD
-  //   driver.quit();
-=======
-		driver.quit();
->>>>>>> 6484e311590698076ae14e4fbc992554e5e9ae5f
+ 
+   driver.quit();
+ 
+	 
 
 
 		System.out.println("Pega Markting NBA Camp Run Finished");  

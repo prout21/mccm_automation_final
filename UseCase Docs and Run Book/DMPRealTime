@@ -17,7 +17,8 @@ Test Suite Name:RegressionSuite.DMPRealTime.xml
 Pre-condition and Data setup:
 -----------------------------
 Step-1:Input test data setup in Excel file for DMP
-    path location: mccm_automation\src\main\java\Mccm\Pega\TestData\PegaTestData.xlsx
+    path location:mccm_automation\UseCaseConfigFile\TestData\PegaTestData.xlsx
+    Sheet:PegaTestDataDMP
     Column:DMPCampCd, DMPRealtimecontainers,ConfigMrkStrtgy
     
 Step-2:Config file: setup for the input test data for API POST CALL NextBatchAction
@@ -33,4 +34,4 @@ Step-3:Config file: setup for the input test data for API POST CALL Process Offe
 Step-4: Validation will occur based on the below setup in the config file.
    Channel name  is either  DMP  or Online input test data in config file
 
-  Config location: configurationFile.properties  
+  Config location: mccm_automation\UseCaseConfigFile\configurationFile.properties

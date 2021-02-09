@@ -64,6 +64,9 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 
 	@FindBy(xpath="//div[text()='There are no results returned, please try a new search term.']")
 	WebElement DisplayMsg;
+	
+	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
+	WebElement CampaignImage;
 
 
 
@@ -86,10 +89,37 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 		 
 	}
 
+	public void ExpandPegMrkPage1() throws InterruptedException
+	{
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+		 
+	}
+
+
 	public void Campaigns() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigns));
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
+		Thread.sleep(8000); 
+	}
+	
+
+public void CampaignImage() throws InterruptedException
+	{
+
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
 		 
 	}
 
@@ -123,7 +153,7 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 			wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
 			CampaignVlSrch.clear();
 		 
-			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 		 	String NBACampValue1 = obj.getCellValue("PegaTestDataDMP", 1, 0);
 		 	wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
  			CampaignVlSrch.sendKeys(NBACampValue1);
@@ -159,7 +189,7 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 			else
 			{
 
-				Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+				Excel_Reader obj1= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 
 				String CampCode1 = obj1.getCellValue("PegaTestDataDMP", i+1, 0);
 
@@ -167,7 +197,7 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 
 				try {
 
-					InputStream inp = new FileInputStream(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+					InputStream inp = new FileInputStream(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 
 
 					//	Workbook wb = WorkbookFactory.create(inp);
@@ -181,7 +211,7 @@ public class PegaPreChkValidCalcNBACampCd extends TestBase  {
 					cell.setCellValue(CampCode1);
 
 				 	// Write the output to a file
-					FileOutputStream fileOut = new FileOutputStream(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaTestData.xlsx");
+					FileOutputStream fileOut = new FileOutputStream(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 					wb.write(fileOut);
 					fileOut.close();
 

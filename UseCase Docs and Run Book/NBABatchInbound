@@ -18,7 +18,7 @@ Pre-condition and Data setup:
 
 2.Config file: setup for the input test file name used in the unix script.
 
-  Config location:user.dir(in Config file)MCCM\src\main\java\Mccm\Pega\ConfigPega\Config.properties
-                 :user.dir(in Config file)MCCM\configurationFile.properties
+  Config location:user.dir(in Config file)mccm_automation\UseCaseConfigFile\Config.propertie
+                 :user.dir(in Config file)mccm_automation\UseCaseConfigFile\configurationFile.properties
   Used Step No:1 and 2
 3.Report location: user.dir(in Config file)MCCM\TestReport\Test-Automaton-Report.html

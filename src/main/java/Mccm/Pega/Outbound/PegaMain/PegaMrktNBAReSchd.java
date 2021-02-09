@@ -101,10 +101,13 @@ public class PegaMrktNBAReSchd extends TestBase  {
 
 	@FindBy(xpath="//span[.='Campaign run ID']/..//span[contains(.,'PR-')]")
 	WebElement CaputredRunID;
+	
+	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
+	WebElement CampaignImage;
 
-	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData1.xlsx");
+	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData1.xlsx");
 
-	String NBACampValue = obj.getCellValue("PegaOutputData", 1, 0);
+	String NBACampValue = obj.getCellValue("PegaOutputData1", 1, 0);
 
 
 
@@ -121,26 +124,50 @@ public class PegaMrktNBAReSchd extends TestBase  {
 	}
 
 
-	public void ExpandPegMrkPage() throws InterruptedException
+	public void ExpandPegMrkPage1() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		ExpandPegMrkPage.click( );
-		Thread.sleep(6000);
+
+		boolean searchIconPresence = ExpandPegMrkPage.isDisplayed();
+		boolean searchIconEnabled =  ExpandPegMrkPage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = ExpandPegMrkPage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+
+		}
+		 
 	}
+
 
 	public void Campaigns() throws InterruptedException
 	{
-		Thread.sleep(6000);
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000); 
 	}
+	
+
+public void CampaignImage() throws InterruptedException
+	{
+
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		CampaignImage.click( );
+		 
+	}
+
 
 
 	public void Filter() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		Filter.click( );
-		Thread.sleep(6000);
+			
+		  try { 
+			  JavascriptExecutor js = (JavascriptExecutor)driver;
+			  js.executeScript("arguments[0].click();", Filter);
+		   }catch(Exception e){
+	 }
 	}
 
 	public void CampaignVlSrch() throws InterruptedException
@@ -297,7 +324,7 @@ public class PegaMrktNBAReSchd extends TestBase  {
 
 		System.out.println(w.getText());
 
-		File file = new File(ExcelFilePath+"/src/main/java/Mccm/Pega/TestData/PegaOutputData.xlsx");
+		File file = new File(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaOutputData.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook();
 
 		XSSFSheet sh = wb.createSheet("PegaOutputData");
