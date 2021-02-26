@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -37,7 +37,7 @@ public class PegaCalcNBAStartOffDSSTest extends TestBase {
 		calcNBAStartOffDSS=homepage.CalcNBAStartOffDSS();
 	}
 	@Test (priority=1)
-	public void VerifyDynamicSystemSettingSuccessfully() throws InterruptedException { 
+	public void VerifyCalcNBADynamicSystemSettingSuccessfully() throws InterruptedException { 
 		calcNBAStartOffDSS.Recordclk();
 		calcNBAStartOffDSS.SysAdmin();
 		calcNBAStartOffDSS.javaexictor4();
@@ -101,7 +101,8 @@ public class PegaCalcNBAStartOffDSSTest extends TestBase {
 	@AfterMethod
 
 	public void teardown() {
-	driver.quit();
+		
+	//driver.quit();
 
 
 		System.out.println("Calc NBA sTART oFFER DSS Done");  

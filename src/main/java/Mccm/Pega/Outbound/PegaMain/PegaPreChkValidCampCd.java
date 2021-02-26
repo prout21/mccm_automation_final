@@ -146,7 +146,7 @@ public void CampaignImage() throws InterruptedException
 //	}
 	public void PreChkValdCampCd() throws InterruptedException
 	{
-		for(int i=1;i<20;i++){
+		for(int i=1;i<10;i++){
 			 
 			  try { 
 				  JavascriptExecutor js = (JavascriptExecutor)driver;

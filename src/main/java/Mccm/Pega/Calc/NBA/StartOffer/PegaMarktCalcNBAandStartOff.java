@@ -10,6 +10,7 @@ import java.util.function.Function;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -148,11 +149,12 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		Thread.sleep(6000);
 		pegamrkting1.click( );
-        Thread.sleep(8000);
+		Thread.sleep(6000);
 	}
-	
+
+
 	public void ExpandPegMrkPage1() throws InterruptedException
 	{
 
@@ -169,25 +171,25 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		}
 		 
 	}
-	public void ExpandPegMrkPage() throws InterruptedException
+
+
+	public void Campaigns() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
-		ExpandPegMrkPage.click( );
-       
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		Campaigns.click( );
+		Thread.sleep(8000); 
 	}
-	public void CampaignImage() throws InterruptedException
+	
+
+public void CampaignImage() throws InterruptedException
 	{
 
 	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
 		 
 	}
-	public void Campaigns() throws InterruptedException
-	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigns));
-		Campaigns.click( );
-        
-	}
+
+
 	public void Create() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Create));
@@ -231,8 +233,10 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	public void AddMrkStrtgy() throws InterruptedException
 	{
 	//	wait.until(ExpectedConditions.visibilityOf(AddMrkStrtgy));
+		 try {
 		AddMrkStrtgy.click( );
-        
+		 } catch(StaleElementReferenceException e) {
+	        }
 	}
 	public void Applay() throws InterruptedException
 	{

@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.awt.AWTException;
 
@@ -17,7 +17,7 @@ import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
-public class PegaCalcNBAandStartOffAPIVldtTest extends TestBase {
+public class PegaCalcNBAAPIVldtCableTest extends TestBase {
 	private static final String priorty = null;
 	LoginPageInbound loginpageinbound;
 
@@ -25,7 +25,7 @@ public class PegaCalcNBAandStartOffAPIVldtTest extends TestBase {
 	TestUtil testutil;
 	
 
-	public PegaCalcNBAandStartOffAPIVldtTest()
+	public PegaCalcNBAAPIVldtCableTest()
 	{
 		super();
 	}
@@ -60,7 +60,7 @@ public class PegaCalcNBAandStartOffAPIVldtTest extends TestBase {
 
 public void teardown() {
 
- // driver.quit();
+ driver.quit();
 
 
 	System.out.println("Calc NBAandStart Offer API Validation Done");

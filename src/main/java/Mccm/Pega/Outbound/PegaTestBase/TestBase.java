@@ -29,8 +29,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import ExecutionUSECase.MainClass;
 import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
 import Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff;
+import Mccm.Pega.Calc.NBA.StartOffer.PegaPreChkValidCalcNBACampCd;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
+import Mccm.Pega.OSF.OSFDMCCMSettings;
+import Mccm.Pega.OSF.OSFDSS;
+import Mccm.Pega.OSF.PegaMarktOSF;
+import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
@@ -98,9 +103,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaMarktCalcNBAandStartOff.ExcelFilePath = System.getProperty("user.dir");
 			CalcNBAStartOffDSS.ExcelFilePath=System.getProperty("user.dir");
-		
-		 
-
+			PegaPreChkValidCalcNBACampCd.ExcelFilePath=System.getProperty("user.dir");
+			OSFDSS.ExcelFilePath=System.getProperty("user.dir");
+			OSFDMCCMSettings.ExcelFilePath=System.getProperty("user.dir");
+			PegaMarktOSF.ExcelFilePath=System.getProperty("user.dir");
+			PegaPreChkValidOSFCampCd.ExcelFilePath=System.getProperty("user.dir");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -118,11 +125,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 		if(browserName.equals("chrome")) {
 			
 
-       System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
- //  System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+       // System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 	
 			if(headLessMode.equals("true")) {

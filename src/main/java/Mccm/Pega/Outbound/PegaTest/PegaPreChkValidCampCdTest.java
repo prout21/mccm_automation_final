@@ -39,7 +39,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 	     testutil=new TestUtil();
 	     pegaPreChkValidCampCd =new PegaPreChkValidCampCd();
 	 //    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
-	     pegaPreChkValidCampCd=homepage.Pegamrklunch3();
+	  pegaPreChkValidCampCd=homepage.Pegamrklunch3();
 	    }
  
 
@@ -47,7 +47,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 @Test (priority=1)
  public void VerifyPreCheckNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
 	 
-	 homepage.Pegamrklunch1();
+	// homepage.Pegamrklunch3();
 	 pegaPreChkValidCampCd.pegamarkting();
 	 testutil.WindowHandling();
 	 pegaPreChkValidCampCd.ExpandPegMrkPage1();

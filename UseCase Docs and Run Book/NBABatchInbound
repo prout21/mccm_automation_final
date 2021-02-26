@@ -1,4 +1,4 @@
-NBA Batch Outbound E2E Flow :
+NBA Batch Inbound E2E Flow :
 url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
 --------------------------------------------------------------------
 Step-1: Dataload -3 interface with correct data file.

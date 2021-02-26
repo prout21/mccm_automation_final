@@ -105,6 +105,7 @@ public class HomePageTest extends TestBase {
 		HomePageDetails1.SaveNotifyErrLst();
 		HomePageDetails1.CloseNotifyErrLst();
 		//NBANotifyErrList
+		//D_mccmsettings
 		HomePageDetails1.D_mccmsettings();
 		HomePageDetails1.SerchClick();
 		HomePageDetails1.Clickdmccmsetting();
@@ -113,7 +114,7 @@ public class HomePageTest extends TestBase {
 		HomePageDetails1.ActionClkDmccmsetting();
 		HomePageDetails1.RunActionClk();
 		HomePageDetails1.FulshRunClick();
-
+        //D_mccmsettings
 		//<----Override -remove commented during prod env run ------>
 		//OverrideCampSrch
 		HomePageDetails1.OverrideCampSrch();

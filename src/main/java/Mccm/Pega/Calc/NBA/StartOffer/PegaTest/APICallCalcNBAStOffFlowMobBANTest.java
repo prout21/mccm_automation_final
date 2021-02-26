@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -36,7 +36,7 @@ public class APICallCalcNBAStOffFlowMobBANTest extends TestBase  {
 			//          String port = "18576";// 8573
 
 
-			hostName=general_ReadProperty("NBA_hostName");
+			hostName=general_ReadProperty("Calc_NBA_hostname");
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");

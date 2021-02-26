@@ -28,6 +28,8 @@ import org.testng.Assert;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
+import groovy.transform.Undefined.EXCEPTION;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
@@ -43,6 +45,8 @@ public class PegaMarketPage extends TestBase  {
 	WebElement pegamrkting1;
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
 	WebElement ExpandPegMrkPage;
+	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
+	By ExpandPegMrkPage2;
 
 	@FindBy(xpath="//span[text()='Campaigns']")
 	WebElement Campaigns;
@@ -188,18 +192,11 @@ public class PegaMarketPage extends TestBase  {
 	//*click the pega marketing option
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(8000); 
+		Thread.sleep(6000);
 		pegamrkting1.click( );
-		Thread.sleep(8000); 
-
+		Thread.sleep(6000);
 	}
 
-	public void ExpandPegMrkPage() throws InterruptedException
-	{
-		//	wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
-		ExpandPegMrkPage.click( );
-
-	}
 
 	public void ExpandPegMrkPage1() throws InterruptedException
 	{
@@ -215,26 +212,25 @@ public class PegaMarketPage extends TestBase  {
 			executor14.executeScript("arguments[0].click();", element20);
 
 		}
-
+		 
 	}
 
 
 	public void Campaigns() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
 		Thread.sleep(8000); 
 	}
+	
 
-
-	public void CampaignImage() throws InterruptedException
+public void CampaignImage() throws InterruptedException
 	{
 
-		//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
-
+		 
 	}
-
 
 
 	public void Create() throws InterruptedException

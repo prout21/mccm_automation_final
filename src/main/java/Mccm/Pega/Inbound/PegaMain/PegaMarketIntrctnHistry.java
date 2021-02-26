@@ -51,8 +51,11 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	@FindBy(xpath="//div[text()='Journey']")
 	WebElement Journey ;
 	
-	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]")
+ 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]")
 	WebElement Channel ;
+ 	
+//	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]")
+//	WebElement Channel ;
 	
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]")
 	WebElement BusinessIssue ;
@@ -63,6 +66,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[8]/div[1]/span[1]")
 	WebElement Proposition ;
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[9]/div[1]/span[1]")
+	WebElement Outcome;
 	
 	
 	
@@ -75,6 +80,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
 	     return new PegaMarketIntrctnHistry();
 	}
 	
@@ -178,9 +184,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 				//  	 wait.until(ExpectedConditions.visibilityOf(Proposition));
 						// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
 							 WebElement element14 = Proposition;
-			 
-			 
-			 
+			 	 
 			
 			 getTextOnPage1 = element12.getText();
 			 System.out.println(getTextOnPage1);
@@ -189,10 +193,34 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 			 getTextOnPage3 = element14.getText();
 			 System.out.println(getTextOnPage3);
 		 			 
-			 boolean result = getTextOnPage1.equals("Sales") &&getTextOnPage2.equals("Mobile")&&
-  	                    getTextOnPage3.equals("UpsellOffer1GB"); 
+			 boolean result = getTextOnPage1.equals("Event") &&getTextOnPage2.equals("real time")&&
+  	                    getTextOnPage3.equals("NBAOF"); 
             assertTrue(result);
 				 System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
+	}
+	public void PegaOSFOutcomeAPIVlidtion() throws InterruptedException
+	{
+		 driver.manage().window().maximize();
+	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+	     Thread.sleep(8000);
+	    
+	    	String getTextOnPage1 = "";
+	    	 
+	    	 
+	     	 wait.until(ExpectedConditions.visibilityOf(Outcome));
+			 WebElement element1 = Outcome;
+			 		 	 
+			
+			 getTextOnPage1 = element1.getText();
+			 System.out.println(getTextOnPage1);
+		 
+		 			 
+			 boolean result = getTextOnPage1.equals("Accepted") ; 
+  	                    
+            assertTrue(result);
+				 System.out.println("MCCM OSF Outcome API Validation Done");
 	}
 	
 }	 

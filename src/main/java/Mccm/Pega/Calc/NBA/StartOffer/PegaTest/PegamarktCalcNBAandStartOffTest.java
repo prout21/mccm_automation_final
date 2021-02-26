@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.awt.AWTException;
 
@@ -41,10 +41,11 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	@Test (priority=1)
 	public void VerifyCalcNBAandStartOfferRunSuccessfully() throws InterruptedException, AWTException { 
 
-		loginPageCalcNBAandStartOff.Pegamrklunch3();
+	//	loginPageCalcNBAandStartOff.Pegamrklunch3();
 		pegaMarktCalcNBAandStartOff.pegamarkting();
 		testutil.WindowHandling();
-		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage();
+		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage1();
+		pegaMarktCalcNBAandStartOff.CampaignImage();
 		pegaMarktCalcNBAandStartOff.Campaigns();
 		testutil.SwitcToFrame(1);
 		testutil.RobertAction();

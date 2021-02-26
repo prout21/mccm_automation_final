@@ -9,10 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaPreChkValidDMPCampCd;
+import Mccm.Pega.OSF.OSFDMCCMSettings;
+import Mccm.Pega.OSF.OSFDSS;
+import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
+import Mccm.Pega.Calc.NBA.StartOffer.PegaPreChkValidCalcNBACampCd;
 
 public class HomePage extends TestBase {
 	//page factory - OR:
@@ -61,6 +65,23 @@ public class HomePage extends TestBase {
     	 
     	  return new HomePageDetails();
     } 	
+    public OSFDMCCMSettings ClickHomepageOSF() throws InterruptedException {
+  	  Thread.sleep(8000);
+  	//  Homepage.click();
+  	  boolean searchIconPresence = Homepage.isDisplayed();
+		boolean searchIconEnabled =  Homepage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = Homepage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+	 
+	}
+  	 
+  	  return new OSFDMCCMSettings();
+  } 	
    public PegaMarketPage Pegamrklunch()throws InterruptedException {
 	   
 	     Actions  action = new Actions(driver);
@@ -167,6 +188,14 @@ public class HomePage extends TestBase {
 	   	  return new PegaPreChkValidDMPCampCd();
 	   }
    
+   public PegaPreChkValidCalcNBACampCd Pegamrklunch5()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
+	   	  return new PegaPreChkValidCalcNBACampCd();
+	   }
+   
    public CalcNBAStartOffDSS CalcNBAStartOffDSS() throws InterruptedException {
 	   	  Thread.sleep(8000);
 	   	//  Homepage.click();
@@ -183,6 +212,28 @@ public class HomePage extends TestBase {
 	}
 	   	  return new CalcNBAStartOffDSS();
 	   }
+   public OSFDSS OSFDSS() throws InterruptedException {
+	   	  Thread.sleep(8000);
+	   	//  Homepage.click();
+	   	boolean searchIconPresence = Homepage.isDisplayed();
+		boolean searchIconEnabled =  Homepage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{
+			WebElement element20 = Homepage;
+			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+			executor14.executeScript("arguments[0].click();", element20);
+	 
+	}
+	   	  return new OSFDSS();
+	   }
   
- 
+   public PegaPreChkValidOSFCampCd Pegamrklunch6()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
+	   	  return new PegaPreChkValidOSFCampCd();
+	   }
 }

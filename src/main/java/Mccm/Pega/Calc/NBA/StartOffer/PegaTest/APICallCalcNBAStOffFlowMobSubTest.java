@@ -1,4 +1,4 @@
-package Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest;
+package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class APICallCalcNBAStOffFlowFixnetTest extends TestBase  {
+public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class APICallCalcNBAStOffFlowFixnetTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyCalcNBAandStartOfferFlowFixnetAPIcallSuccessfully() {
+	public void VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -36,7 +36,7 @@ public class APICallCalcNBAStOffFlowFixnetTest extends TestBase  {
 			//          String port = "18576";// 8573
 
 
-			hostName=general_ReadProperty("NBA_hostName");
+			hostName=general_ReadProperty("Calc_NBA_hostname");
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
@@ -53,7 +53,7 @@ public class APICallCalcNBAStOffFlowFixnetTest extends TestBase  {
 
 		//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-			  json = general_ReadProperty("NBA_json_Fixnet");
+			  json = general_ReadProperty("NBA_json_MobileSubscr");
 	
 		 
 			

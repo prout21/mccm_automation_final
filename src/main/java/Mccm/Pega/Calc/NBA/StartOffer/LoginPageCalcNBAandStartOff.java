@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
 public class LoginPageCalcNBAandStartOff extends TestBase {
@@ -30,8 +31,7 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
     {
     	PageFactory.initElements(driver, this);
     }
-    			
-   
+       
     public PegaMarktCalcNBAandStartOff login(String uid,String pwd)
     {
     	username.sendKeys(uid);
@@ -40,11 +40,20 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
     	return new PegaMarktCalcNBAandStartOff();    	
     	    }
     
+   
     public PegaMarktCalcNBAandStartOff Pegamrklunch3()throws InterruptedException {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
 	   	  return new PegaMarktCalcNBAandStartOff();
 	   }
     
+    public PegaPreChkValidCalcNBACampCd Pegamrklunch5()throws InterruptedException {
+		
+	     Actions  action = new Actions(driver);
+	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
+	   	  return new PegaPreChkValidCalcNBACampCd();
+	   }
 }

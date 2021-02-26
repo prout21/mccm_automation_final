@@ -44,6 +44,7 @@ public class LoginPageDMPRealTime extends TestBase {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
+	     Thread.sleep(1000);
 	   	  return new PegaMarktDMPRealTime();
 	   }
     

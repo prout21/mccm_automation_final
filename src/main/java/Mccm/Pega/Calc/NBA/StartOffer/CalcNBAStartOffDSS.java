@@ -55,21 +55,21 @@ public class CalcNBAStartOffDSS extends TestBase {
 	
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 			
-	String Internal_REST_URL_OSF = obj.getCellValue("PegaTestDataCalcNBA", 1, 3);
+	String Internal_REST_URL_OSF = obj.getCellValue("PegaTestDataOSF", 1, 3);
 	
-	String OSFDirection = obj.getCellValue("PegaTestDataCalcNBA", 1, 4);
+	String OSFDirection = obj.getCellValue("PegaTestDataOSF", 1, 4);
 	
-	String OSFChannel = obj.getCellValue("PegaTestDataCalcNBA", 1,5);
+	String OSFChannel = obj.getCellValue("PegaTestDataOSF", 1,5);
 	
-	String OSFContainerName = obj.getCellValue("PegaTestDataCalcNBA", 1, 6);
+	String OSFContainerName = obj.getCellValue("PegaTestDataOSF", 1, 6);
 	
-	String Internal_REST_URL_OSFValue = obj.getCellValue("PegaTestDataCalcNBA", 1,7);
+	String Internal_REST_URL_OSFValue = obj.getCellValue("PegaTestDataOSF", 1,7);
 	
-	String OSFDirectionValue = obj.getCellValue("PegaTestDataCalcNBA", 1, 8);
+	String OSFDirectionValue = obj.getCellValue("PegaTestDataOSF", 1, 8);
 	
-	String OSFChannelValue = obj.getCellValue("PegaTestDataCalcNBA", 1, 9);
+	String OSFChannelValue = obj.getCellValue("PegaTestDataOSF", 1, 9);
 	
-	String OSFContainerNameValue = obj.getCellValue("PegaTestDataCalcNBA", 1, 10);
+	String OSFContainerNameValue = obj.getCellValue("PegaTestDataOSF", 1, 10);
 	
  
 	public CalcNBAStartOffDSS( ) {
