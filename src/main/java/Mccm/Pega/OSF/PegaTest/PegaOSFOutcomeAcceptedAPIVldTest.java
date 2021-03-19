@@ -15,7 +15,7 @@ import Mccm.Pega.QAUtil.TestUtil;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 
 
-public class PegaOSFOutcomeAPIVldTest extends TestBase {
+public class PegaOSFOutcomeAcceptedAPIVldTest extends TestBase {
 	private static final String priorty = null;
 	LoginPageInbound loginpageinbound;
 
@@ -23,7 +23,7 @@ public class PegaOSFOutcomeAPIVldTest extends TestBase {
 	TestUtil testutil;
 	
 
-	public PegaOSFOutcomeAPIVldTest()
+	public PegaOSFOutcomeAcceptedAPIVldTest()
 	{
 		super();
 	}
@@ -42,7 +42,7 @@ public class PegaOSFOutcomeAPIVldTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyIntractionHistoryRunSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyMCCMOSFOutcomeAPIAcceptedValidationRunSuccessfully() throws InterruptedException, AWTException { 
 
 	 loginpageinbound.Pegamrklunch3();
 	 pegaMarketIntrctnHistry.pegamarkting();
@@ -51,7 +51,7 @@ public class PegaOSFOutcomeAPIVldTest extends TestBase {
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();
-	 pegaMarketIntrctnHistry.PegaOSFOutcomeAPIVlidtion();
+	 pegaMarketIntrctnHistry.PegaOSFOutcomeAPIAcceptedVlidtion();
 	 
 	 
  }
@@ -61,9 +61,9 @@ public class PegaOSFOutcomeAPIVldTest extends TestBase {
 
      public void teardown() {
 	
-      driver.quit();
+    driver.quit();
 	      
-	 System.out.println("Inbound Intraction History Validation Chanel Done");  
+	 System.out.println("MCCM OSF Outcome API Accepted Validation Done");  
 }
    
 }

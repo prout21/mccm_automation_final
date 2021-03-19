@@ -22,8 +22,8 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
- 
-	
+
+
 	@Test
 
 	public void VerifyOSFUpdate_ShoppingCartID_InteractionHistoryAPIcallSuccessfully() {
@@ -40,8 +40,8 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
-		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+
+			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
@@ -51,11 +51,11 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-			              
-		 	  json = general_ReadProperty("OSF_Json_Pfdbkscid");
-	
-	 // String   json =  "{   \"CustomerID\":\"82123848\",   \"ContainerName\":\"OSF\",   \"Channel\":\"OSF\",   \"Direction\":\"Inbound\",   \"OriginAccount\":{       \"AccountID\":\"12343254\",  \"SubscriptionID\":\"GSM1721234567\",    \"SI\":\"MobileSubscr\"   },   \"Name\":\"SG4\",   \"Issue\":\"Sales\",   \"Group\":\"Mobile\",   \"CampaignID\":\"P-12345\",   \"InteractionID\":\"-56033434234234255\",   \"Outcome\":\"Accepted\",   \"FeedbackCode\":\"Accepted\",   \"CommissionPoints\":5,   \"VOID\":\"2343\",   \"NBAOfferID\":\"PAPs12344777\"}";
-			
+
+			json = general_ReadProperty("OSF_Json_Pfdbkscid");
+
+			// String   json ="{\"OrderID\":\"7473\",\"Outcome\":\"SaveOffer\",\"RankedResults\":[{\"CustomerID\":\"45189267\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\",\"OriginAccount\":{\"AccountID\":\"30541396\",\"SI\":\"Cable\"},\"Name\":\"SG5\",\"Issue\":\"Sales\",\"Group\":\"Cable\",\"CampaignID\":\"P-12\",\"InteractionID\":\"-56933434234234299\",\"CommissionPoints\":4,\"VOID\":\"1000\",\"NBAOfferID\":\"755\"},{\"CustomerID\":\"45189268\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\",\"OriginAccount\":{\"AccountID\":\"13013596\",\"SI\":\"Fixnet\"},\"Name\":\"SG4\",\"Issue\":\"Sales\",\"Group\":\"Cable\",\"CampaignID\":\"P-987\",\"InteractionID\":\"-46033434234234300\",\"CommissionPoints\":1,\"VOID\":\"2272\",\"NBAOfferID\":\"876\"}]}";
+
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
@@ -67,7 +67,10 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("x-mccm-usecase", "OSF_ProcessFeedback");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
+			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -87,9 +90,9 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
+
 			System.out.println(responseCode);
-			
+
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {

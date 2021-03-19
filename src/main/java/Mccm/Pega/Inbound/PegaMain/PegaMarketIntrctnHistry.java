@@ -198,7 +198,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
             assertTrue(result);
 				 System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
 	}
-	public void PegaOSFOutcomeAPIVlidtion() throws InterruptedException
+	public void PegaOSFOutcomeAPIAcceptedVlidtion() throws InterruptedException
 	{
 		 driver.manage().window().maximize();
 	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
@@ -220,7 +220,55 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 			 boolean result = getTextOnPage1.equals("Accepted") ; 
   	                    
             assertTrue(result);
-				 System.out.println("MCCM OSF Outcome API Validation Done");
+				 System.out.println("MCCM OSF Outcome API Accepted Validation Done");
+	}
+	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
+	{
+		 driver.manage().window().maximize();
+	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+	     Thread.sleep(8000);
+	    
+	    	String getTextOnPage1 = "";
+	    	 
+	    	 
+	     	 wait.until(ExpectedConditions.visibilityOf(Outcome));
+			 WebElement element1 = Outcome;
+			 		 	 
+			
+			 getTextOnPage1 = element1.getText();
+			 System.out.println(getTextOnPage1);
+		 
+		 			 
+			 boolean result = getTextOnPage1.equals("SaveOffer") ; 
+  	                    
+            assertTrue(result);
+			//	 System.out.println("MCCM OSF Outcome API SaveOffer Validation Done");
+	}
+	public void PegaOSFOutcomeAPISubmitOrderVlidtion() throws InterruptedException
+	{
+		 driver.manage().window().maximize();
+	 	 JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+	     js5.executeScript("arguments[0].scrollIntoView();", element6);	
+	     Thread.sleep(8000);
+	    
+	    	String getTextOnPage1 = "";
+	    	 
+	    	 
+	     	 wait.until(ExpectedConditions.visibilityOf(Outcome));
+			 WebElement element1 = Outcome;
+			 		 	 
+			
+			 getTextOnPage1 = element1.getText();
+			 System.out.println(getTextOnPage1);
+		 
+		 			 
+			 boolean result = getTextOnPage1.equals("SubmitOrder") ; 
+  	                    
+            assertTrue(result);
+			//	 System.out.println("MCCM OSF Outcome API SubmitOrder Validation Done");
 	}
 	
 }	 

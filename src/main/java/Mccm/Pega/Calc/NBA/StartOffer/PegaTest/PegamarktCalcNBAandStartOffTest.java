@@ -18,7 +18,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	private static final String priorty = null;
 
 	LoginPageCalcNBAandStartOff loginPageCalcNBAandStartOff;
-	PegaMarktCalcNBAandStartOff pegaMarktCalcNBAandStartOff;
+	PegaMarktCalcNBAandStartOff pegaMarktCalcNBAandStartOff; 
 	TestUtil testutil;
 
 
@@ -39,7 +39,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	}
 
 	@Test (priority=1)
-	public void VerifyCalcNBAandStartOfferRunSuccessfully() throws InterruptedException, AWTException { 
+	public void VerifyCalcNBAandStartOfferEventRunSuccessfully() throws InterruptedException, AWTException { 
 
 	//	loginPageCalcNBAandStartOff.Pegamrklunch3();
 		pegaMarktCalcNBAandStartOff.pegamarkting();

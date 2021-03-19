@@ -41,8 +41,14 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
-		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/GetNBA");
+			
+			  URL urlForGetRequest = new URL("https://" + hostName + ":" + port +
+			  "/prweb/PRRestService/MCCMOSF/Services/GetNBA");
+			 
+		 	
+	//	  	URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA");  
+		 	
+		 	
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -52,9 +58,10 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 			              
-		 	  json = general_ReadProperty("OSF_Json_MultiAcc");
+		   json = general_ReadProperty("OSF_Json_MultiAcc");
+		 	  
 	
-	 // String   json =  "{   \"CustomerID\":\"82123848\",   \"ContainerName\":\"OSF\",   \"Channel\":\"OSF\",   \"Direction\":\"Inbound\",   \"OriginAccount\":{       \"AccountID\":\"12343254\",  \"SubscriptionID\":\"GSM1721234567\",    \"SI\":\"MobileSubscr\"   },   \"Name\":\"SG4\",   \"Issue\":\"Sales\",   \"Group\":\"Mobile\",   \"CampaignID\":\"P-12345\",   \"InteractionID\":\"-56033434234234255\",   \"Outcome\":\"Accepted\",   \"FeedbackCode\":\"Accepted\",   \"CommissionPoints\":5,   \"VOID\":\"2343\",   \"NBAOfferID\":\"PAPs12344777\"}";
+        //   String   json ="{\"Accounts\":[{\"AccountID\":\"1130542249\",\"SI\":\"MobileBAN\"},{\"AccountID\":\"30541253\",\"SI\":\"Cable\"},{\"AccountID\":\"13013453\",\"SI\":\"Fixnet\"}],\"VOID\":\"12345678\",\"SCClassification\":\"SCL\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\"}";
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -67,7 +74,12 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			
+		  	  connection.setRequestProperty("x-mccm-usecase", "OSF_GetNBA");
+		  	  connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
+		 	  connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+ 		 	connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+ 		 	
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -76,6 +88,7 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			os.flush();
 			os.close();
 			int responseCode = connection.getResponseCode();
+			
 
 			BufferedReader in = null;
 			if (responseCode == 200)
@@ -94,11 +107,7 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-
-
 		}
-
-
 	}
 
 }

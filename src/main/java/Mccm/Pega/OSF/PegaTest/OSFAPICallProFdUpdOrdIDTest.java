@@ -54,7 +54,6 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			              
 		 	  json = general_ReadProperty("OSF_Json_OrderID");
 	
-	 // String   json =  "{   \"CustomerID\":\"82123848\",   \"ContainerName\":\"OSF\",   \"Channel\":\"OSF\",   \"Direction\":\"Inbound\",   \"OriginAccount\":{       \"AccountID\":\"12343254\",  \"SubscriptionID\":\"GSM1721234567\",    \"SI\":\"MobileSubscr\"   },   \"Name\":\"SG4\",   \"Issue\":\"Sales\",   \"Group\":\"Mobile\",   \"CampaignID\":\"P-12345\",   \"InteractionID\":\"-56033434234234255\",   \"Outcome\":\"Accepted\",   \"FeedbackCode\":\"Accepted\",   \"CommissionPoints\":5,   \"VOID\":\"2343\",   \"NBAOfferID\":\"PAPs12344777\"}";
 			
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -67,7 +66,10 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("x-mccm-usecase", "OSF_ProcessFeedback");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
+			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);

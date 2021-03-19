@@ -6,23 +6,20 @@
 		<listener class-name="Mccm.Pega.ExtentReportListner.TestListener" />
 	</listeners>
  
-  <test name="Pega CalcNBAandStartOfferFlow DSS and NBAOF Request Regression Test">
+  <test name="Pega CalcNBAandStartOfferFlow PegaMarket NBAOF Event Regression Test">
     <classes>
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.PegaCalcNBAStartOffDSSTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.PegamarktCalcNBAandStartOffTest"/> 
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest"/> 
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest"/> 
     </classes>
   </test> <!-- Test -->
       <test name="Pega CalcNBAandStartOfferFlow API Call Regression Test">
     <classes>
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowMobSubTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowMobBANTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowFixnetTest"/> 
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.APICallCalcNBAStOffFlowCableTest"/>  
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobSubTest"/> 
     </classes>
   </test> <!-- Test -->
-    <test name="Pega CalcNBAandStartOfferFlow DSS and NBAOF Request Regression Test">
+    <test name="Pega CalcNBAandStartOfferFlow API Call Validation Regression Test">
     <classes>
-      <class name="Mccm.Pega.CalcNBAandStartOfferFlow.PegaTest.PegaCalcNBAandStartOffAPIVldtTest"/> 
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBSUBSCTest"/> 
     </classes>
   </test> <!-- Test -->
      

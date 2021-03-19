@@ -56,33 +56,33 @@ public class PegaOSFDSSTest extends TestBase {
 		osfDSS.CloseCalNBAStartOff();
 		//Internal_REST_URL_OSF
 
-		//OSFDirection
-		testutil.SwitcTodefaultContent();
-		testutil.SwitchToFrame("PegaGadget0Ifr");
-		osfDSS.FilterOSFDirection();
-		osfDSS.OSFDirectionSrch();
-		osfDSS.ApplayOSFDirection();
-		osfDSS.ClikMCCMOSFDirection();
-		testutil.SwitcTodefaultContent();
-		testutil.SwitchToFrame("PegaGadget1Ifr");
-		osfDSS.OSFDirection();
-		osfDSS.SaveOSFDirection();
-		osfDSS.CloseOSFDirection();
-		//OSFDirection
+//		//OSFDirection
+//		testutil.SwitcTodefaultContent();
+//		testutil.SwitchToFrame("PegaGadget0Ifr");
+//		osfDSS.FilterOSFDirection();
+//		osfDSS.OSFDirectionSrch();
+//		osfDSS.ApplayOSFDirection();
+//		osfDSS.ClikMCCMOSFDirection();
+//		testutil.SwitcTodefaultContent();
+//		testutil.SwitchToFrame("PegaGadget1Ifr");
+//		osfDSS.OSFDirection();
+//		osfDSS.SaveOSFDirection();
+//		osfDSS.CloseOSFDirection();
+//		//OSFDirection
 		
-		//OSFChannel
-		testutil.SwitcTodefaultContent();
-		testutil.SwitchToFrame("PegaGadget0Ifr");
-		osfDSS.FilterOSFChannel();
-		osfDSS.OSFChannelSrch();
-		osfDSS.ApplayOSFChannel();
-		osfDSS.ClikMCCMOSFChannel();
-		testutil.SwitcTodefaultContent();
-		testutil.SwitchToFrame("PegaGadget1Ifr");
-		osfDSS.OSFChannel();
-		osfDSS.SaveOSFChannel();
-		osfDSS.CloseOSFChannel();
-		//OSFChannel
+//		//OSFChannel
+//		testutil.SwitcTodefaultContent();
+//		testutil.SwitchToFrame("PegaGadget0Ifr");
+//		osfDSS.FilterOSFChannel();
+//		osfDSS.OSFChannelSrch();
+//		osfDSS.ApplayOSFChannel();
+//		osfDSS.ClikMCCMOSFChannel();
+//		testutil.SwitcTodefaultContent();
+//		testutil.SwitchToFrame("PegaGadget1Ifr");
+//		osfDSS.OSFChannel();
+//		osfDSS.SaveOSFChannel();
+//		osfDSS.CloseOSFChannel();
+//		//OSFChannel
 		//OSFContainerName
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -103,10 +103,10 @@ public class PegaOSFDSSTest extends TestBase {
 
 	public void teardown() {
 		
-	//driver.quit();
+	 driver.quit();
 
 
-		System.out.println("Calc NBA sTART oFFER DSS Done");  
+		System.out.println("OSF Dynamic System Setting Run Successfully");  
 	}
 
 }

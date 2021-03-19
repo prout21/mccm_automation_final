@@ -22,8 +22,8 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
- 
-	
+
+
 	@Test
 
 	public void VerifyOSFCaptureOutcomeResponseAPIcallSuccessfully() {
@@ -40,8 +40,8 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
-		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+
+			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
@@ -51,12 +51,12 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-			              
-		 	  json = general_ReadProperty("OSF_Json_CaptureResponse");
-	
-	 // String   json =  "{   \"CustomerID\":\"82123848\",   \"ContainerName\":\"OSF\",   \"Channel\":\"OSF\",   \"Direction\":\"Inbound\",   \"OriginAccount\":{       \"AccountID\":\"12343254\",  \"SubscriptionID\":\"GSM1721234567\",    \"SI\":\"MobileSubscr\"   },   \"Name\":\"SG4\",   \"Issue\":\"Sales\",   \"Group\":\"Mobile\",   \"CampaignID\":\"P-12345\",   \"InteractionID\":\"-56033434234234255\",   \"Outcome\":\"Accepted\",   \"FeedbackCode\":\"Accepted\",   \"CommissionPoints\":5,   \"VOID\":\"2343\",   \"NBAOfferID\":\"PAPs12344777\"}";
-			
+
+			json = general_ReadProperty("OSF_Json_CaptureResponse");
+
+
 			// Create all-trusting host name verifier
+
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
 					return true;
@@ -67,9 +67,17 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("x-mccm-usecase", "OSF_CaptureResponse");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
+			connection.setRequestProperty("x-request-id", "GUID likead785657");
+			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+			/*
+			 * connection.setRequestProperty("usecase ID", "OSF_CaptureResponse");
+			 * connection.setRequestProperty("correlation ID", "GUID likead64557");
+			 * connection.setRequestProperty("request-Id", "GUID likead785657");
+			 */
 			StringBuffer response = new StringBuffer();
-			connection.setDoOutput(true);
+			connection.setDoOutput(true); 
 			connection.setDoInput(true);
 			OutputStream os = connection.getOutputStream();
 			os.write(json.getBytes());

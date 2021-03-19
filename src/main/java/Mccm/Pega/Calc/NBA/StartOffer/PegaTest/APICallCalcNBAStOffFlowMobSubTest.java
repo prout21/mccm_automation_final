@@ -51,14 +51,14 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
+		 //	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-			  json = general_ReadProperty("NBA_json_MobileSubscr");
+		 	  json = general_ReadProperty("NBA_json_MobileSubscr");
 	
 		 
 			
 			// Create all-trusting host name verifier
-			HostnameVerifier allHostsValid = new HostnameVerifier() {
+			HostnameVerifier allHostsValid = new HostnameVerifier() { 
 				public boolean verify(String hostname, SSLSession session) {
 					return true;
 				}
@@ -68,7 +68,10 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("x-mccm-usecase", "CalcNBAAndStartOfferFlow");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
+			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);

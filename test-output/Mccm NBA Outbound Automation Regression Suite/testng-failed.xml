@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm NBA Outbound Automation Regression Suite]">
+  <test thread-count="5" name="Unix filechk and DB loaded Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
+        <methods>
+          <include name="VerifyDBDataLoadedSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
+    </classes>
+  </test> <!-- Unix filechk and DB loaded Regression Test(failed) -->
   <test thread-count="5" name="Pre Data Setup for Valid Camp Code Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest">
@@ -14,20 +23,6 @@
   </test> <!-- Pre Data Setup for Valid Camp Code Regression Test(failed) -->
   <test thread-count="5" name="Pega Dynamic System Setting Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
-        <methods>
-          <include name="VerifyDynamicSystemSettingSuccessfully"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
-      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
-        <methods>
-          <include name="setup"/>
-          <include name="VerifyOracleCansadraDataLoadedSuccessfully"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
       <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
         <methods>
           <include name="VerifyPegaLogoTest"/>
@@ -37,6 +32,20 @@
           <include name="VerifyLoginSuccessfulTest"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
+      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="VerifyOracleCansadraDataLoadedSuccessfully"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
+      <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
+        <methods>
+          <include name="VerifyDynamicSystemSettingSuccessfully"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
     </classes>
   </test> <!-- Pega Dynamic System Setting Regression Test(failed) -->
   <test thread-count="5" name="Pega NBACampaign Run Marketing Completed Regression Test(failed)">

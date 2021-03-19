@@ -67,7 +67,10 @@ public class OSFAPICallProFdCableTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
+			connection.setRequestProperty("usecase ID", "OSF_CaptureResponse");
+			connection.setRequestProperty("correlation ID", "GUID likead64557");
+		    connection.setRequestProperty("request-Id", "GUID likead785657");
+		 	connection.setRequestProperty("Content-Type", "application/json;charset=utf-8");
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);

@@ -4,6 +4,17 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Pega DMP Real Time Camp Code Validation Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="VerifyPreCheckDMPRTCampCodeValueValidSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest -->
+    </classes>
+  </test> <!-- Pega DMP Real Time Camp Code Validation Regression Test(failed) -->
   <test thread-count="5" name="Pega DMP Real Time Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest">
@@ -17,11 +28,13 @@
   </test> <!-- Pega DMP Real Time Regression Test(failed) -->
   <test thread-count="5" name="RestAPI POST Call NBA Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest">
+      <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest">
         <methods>
-          <include name="VerifyDMPRTPNBAMobHashedAPIcallSuccessfully"/>
+          <include name="setup"/>
+          <include name="VerifyDMPAPIProcessOffRsultsValidtnSuccessfully"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest -->
+      </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest -->
     </classes>
   </test> <!-- RestAPI POST Call NBA Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm DMP Real time Automation Regression Suite] -->
