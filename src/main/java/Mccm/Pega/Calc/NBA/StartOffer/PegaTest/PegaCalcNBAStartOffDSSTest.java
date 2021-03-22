@@ -68,7 +68,7 @@ public class PegaCalcNBAStartOffDSSTest extends TestBase {
 		calcNBAStartOffDSS.SaveOSFDirection();
 		calcNBAStartOffDSS.CloseOSFDirection();
 		//OSFDirection
-		
+
 		//OSFChannel
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -101,11 +101,11 @@ public class PegaCalcNBAStartOffDSSTest extends TestBase {
 	@AfterMethod
 
 	public void teardown() {
-		
-	//driver.quit();
+
+		driver.quit();
 
 
-		System.out.println("Calc NBA sTART oFFER DSS Done");  
+		System.out.println("Calc NBA Start Offer DSS Done");  
 	}
 
 }

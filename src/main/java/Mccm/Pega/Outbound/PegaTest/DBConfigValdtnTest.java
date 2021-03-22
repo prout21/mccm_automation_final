@@ -36,7 +36,7 @@ public class DBConfigValdtnTest extends TestBase {
 	    DBConfigValdtn1=homepage.DBConfigValidation();
  }
  @Test (priority=1)
- public void VerifyDBConfigurationCampRunidValidationSuccessfully() throws InterruptedException { 
+ public void VerifyOutboundDBConfigurationCampRunidValidationSuccessfully() throws InterruptedException { 
 	 DBConfigValdtn1.Recordclk();
 	 DBConfigValdtn1.SysAdmin();
 	 DBConfigValdtn1.javaexictor4();
@@ -61,7 +61,7 @@ public class DBConfigValdtnTest extends TestBase {
     driver.quit();
 	 
       
- 	 System.out.println("DB Config Runid Check Done");  
+ 	 System.out.println("Outbound DB Config Runid Check Done");  
  }
     
 }

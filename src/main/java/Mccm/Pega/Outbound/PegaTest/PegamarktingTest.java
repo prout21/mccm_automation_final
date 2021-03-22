@@ -43,7 +43,7 @@ public class PegamarktingTest extends TestBase {
 
 
 	@Test (priority=1)
-	public void VerifyNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
+	public void VerifyOutboundNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
 		//homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
@@ -89,12 +89,12 @@ public class PegamarktingTest extends TestBase {
 	public void teardown() {
 
  
- //  driver.quit();
+    driver.quit();
  
 	 
 
 
-		System.out.println("Pega Markting NBA Camp Run Finished");  
+		System.out.println("Outbound Pega Markting NBA Camp Run Finished");  
 	}	 
 }
 

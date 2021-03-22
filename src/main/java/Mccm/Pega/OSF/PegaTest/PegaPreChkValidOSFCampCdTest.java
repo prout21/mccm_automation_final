@@ -51,7 +51,7 @@ public class PegaPreChkValidOSFCampCdTest extends TestBase {
 
 
 	@Test (priority=1)
-	public void VerifyPreCheckDMPRTCampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
+	public void VerifyOSFPreCheckCampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
 
 		
 		pegaPreChkValidOSFCampCd.pegamarkting();
@@ -74,7 +74,7 @@ public class PegaPreChkValidOSFCampCdTest extends TestBase {
 
 		driver.quit();
 
-		System.out.println("OSF Campaign Code Validation Done");
+		System.out.println("OSF PreCheck Campaign Code Validation Done");
 	}	 
 }
 

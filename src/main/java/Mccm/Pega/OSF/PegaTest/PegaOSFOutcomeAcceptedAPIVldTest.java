@@ -42,7 +42,7 @@ public class PegaOSFOutcomeAcceptedAPIVldTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyMCCMOSFOutcomeAPIAcceptedValidationRunSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully() throws InterruptedException, AWTException { 
 
 	 loginpageinbound.Pegamrklunch3();
 	 pegaMarketIntrctnHistry.pegamarkting();

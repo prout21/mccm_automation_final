@@ -61,7 +61,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
   //  public static void main( String[] args )
 //	 {
 	
-	      public void VerifyDBDataLoadedSuccessfully() throws InterruptedException, AWTException, SftpException {
+	      public void VerifyOutboundDBDataLoadedSuccessfully() throws InterruptedException, AWTException, SftpException {
 		//   public void main() throws InterruptedException, AWTException, SftpException {
 	//		public static void main() throws InterruptedException, AWTException {
 	

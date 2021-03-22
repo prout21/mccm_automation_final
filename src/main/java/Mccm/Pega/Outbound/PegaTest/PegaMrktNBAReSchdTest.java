@@ -43,7 +43,7 @@ public class PegaMrktNBAReSchdTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyNBACampReScheduleRunSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyOutboundNBACampReScheduleRunSuccessfully() throws InterruptedException, AWTException { 
 	 
 	 homepage.Pegamrklunch2();
 	 pegaMrktNBAReSchd.pegamarkting();
@@ -72,10 +72,10 @@ public class PegaMrktNBAReSchdTest extends TestBase {
 
  public void teardown() {
 
- //   driver.quit();
+  driver.quit();
 
 
-     System.out.println("NBACamp ReSchedule Run Successfully Done");  
+     System.out.println("Outbound NBACamp ReSchedule Run Successfully Done");  
 }	 
  }
  

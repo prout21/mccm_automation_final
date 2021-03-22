@@ -26,7 +26,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 	
 	@Test
 
-	public void VerifyOSFUpdate_OrderID_InteractionHistoryAPIcallSuccessfully() {
+	public void VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 

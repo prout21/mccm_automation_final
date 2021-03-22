@@ -36,7 +36,7 @@ public class HomePageTest extends TestBase {
 		HomePageDetails1=homepage.ClickHomepage();
 	}
 	@Test (priority=1)
-	public void VerifyDynamicSystemSettingSuccessfully() throws InterruptedException { 
+	public void VerifyOutboundDynamicSystemSettingSuccessfully() throws InterruptedException { 
 		HomePageDetails1.Recordclk();
 		HomePageDetails1.SysAdmin();
 		HomePageDetails1.javaexictor4();
@@ -137,7 +137,7 @@ public class HomePageTest extends TestBase {
 		driver.quit();
 
 
-		System.out.println("Pega Dynamic System Setting Done");  
+		System.out.println("Pega Outbound Dynamic System Setting Done");  
 	}
 
 }

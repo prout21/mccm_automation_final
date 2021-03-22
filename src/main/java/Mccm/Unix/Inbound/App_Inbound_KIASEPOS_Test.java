@@ -60,7 +60,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 	//  public static void main( String[] args )
 	//	 {
 
-	public void VerifyKIASEPOSFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
+	public void VerifyInboundKIASEPOSFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
 		//   public void main() throws InterruptedException, AWTException, SftpException {
 		//		public static void main() throws InterruptedException, AWTException {
 

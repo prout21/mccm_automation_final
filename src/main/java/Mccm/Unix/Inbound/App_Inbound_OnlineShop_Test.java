@@ -60,7 +60,7 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
   //  public static void main( String[] args )
 //	 {
 	
-	      public void VerifyONLINESHOPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
+	      public void VerifyInboundONLINESHOPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
 		//   public void main() throws InterruptedException, AWTException, SftpException {
 	//		public static void main() throws InterruptedException, AWTException {
 	

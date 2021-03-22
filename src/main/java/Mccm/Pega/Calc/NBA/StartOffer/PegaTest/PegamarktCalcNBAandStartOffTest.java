@@ -41,7 +41,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	@Test (priority=1)
 	public void VerifyCalcNBAandStartOfferEventRunSuccessfully() throws InterruptedException, AWTException { 
 
-	//	loginPageCalcNBAandStartOff.Pegamrklunch3();
+		//	loginPageCalcNBAandStartOff.Pegamrklunch3();
 		pegaMarktCalcNBAandStartOff.pegamarkting();
 		testutil.WindowHandling();
 		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage1();
@@ -79,10 +79,10 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 
 	public void teardown() {
 
-	//	driver.quit();
+		driver.quit();
 
 
-		System.out.println("Calc NBAandStart Offer Run Done");
+		System.out.println("Calc NBAandStart Offer Event setup Run Done");
 	}
 
 }

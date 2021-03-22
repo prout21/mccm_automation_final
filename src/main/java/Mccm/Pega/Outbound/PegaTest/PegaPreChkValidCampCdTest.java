@@ -45,7 +45,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyPreCheckNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyOutboundPreCheckNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
 	 
 	// homepage.Pegamrklunch3();
 	 pegaPreChkValidCampCd.pegamarkting();
@@ -68,7 +68,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 	
  driver.quit();
 
-    System.out.println("NBA Campaign Code Validation Done");
+    System.out.println("Outbound NBA Precheck Campaign Code Validation Done");
 }	 
  }
  

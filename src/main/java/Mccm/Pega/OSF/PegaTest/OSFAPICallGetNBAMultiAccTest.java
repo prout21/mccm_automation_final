@@ -22,11 +22,11 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
- 
-	
+
+
 	@Test
 
-	public void VerifyOSFRealtimeNBAMultipleAccountsAPIcallSuccessfully() {
+	public void VerifyOSFGetNBAMultipleAccountsAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -40,15 +40,15 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
-			
-			  URL urlForGetRequest = new URL("https://" + hostName + ":" + port +
-			  "/prweb/PRRestService/MCCMOSF/Services/GetNBA");
-			 
-		 	
-	//	  	URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA");  
-		 	
-		 	
+
+
+			URL urlForGetRequest = new URL("https://" + hostName + ":" + port +
+					"/prweb/PRRestService/MCCMOSF/Services/GetNBA");
+
+
+			//	  	URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA");  
+
+
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -57,12 +57,12 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-			              
-		   json = general_ReadProperty("OSF_Json_MultiAcc");
-		 	  
-	
-        //   String   json ="{\"Accounts\":[{\"AccountID\":\"1130542249\",\"SI\":\"MobileBAN\"},{\"AccountID\":\"30541253\",\"SI\":\"Cable\"},{\"AccountID\":\"13013453\",\"SI\":\"Fixnet\"}],\"VOID\":\"12345678\",\"SCClassification\":\"SCL\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\"}";
-			
+
+			json = general_ReadProperty("OSF_Json_MultiAcc");
+
+
+			//   String   json ="{\"Accounts\":[{\"AccountID\":\"1130542249\",\"SI\":\"MobileBAN\"},{\"AccountID\":\"30541253\",\"SI\":\"Cable\"},{\"AccountID\":\"13013453\",\"SI\":\"Fixnet\"}],\"VOID\":\"12345678\",\"SCClassification\":\"SCL\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\"}";
+
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
@@ -74,12 +74,12 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
-			
-		  	  connection.setRequestProperty("x-mccm-usecase", "OSF_GetNBA");
-		  	  connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
-		 	  connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
- 		 	connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
- 		 	
+
+			connection.setRequestProperty("x-mccm-usecase", "OSF_GetNBA");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
+			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -88,7 +88,7 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			os.flush();
 			os.close();
 			int responseCode = connection.getResponseCode();
-			
+
 
 			BufferedReader in = null;
 			if (responseCode == 200)
@@ -100,9 +100,9 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
+
 			System.out.println(responseCode);
-			
+
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 
 		} catch (Exception e) {

@@ -63,7 +63,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
   //  public static void main( String[] args )
 //	 {
 	
-	      public void VerifyDMPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
+	      public void VerifyInboundDMPFileLoadSuccessfully() throws InterruptedException, AWTException, SftpException {
 	 
 	    	
 	    	  

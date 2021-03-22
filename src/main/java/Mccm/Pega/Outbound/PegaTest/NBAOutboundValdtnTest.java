@@ -35,7 +35,7 @@ public class NBAOutboundValdtnTest extends TestBase {
 	    NBAOutboundValdtn1=homepage.NBAOutboundValdtn();
  }
  @Test (priority=1)
- public void VerifyNBABatchProcessCompletedSuccessfully() throws InterruptedException { 
+ public void VerifyOutboundNBABatchProcessCompletedSuccessfully() throws InterruptedException { 
 	 NBAOutboundValdtn1.Recordclk();
 	 NBAOutboundValdtn1.SysAdmin();
 	 NBAOutboundValdtn1.javaexictor4();
@@ -70,7 +70,7 @@ public class NBAOutboundValdtnTest extends TestBase {
      driver.quit();
 	 
       
- 	 System.out.println("NBA Batch process completed");  
+ 	 System.out.println("Outbound NBA Batch process completed");  
  }
     
 }

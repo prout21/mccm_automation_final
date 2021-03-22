@@ -26,7 +26,7 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 
 	@Test
 
-	public void VerifyOSFUpdate_ShoppingCartID_InteractionHistoryAPIcallSuccessfully() {
+	public void VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 

@@ -36,7 +36,7 @@ public class PreChkNBACampValuTest extends TestBase {
 		PreChkNBACampValu1=homepage.PreChkNBACampValu();
 	}
 	@Test (priority=1)
-	public void VerifyCapturedNBACampaignNameValueSuccessfully() throws InterruptedException { 
+	public void VerifyOutboundCapturedNBACampaignNameValueSuccessfully() throws InterruptedException { 
 		PreChkNBACampValu1.Recordclk();
 		PreChkNBACampValu1.SysAdmin();
 		PreChkNBACampValu1.javaexictor4();
@@ -60,7 +60,7 @@ public class PreChkNBACampValuTest extends TestBase {
 		driver.quit();
 
 
-		System.out.println("Captured NBACampaign Name Value Successfully Done");  
+		System.out.println("Outbound Captured NBACampaign Name Value Successfully Done");  
 	}
 
 }

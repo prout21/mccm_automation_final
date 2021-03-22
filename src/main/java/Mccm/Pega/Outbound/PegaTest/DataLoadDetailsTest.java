@@ -71,7 +71,7 @@ public class DataLoadDetailsTest extends TestBase {
  }
  
  @Test (priority=1)
- public void VerifyOracleCansadraDataLoadedSuccessfully() throws InterruptedException { 
+ public void VerifyOutboundOracleCansadraDataLoadedSuccessfully() throws InterruptedException { 
   	 DataLoadDetails1.Recordclk();
 	 DataLoadDetails1.SysAdmin();
 	 DataLoadDetails1.javaexictor4();
@@ -93,7 +93,7 @@ public class DataLoadDetailsTest extends TestBase {
 	
     driver.quit();
 	      
- 	 System.out.println("DB Data loaded Validation Done");  
+ 	 System.out.println("Outbound DB Data loaded Validation Done");  
  }
     
 }

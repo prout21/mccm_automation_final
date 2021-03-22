@@ -36,7 +36,7 @@ public class ExtractChannelFileTest extends TestBase {
 	    ExtractChannelFile1=homepage.ExtractChannelFile();
  }
  @Test (priority=1)
- public void VerifyExtractChannelFileCheckSuccessfully() throws InterruptedException { 
+ public void VerifyOutboundExtractChannelFileCheckSuccessfully() throws InterruptedException { 
 	 ExtractChannelFile1.Recordclk();
 	 ExtractChannelFile1.SysAdmin();
 	 ExtractChannelFile1.javaexictor4();
@@ -62,7 +62,7 @@ public class ExtractChannelFileTest extends TestBase {
    driver.quit();
 	 
       
- 	 System.out.println("Extract file Check Done");  
+ 	 System.out.println("Outbound Extract file Check Done");  
  }
     
 }

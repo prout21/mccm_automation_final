@@ -33,7 +33,7 @@ public class LoginPageTest extends TestBase {
  
  
  @Test (priority=1)
- public void VerifyLoginPageTitleTest() { 
+ public void VerifyPegaApplicationLoginPageTitleTest() { 
 	 String title = loginpage.PageTitle();
 	 Assert.assertEquals(title, "Pega Platform");
 	
@@ -41,13 +41,13 @@ public class LoginPageTest extends TestBase {
  }
 
  @Test (priority=2)
- public void VerifyPegaLogoTest() { 
+ public void VerifyPegaApplicationPegaLogoTest() { 
 	 boolean flag = loginpage.veryfyLogo();
 	 Assert.assertTrue(flag);
 	 
  }
  @Test (priority=3)
- public void VerifyLoginSuccessfulTest() { 
+ public void VerifyPegaApplicationLoginSuccessfulTest() { 
 	 loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	 	 
  }

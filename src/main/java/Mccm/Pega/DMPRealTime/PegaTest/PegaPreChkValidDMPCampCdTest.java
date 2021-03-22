@@ -70,7 +70,7 @@ public class PegaPreChkValidDMPCampCdTest extends TestBase {
 
 		driver.quit();
 
-		System.out.println("DMP Campaign Code Validation Done");
+		System.out.println("DMP PreCheck Campaign Code Validation Done");
 	}	 
 }
 

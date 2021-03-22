@@ -42,7 +42,7 @@ public class PegaOSFOutcomeSaveOffAPIVldTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyMCCMOSFOutcomeAPISaveOffValidationRunSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully() throws InterruptedException, AWTException { 
 
 	 loginpageinbound.Pegamrklunch3();
 	 pegaMarketIntrctnHistry.pegamarkting();
@@ -63,7 +63,7 @@ public class PegaOSFOutcomeSaveOffAPIVldTest extends TestBase {
 	
      driver.quit();
 	      
-	 System.out.println("MCCM OSF Outcome API Save Offer Validation Done");  
+	 System.out.println("OSF Outcome API Save Offer Validation Done");  
 }
    
 }

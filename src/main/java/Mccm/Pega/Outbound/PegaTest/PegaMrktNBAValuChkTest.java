@@ -43,7 +43,7 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 
  
 @Test (priority=1)
- public void VerifyNBACampValueChkPresentTestSuccessfully() throws InterruptedException, AWTException { 
+ public void VerifyOutboundNBACampValueChkPresentTestSuccessfully() throws InterruptedException, AWTException { 
 	 
 	 homepage.Pegamrklunch1();
 	 pegaMrktNBAValuChk.pegamarkting();
@@ -64,9 +64,9 @@ public class PegaMrktNBAValuChkTest extends TestBase {
 
  public void teardown() {
 
-   // driver.quit();
+    driver.quit();
 
-    System.out.println("NBACampaignName Value is not Present..Goto Main Flow");
+    System.out.println("Outbound NBACampaignName Value is not Present..Goto Main Flow");
 }	 
  }
  

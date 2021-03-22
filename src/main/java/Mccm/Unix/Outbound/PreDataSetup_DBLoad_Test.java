@@ -46,7 +46,7 @@ public class PreDataSetup_DBLoad_Test  {
 @Test	
 //	public static void main(Object args)
 
-   public void VerifyPreDatasetupDBLoadsuccessfully()
+   public void VerifyOutboundPreDatasetupDBLoadsuccessfully()
  
 
 	{

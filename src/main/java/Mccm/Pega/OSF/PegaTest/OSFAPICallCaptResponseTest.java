@@ -26,7 +26,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 
 	@Test
 
-	public void VerifyOSFCaptureOutcomeResponseAPIcallSuccessfully() {
+	public void VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 

@@ -23,46 +23,46 @@ public class PegaDMPProcOffRsltsVldtTest extends TestBase {
 
 	PegaMarketIntrctnHistry pegaMarketIntrctnHistry;
 	TestUtil testutil;
-	
+
 
 	public PegaDMPProcOffRsltsVldtTest()
 	{
 		super();
 	}
- @BeforeMethod
- 
-    public void setup() throws InterruptedException {
-	    initialization();
-	     loginpageinbound = new LoginPageInbound();
-	     pegaMarketIntrctnHistry = loginpageinbound.login(prop.getProperty("username"), prop.getProperty("password")); 
-	     testutil=new TestUtil();
-	     pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
-	     pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
-	
-	    }
+	@BeforeMethod
+
+	public void setup() throws InterruptedException {
+		initialization();
+		loginpageinbound = new LoginPageInbound();
+		pegaMarketIntrctnHistry = loginpageinbound.login(prop.getProperty("username"), prop.getProperty("password")); 
+		testutil=new TestUtil();
+		pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
+		pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
+
+	}
 
 
- 
-@Test (priority=1)
- public void VerifyDMPAPIProcessOffRsultsValidtnSuccessfully() throws InterruptedException, AWTException { 
 
-	 loginpageinbound.Pegamrklunch3();
-	 pegaMarketIntrctnHistry.pegamarkting();
-	 testutil.WindowHandling();
-	 pegaMarketIntrctnHistry.ExpandReport();;
-	 pegaMarketIntrctnHistry.ClkIntractionHstry();
-	 testutil.SwitchToFrame("PegaGadget1Ifr");
-	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();
-	 pegaMarketIntrctnHistry.DMPRealTimeVlidtion();
-	 	 
- }
-@AfterMethod
+	@Test (priority=1)
+	public void VerifyDMPAPIProcessOffRsultsValidtnSuccessfully() throws InterruptedException, AWTException { 
 
-public void teardown() {
+		loginpageinbound.Pegamrklunch3();
+		pegaMarketIntrctnHistry.pegamarkting();
+		testutil.WindowHandling();
+		pegaMarketIntrctnHistry.ExpandReport();;
+		pegaMarketIntrctnHistry.ClkIntractionHstry();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();
+		pegaMarketIntrctnHistry.DMPRealTimeVlidtion();
 
- driver.quit();
+	}
+	@AfterMethod
+
+	public void teardown() {
+
+		driver.quit();
 
 
-	System.out.println("DMP API Process Offer Results Validation Done");
-}
+		System.out.println("DMP API Process Offer Results IH Validation Done");
+	}
 }

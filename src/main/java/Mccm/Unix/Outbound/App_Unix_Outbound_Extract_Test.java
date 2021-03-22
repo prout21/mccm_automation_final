@@ -48,7 +48,7 @@
 		public static String host;
 		public static XSSFWorkbook wb;
 	
-		public void VerifyExtracDataLoadedSuccessfully() throws InterruptedException, AWTException, SftpException, JSchException {
+		public void VerifyOutboundExtracDataLoadedSuccessfully() throws InterruptedException, AWTException, SftpException, JSchException {
 	
 			System.out.println("Connection started");        	
 			System.out.println("PROJECT_FOLDER_PATH:");  

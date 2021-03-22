@@ -7,7 +7,7 @@
 	</listeners>
 	 
  
-   <test name="Unix Filecheck Inbound Interface Regression Test">
+   <test name="Unix Filecheck And load Inbound Interface Regression Test">
     <classes>
         <class name="Mccm.Unix.Inbound.App_Inbound_DMP_Test"/> 
         <class name="Mccm.Unix.Inbound.App_Inbound_KIASEPOS_Test"/> 
@@ -16,7 +16,7 @@
   </test> <!-- Test -->
   
 
-  <test name="Pega Intraction Recent History Regression Test">
+  <test name="Pega Inbound Intraction Recent History Regression Test">
     <classes>
       <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest"/>  
     </classes>
