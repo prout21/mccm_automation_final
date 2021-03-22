@@ -9,7 +9,7 @@ def nightlyBuild = false
 pkg_repos = "DXC-VF"
 
 // Cron job setting for nightly build. Branch fb-test* will be included for nightlybuild.
-def schedule = env.BRANCH_NAME.contains('fb_develop')  ? "0 11 * * 1-5" : ""
+def schedule = env.BRANCH_NAME.contains('develop')  ? "0 11 * * 1-5" : ""
 
 pipeline {
     agent {dockerfile true}
@@ -76,10 +76,11 @@ pipeline {
                                 ssh -N -o StrictHostKeyChecking=no -L 18576:${REST_API_ENDPOINT_HOST}:8002 dxc_dev@${BASTION_MACHINE} -p 18881 &
                                 cd ${WORKSPACE}
                                 # Update properties file with actual WORKSPACE.
-                                sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' configurationFile.properties
+                                sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/configurationFile.properties
                                 # Port fordwaring to rest endpoint.
                                 sed -i -e 's|192.57.138.25|localhost|g' configurationFile.properties
-                                sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' src/main/java/Mccm/Pega/ConfigPega/Config.properties
+                                sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/Config.properties
+                                sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/UseCaseConfigFile.properties
                                 # Run inside a script 
                                 echo 'xvfb-run --server-args="-screen 0 1024x768x24" mvn test ' >runTest.sh
                                 echo "exit 0" >>runTest.sh
@@ -107,7 +108,7 @@ pipeline {
             when { 
                 allOf {
                     triggeredBy cause: "TimerTrigger"
-                    expression { BRANCH_NAME ==~ /(fb_develop)/ }
+                    expression { BRANCH_NAME ==~ /(develop)/ }
                 }  
             }
             steps {
@@ -147,7 +148,7 @@ pipeline {
         failure {
             echo 'I failed :(' 
             script {
-                if(env.BRANCH_NAME == "fb_develop" && nightlyBuild) {
+                if(env.BRANCH_NAME == "develop" && nightlyBuild) {
                     office365ConnectorSend message: "Build: Failed" , status: "Nightly build Failed", webhookUrl: 'https://outlook.office.com/webhook/a1e5ba23-63a3-4537-977e-e2191201fb75@93f33571-550f-43cf-b09f-cd331338d086/JenkinsCI/44ea78e1198249ddb18bc0c0f2b80c62/19011347-d504-4b65-9a0a-0b676f0b9762'
                 }
                 // emailext body: '"Log Url: (<${env.BUILD_URL}|Open>)"', subject: 'Build Failed', to: 'someemail@dxc.com'
