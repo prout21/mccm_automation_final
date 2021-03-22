@@ -36,7 +36,7 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			//          String port = "18576";// 8573
 
 
-			hostName=general_ReadProperty("Calc_NBA_hostname");
+			hostName=general_ReadProperty("NBA_hostName");
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
@@ -53,7 +53,7 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 
 		 //	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 			              
-		 	  json = general_ReadProperty("NBA_json_MobileSubscr");
+		 	  json = general_ReadProperty("CalNBA_json_MobileSubscr");
 	
 		 
 			

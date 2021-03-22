@@ -52,7 +52,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 			              
-		 	  json = general_ReadProperty("OSF_Json_OrderID");
+		 	  json = general_ReadProperty("OSF_Json_PfdbOrderID");
 	
 			
 			// Create all-trusting host name verifier
