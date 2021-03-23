@@ -78,7 +78,7 @@ pipeline {
                                 # Update properties file with actual WORKSPACE.
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/configurationFile.properties
                                 # Port fordwaring to rest endpoint.
-                                sed -i -e 's|192.57.138.25|localhost|g' configurationFile.properties
+                                sed -i -e 's|192.57.138.25|localhost|g' UseCaseConfigFile/configurationFile.properties
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/Config.properties
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/UseCaseConfigFile.properties
                                 # Run inside a script 
