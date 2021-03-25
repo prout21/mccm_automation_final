@@ -4,14 +4,14 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest</td>
+<td>Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyMCCMOSFOutcomeAPISaveOffValidationRunSuccessfully</td>
+<td>VerifyOutboundOracleCansadraDataLoadedSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -34,58 +34,14 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest</td>
+<td>Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyOSFUpdate_ShoppingCartID_InteractionHistoryAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobSubTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyExtracDataLoadedSuccessfully</td>
+<td>VerifyOutboundPreDatasetupDBLoadsuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -107,7 +63,67 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyNBACampaignRunSuccessfully</td>
+<td>VerifyOutboundNBACampaignRunSuccessfully</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>teardown</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>VerifyOutboundDBConfigurationCampRunidValidationSuccessfully</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>setup</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>teardown</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>VerifyOutboundNBABatchProcessCompletedSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -137,7 +153,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyDBDataLoadedSuccessfully</td>
+<td>VerifyOutboundDBDataLoadedSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -159,7 +175,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyPreCheckNBACampCodeValueValidSuccessfully</td>
+<td>VerifyOutboundPreCheckNBACampCodeValueValidSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -189,573 +205,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyDynamicSystemSettingSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyMCCMOSFOutcomeAPIAcceptedValidationRunSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Unix.Inbound.App_Inbound_OnlineShop_Test</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyONLINESHOPFileLoadSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBSUBSCTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyPegaCalcNBAandStartOffAPIVldtTestSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOSFUpdate_OrderID_InteractionHistoryAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyCalcNBAandStartOfferEventRunSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDMPAPIProcessOffRsultsValidtnSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Unix.Inbound.App_Inbound_KIASEPOS_Test</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyKIASEPOSFileLoadSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAMobHashTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDMPRTPNBAMobHashedAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyNBABatchProcessCompletedSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.PegaOSFDSSTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOSFDynamicSystemSettingSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyMCCMOSFOutcomeAPISubmitOrderValidationRunSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyPreCheckCalcNBACampCodeValueValidSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Unix.Inbound.App_Inbound_DMP_Test</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDMPFileLoadSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOSFDMCCMSettingDSSSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.DMPRealTime.PegaTest.DMPRTPNBAProOffRltsTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDMPRTProcessOffResltsAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDMPrealtimeRunSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyExtractChannelFileCheckSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOracleCansadraDataLoadedSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOSFCaptureOutcomeResponseAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Unix.Outbound.PreDataSetup_DBLoad_Test</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyPreDatasetupDBLoadsuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyDBConfigurationCampRunidValidationSuccessfully</td>
+<td>VerifyOutboundDynamicSystemSettingSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -785,15 +235,15 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyLoginPageTitleTest</td>
+<td>VerifyPegaApplicationLoginPageTitleTest</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyPegaLogoTest</td>
+<td>VerifyPegaApplicationLoginSuccessfulTest</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyLoginSuccessfulTest</td>
+<td>VerifyPegaApplicationPegaLogoTest</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -816,14 +266,36 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest</td>
+<td>Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>VerifyIntractionHistoryRunSuccessfully</td>
+<td>VerifyOutboundExtracDataLoadedSuccessfully</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>VerifyOutboundExtractChannelFileCheckSuccessfully</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -842,58 +314,6 @@
 <td>&nbsp;</td>
 <td>teardown</td>
 <td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyPreCheckDMPRTCampCodeValueValidSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>setup</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>teardown</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBAMultiAccTest</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>VerifyOSFRealtimeNBAMultipleAccountsAPIcallSuccessfully</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
 <tr>
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>

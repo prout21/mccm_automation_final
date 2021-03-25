@@ -22,6 +22,15 @@
       </class> <!-- Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest -->
     </classes>
   </test> <!-- Pega CalcNBAandStartOfferFlow PegaMarket NBAOF Event Regression Test(failed) -->
+  <test thread-count="5" name="Pega CalcNBAandStartOfferFlow API Call Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobSubTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobSubTest -->
+    </classes>
+  </test> <!-- Pega CalcNBAandStartOfferFlow API Call Regression Test(failed) -->
   <test thread-count="5" name="Pega CalcNBAandStartOfferFlow API Call Validation Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBSUBSCTest">

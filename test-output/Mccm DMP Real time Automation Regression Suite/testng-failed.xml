@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega DMP Real Time Camp Code Validation Regression Test(failed)">
+  <test thread-count="5" name="Pega DMP Real Time Precheck Camp Code Validation Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest">
         <methods>
@@ -14,8 +14,8 @@
         </methods>
       </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegaPreChkValidDMPCampCdTest -->
     </classes>
-  </test> <!-- Pega DMP Real Time Camp Code Validation Regression Test(failed) -->
-  <test thread-count="5" name="Pega DMP Real Time Regression Test(failed)">
+  </test> <!-- Pega DMP Real Time Precheck Camp Code Validation Regression Test(failed) -->
+  <test thread-count="5" name="Pega DMP Real Time Marketing Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest">
         <methods>
@@ -25,8 +25,8 @@
         </methods>
       </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegamarktDMPrealtimeTest -->
     </classes>
-  </test> <!-- Pega DMP Real Time Regression Test(failed) -->
-  <test thread-count="5" name="RestAPI POST Call NBA Regression Test(failed)">
+  </test> <!-- Pega DMP Real Time Marketing Regression Test(failed) -->
+  <test thread-count="5" name="Pega DMP Real time RestAPI POST Call NBA Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest">
         <methods>
@@ -36,5 +36,5 @@
         </methods>
       </class> <!-- Mccm.Pega.DMPRealTime.PegaTest.PegaDMPProcOffRsltsVldtTest -->
     </classes>
-  </test> <!-- RestAPI POST Call NBA Regression Test(failed) -->
+  </test> <!-- Pega DMP Real time RestAPI POST Call NBA Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm DMP Real time Automation Regression Suite] -->

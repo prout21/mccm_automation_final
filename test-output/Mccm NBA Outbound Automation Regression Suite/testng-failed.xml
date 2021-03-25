@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm NBA Outbound Automation Regression Suite]">
-  <test thread-count="5" name="Unix filechk and DB loaded Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
-        <methods>
-          <include name="VerifyDBDataLoadedSuccessfully"/>
-        </methods>
-      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
-    </classes>
-  </test> <!-- Unix filechk and DB loaded Regression Test(failed) -->
   <test thread-count="5" name="Pre Data Setup for Valid Camp Code Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.PegaPreChkValidCampCdTest">
         <methods>
-          <include name="VerifyPreCheckNBACampCodeValueValidSuccessfully"/>
+          <include name="VerifyOutboundPreCheckNBACampCodeValueValidSuccessfully"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
@@ -23,37 +14,37 @@
   </test> <!-- Pre Data Setup for Valid Camp Code Regression Test(failed) -->
   <test thread-count="5" name="Pega Dynamic System Setting Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
-        <methods>
-          <include name="VerifyPegaLogoTest"/>
-          <include name="teardown"/>
-          <include name="VerifyLoginPageTitleTest"/>
-          <include name="setup"/>
-          <include name="VerifyLoginSuccessfulTest"/>
-        </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
       <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
         <methods>
+          <include name="VerifyOutboundOracleCansadraDataLoadedSuccessfully"/>
           <include name="setup"/>
-          <include name="VerifyOracleCansadraDataLoadedSuccessfully"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
       <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
         <methods>
-          <include name="VerifyDynamicSystemSettingSuccessfully"/>
+          <include name="VerifyOutboundDynamicSystemSettingSuccessfully"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
+      <class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest">
+        <methods>
+          <include name="VerifyPegaApplicationLoginPageTitleTest"/>
+          <include name="teardown"/>
+          <include name="VerifyPegaApplicationPegaLogoTest"/>
+          <include name="setup"/>
+          <include name="VerifyPegaApplicationLoginSuccessfulTest"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.LoginPageTest -->
     </classes>
   </test> <!-- Pega Dynamic System Setting Regression Test(failed) -->
   <test thread-count="5" name="Pega NBACampaign Run Marketing Completed Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest">
         <methods>
+          <include name="VerifyOutboundNBACampaignRunSuccessfully"/>
           <include name="teardown"/>
-          <include name="VerifyNBACampaignRunSuccessfully"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.PegamarktingTest -->
@@ -63,7 +54,7 @@
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest">
         <methods>
-          <include name="VerifyDBConfigurationCampRunidValidationSuccessfully"/>
+          <include name="VerifyOutboundDBConfigurationCampRunidValidationSuccessfully"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
@@ -74,7 +65,7 @@
     <classes>
       <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
         <methods>
-          <include name="VerifyExtracDataLoadedSuccessfully"/>
+          <include name="VerifyOutboundExtracDataLoadedSuccessfully"/>
         </methods>
       </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
     </classes>
@@ -84,8 +75,8 @@
       <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
         <methods>
           <include name="teardown"/>
-          <include name="VerifyExtractChannelFileCheckSuccessfully"/>
           <include name="setup"/>
+          <include name="VerifyOutboundExtractChannelFileCheckSuccessfully"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
     </classes>
@@ -94,8 +85,8 @@
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
         <methods>
-          <include name="VerifyNBABatchProcessCompletedSuccessfully"/>
           <include name="teardown"/>
+          <include name="VerifyOutboundNBABatchProcessCompletedSuccessfully"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->

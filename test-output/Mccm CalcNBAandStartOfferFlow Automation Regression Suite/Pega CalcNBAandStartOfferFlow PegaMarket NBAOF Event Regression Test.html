@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 19 14:41:23 IST 2021</td>
+<td>Started on:</td><td>Thu Mar 25 17:52:21 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (7 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10971 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,97 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup()'><b>setup</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:39)
+<td><div><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at Mccm.Pega.Outbound.PegaMain.HomePage.Pegamrklunch5(HomePage.java:194)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:44)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace858204589", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace858204589'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:39)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 39 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 51 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e902e9ad919385c187eafa7057db53a0
+*** Element info: {Using=xpath, value=(//i[@class=&apos;pi pi-caret-down&apos;])[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 56 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1819940427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1819940427'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at Mccm.Pega.Outbound.PegaMain.HomePage.Pegamrklunch5(HomePage.java:194)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -131,35 +197,96 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuites(TestNG.java:1066)
 	at org.testng.TestNG.run(TestNG.java:1034)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 39 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 51 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e902e9ad919385c187eafa7057db53a0
+*** Element info: {Using=xpath, value=(//i[@class=&apos;pi pi-caret-down&apos;])[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 56 more
 </pre></div></td>
-<td>0</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@2758fe70</td></tr>
+<td>8</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@4883b407</td></tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.setup()'><b>setup</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56881}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5edd6f07f0698315a0dc68ffa0095862
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:158)
 	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.setup(PegamarktCalcNBAandStartOffTest.java:32)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace53940034", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace53940034'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1942828992", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1942828992'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56881}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5edd6f07f0698315a0dc68ffa0095862
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:158)
 	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.setup(PegamarktCalcNBAandStartOffTest.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -192,8 +319,8 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.run(TestNG.java:1034)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
 </pre></div></td>
-<td>0</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@1f36e637</td></tr>
+<td>2</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@7d9d1a19</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -205,13 +332,13 @@ function toggleAllBoxes() {
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.teardown()'><b>teardown</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest</td>
 <td></td>
-<td>-1616145083</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@2758fe70</td></tr>
+<td>-1616674950</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@4883b407</td></tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.teardown()'><b>teardown</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest</td>
 <td></td>
-<td>-1616145083</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@1f36e637</td></tr>
+<td>-1616674952</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@7d9d1a19</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -222,30 +349,46 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully()'><b>VerifyCalcNBAandStartOfferEventRunSuccessfully</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56881}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5edd6f07f0698315a0dc68ffa0095862
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:158)
 	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.setup(PegamarktCalcNBAandStartOffTest.java:32)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1616359099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1616359099'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace557023099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace557023099'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56881}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5edd6f07f0698315a0dc68ffa0095862
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:158)
 	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.setup(PegamarktCalcNBAandStartOffTest.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -279,34 +422,100 @@ function toggleAllBoxes() {
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
 </pre></div></td>
 <td>0</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@1f36e637</td></tr>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@7d9d1a19</td></tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.VerifyPreCheckCalcNBACampCodeValueValidSuccessfully()'><b>VerifyPreCheckCalcNBACampCodeValueValidSuccessfully</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest</td>
-<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:39)
+<td><div><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at Mccm.Pega.Outbound.PegaMain.HomePage.Pegamrklunch5(HomePage.java:194)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:44)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1976752685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1976752685'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at Mccm.Pega.Outbound.PegaTestBase.TestBase.initialization(TestBase.java:142)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:39)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 39 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 51 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e902e9ad919385c187eafa7057db53a0
+*** Element info: {Using=xpath, value=(//i[@class=&apos;pi pi-caret-down&apos;])[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 56 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2024415090", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2024415090'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at Mccm.Pega.Outbound.PegaMain.HomePage.Pegamrklunch5(HomePage.java:194)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.setup(PegaPreChkValidCalcNBACampCdTest.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -337,9 +546,54 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuites(TestNG.java:1066)
 	at org.testng.TestNG.run(TestNG.java:1034)
 	at ExecutionUSECase.MainClass.main(MainClass.java:50)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 39 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 51 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.90)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.161.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56863}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e902e9ad919385c187eafa7057db53a0
+*** Element info: {Using=xpath, value=(//i[@class=&apos;pi pi-caret-down&apos;])[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 56 more
 </pre></div></td>
 <td>0</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@2758fe70</td></tr>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@4883b407</td></tr>
 </table><p>
 </body>
 </html>
