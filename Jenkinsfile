@@ -22,6 +22,11 @@ pipeline {
         // Here define the environment variables
         MCCM_AUTOMATION_REPO_URL = "github.dxc.com/DXC-VF/mccm_automation.git"
         REPO = "mccm_automation"
+        DOCKER_REGISTERY = "docker.dxc.com/mccm-automation-docker"
+        DOCKER_REPO_CREDENTIALS = credentials('MCCM_CREDENTIALS')
+        DOCKER_REPO_USER = "${env.DOCKER_REPO_CREDENTIALS_USR}"
+        DOCKER_REPO_PWD = "${env.DOCKER_REPO_CREDENTIALS_PSW}"
+
     }// environment
     
     options {
@@ -40,16 +45,35 @@ pipeline {
         } // codequalitycheck
     
         stage('Build') {
+            when { 
+                allOf {
+                    triggeredBy cause: "UserIdCause"
+                    expression { BRANCH_NAME ==~ /(master|develop)/ 
+                    }
+                }  
             steps {
                     echo "Building...."
                     sh '''
                         cd ${WORKSPACE}
-                        mvn compile
+                        mvn package
                     '''
+                    withCredentials([[$class: "UsernamePasswordMultiBinding", credentialsId: "MCCM_CREDENTIALS", usernameVariable: "DOCKER_USR", passwordVariable: "DOCKER_PWD"]])
+                    {
+                        def tagName = "latest"
+                        def uploadPath = "build/"
+                        def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
+                        mccm_automation.push()
+                    } // withCredentials
             }
         } //stage (Build)
         stage('Test')
         {
+            when { 
+                    allOf {
+                        triggeredBy "TimerTrigger"
+                        expression { BRANCH_NAME ==~ /(develop)/ 
+                    }   
+                }  
             environment {
                 // These are user defined environment variables.
                 REMOTE_MACHINE = "10.0.4.99"
