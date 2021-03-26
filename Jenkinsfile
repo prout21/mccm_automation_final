@@ -53,6 +53,7 @@ pipeline {
                 } 
             }  
             steps {
+                script {
                     echo "Building...."
                     sh '''
                         cd ${WORKSPACE}
@@ -65,6 +66,8 @@ pipeline {
                         def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
                         mccm_automation.push()
                     } // withCredentials
+                }
+                    
             }
         } //stage (Build)
         stage('Test')
