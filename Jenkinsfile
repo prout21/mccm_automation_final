@@ -87,6 +87,7 @@ pipeline {
             }
             steps {
                     script {
+                        nightlyBuild = true
                         echo "Testing...."
                         sshagent (credentials: ['DEV_MACHINE_SSH_KEY']) {
                             sh '''
@@ -127,9 +128,14 @@ pipeline {
         stage('Store to Jenkins') {
             // Here we store the results of test.
             steps {
-                    echo "Saving Test results."
-                    unstash "TestReport"
-                    archiveArtifacts artifacts: '**/TestReport/Test-Automaton-Report.html', fingerprint: true
+                script {
+                    if(nightlyBuild){
+                        echo "Saving Test results."
+                        unstash "TestReport"
+                        archiveArtifacts artifacts: '**/TestReport/Test-Automaton-Report.html', fingerprint: true
+                    }
+                }
+                    
             } 
         }// (End of Store to Jenkins)	
         stage('Send message MS TEAMS'){
