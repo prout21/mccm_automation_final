@@ -59,8 +59,7 @@ pipeline {
                         cd ${WORKSPACE}
                         mvn package
                     '''
-                    withCredentials([[$class: "UsernamePasswordMultiBinding", credentialsId: "MCCM_CREDENTIALS", usernameVariable: "DOCKER_USR", passwordVariable: "DOCKER_PWD"]])
-                    {
+                    docker.withRegistry('https://docker.dxc.com', 'MCCM_CREDENTIALS') {
                         def tagName = "latest"
                         def uploadPath = "build/"
                         def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
@@ -111,12 +110,12 @@ pipeline {
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/Config.properties
                                 sed -i -e 's|${WORKSPACE}|'${WORKSPACE}'|g' UseCaseConfigFile/UseCaseConfigFile.properties
                                 # Run inside a script 
-                                echo 'xvfb-run --server-args="-screen 0 1024x768x24" mvn test ' >runTest.sh
+                                echo 'xvfb-run --server-args="-screen 0 1024x768x24" java ExecutionUSECase.MainClass' >runTest.sh
                                 echo "exit 0" >>runTest.sh
                                 chmod +x runTest.sh
                                 cat runTest.sh
                                 ./runTest.sh
-                                #xvfb-run --server-args="-screen 0 1024x768x24" mvn test
+                                #xvfb-run --server-args="-screen 0 1024x768x24" java ExecutionUSECase.MainClas
                             '''
                         }
                         stash name: "TestReport" , includes: "**/TestReport/Test-Automaton-Report.html"
