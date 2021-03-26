@@ -50,7 +50,8 @@ pipeline {
                     triggeredBy cause: "UserIdCause"
                     expression { BRANCH_NAME ==~ /(master|develop)/ 
                     }
-                }  
+                } 
+            }  
             steps {
                     echo "Building...."
                     sh '''
@@ -73,7 +74,8 @@ pipeline {
                         triggeredBy "TimerTrigger"
                         expression { BRANCH_NAME ==~ /(develop)/ 
                     }   
-                }  
+                } 
+            } 
             environment {
                 // These are user defined environment variables.
                 REMOTE_MACHINE = "10.0.4.99"
