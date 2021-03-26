@@ -26,21 +26,21 @@ public class MainClass extends TestBase {
 		String projectPath = System.getProperty("user.dir");
 
 		TestSuite_UseCase1 = general_ReadProperty_UseCase("UseCase_Name1");
-		/*
-		 * TestSuite_UseCase2 = general_ReadProperty_UseCase("UseCase_Name2");
-		 * TestSuite_UseCase3 = general_ReadProperty_UseCase("UseCase_Name3");
-		 * TestSuite_UseCase4 = general_ReadProperty_UseCase("UseCase_Name4");
-		 * TestSuite_UseCase5 = general_ReadProperty_UseCase("UseCase_Name5");
-		 */
+		TestSuite_UseCase2 = general_ReadProperty_UseCase("UseCase_Name2");
+		TestSuite_UseCase3 = general_ReadProperty_UseCase("UseCase_Name3");
+		TestSuite_UseCase4 = general_ReadProperty_UseCase("UseCase_Name4");
+		TestSuite_UseCase5 = general_ReadProperty_UseCase("UseCase_Name5");
+
 
 		List<String> suites = new ArrayList<String>();
 
 
 		suites.add(TestSuite_UseCase1);
-		/*
-		 * suites.add(TestSuite_UseCase2); suites.add(TestSuite_UseCase3);
-		 * suites.add(TestSuite_UseCase4); suites.add(TestSuite_UseCase5);
-		 */
+		suites.add(TestSuite_UseCase2);
+		suites.add(TestSuite_UseCase3);
+		suites.add(TestSuite_UseCase4);
+		suites.add(TestSuite_UseCase5);
+
 
 
 		testNG.setTestSuites(suites);
