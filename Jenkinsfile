@@ -12,7 +12,8 @@ pkg_repos = "DXC-VF"
 def schedule = env.BRANCH_NAME.contains('develop')  ? "0 11 * * 1-5" : ""
 
 pipeline {
-    agent {dockerfile true}
+    // agent {dockerfile true}
+    agent any
     
     triggers {
         cron(schedule)
@@ -26,6 +27,7 @@ pipeline {
         DOCKER_REPO_CREDENTIALS = credentials('MCCM_CREDENTIALS')
         DOCKER_REPO_USER = "${env.DOCKER_REPO_CREDENTIALS_USR}"
         DOCKER_REPO_PWD = "${env.DOCKER_REPO_CREDENTIALS_PSW}"
+        BUILD_IMAGE = "build/mccm_automation_buildimage:latest"
 
     }// environment
     
@@ -54,12 +56,14 @@ pipeline {
             }  
             steps {
                 script {
-                    echo "Building...."
-                    sh '''
-                        cd ${WORKSPACE}
-                        mvn package
-                    '''
                     docker.withRegistry('https://docker.dxc.com', 'MCCM_CREDENTIALS') {
+                        docker.image('${DOCKER_REGISTERY}/${BUILD_IMAGE}').inside() {
+                            echo "Building...."
+                            sh '''
+                                cd ${WORKSPACE}
+                                mvn package
+                            '''
+                        }
                         def tagName = "latest"
                         def uploadPath = "build/"
                         def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
