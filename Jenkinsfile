@@ -14,6 +14,9 @@ def schedule = env.BRANCH_NAME.contains('develop')  ? "0 11 * * 1-5" : ""
 pipeline {
     // agent {dockerfile true}
     agent any
+    parameters {
+        string(name: 'BUILD_NUMBER', defaultValue: 'mccm-release', description: 'Release number used for tagging the image.')
+    }
     
     triggers {
         cron(schedule)
@@ -70,8 +73,8 @@ pipeline {
                                 mvn package
                             '''
                         }
-                        def tagName = "latest"
-                        def uploadPath = "develop/nightlybuild"
+                        def tagName = "${params.BUILD_NUMBER}"
+                        def uploadPath = "release"
                         def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
                         mccm_automation.push()
                     } // withCredentials
@@ -88,6 +91,9 @@ pipeline {
                     }   
                 } 
             } 
+            
+            agent {dockerfile true}
+
             environment {
                 // These are user defined environment variables.
                 REMOTE_MACHINE = "10.0.4.99"
