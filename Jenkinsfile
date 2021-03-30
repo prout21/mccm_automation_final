@@ -71,7 +71,7 @@ pipeline {
                             '''
                         }
                         def tagName = "latest"
-                        def uploadPath = "build/"
+                        def uploadPath = "develop/nightlybuild"
                         def mccm_automation = docker.build("${env.DOCKER_REGISTERY}/${uploadPath}/mccm-automation:${tagName}", "-f ${env.WORKSPACE}/build/Dockerfile_r7ubi .")
                         mccm_automation.push()
                     } // withCredentials
