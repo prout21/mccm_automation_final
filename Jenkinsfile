@@ -56,6 +56,12 @@ pipeline {
             }  
             steps {
                 script {
+                    withCredentials([[$class: "UsernamePasswordMultiBinding", credentialsId: "MCCM_CREDENTIALS", usernameVariable: "DOCKER_USR", passwordVariable: "DOCKER_PWD"]])
+                    {
+                        sh 'docker login ${DOCKER_REGISTERY} --username $DOCKER_USR --password $DOCKER_PWD'
+                        sh 'docker pull ${DOCKER_REGISTERY}/${BUILD_IMAGE}'
+                    } // withCredentials
+
                     docker.withRegistry('https://docker.dxc.com', 'MCCM_CREDENTIALS') {
                         docker.image('${DOCKER_REGISTERY}/${BUILD_IMAGE}').inside() {
                             echo "Building...."
