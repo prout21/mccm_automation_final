@@ -1,7 +1,7 @@
 FROM docker.dxc.com/mccm-automation-docker/build/mccm_automation_rhel7_baseimage:latest
 
 # Install Latest Cromedriver
-COPY build/dependencies/chromedriver /usr/bin/
+COPY dependencies/chromedriver /usr/bin/
 
 # Run as non root user
 RUN groupadd -r mccm && useradd -r -g mccm mccm
@@ -14,6 +14,6 @@ COPY --chown=mccm:mccm target/mccm_automation-0.0.1-SNAPSHOT.jar build/dependenc
 COPY --chown=mccm:mccm build/dependencies/entrypoint_rhel7.sh /app/
 
 # Set classpath
-ENV CLASSPATH=".:/app/jarfiles/mccm_automation-0.0.1-SNAPSHOT.jar:/app/jarfiles/testng-6.8.7.jar:/app/jarfiles/selenium-server-standalone-3.13.0.jar"
+ENV CLASSPATH=".:/app/jarfiles/mccm_automation-0.0.1-SNAPSHOT.jar:/app/jarfiles/testng-6.8.7.jar:/app/jarfiles/selenium-server-standalone-3.141.59.jar"
 
 ENTRYPOINT ["/app/entrypoint_rhel7.sh"]
