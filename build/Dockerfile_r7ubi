@@ -1,7 +1,7 @@
 FROM docker.dxc.com/mccm-automation-docker/build/mccm_automation_rhel7_baseimage:latest
 
 # Install Latest Cromedriver
-COPY dependencies/chromedriver /usr/bin/
+COPY build/dependencies/chromedriver /usr/bin/
 
 # Run as non root user
 RUN groupadd -r mccm && useradd -r -g mccm mccm
