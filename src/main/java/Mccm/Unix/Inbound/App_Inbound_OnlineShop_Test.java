@@ -117,9 +117,8 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
          
         //String host1 = "46.190.224.85";
         Upload_Inbound_OnlineShop.main(null);//main();
-        Thread.sleep(2000);
-        Thread.sleep(2000);
-        Thread.sleep(2000);
+        Thread.sleep(8000);
+     
         
         JSch jSch = new JSch();
         Session session = jSch.getSession(user,host,9022);
@@ -145,47 +144,37 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
         fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
-          
+        Thread.sleep(8000);
         	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
-        	System.out.println("The available files are : ");
-           System.out.println("");  
-           for (int i = 0; i < fileList.size(); i++) {
-               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
-               System.out.println(lsEntry.getFilename()); 
-           		}  
-           //NEW CODE
-           Thread.sleep(2000);
-           Thread.sleep(2000);
-           
-String  name  = general_ReadProperty("File_ONLINE_SHOP");
-           
-      //     System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
-          for (int i = 0; i <1; i++) 
-          {
-          	 filefound = false;
-           for (int j = 0; j < fileList.size(); j++) 
-           {
-               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
-               name11 = (lsEntry.getFilename()); 
- 
-               if (name11.contains(name)) { 
-                	 filefound = true;
-                	 k=i+1;
-               	 System.out.println("The file [" + k +"]:" + name  + " is found in the input folder");
-               	}
-           }
-           
-           if (!filefound)
-           {
-
- 
-           	 k=i+1;
-          	 System.out.println("The file [" + k +"]: " + name  + " is NOT found in the input folder");            	
- 
-         	 
-           }
-          }
-      //    System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
+        //  --------------------------------------------------------------------------------  
+        //     System.out.println("hii test1"); 
+		/*
+		 * System.out.println("The available files are : "); System.out.println(""); for
+		 * (int i = 0; i < fileList.size(); i++) { ChannelSftp.LsEntry lsEntry =
+		 * (ChannelSftp.LsEntry) fileList.get(i);
+		 * System.out.println(lsEntry.getFilename()); } //NEW CODE Thread.sleep(8000);
+		 * 
+		 * String name = general_ReadProperty("File_ONLINE_SHOP");
+		 * 
+		 * 
+		 * for (int i = 0; i <1; i++) { filefound = false; for (int j = 0; j <
+		 * fileList.size(); j++) { ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry)
+		 * fileList.get(j); name11 = (lsEntry.getFilename());
+		 * 
+		 * if (name11.contains(name)) { filefound = true; k=i+1;
+		 * 
+		 * System.out.println("The file [" + k +"]:" + name +
+		 * " is found in the input folder"); } }
+		 * 
+		 * if (!filefound) {
+		 * 
+		 * 
+		 * k=i+1; System.out.println("The file [" + k +"]: " + name +
+		 * " is not found in the input folder");
+		 * 
+		 * 
+		 * } } // System.out.println("hi test1");
+		 */		  //  --------------------------------------------------------------------------------  
           //NEW CODE
           
 //PR           String[] name = {"TESTCYCL_1704_TC096_Validate_Onlineshop_Response_IP_Correct.txt"};
@@ -332,21 +321,21 @@ String  name  = general_ReadProperty("File_ONLINE_SHOP");
 		 // System.out.println("Case 2:");
 		  System.out.println("");
 		 // FilesAvailabilityCheck.main(args);
-     	  System.out.println("Case 3:"); 
+     //	  System.out.println("Case 3:"); 
 	//pr	  ScriptsExecution.main(args); // // Cassandra
 		  //load start System.out.println(""); System.out.println("Case 4-5-6:");
 	//pr	  DBCheck_Mccm.main(args); // ////////////////////////////
 	//pr	  System.out.println("Cassandra load start"); System.out.println("");
 		 
 	    //pr    Upload_Cassandra.main(null);
-		   System.out.println("Case 2:"); 
+		//   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 		   Thread.sleep(8000);
 		   Thread.sleep(2000);
 		//pr  FileExistChk_Inbound_OnlineShop.main(null);
 		 
 			
-     		  System.out.println(""); System.out.println("Case 3:"); //
+     	//	  System.out.println(""); System.out.println("Case 3:"); //
 			  
 		//pr	  ZippingFiles_Cassandra.main(args); 
 			  System.out.println(""); //

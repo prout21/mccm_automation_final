@@ -41,10 +41,10 @@ import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
-import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
-import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
+//import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
+//import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
 import Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd;
-import Mccm.Pega.Outbound.PegaMain.PreChkNBACampValu;
+//import Mccm.Pega.Outbound.PegaMain.PreChkNBACampValu;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
@@ -96,9 +96,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 			DBConfigValdtn.ExcelFilePath = System.getProperty("user.dir");
 			ExtractChannelFile.ExcelFilePath = System.getProperty("user.dir");
 			NBAOutboundValdtn.ExcelFilePath = System.getProperty("user.dir");
-			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
-			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
-			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
+//			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
+//			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
+//			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaMarktCalcNBAandStartOff.ExcelFilePath = System.getProperty("user.dir");
@@ -124,11 +124,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 			
-         System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+        System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
-     // System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+     //  System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 	
 			if(headLessMode.equals("true")) {

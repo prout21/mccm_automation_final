@@ -78,11 +78,15 @@ public class DataLoadDetails extends TestBase {
 	public void Recordclk() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
-	//	Recordclk.click( );
-		 Thread.sleep(1000);
+	 //	Recordclk.click( );
+	      Thread.sleep(1000);
+	//	System.out.println("hi");
 		 Actions  action = new Actions(driver);
 	     action.moveToElement(Recordclk).click().build().perform();
 	     Thread.sleep(1000);
+	
+//	     JavascriptExecutor js = (JavascriptExecutor)driver;
+//	     js.executeScript("arguments[0].click();", Recordclk);
 	}
 	public void SysAdmin() throws InterruptedException
 	{

@@ -1,6 +1,27 @@
+CalcNBAandStartOfferFlow E2E Flow :
+url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
+--------------------------------------------------------------------
+Pre-request:
+Check valid Camp code: 
+class name=/mccm_automation/src/main/java/Mccm/Pega/Calc/NBA/StartOffer/PegaTest/PegaPreChkValidCalcNBACampCdTest.java
+
+Step-1: Run the pega marketing 
+       class name=/mccm_automation/src/main/java/Mccm/Pega/Calc/NBA/StartOffer/PegaTest/PegamarktCalcNBAandStartOffTest.java
+ 
+ Step2: Run the rest call
+       class name=/mccm_automation/src/main/java/Mccm/Pega/Calc/NBA/StartOffer/PegaTest/APICallCalcNBAStOffFlowMobSubTest.java
+             
+Step-3: Go to PEGA market and report->intraction histry->recent history  
+         class name=/mccm_automation/src/main/java/Mccm/Pega/Calc/NBA/StartOffer/PegaTest/PegaCalcNBAAPIVldtMOBSUBSCTest.java
+
+
+
+-----------------------------------------------------------------------------------
+Test Suite loc/Name:/mccm_automation/src/test/resources/TestSuite/RegressionSuite.CalcNBAandStartOfferFlow.xml
+
 https://10.0.4.159:8002/prweb/PRRestService/PegaMKTContainer/V2/Container
 
-  DSS SETTING :  
+  DSS SETTING : below data setup 
 Internal_REST_URL_OSF = https://10.0.4.159:8002/prweb/PRRestService/PegaMKTContainer/V2/Container
  
     OSFDirection = Inbound

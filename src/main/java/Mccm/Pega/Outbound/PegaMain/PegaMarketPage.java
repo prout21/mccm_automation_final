@@ -167,7 +167,8 @@ public class PegaMarketPage extends TestBase  {
 	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
 	WebElement CampaignImage;
 
-
+	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+	WebElement Pegalunch;
 
 
 
@@ -190,13 +191,24 @@ public class PegaMarketPage extends TestBase  {
 	}
 
 	//*click the pega marketing option
+
 	public void pegamarkting() throws InterruptedException
 	{
+		Actions  action = new Actions(driver);
+		action.moveToElement(Pegalunch).click().build().perform();
+		//  Thread.sleep(1000);
 		Thread.sleep(6000);
 		pegamrkting1.click( );
 		Thread.sleep(6000);
 	}
 
+
+	public void ExpandPegMrkPage() throws InterruptedException
+	{
+
+		ExpandPegMrkPage.click( );
+
+	}
 
 	public void ExpandPegMrkPage1() throws InterruptedException
 	{
@@ -212,27 +224,65 @@ public class PegaMarketPage extends TestBase  {
 			executor14.executeScript("arguments[0].click();", element20);
 
 		}
-		 
+
 	}
 
 
 	public void Campaigns() throws InterruptedException
 	{
-	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
 		Thread.sleep(8000); 
 	}
-	
 
-public void CampaignImage() throws InterruptedException
+
+	public void CampaignImage() throws InterruptedException
 	{
 
-	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
-		 
+
 	}
 
 
+
+
+
+	///
+	/*
+	 * public void pegamarkting() throws InterruptedException { Thread.sleep(6000);
+	 * pegamrkting1.click( ); Thread.sleep(6000); }
+	 * 
+	 * 
+	 * public void ExpandPegMrkPage1() throws InterruptedException {
+	 * 
+	 * boolean searchIconPresence = ExpandPegMrkPage.isDisplayed(); boolean
+	 * searchIconEnabled = ExpandPegMrkPage.isEnabled();
+	 * 
+	 * if (searchIconPresence==true && searchIconEnabled==true)
+	 * 
+	 * { WebElement element20 = ExpandPegMrkPage; JavascriptExecutor executor14 =
+	 * (JavascriptExecutor)driver; executor14.executeScript("arguments[0].click();",
+	 * element20);
+	 * 
+	 * }
+	 * 
+	 * }
+	 * 
+	 * 
+	 * public void Campaigns() throws InterruptedException { //
+	 * wait.until(ExpectedConditions.visibilityOf(Campaigns)); Campaigns.click( );
+	 * Thread.sleep(8000); }
+	 * 
+	 * 
+	 * public void CampaignImage() throws InterruptedException {
+	 * 
+	 * // wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+	 * CampaignImage.click( );
+	 * 
+	 * }
+	 * 
+	 */
 	public void Create() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Create));

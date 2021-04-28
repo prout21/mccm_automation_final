@@ -65,23 +65,25 @@ public class HomePage extends TestBase {
     	 
     	  return new HomePageDetails();
     } 	
-    public OSFDMCCMSettings ClickHomepageOSF() throws InterruptedException {
-  	  Thread.sleep(8000);
-  	//  Homepage.click();
-  	  boolean searchIconPresence = Homepage.isDisplayed();
-		boolean searchIconEnabled =  Homepage.isEnabled();
 
-		if (searchIconPresence==true && searchIconEnabled==true)
-
-		{
-			WebElement element20 = Homepage;
-			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
-			executor14.executeScript("arguments[0].click();", element20);
+	
+	  public OSFDMCCMSettings ClickHomepageOSF() throws InterruptedException {
+	  Thread.sleep(6000); // Homepage.click();
+	  
+	  boolean searchIconPresence = Homepage.isDisplayed(); boolean
+	  searchIconEnabled = Homepage.isEnabled();
+	  
+	  if (searchIconPresence==true && searchIconEnabled==true)
+	  
+	  { 
+		  WebElement element20 = Homepage; JavascriptExecutor executor14 =
+	  (JavascriptExecutor)driver; executor14.executeScript("arguments[0].click();",
+	  element20);
+	  
+	  }
+	    
+	  return new OSFDMCCMSettings(); }
 	 
-	}
-  	 
-  	  return new OSFDMCCMSettings();
-  } 	
    public PegaMarketPage Pegamrklunch()throws InterruptedException {
 	   
 	     Actions  action = new Actions(driver);
@@ -142,37 +144,37 @@ public class HomePage extends TestBase {
 	   	  return new NBAOutboundValdtn();
 	   } 
    
-   public PegaMrktNBAValuChk Pegamrklunch1()throws InterruptedException {
-		
-	     Actions  action = new Actions(driver);
-	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
-	   	  return new PegaMrktNBAValuChk();
-	   } 
-   public PegaMrktNBAReSchd Pegamrklunch2()throws InterruptedException {
-		
-	     Actions  action = new Actions(driver);
-	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
-	   	  return new PegaMrktNBAReSchd();
-	   }
-   
-   public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
-	   	  Thread.sleep(8000);
-	   //	  Homepage.click();
-	   	boolean searchIconPresence = Homepage.isDisplayed();
-		boolean searchIconEnabled =  Homepage.isEnabled();
-
-		if (searchIconPresence==true && searchIconEnabled==true)
-
-		{
-			WebElement element20 = Homepage;
-			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
-			executor14.executeScript("arguments[0].click();", element20);
-	 
-	}
-	   	   return new PreChkNBACampValu();
-	   }
+//   public PegaMrktNBAValuChk Pegamrklunch1()throws InterruptedException {
+//		
+//	     Actions  action = new Actions(driver);
+//	     action.moveToElement(Pegalunch).click().build().perform();
+//	     Thread.sleep(1000);
+//	   	  return new PegaMrktNBAValuChk();
+//	   } 
+//   public PegaMrktNBAReSchd Pegamrklunch2()throws InterruptedException {
+//		
+//	     Actions  action = new Actions(driver);
+//	     action.moveToElement(Pegalunch).click().build().perform();
+//	     Thread.sleep(1000);
+//	   	  return new PegaMrktNBAReSchd();
+//	   }
+//   
+//   public PreChkNBACampValu PreChkNBACampValu() throws InterruptedException {
+//	   	  Thread.sleep(8000);
+//	   //	  Homepage.click();
+//	   	boolean searchIconPresence = Homepage.isDisplayed();
+//		boolean searchIconEnabled =  Homepage.isEnabled();
+//
+//		if (searchIconPresence==true && searchIconEnabled==true)
+//
+//		{
+//			WebElement element20 = Homepage;
+//			JavascriptExecutor executor14 = (JavascriptExecutor)driver;
+//			executor14.executeScript("arguments[0].click();", element20);
+//	 
+//	}
+//	   	   return new PreChkNBACampValu();
+//	   }
    public PegaPreChkValidCampCd Pegamrklunch3()throws InterruptedException {
 		
 	     Actions  action = new Actions(driver);

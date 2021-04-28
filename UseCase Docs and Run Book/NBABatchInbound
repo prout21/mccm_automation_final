@@ -2,7 +2,9 @@ NBA Batch Inbound E2E Flow :
 url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
 --------------------------------------------------------------------
 Step-1: Dataload -3 interface with correct data file.
-       class name="Mccm.Unix.Outbound.App_Unix_Inbound_Test"
+       class name="Mccm.Unix.Inbound.App_Inbound_DMP_Test.java"
+       class name="Mccm.Unix.Inbound.App_Inbound_KIASEPOS_Test.java"
+       class name="Mccm.Unix..Inbound.App_Inbound_OnlineShop_Test.java"
        
 Step-2: Go to PEGA market and report->intraction histry->recent history  
          class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest

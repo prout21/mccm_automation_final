@@ -8,26 +8,20 @@ Step-2: Go to PEGA and search D_LatestDataLoadFlag ,click the datapage ->action-
            DataLoadCmpltdCsndra 
            DataLoadCmpltdOracle 
          class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest"
-
-Step-3: Dev studio serch navigate the records->Sys admin-> Dynamic system setting->serch /filter(NBACampaignName)->copy value 
-       from NBACampaignName->Launch pega markting->serch the NBACampaignName's value->
-       if present navigate the reschedule script (after jump step-7)
-       Else if not goto step 4.  
-       (Adhoc Request Run, it is not include in main flow currently and applicable)
-Step-4:Dev DSS studio setup
+Step-3:Dev DSS studio setup
       class name="Mccm.Pega.Outbound.PegaTest.LoginPageTest" 
       class name="Mccm.Pega.Outbound.PegaTest.HomePageTest
-Step-5:Pega marketing part configuration
+Step-4:Pega marketing part configuration
       class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest
-Step-6:Campaign run and validation on completed successfully
+Step-5:Campaign run and validation on completed successfully
        class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest
-Step-7:After captured the completed status of the NBA Campaign run. click on the completed status .then expand the run details.
+Step-6:After captured the completed status of the NBA Campaign run. click on the completed status .then expand the run details.
        store the value of the Campaign run ID (PR-7801).
        class name="Mccm.Pega.Outbound.PegaTest.PegamarktingTest
-Step-8:(Validation of configured DB table(MCCMLCOutbound)dev studio ->search the value -MCCMLCOUTBOUND ->select dataset->action->run->drop down 
+Step-7:(Validation of configured DB table(MCCMLCOutbound)dev studio ->search the value -MCCMLCOUTBOUND ->select dataset->action->run->drop down 
        ->select browse->click run->validation of the MCCMLCOutbound ->wait for 2 min->close the window
       class name="Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest
-Step-9:Putty login run the wrapper script for 5 Different channels as mention below:(5 time run per each channal):
+Step-8:Putty login run the wrapper script for 5 Different channels as mention below:(5 time run per each channal):
        sub steps:
       1. login into Putty as dxc_dev
       2. Run the Command ssh mccm02@10.0.4.99, Password: unix11
@@ -39,7 +33,7 @@ Step-9:Putty login run the wrapper script for 5 Different channels as mention be
      -> ksh Data_Extract_wrapper.ksh NBA_MAMODB
      -> ksh Data_Extract_wrapper.ksh NBA_EDWH
      class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test
-Step-10: Go to PEGA and search GetDataExtractDetails ,click the report and data extraction ->action->run->drop down 
+Step-9: Go to PEGA and search GetDataExtractDetails ,click the report and data extraction ->action->run->drop down 
        ->select browse->click on run->wait for 2 min -> close the window
       validate the below file name are available for report definition run.
       DPF_MMC_NBA_DMP_20191211055800.csv.gz 
@@ -48,7 +42,7 @@ Step-10: Go to PEGA and search GetDataExtractDetails ,click the report and data 
       DPF_MMC_NBA_MAMODB_20191211055800.csv.gz 
       DPF_MMC_NBA_EDWH_20191211055800.csv.gz 
       class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest
-Step-11: Go to PEGA and search D_LatestNBACampaignFlag  ,click the datapage ->action->run-> click on the flush->run 
+Step-10: Go to PEGA and search D_LatestNBACampaignFlag  ,click the datapage ->action->run-> click on the flush->run 
       compare the value Campaign run ID of Campaign and datapage.
       please validate the below value if Campaign run id matches , this is value should be 'y'. 
       class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest   

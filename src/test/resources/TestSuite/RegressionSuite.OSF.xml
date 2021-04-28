@@ -9,7 +9,6 @@
 
 	<test name="Pega OSF DSS Regression Test">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFDSSTest" />
 			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest" />
 		</classes>
 	</test> <!-- Test -->
@@ -34,7 +33,8 @@
 	<test name="Pega OSF Capture Response API Call Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest" />
-			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest" />
+			<class
+				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest" />
 		</classes>
 	</test> <!-- Test -->
 

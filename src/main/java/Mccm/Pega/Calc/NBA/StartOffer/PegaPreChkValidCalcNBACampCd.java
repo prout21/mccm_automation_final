@@ -153,11 +153,13 @@ public void CampaignImage() throws InterruptedException
 				  js.executeScript("arguments[0].click();", Filter);
 			   }catch(Exception e){
 		 }
+			   
 			wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
 			CampaignVlSrch.clear();
-		 
+			 
 			Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 		 	String NBACampValue1 = obj.getCellValue("PegaTestDataCalcNBA", 1, 0);
+		 	 
 		 	wait.until(ExpectedConditions.visibilityOf(CampaignVlSrch));
  			CampaignVlSrch.sendKeys(NBACampValue1);
  			 
@@ -165,7 +167,8 @@ public void CampaignImage() throws InterruptedException
  			wait.until(ExpectedConditions.visibilityOf(View));
  			View.click( );
  			 
-
+ 			 
+ 			
 			String NBACampCodeExits1 = "";
 
 			try
@@ -197,11 +200,13 @@ public void CampaignImage() throws InterruptedException
 				String CampCode1 = obj1.getCellValue("PegaTestDataCalcNBA", i+1, 0);
 
 				System.out.print(CampCode1 + "  ");
+				
+				 
 
 				try {
 
 					InputStream inp = new FileInputStream(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
-
+					 
 
 					//	Workbook wb = WorkbookFactory.create(inp);
 					XSSFWorkbook wb = new XSSFWorkbook(inp);
@@ -212,7 +217,7 @@ public void CampaignImage() throws InterruptedException
 						cell = row.createCell(0);
 					cell.setCellType(Cell.CELL_TYPE_STRING);
 					cell.setCellValue(CampCode1);
-
+					 
 				 	// Write the output to a file
 					FileOutputStream fileOut = new FileOutputStream(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
 					wb.write(fileOut);

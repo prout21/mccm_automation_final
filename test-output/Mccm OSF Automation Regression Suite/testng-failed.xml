@@ -4,24 +4,6 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega OSF DSS Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDSSTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="VerifyOSFDynamicSystemSettingSuccessfully"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDSSTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <methods>
-          <include name="setup"/>
-          <include name="VerifyOSFDMCCMSettingDSSSuccessfully"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
-    </classes>
-  </test> <!-- Pega OSF DSS Regression Test(failed) -->
   <test thread-count="5" name="Pega OSF Process Feedback API Call Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">

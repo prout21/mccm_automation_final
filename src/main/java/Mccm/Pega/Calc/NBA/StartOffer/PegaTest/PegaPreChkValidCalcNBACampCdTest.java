@@ -12,7 +12,7 @@ import Mccm.Pega.Calc.NBA.StartOffer.PegaPreChkValidCalcNBACampCd;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
-import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
+
 import Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
@@ -49,7 +49,7 @@ public class PegaPreChkValidCalcNBACampCdTest extends TestBase {
 	@Test (priority=1)
 	public void VerifyPreCheckCalcNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
 
-		// homepage.Pegamrklunch5();
+		homepage.Pegamrklunch5();
 		pegaPreChkValidCalcNBACampCd.pegamarkting();
 		testutil.WindowHandling();
 		pegaPreChkValidCalcNBACampCd.ExpandPegMrkPage1();

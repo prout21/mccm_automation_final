@@ -23,18 +23,6 @@ mccm_automation\UseCaseConfigFile\Config.properties
 
 mccm_automation\UseCaseConfigFile\UseCaseConfigFile.properties   -used for run time , pass the use case name for particular scenarios
 
- mccm_automation\UseCaseConfigFile\configurationFile.properties: config file change for unix and api 
+ mccm_automation\UseCaseConfigFile\configurationFile.properties: config file change for unix and rest api 
     
     ------------
-   Push to PDXC Env.
-    
-cd "C:\Users\prout21\git\Automation_Framework\MCCM\MCCM"
-git remote add fb_develop https://github.dxc.com/DXC-VF/mccm_automation 
-git remote
-git status
-git add .
-git status
-git commit -m "gittest push"
-git push -u origin
-git pull
-    

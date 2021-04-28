@@ -19,6 +19,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -68,24 +69,28 @@ public class PegaPreChkValidOSFCampCd extends TestBase  {
 	@FindBy(xpath="(//span[@class='menu-item-icon-imageclass pi pi-megaphone'])[1]")
 	WebElement CampaignImage;
 
-
+	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+	WebElement Pegalunch;
+	
+	
 
 	public PegaPreChkValidOSFCampCd( ) {
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		pegamrkting1.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
+		pegamrkting1.click();
+		Thread.sleep(8000);
 	}
 
 
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
 	  
-		ExpandPegMrkPage.click( );
+		ExpandPegMrkPage.click();
 		 
 	}
 
@@ -110,7 +115,7 @@ public class PegaPreChkValidOSFCampCd extends TestBase  {
 	public void Campaigns() throws InterruptedException
 	{
 	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
-		Campaigns.click( );
+		Campaigns.click();
 		Thread.sleep(8000); 
 	}
 	
@@ -119,7 +124,7 @@ public void CampaignImage() throws InterruptedException
 	{
 
 	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
-		CampaignImage.click( );
+		CampaignImage.click();
 		 
 	}
 
@@ -163,7 +168,7 @@ public void CampaignImage() throws InterruptedException
  			 
  			System.out.println(NBACampValue1);
  			wait.until(ExpectedConditions.visibilityOf(View));
- 			View.click( );
+ 			View.click();
  			 
 
 			String NBACampCodeExits1 = "";

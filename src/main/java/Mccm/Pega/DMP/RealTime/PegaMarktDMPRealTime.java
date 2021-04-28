@@ -34,6 +34,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
 	WebElement Pegalunch;
 	
+	
 	@FindBy(xpath="(//span[@class='menu-item-title'])[5]")
 	WebElement pegamrkting1;
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
@@ -149,18 +150,22 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		Actions  action = new Actions(driver);
+		action.moveToElement(Pegalunch).click().build().perform();
+		//  Thread.sleep(1000);
+		Thread.sleep(6000);
 		pegamrkting1.click( );
-        Thread.sleep(8000);
+		Thread.sleep(6000);
 	}
 	
 
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ExpandPegMrkPage));
+
 		ExpandPegMrkPage.click( );
-       
+
 	}
+
 	public void ExpandPegMrkPage1() throws InterruptedException
 	{
 
@@ -194,6 +199,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 		CampaignImage.click( );
 
 	}
+
 	public void Create() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Create));

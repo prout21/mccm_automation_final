@@ -11,6 +11,7 @@ import Mccm.Pega.DMP.RealTime.LoginPageDMPRealTime;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
+import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
@@ -21,6 +22,8 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	LoginPageDMPRealTime loginpageDMPrealtime;
 	PegaMarktDMPRealTime pegamarktDMPrealtime;
 	TestUtil testutil;
+	HomePage  homepage;
+	LoginPage loginpage;
 
 
 	public PegamarktDMPrealtimeTest()
@@ -32,10 +35,12 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	public void setup() throws InterruptedException {
 		initialization();
 		loginpageDMPrealtime = new LoginPageDMPRealTime();
-		pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
+		loginpage = new LoginPage();
+		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));  
+	  //  pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarktDMPrealtime  = new PegaMarktDMPRealTime();
-		pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
+	//	pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
 
 	}
 
@@ -44,7 +49,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	@Test (priority=1)
 	public void VerifyDMPrealtimeRunSuccessfully() throws InterruptedException, AWTException { 
 
-		loginpageDMPrealtime.Pegamrklunch3();
+		//loginpageDMPrealtime.Pegamrklunch3();
 		pegamarktDMPrealtime.pegamarkting();
 		testutil.WindowHandling();
 		pegamarktDMPrealtime.ExpandPegMrkPage1();

@@ -115,9 +115,10 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 
 			//String host1 = "46.190.224.85";
 			Upload_Inbound_KIASEPOS.main(null);//main();
-			 Thread.sleep(2000);
-			 Thread.sleep(2000);
-			 Thread.sleep(2000);
+	        Thread.sleep(2000);
+	        Thread.sleep(2000);
+	        Thread.sleep(2000);
+		 
 
 
 			JSch jSch = new JSch();
@@ -144,49 +145,37 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 			//fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
 			fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
 			//  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
-
+		     Thread.sleep(8000);
 			//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
-			System.out.println("The available files are : ");
-			System.out.println("");  
-			for (int i = 0; i < fileList.size(); i++) {
-				ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
-				System.out.println(lsEntry.getFilename()); 
-			}   
-			//      new code 10.13.2020
-			 Thread.sleep(2000);
-			 Thread.sleep(2000);
-			String  name  = general_ReadProperty("File_KIASEPOS");
-
-		//	System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
-			for (int i = 0; i < 1; i++) 
-			//pr	for (int i = 0; i < name.length(); i++) 
-			{
-				filefound = false;
-				for (int j = 0; j < fileList.size(); j++) 
-				{
-					ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
-					name11 = (lsEntry.getFilename()); 
-
-					if (name11.contains(name)) { 
-						filefound = true;
-						k=i+1;
-						System.out.println("The file [" + k +"]:" + name  + " is found in the input folder");
-					}
-				}
-
-				if (!filefound)
-				{
-
-
-					k=i+1;
-					System.out.println("The file [" + k +"]: " + name  + " is NOT found in the input folder");            	
-
-
-				}
-			}
-	//		System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
-
-			//      new code 10.13.2020
+		     //  --------------------------------------------------------------------------------  
+				/*
+				 * // System.out.println("hi test1");
+				 * System.out.println("The available files are : "); System.out.println(""); for
+				 * (int i = 0; i < fileList.size(); i++) { ChannelSftp.LsEntry lsEntry =
+				 * (ChannelSftp.LsEntry) fileList.get(i);
+				 * System.out.println(lsEntry.getFilename()); } // new code Thread.sleep(8000);
+				 * 
+				 * String name = general_ReadProperty("File_KIASEPOS");
+				 * 
+				 * // System.out.println("hi test1"); for (int i = 0; i < 1; i++) //pr for (int
+				 * i = 0; i < name.length(); i++) { filefound = false; for (int j = 0; j <
+				 * fileList.size(); j++) { ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry)
+				 * fileList.get(j); name11 = (lsEntry.getFilename());
+				 * 
+				 * if (name11.contains(name)) { filefound = true; k=i+1;
+				 * System.out.println("The file [" + k +"]:" + name +
+				 * " is found in the input folder"); } }
+				 * 
+				 * if (!filefound) { k=i+1; System.out.println("The file [" + k +"]: " + name +
+				 * " is not found in the input folder");
+				 * 
+				 * 
+				 * } }
+				 */
+			   //   System.out.println("hi test1"); 
+			  //  --------------------------------------------------------------------------------  
+	     
+			//      new code 
 			//pr change       String[] name = {"DWH.3MMC.SUBSCRIBER_TIP_HIS"};
 
 
@@ -335,14 +324,14 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 		// System.out.println("Case 2:");
 		System.out.println("");
 		// FilesAvailabilityCheck.main(args);
-		System.out.println("Case 3:"); 
+		 
 		//pr	  ScriptsExecution.main(args); // // Cassandra
 		//load start System.out.println(""); System.out.println("Case 4-5-6:");
 		//pr	  DBCheck_Mccm.main(args); // ////////////////////////////
 		//pr	  System.out.println("Cassandra load start"); System.out.println("");
 
 		//pr    Upload_Cassandra.main(null);
-		System.out.println("Case 2:"); 
+		//System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 
 		Thread.sleep(8000);
@@ -350,7 +339,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 	//pr	FileExistChk_Inbound_KIASEPOS.main(null);
 
 
-		System.out.println(""); System.out.println("Case 3:"); //
+	//	System.out.println(""); System.out.println("Case 3:"); //
 
 		//pr	  ZippingFiles_Cassandra.main(args); 
 		System.out.println(""); //

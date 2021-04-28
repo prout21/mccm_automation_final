@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -145,13 +146,18 @@ public class HomePageDetails extends TestBase {
 	
 	public void Recordclk() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Recordclk));
-		Recordclk.click( );
-         
+		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
+		 //	Recordclk.click( );
+		      Thread.sleep(1000);
+		//	System.out.println("hi");
+			 Actions  action = new Actions(driver);
+		     action.moveToElement(Recordclk).click().build().perform();
+		     Thread.sleep(1000);
+		
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		 Thread.sleep(2000);
+		 Thread.sleep(6000);
 		 SysAdmin.click( );
 		  
 	}

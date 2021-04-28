@@ -33,7 +33,7 @@ public class ExtractChannelFileTest extends TestBase {
 	    testutil = new TestUtil();
 	    ExtractChannelFile1 =new ExtractChannelFile();
 	    homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	    ExtractChannelFile1=homepage.ExtractChannelFile();
+	   // ExtractChannelFile1=homepage.ExtractChannelFile();
  }
  @Test (priority=1)
  public void VerifyOutboundExtractChannelFileCheckSuccessfully() throws InterruptedException { 

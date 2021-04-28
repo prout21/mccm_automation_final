@@ -13,7 +13,7 @@ import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
-import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
+
 import Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
@@ -52,8 +52,7 @@ public class PegaPreChkValidOSFCampCdTest extends TestBase {
 
 	@Test (priority=1)
 	public void VerifyOSFPreCheckCampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
-
-		
+		homepage.Pegamrklunch6();		
 		pegaPreChkValidOSFCampCd.pegamarkting();
 		testutil.WindowHandling();
 		pegaPreChkValidOSFCampCd.ExpandPegMrkPage1();

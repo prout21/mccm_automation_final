@@ -38,7 +38,7 @@ public class PegamarktingTest extends TestBase {
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarketpage =new PegaMarketPage();
-		pegamarketpage=homepage.Pegamrklunch();
+		//pegamarketpage=homepage.Pegamrklunch();
 	}
 
 

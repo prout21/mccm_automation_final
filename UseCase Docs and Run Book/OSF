@@ -1,0 +1,24 @@
+OSF E2E Flow :
+url:http://mccm-191102761.eu-central-1.elb.amazonaws.com:8573/prweb
+--------------------------------------------------------------------
+
+Step-1: Run the DSS
+       class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/PegaOSFDMCCMSettingTest.java
+ 
+ Step2: Run the 4 rest call
+       class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/OSFAPICallCaptResponseTest.java
+       class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/OSFAPICallGetNBAMultiAccTest.java
+       class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/OSFAPICallProFdUpdOrdIDTest.java
+       class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/OSFAPICallProFdUpdShpCrtIDTest.java
+             
+Step-3: Go to PEGA market and report->intraction histry->recent history  
+         class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/PegaOSFOutcomeSaveOffAPIVldTest.java
+         class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/PegaOSFOutcomeSubmitOrderAPIVldTest.java
+         class name=/mccm_automation/src/main/java/Mccm/Pega/OSF/PegaTest/PegaOSFOutcomeAcceptedAPIVldTest.java
+
+
+
+-----------------------------------------------------------------------------------
+Test Suite loc/Name:/mccm_automation/src/test/resources/TestSuite/RegressionSuite.OSF.xml
+
+ 

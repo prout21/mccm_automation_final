@@ -31,13 +31,18 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 
 	public void setup() throws InterruptedException {
 		initialization();
+		 
 		loginpage = new LoginPage();
 		testutil = new TestUtil();
+		 
 		//HomePageDetails1 =new HomePageDetails();
 		OSFDMCCMSettings1 = new OSFDMCCMSettings();
+		 
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
+		 
 	//	HomePageDetails1=homepage.ClickHomepage();
-		OSFDMCCMSettings1=homepage.ClickHomepageOSF();
+	//	OSFDMCCMSettings1=homepage.ClickHomepageOSF();
+		 
 	}
 	@Test (priority=1)
 	public void VerifyOSFDMCCMSettingDSSSuccessfully() throws InterruptedException { 

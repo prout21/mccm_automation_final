@@ -67,7 +67,7 @@ public class DataLoadDetailsTest extends TestBase {
 	    testutil = new TestUtil();
 	    DataLoadDetails1 =new DataLoadDetails();
 	    homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	    DataLoadDetails1=homepage.DataLoadValidation();
+	  //  DataLoadDetails1=homepage.DataLoadValidation();
  }
  
  @Test (priority=1)

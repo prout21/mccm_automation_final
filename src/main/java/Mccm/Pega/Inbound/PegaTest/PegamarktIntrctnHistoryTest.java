@@ -61,7 +61,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 
      public void teardown() {
 	
-      driver.quit();
+   // driver.quit();
 	      
 	 System.out.println("Inbound Intraction History Validation Chanel Done");  
 }

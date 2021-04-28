@@ -84,7 +84,7 @@ public class PegaPreChkValidCampCd extends TestBase  {
 	public void pegamarkting() throws InterruptedException
 	{
 		Thread.sleep(6000);
-		pegamrkting1.click( );
+		pegamrkting1.click();
 		Thread.sleep(6000);
 	}
 
@@ -110,7 +110,7 @@ public class PegaPreChkValidCampCd extends TestBase  {
 	public void Campaigns() throws InterruptedException
 	{
 	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
-		Campaigns.click( );
+		Campaigns.click();
 		Thread.sleep(8000); 
 	}
 	

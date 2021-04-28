@@ -134,46 +134,39 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
         fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
-          
-        	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
-        	System.out.println("The available files are : ");
-           System.out.println("");  
-           for (int i = 0; i < fileList.size(); i++) {
-               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
-               System.out.println(lsEntry.getFilename()); 
-         		}              
-           Thread.sleep(2000);
-       //  ----------------------------------------------  
-           String  name  = general_ReadProperty("File_DMP");
-           
-        //   System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test1"); 
-          for (int i = 0; i <1; i++) 
-          {
-          	 filefound = false;
-           for (int j = 0; j < fileList.size(); j++) 
-           {
-               ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(j);
-               name11 = (lsEntry.getFilename()); 
- 
-               if (name11.contains(name)) { 
-                	 filefound = true;
-                	 k=i+1;
-               	 System.out.println("The file [" + k +"]:" + name  + " is found in the input folder");
-               	}
-           }
-           
-           if (!filefound)
-           {
+        Thread.sleep(8000);
 
- 
-           	 k=i+1;
-          	 System.out.println("The file [" + k +"]: " + name  + " is NOT found in the input folder");            	
- 
-         	 
-           }
-          }
-    //      System.out.println("hiiiiiiiiiiiiiiiiiiiiiii  test"); 
-           //----------------------------------------------------------------
+        	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");
+        //  --------------------------------------------------------------------------------  
+        //   System.out.println("hi test1"); 
+		/*
+		 * System.out.println("The available files are : "); System.out.println(""); for
+		 * (int i = 0; i < fileList.size(); i++) { ChannelSftp.LsEntry lsEntry =
+		 * (ChannelSftp.LsEntry) fileList.get(i);
+		 * System.out.println(lsEntry.getFilename()); } Thread.sleep(8000);
+		 * 
+		 * String name = general_ReadProperty("File_DMP");
+		 * 
+		 * 
+		 * for (int i = 0; i <1; i++) { filefound = false; for (int j = 0; j <
+		 * fileList.size(); j++) { ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry)
+		 * fileList.get(j); name11 = (lsEntry.getFilename());
+		 * 
+		 * if (name11.contains(name)) { filefound = true; k=i+1;
+		 * System.out.println("The file [" + k +"]:" + name +
+		 * " is found in the input folder"); } }
+		 * 
+		 * if (!filefound) {
+		 * 
+		 * 
+		 * k=i+1; System.out.println("The file [" + k +"]: " + name +
+		 * " is NOT found in the input folder");
+		 * 
+		 * 
+		 * } }
+		 */
+    //      System.out.println("hi  test"); 
+    //-------------------------------------------------------------------------------------
          //IMPLEMENTED NEW TEST//////////////10.08.2020///////////
 //         
 //       String [] name = {"TESTCYCL_1669_Auto2_Validate_DMP_Response_IP_Correct-3"};
@@ -324,25 +317,22 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 		 // System.out.println("Case 2:");
 		  System.out.println("");
 		 // FilesAvailabilityCheck.main(args);
-     	  System.out.println("Case 3:"); 
+     //	  System.out.println("Case 3:"); 
 	//pr	  ScriptsExecution.main(args); // // Cassandra
 		  //load start System.out.println(""); System.out.println("Case 4-5-6:");
 	//pr	  DBCheck_Mccm.main(args); // ////////////////////////////
 	//pr	  System.out.println("Cassandra load start"); System.out.println("");
 		 
 	    //pr    Upload_Cassandra.main(null);
-		   System.out.println("Case 2:"); 
+		//   System.out.println("Case 2:"); 
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
-		   
- 		   Thread.sleep(2000);
- 		   Thread.sleep(2000);
- 	        Thread.sleep(2000);
+	
 		   
  	 	//pr  FileExistChk_Inbound_DMP.main(null);
 		   
 	 	 
 			
-     		  System.out.println(""); System.out.println("Case 3:"); //
+     	//	  System.out.println(""); System.out.println("Case 3:"); //
 			  
 		//pr	  ZippingFiles_Cassandra.main(args); 
 			  System.out.println(""); //

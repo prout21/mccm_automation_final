@@ -33,7 +33,7 @@ public class HomePageTest extends TestBase {
 		testutil = new TestUtil();
 		HomePageDetails1 =new HomePageDetails();
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-		HomePageDetails1=homepage.ClickHomepage();
+	//	HomePageDetails1=homepage.ClickHomepage();
 	}
 	@Test (priority=1)
 	public void VerifyOutboundDynamicSystemSettingSuccessfully() throws InterruptedException { 
