@@ -1,5 +1,7 @@
 package Mccm.Unix.Outbound;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
@@ -16,6 +18,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -32,10 +35,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
 public class PreDataSetup_DBLoad_Test  {
+	
+	public static String PROJECT_FOLDER_PATH1;
+	public static String TEST_ENV1;
+	public static String user;
+	public static String password;
+	public static String host;
+	public static XSSFWorkbook wb;
+	
+	 public static String name;
 
 //	  public static String FCA;
 //	  public static String SCA;
@@ -50,10 +63,20 @@ public class PreDataSetup_DBLoad_Test  {
  
 
 	{
-	    String host="localhost";
-	    String user="mccm02";
-	    String password="unix11";
+	PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
+	/*
+	 * ENV_WIKI=general_ReadProperty("ENV_WIKI"); String path=
+	 * (PROJECT_FOLDER_PATH1+ENV_WIKI);
+	 */
+	 TEST_ENV1=general_ReadProperty("TEST_ENV");
+	 user=general_ReadProperty("USER_NAME");
+	 password=general_ReadProperty("PASSWORD");
+	 host=general_ReadProperty("HOST_NAME");
+	/*
+	 * String host="localhost"; String user="mccm02"; String password="unix11";
+	 */
         String Status="COMPLETED";
+        
 //pr        String FCA="FCA_cass_20200707010201.csv";
 //pr        String SCA="SCA_cass_20200707010201.csv";
         
@@ -139,5 +162,28 @@ public class PreDataSetup_DBLoad_Test  {
 	    	e.printStackTrace();
 	    }
 	    	
+}
+public static String general_ReadProperty(String propertyKey)
+{
+	String propertyValue="";
+	File cfgfile = new File("UseCaseConfigFile/configurationFile.properties");
+	
+	if(cfgfile.exists())
+	{
+		  Properties propties = new Properties();
+		  FileInputStream propFile;
+
+		  try {
+			  propFile = new FileInputStream(cfgfile);
+			  propties.load(propFile);
+			  propertyValue=propties.getProperty(propertyKey);
+			  } catch (Exception e1) {
+				  
+				  e1.printStackTrace();
+			  } 
+	 }
+	return propertyValue;
+	
+    
 }
 }

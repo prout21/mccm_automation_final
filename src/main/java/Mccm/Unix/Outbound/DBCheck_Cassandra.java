@@ -32,110 +32,122 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
 public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 
-	  public static String FCA;
-	  public static String SCA;
-	  public static String Close;
-	  
+	public static String FCA;
+	public static String SCA;
+	public static String Close;
+	public static String PROJECT_FOLDER_PATH1;
+	public static String TEST_ENV1;
+	public static String user;
+	public static String pass;
+	public static String host;
+	public static XSSFWorkbook wb;
+
 	/**
-	 	 */
-@Test	
+	 */
+	@Test	
 	public static void main(Object args)
- 
+
 
 	{
-	    String host="localhost";
-	    String user="mccm02";
-	    String password="unix11";
-        String Status="COMPLETED";
-//pr        String FCA="FCA_cass_20200707010201.csv";
-//pr        String SCA="SCA_cass_20200707010201.csv";
-        
-//        String FCA="FCA_cass_20200922010201.csv";
-//        String SCA="SCA_cass_20200922010201.csv";
-        
-        String FCA = general_ReadProperty("File_NameFCA");
-        String SCA = general_ReadProperty("File_NameSCA");
-        String Close = general_ReadProperty("File_NameClose");
-        
-	   String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
-	 
+		/*
+		 * String host="localhost"; String user="mccm02"; String password="unix11";
+		 */
+		String Status="COMPLETED";
+		PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
+		TEST_ENV1=general_ReadProperty("TEST_ENV");
+		user=general_ReadProperty("USER_NAME");
+		pass=general_ReadProperty("PASSWORD");
+		host=general_ReadProperty("HOST_NAME");
+		//pr        String FCA="FCA_cass_20200707010201.csv";
+		//pr        String SCA="SCA_cass_20200707010201.csv";
 
-	    try{
-	   
+		//        String FCA="FCA_cass_20200922010201.csv";
+		//        String SCA="SCA_cass_20200922010201.csv";
 
-	    	java.util.Properties config = new java.util.Properties(); 
-	    	config.put("StrictHostKeyChecking", "no");
-	    	JSch jsch = new JSch();
-	    	Session session=jsch.getSession(user, host, 9022);
-	    	session.setPassword(password);
-	    	session.setConfig(config);
-	    	session.connect();
-	 
-	    	
-	    	System.out.println("Connected");
-	    	
-	 
-	    	Channel channel=session.openChannel("exec");
-	        ((ChannelExec)channel).setCommand(command);
-	     
-	        channel.setInputStream(null);
-	        ((ChannelExec)channel).setErrStream(System.err);
-	        
-	        InputStream in=channel.getInputStream();
-	        channel.connect();
-	        
- 	     //    String contents = new String(in.readAllBytes(), StandardCharsets.UTF_8);
-	        
-	         
-	         //System.out.println(contents);
+		String FCA = general_ReadProperty("File_NameFCA");
+		String SCA = general_ReadProperty("File_NameSCA");
+		String Close = general_ReadProperty("File_NameClose");
 
-	        byte[] tmp=new byte[1024];
-	        while(true){
-	          while(in.available()>0){
-	            int i=in.read(tmp, 0, 1024);
-	            if(i<0)break;
-	            System.out.print(new String(tmp, 0, i));
-	          }
-	          if(channel.isClosed()){
-	            System.out.println("exit-status: "+channel.getExitStatus());
-	            break;
-	          }
-	          try{Thread.sleep(1000);}catch(Exception ee){}
-	        }
-	        
-//	         System.out.println(contents);
-	         System.out.println();
-	         
-//            if (contents.contains(FCA))
-//            { 
-//           	 System.out.println("The file:" + FCA +  ":  loaded to Cassandra DB  successfully.");
-//            }else { 
-//               	 System.out.println("The file:" + FCA +  ":  Not loaded  successfully.");
-// 
-//			}	    
-//            if (contents.contains(SCA)) { 
-//            	System.out.println();
-//            	System.out.println("The file:" + SCA +":  loaded to Cassandra DB  successfully.");
-//            }
-//            	else { 
-//                  	 System.out.println("The file:" + SCA +  ":  Not loaded to Cassandra DB  successfully.");
-//                	
-//   			}
-//	            if (contents.contains(Status)) { 
-//	            	 System.out.println();
-//	              	 System.out.println("The file status updated successfully as : " + Status + " at Cassandra.");
-//	   			}            
-	        channel.disconnect();
-	        session.disconnect();
-	        System.out.println("DONE");
-	    }catch(Exception e){
-	    	e.printStackTrace();
-	    }
-	    	
-}
+		String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
+
+
+		try{
+
+
+			java.util.Properties config = new java.util.Properties(); 
+			config.put("StrictHostKeyChecking", "no");
+			JSch jsch = new JSch();
+			Session session=jsch.getSession(user, host, 9022);
+			session.setPassword(pass);
+			session.setConfig(config);
+			session.connect();
+
+
+			System.out.println("Connected");
+
+
+			Channel channel=session.openChannel("exec");
+			((ChannelExec)channel).setCommand(command);
+
+			channel.setInputStream(null);
+			((ChannelExec)channel).setErrStream(System.err);
+
+			InputStream in=channel.getInputStream();
+			channel.connect();
+
+			//    String contents = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+
+
+			//System.out.println(contents);
+
+			byte[] tmp=new byte[1024];
+			while(true){
+				while(in.available()>0){
+					int i=in.read(tmp, 0, 1024);
+					if(i<0)break;
+					System.out.print(new String(tmp, 0, i));
+				}
+				if(channel.isClosed()){
+					System.out.println("exit-status: "+channel.getExitStatus());
+					break;
+				}
+				try{Thread.sleep(1000);}catch(Exception ee){}
+			}
+
+			//	         System.out.println(contents);
+			System.out.println();
+
+			//            if (contents.contains(FCA))
+			//            { 
+			//           	 System.out.println("The file:" + FCA +  ":  loaded to Cassandra DB  successfully.");
+			//            }else { 
+			//               	 System.out.println("The file:" + FCA +  ":  Not loaded  successfully.");
+			// 
+			//			}	    
+			//            if (contents.contains(SCA)) { 
+			//            	System.out.println();
+			//            	System.out.println("The file:" + SCA +":  loaded to Cassandra DB  successfully.");
+			//            }
+			//            	else { 
+			//                  	 System.out.println("The file:" + SCA +  ":  Not loaded to Cassandra DB  successfully.");
+			//                	
+			//   			}
+			//	            if (contents.contains(Status)) { 
+			//	            	 System.out.println();
+			//	              	 System.out.println("The file status updated successfully as : " + Status + " at Cassandra.");
+			//	   			}            
+			channel.disconnect();
+			session.disconnect();
+			System.out.println("DONE");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
 }

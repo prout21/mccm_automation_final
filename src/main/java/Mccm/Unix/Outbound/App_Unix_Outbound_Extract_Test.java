@@ -54,22 +54,28 @@
 			System.out.println("PROJECT_FOLDER_PATH:");  
 			System.out.println("ENV_WIKI:");  
 			PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
-			ENV_WIKI=general_ReadProperty("ENV_WIKI");
-			String path= (PROJECT_FOLDER_PATH1+ENV_WIKI);
+			/*
+			 * ENV_WIKI=general_ReadProperty("ENV_WIKI"); String path=
+			 * (PROJECT_FOLDER_PATH1+ENV_WIKI);
+			 */
 			TEST_ENV1=general_ReadProperty("TEST_ENV");
+			 user=general_ReadProperty("USER_NAME");
+			 pass=general_ReadProperty("PASSWORD");
+			 host=general_ReadProperty("HOST_NAME");
 	
-			XLSXReadWrite readFile = new XLSXReadWrite(path);
-	
-			int rowIndex=readFile.findRowIndex("EnvDetails", TEST_ENV1);
-			int userNameColIndex=readFile.findColumnIndex("EnvDetails", "USER_NAME");
-			int passwordColIndex=readFile.findColumnIndex("EnvDetails", "PASSWORD");
-	
-			int hostColIndex=readFile.findColumnIndex("EnvDetails", "UNIX-SERVER");
-	
-			user= readFile.getCellValue("EnvDetails", rowIndex, userNameColIndex); 
-			pass= readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
-			host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
-	
+				/*
+				 * XLSXReadWrite readFile = new XLSXReadWrite(path);
+				 * 
+				 * int rowIndex=readFile.findRowIndex("EnvDetails", TEST_ENV1); int
+				 * userNameColIndex=readFile.findColumnIndex("EnvDetails", "USER_NAME"); int
+				 * passwordColIndex=readFile.findColumnIndex("EnvDetails", "PASSWORD");
+				 * 
+				 * int hostColIndex=readFile.findColumnIndex("EnvDetails", "UNIX-SERVER");
+				 * 
+				 * user= readFile.getCellValue("EnvDetails", rowIndex, userNameColIndex); pass=
+				 * readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
+				 * host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
+				 */
 	
 			Properties config = new Properties();
 			config.put("StrictHostKeyChecking","no");

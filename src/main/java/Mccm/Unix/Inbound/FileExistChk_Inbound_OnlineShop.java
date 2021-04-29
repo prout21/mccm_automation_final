@@ -4,6 +4,7 @@ package Mccm.Unix.Inbound;
 
 import java.util.ArrayList;
 
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
 import com.jcraft.jsch.Channel;
@@ -16,11 +17,17 @@ public class FileExistChk_Inbound_OnlineShop extends App_Inbound_OnlineShop_Test
 
 ChannelExec channelExec = null;
 static Channel channel = null;
+public static String TEST_ENV1;
+public static String user;
+public static String password;
+public static String host;
+public static XSSFWorkbook wb;
+public static String name;
 
-static String host = "localhost";
-//static String user = "pegat02";
-static String user = "mccm02";
-static String password = "unix11";
+/*
+ * static String host = "localhost"; //static String user = "pegat02"; static
+ * String user = "mccm02"; static String password = "unix11";
+ */
 public static String filename;
 
 @Test
@@ -30,6 +37,10 @@ public static void main(String[] args) {
 //String filename = "file_list_oracle1.lst";
 //PR	String[] filename = {"TESTCYCL_1704_TC096_Validate_Onlineshop_Response_IP_Correct.txt"};//, "file_list_oracle.lst";
 //pr	String[] filename = {"SCA_cass_20200722010201.csv.gz", "FCA_cass_202007220010201.csv.gz"};//, "file_list_oracle.lst";
+	 TEST_ENV1=general_ReadProperty("TEST_ENV");
+	 user=general_ReadProperty("USER_NAME");
+	 password=general_ReadProperty("PASSWORD");
+	 host=general_ReadProperty("HOST_NAME");
 	String  filename  = general_ReadProperty("File_ONLINE_SHOP");
     String filepath = "/opt/SP/mccm/SYSN/input/OnlineShop";
   //pr  String filepath = "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/";

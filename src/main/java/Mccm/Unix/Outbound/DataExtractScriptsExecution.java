@@ -27,22 +27,26 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		
 	
 		PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
-		ENV_WIKI=general_ReadProperty("ENV_WIKI");
-		String path= (PROJECT_FOLDER_PATH1+ENV_WIKI);
 		TEST_ENV1=general_ReadProperty("TEST_ENV");
-
-		XLSXReadWrite readFile = new XLSXReadWrite(path);
-
-		int rowIndex=readFile.findRowIndex("EnvDetails", TEST_ENV1);
-		int userNameColIndex=readFile.findColumnIndex("EnvDetails", "USER_NAME");
-		int passwordColIndex=readFile.findColumnIndex("EnvDetails", "PASSWORD");
-
-		int hostColIndex=readFile.findColumnIndex("EnvDetails", "UNIX-SERVER");
-
-		user= readFile.getCellValue("EnvDetails", rowIndex, userNameColIndex); 
-		pass= readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
-		host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
-
+		 user=general_ReadProperty("USER_NAME");
+		 pass=general_ReadProperty("PASSWORD");
+		 host=general_ReadProperty("HOST_NAME");
+		/*
+		 * ENV_WIKI=general_ReadProperty("ENV_WIKI"); String path=
+		 * (PROJECT_FOLDER_PATH1+ENV_WIKI); TEST_ENV1=general_ReadProperty("TEST_ENV");
+		 * 
+		 * XLSXReadWrite readFile = new XLSXReadWrite(path);
+		 * 
+		 * int rowIndex=readFile.findRowIndex("EnvDetails", TEST_ENV1); int
+		 * userNameColIndex=readFile.findColumnIndex("EnvDetails", "USER_NAME"); int
+		 * passwordColIndex=readFile.findColumnIndex("EnvDetails", "PASSWORD");
+		 * 
+		 * int hostColIndex=readFile.findColumnIndex("EnvDetails", "UNIX-SERVER");
+		 * 
+		 * user= readFile.getCellValue("EnvDetails", rowIndex, userNameColIndex); pass=
+		 * readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
+		 * host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
+		 */
 		String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
 		try{
 			java.util.Properties config = new java.util.Properties(); 
