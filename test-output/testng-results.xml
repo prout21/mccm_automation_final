@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113880" started-at="2021-04-29T15:52:12 IST" finished-at="2021-04-29T15:54:06 IST">
+  <suite name="Default suite" duration-ms="240066" started-at="2021-04-30T16:14:14 IST" finished-at="2021-04-30T16:18:14 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113880" started-at="2021-04-29T15:52:12 IST" finished-at="2021-04-29T15:54:06 IST">
-      <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1fc2b765]" name="setup" is-config="true" duration-ms="61334" started-at="2021-04-29T15:52:12 IST" finished-at="2021-04-29T15:53:13 IST">
+    <test name="Default test" duration-ms="240066" started-at="2021-04-30T16:14:14 IST" finished-at="2021-04-30T16:18:14 IST">
+      <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Test">
+        <test-method status="PASS" signature="VerifyOutboundDBDataLoadedSuccessfully()[pri:0, instance:Mccm.Unix.Outbound.App_Unix_Outbound_Test@569cfc36]" name="VerifyOutboundDBDataLoadedSuccessfully" duration-ms="239999" started-at="2021-04-30T16:14:14 IST" finished-at="2021-04-30T16:18:14 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOutboundOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1fc2b765]" name="VerifyOutboundOracleCansadraDataLoadedSuccessfully" duration-ms="51391" started-at="2021-04-29T15:53:13 IST" finished-at="2021-04-29T15:54:05 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOutboundOracleCansadraDataLoadedSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1fc2b765]" name="teardown" is-config="true" duration-ms="1107" started-at="2021-04-29T15:54:05 IST" finished-at="2021-04-29T15:54:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
+        </test-method> <!-- VerifyOutboundDBDataLoadedSuccessfully -->
+      </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

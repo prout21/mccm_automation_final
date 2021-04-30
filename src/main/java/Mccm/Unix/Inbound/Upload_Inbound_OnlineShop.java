@@ -31,6 +31,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	private static XSSFWorkbook wb;
 	public static String UnixInputFilePath;
 	public static String name;
+	public static String App_Inbound_OnlineShop;
 	
 	@Test
 	
@@ -67,7 +68,12 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	      // File f = new File("ADDRESSBAN_20200515010201.csv");
 	      //  channelSftp.put(new FileInputStream(f), f.getName());
 	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs///");
-	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+	      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+	        
+	        String App_Inbound_OnlineShop= general_ReadProperty("App_Inbound_OnlineShop");
+		    
+	        //Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+	          Vector fileList = channelSftp.ls(App_Inbound_OnlineShop);
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -121,7 +127,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
-	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/OnlineShop/"+f2.getName(),new progressMonitor());
+	                //	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/OnlineShop/"+f2.getName(),new progressMonitor());
+	                	 
+	                	 channelSftp.put(f2.getPath(), App_Inbound_OnlineShop+f2.getName(),new progressMonitor());
 	                	 
 	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  ONLINE SHOP input folder");
 	                	 Thread.sleep(2000);

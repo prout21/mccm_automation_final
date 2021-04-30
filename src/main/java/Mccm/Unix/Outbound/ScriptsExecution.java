@@ -24,6 +24,10 @@ public class ScriptsExecution {
 	public static String password;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String mccm_oracle_file_Distribution_ksh;
+	public static String mccm_synonyms_switch_ksh;
+	
+	
 	public static void main(Object args) {
 		/*
 		 * String host="localhost"; String user="mccm02"; String password="unix11";
@@ -43,9 +47,12 @@ public class ScriptsExecution {
 		 host=general_ReadProperty("HOST_NAME");
 		 
 		 
-	    String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/import/scripts/mccm_oracle_file_Distribution.ksh";
-	    String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/import/scripts/mccm_synonyms_switch.ksh";
-
+	 //   String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/import/scripts/mccm_oracle_file_Distribution.ksh";
+	 //   String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/import/scripts/mccm_synonyms_switch.ksh";
+	    String command=general_ReadProperty("mccm_oracle_file_Distribution_ksh");
+	    String command1=general_ReadProperty("mccm_synonyms_switch_ksh");
+	    
+	   
 
 	    try{
 	    	

@@ -35,7 +35,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	
 	 public static String name;
 	
-	  
+	 public static String App_Inbound_DMP;
+	 
+	 public static String var2;
 	
 	@Test
 	
@@ -73,7 +75,12 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	      // File f = new File("ADDRESSBAN_20200515010201.csv");
 	      //  channelSftp.put(new FileInputStream(f), f.getName());
 	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs///");
-	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+	        
+	        String App_Inbound_DMP= general_ReadProperty("App_Inbound_DMP");
+	    
+	        //Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+	          Vector fileList = channelSftp.ls(App_Inbound_DMP);
+	          System.out.println("h7");
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -134,7 +141,16 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
-	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/DMP/"+f2.getName(),new progressMonitor());
+	                	 
+	                	// channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/DMP/"+f2.getName(),new progressMonitor());
+	                	 
+	                	 System.out.println("h5");
+	                	 
+	             //   	 String var2= general_ReadProperty("test1");
+	                	 
+	                channelSftp.put(f2.getPath(), App_Inbound_DMP+f2.getName(),new progressMonitor());
+	                	 
+	                	 System.out.println("h6");
 	                	 
 	                	 System.out.println("The file [" + i +"]:" + name + " UPLOAD done to the  DMP input folder");
 	                	 Thread.sleep(2000);

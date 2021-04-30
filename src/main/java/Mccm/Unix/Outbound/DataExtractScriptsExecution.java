@@ -17,6 +17,9 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 	public static String pass;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String DataExtractScriptsExecution_NBA_ONB;
+	public static String DataExtractScriptsExecution_NBA_DMP;
+	public static String DataExtractScriptsExecution_NBA_KIASEPOS;
 	
 	/**
 	 */
@@ -47,7 +50,10 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		 * readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
 		 * host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
 		 */
-		String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
+		// String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
+		
+		 String command= general_ReadProperty("DataExtractScriptsExecution_NBA_ONB");
+		 
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");
@@ -85,7 +91,9 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 			e.printStackTrace();
 		}	
 		
-		String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_KIASEPOS";
+		//String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_KIASEPOS";
+		 String command1= general_ReadProperty("DataExtractScriptsExecution_NBA_KIASEPOS");
+		
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");
@@ -122,7 +130,8 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		}catch(Exception e){
 			e.printStackTrace();
 		}	
-		String command2="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_DMP";
+	//	String command2="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_DMP";
+		 String command2= general_ReadProperty("DataExtractScriptsExecution_NBA_DMP");
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");

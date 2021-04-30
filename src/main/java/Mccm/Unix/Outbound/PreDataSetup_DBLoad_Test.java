@@ -49,6 +49,7 @@ public class PreDataSetup_DBLoad_Test  {
 	public static XSSFWorkbook wb;
 	
 	 public static String name;
+	 public static String PreDataSetup_DBLoad_Test;
 
 //	  public static String FCA;
 //	  public static String SCA;
@@ -72,6 +73,9 @@ public class PreDataSetup_DBLoad_Test  {
 	 user=general_ReadProperty("USER_NAME");
 	 password=general_ReadProperty("PASSWORD");
 	 host=general_ReadProperty("HOST_NAME");
+
+
+	 
 	/*
 	 * String host="localhost"; String user="mccm02"; String password="unix11";
 	 */
@@ -87,7 +91,13 @@ public class PreDataSetup_DBLoad_Test  {
 //        String SCA = general_ReadProperty("File_NameSCA");
 //        String Close = general_ReadProperty("File_NameClose");
         
-	   String command="sh /opt/SP/data/mccm02/temp/DataSetup.sh";
+	 //  String command="sh /opt/SP/data/mccm02/temp/DataSetup.sh";
+        
+            
+       
+        
+       String command= general_ReadProperty("PreDataSetup_DBLoad_Test");
+	   
 	 
 
 	    try{
@@ -182,6 +192,7 @@ public static String general_ReadProperty(String propertyKey)
 				  e1.printStackTrace();
 			  } 
 	 }
+	
 	return propertyValue;
 	
     

@@ -56,6 +56,8 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 	public static String host;
 	public static XSSFWorkbook wb;
 	
+	public static String App_Inbound_DMP;
+	
 	 public static String name;
 
    // static String name = " ";
@@ -130,16 +132,30 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
     	//System.out.println("");     
       
         System.out.println("Session connected: "+session.isConnected());
-        System.out.println("");            
+        System.out.println(""); 
+        
+        System.out.println("h1");
+        
+        String App_Inbound_DMP= general_ReadProperty("App_Inbound_DMP");
       
-        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+       // Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+        
+        Vector fileList = channelSftp.ls(App_Inbound_DMP);
+        
+        
+        System.out.println("h2");
+        
         
 //        for (int i = 0; i < fileList.size(); i++) {
 //            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 //            System.out.println(lsEntry.getFilename());
             
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-        fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+     //   fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+        fileList = channelSftp.ls(App_Inbound_DMP);
+        
+        System.out.println("h3");
+        
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
         Thread.sleep(8000);
 
@@ -335,7 +351,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
 		///pr  FilesAvailabilityCheck_Cassandra.main(null);
 	
 		   
- 	 	//pr  FileExistChk_Inbound_DMP.main(null);
+ 	 	//  FileExistChk_Inbound_DMP.main(null);
 		   
 	 	 
 			

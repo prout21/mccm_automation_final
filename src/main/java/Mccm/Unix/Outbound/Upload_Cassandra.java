@@ -2,7 +2,10 @@
 
 	import com.jcraft.jsch.ChannelSftp;
 	import com.jcraft.jsch.ChannelSftp.LsEntry;
-	import com.jcraft.jsch.JSch;
+
+import Mccm.Unix.Inbound.progressMonitor;
+
+import com.jcraft.jsch.JSch;
 	import com.jcraft.jsch.Session;
 
 import java.io.File;
@@ -28,6 +31,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 //	public static String host;	
 	private static XSSFWorkbook wb;
 	public static String UnixInputFilePath;
+	public static String Upload_Cassandra;
 	
 	@Test
 	
@@ -56,7 +60,13 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	        session.connect();
 	        ChannelSftp channelSftp = (ChannelSftp) session.openChannel("sftp");
 	        channelSftp.connect();
-	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile");
+	      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile");
+	        
+	        String Upload_Cassandra= general_ReadProperty("Upload_Cassandra");
+	        
+	        Vector fileList = channelSftp.ls(Upload_Cassandra);
+	        
+	        
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -110,7 +120,9 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
-	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/"+f2.getName(),new progressMonitor());
+	                //	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/"+f2.getName(),new progressMonitor());
+	                	 
+	                	 channelSftp.put(f2.getPath(), Upload_Cassandra+f2.getName(),new progressMonitor());
 	                	 
 	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  Cassandra input folder");
 	                	 Thread.sleep(2000);

@@ -55,6 +55,8 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 	public static String pass;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String App_Unix_Outbound_temp_cassandra;
+	public static String App_Unix_Outbound_import_input;
 
 	// static String name = " ";
 
@@ -142,13 +144,24 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 			System.out.println("Session connected: "+session.isConnected());
 			System.out.println("");            
 
-			Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
+		//	Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
+			
+			 String App_Unix_Outbound_temp_cassandra= general_ReadProperty("App_Unix_Outbound_temp_cassandra");
+			 
+			  Vector fileList = channelSftp.ls(App_Unix_Outbound_temp_cassandra);
+			
+		 
 
 			//        for (int i = 0; i < fileList.size(); i++) {
 			//            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 			//            System.out.println(lsEntry.getFilename());
-			//pr change below one    
-			fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
+			//pr change below one 
+			
+			//fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
+			
+			 String App_Unix_Outbound_import_input= general_ReadProperty("App_Unix_Outbound_import_input");
+			 fileList = channelSftp.ls(App_Unix_Outbound_import_input);
+			 
 
 			//pr    fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
 

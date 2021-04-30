@@ -29,6 +29,7 @@ public class FilesAvailabilityCheck_Cassandra extends general_ReadProperty {
 	public static XSSFWorkbook wb;
 	public static String filenameFCA;
 	public static String filenameSCA;
+	public static String FilesAvailabilityCheck_Cassandra;
 
 	@Test
 
@@ -50,8 +51,11 @@ public class FilesAvailabilityCheck_Cassandra extends general_ReadProperty {
 
 		String filenameFCA = general_ReadProperty("File_NameFCA");
 
-		String filepath = "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/";
-
+	//	String filepath = "/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile/";  
+		
+		  String filepath= general_ReadProperty("FilesAvailabilityCheck_Cassandra");
+		
+		
 		try {
 
 			Channel  channel = getChannelSftp(host, user, password);

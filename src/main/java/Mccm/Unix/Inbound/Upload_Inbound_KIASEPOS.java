@@ -30,7 +30,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
  //	public static String host;	
 	private static XSSFWorkbook wb;
 	public static String UnixInputFilePath;
-	
+	public static String App_Inbound_KIASEPOS;
 	@Test
 	
 		
@@ -66,7 +66,12 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	      // File f = new File("ADDRESSBAN_20200515010201.csv");
 	      //  channelSftp.put(new FileInputStream(f), f.getName());
 	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs///");
-	        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+	      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+	        
+	        String App_Inbound_KIASEPOS= general_ReadProperty("App_Inbound_KIASEPOS");
+		    
+	        //Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+	          Vector fileList = channelSftp.ls(App_Inbound_KIASEPOS);
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -121,8 +126,8 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	// channelSftp.put("C:\\oracle\\cusdata1.csv", "/opt/SP/data/mccm02/logs/temp/cassandra/");
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
-	                	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/KIASEPOS/"+f2.getName(),new progressMonitor());
-	                	 
+	                //	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/KIASEPOS/"+f2.getName(),new progressMonitor());
+	                	 channelSftp.put(f2.getPath(), App_Inbound_KIASEPOS+f2.getName(),new progressMonitor());
 	                	 System.out.println("The file [" + i +"]:" + name + " UPLOAD done to the  KIASEPOS input folder");
 	                	 Thread.sleep(2000);
 	                	 

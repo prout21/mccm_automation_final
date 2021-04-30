@@ -22,6 +22,7 @@ public class ScriptsExecution_Cassandra extends App_Unix_Outbound_Test {
 	public static String password;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String ScriptsExecution_Cassandra;
 
 	public static void main(Object args) {
 
@@ -42,9 +43,10 @@ public class ScriptsExecution_Cassandra extends App_Unix_Outbound_Test {
 		password=general_ReadProperty("PASSWORD");
 		host=general_ReadProperty("HOST_NAME");
 
-		String command="sh /opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh";
+		// String command="sh /opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh";
+		String command=general_ReadProperty("ScriptsExecution_Cassandra");
 
-		try{
+		try{        
 
 			//Channel channel = getChannelSftp(host, user, password);
 

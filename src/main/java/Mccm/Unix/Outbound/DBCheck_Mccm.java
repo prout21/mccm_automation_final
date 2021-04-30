@@ -25,6 +25,7 @@ public class DBCheck_Mccm {
 	public static String password;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String DBCheck_Cassandra_oracle;
 
 	/**
 	 	 */
@@ -37,7 +38,9 @@ public class DBCheck_Mccm {
 		 user=general_ReadProperty("USER_NAME");
 		 password=general_ReadProperty("PASSWORD");
 		 host=general_ReadProperty("HOST_NAME");
-	   String command="sh /opt/SP/data/mccm02/temp/oracle.sh";
+	 //  String command="sh /opt/SP/data/mccm02/temp/oracle.sh";
+		 
+	   String command= general_ReadProperty("DBCheck_Cassandra_oracle");
 	  
 	    try{
 	    	

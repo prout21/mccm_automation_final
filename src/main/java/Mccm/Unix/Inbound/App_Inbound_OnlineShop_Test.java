@@ -54,6 +54,7 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
 	public static String host;
 	public static String name;
 	public static XSSFWorkbook wb;
+	public static String App_Inbound_OnlineShop;
 
    // static String name = " ";
 
@@ -142,14 +143,22 @@ public class App_Inbound_OnlineShop_Test extends MyAutomationConstants {
         System.out.println("Session connected: "+session.isConnected());
         System.out.println("");            
      
-        Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+        
+        String App_Inbound_OnlineShop= general_ReadProperty("App_Inbound_OnlineShop");
+        
+        // Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
+         
+         Vector fileList = channelSftp.ls(App_Inbound_OnlineShop);
         
 //        for (int i = 0; i < fileList.size(); i++) {
 //            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 //            System.out.println(lsEntry.getFilename());
             
         //fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-        fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+   //     fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/OnlineShop");
+        
+        fileList = channelSftp.ls(App_Inbound_OnlineShop);
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
         Thread.sleep(8000);
         	//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");

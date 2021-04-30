@@ -54,6 +54,7 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 	public static String host;
 	public static XSSFWorkbook wb;
 	public static String name;
+	public static String App_Inbound_KIASEPOS;
 
 	// static String name = " ";
 
@@ -142,16 +143,23 @@ public class App_Inbound_KIASEPOS_Test extends MyAutomationConstants {
 			//System.out.println("");     
 
 			System.out.println("Session connected: "+session.isConnected());
-			System.out.println("");            
+			System.out.println("");  
+			
+			 String App_Inbound_KIASEPOS= general_ReadProperty("App_Inbound_KIASEPOS");
+			 
+			 Vector fileList = channelSftp.ls(App_Inbound_KIASEPOS);
 
-			Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+		//	Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
 
 			//        for (int i = 0; i < fileList.size(); i++) {
 			//            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
 			//            System.out.println(lsEntry.getFilename());
 
 			//fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
-			fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+			 
+		//	fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/KIASEPOS");
+			 fileList = channelSftp.ls(App_Inbound_KIASEPOS);
+			
 			//  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
 		     Thread.sleep(8000);
 			//Vector fileList = channelSftp.ls("/opt/SP/data/pegat02");

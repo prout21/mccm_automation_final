@@ -47,6 +47,7 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 	public static String pass;
 	public static String host;
 	public static XSSFWorkbook wb;
+	public static String DBCheck_Cassandra_cassandra;
 
 	/**
 	 */
@@ -68,14 +69,14 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 		//pr        String SCA="SCA_cass_20200707010201.csv";
 
 		//        String FCA="FCA_cass_20200922010201.csv";
-		//        String SCA="SCA_cass_20200922010201.csv";
+		//        String SCA="SCA_cass_20200922010201.csv"; DBCheck_Cassandra_cassandra.sh=sh /opt/SP/data/mccm02/temp/cassandra.sh
 
 		String FCA = general_ReadProperty("File_NameFCA");
 		String SCA = general_ReadProperty("File_NameSCA");
 		String Close = general_ReadProperty("File_NameClose");
 
-		String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
-
+		// String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
+		 String command= general_ReadProperty("DBCheck_Cassandra_cassandra");
 
 		try{
 

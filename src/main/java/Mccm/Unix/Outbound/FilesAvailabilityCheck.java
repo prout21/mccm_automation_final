@@ -23,6 +23,8 @@ public static String user;
 public static String pass;
 public static String host;
 public static XSSFWorkbook wb;
+public static String file_list_oracle_lst;
+public static String FilesAvailabilityCheck;
 
 /*
  * static String host = "localhost"; //static String user = "pegat02"; static
@@ -48,12 +50,17 @@ public static void main(Object	 args) {
 		 password=general_ReadProperty("PASSWORD");
 		 host=general_ReadProperty("HOST_NAME");
 	 
-         String filename = "file_list_oracle.lst";
+      //   String filename = "file_list_oracle.lst";
+		 String filename = general_ReadProperty("file_list_oracle_lst");
+         
+		 
 	 
 //	 String filename =  (UnixInputFilePath+"/NBA_Outbound/toupload_oracle/file_list_oracle.lst"); 
 
-    String filepath = "/opt/SP/mccm/SYSN/mccm_dataload/import/input";
-    try {              
+  //  String filepath = "/opt/SP/mccm/SYSN/mccm_dataload/import/input";
+    String filepath = general_ReadProperty("FilesAvailabilityCheck");
+    
+    try {             
     	
         Channel  channel = getChannelSftp(host, user, password);
         channel.connect();
