@@ -80,7 +80,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	    
 	        //Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
 	          Vector fileList = channelSftp.ls(App_Inbound_DMP);
-	          System.out.println("h7");
+	         
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        
 	       	System.out.println("The available files are : ");
@@ -144,13 +144,13 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	 
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/input/DMP/"+f2.getName(),new progressMonitor());
 	                	 
-	                	 System.out.println("h5");
+	                	 
 	                	 
 	             //   	 String var2= general_ReadProperty("test1");
 	                	 
 	                channelSftp.put(f2.getPath(), App_Inbound_DMP+f2.getName(),new progressMonitor());
 	                	 
-	                	 System.out.println("h6");
+	                 
 	                	 
 	                	 System.out.println("The file [" + i +"]:" + name + " UPLOAD done to the  DMP input folder");
 	                	 Thread.sleep(2000);

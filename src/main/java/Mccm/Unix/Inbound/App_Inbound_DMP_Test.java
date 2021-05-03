@@ -115,6 +115,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
         //String host1 = "46.190.224.85";
         
         Upload_Inbound_DMP.main(null);//main();
+        
         Thread.sleep(2000);
         Thread.sleep(2000);
         Thread.sleep(2000);
@@ -134,16 +135,14 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
         System.out.println("Session connected: "+session.isConnected());
         System.out.println(""); 
         
-        System.out.println("h1");
-        
+     
         String App_Inbound_DMP= general_ReadProperty("App_Inbound_DMP");
       
        // Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
         
         Vector fileList = channelSftp.ls(App_Inbound_DMP);
         
-        
-        System.out.println("h2");
+       
         
         
 //        for (int i = 0; i < fileList.size(); i++) {
@@ -154,8 +153,7 @@ public class App_Inbound_DMP_Test extends MyAutomationConstants {
      //   fileList = channelSftp.ls("/opt/SP/mccm/SYSN/input/DMP");
         fileList = channelSftp.ls(App_Inbound_DMP);
         
-        System.out.println("h3");
-        
+       
           //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
         Thread.sleep(8000);
 
