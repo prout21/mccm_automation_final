@@ -60,7 +60,7 @@ public class PegaDMPProcOffRsltsVldtTest extends TestBase {
 
 	public void teardown() {
 
-		driver.quit();
+	 driver.quit();
 
 
 		System.out.println("DMP API Process Offer Results IH Validation Done");

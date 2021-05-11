@@ -62,7 +62,7 @@ public class OSFDMCCMSettings extends TestBase {
 	
 	//D_mccmsettingsValue
 	
-	String D_mccmsettingsValue = obj.getCellValue("PegaTestData", 1, 5);
+	String D_mccmsettingsValue = obj.getCellValue("PegaTestDataOSF", 1, 11);
 	
 	//D_mccmsettingsValue
 	
@@ -88,9 +88,9 @@ public class OSFDMCCMSettings extends TestBase {
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		//wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
+	//	wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
 	//	waitVisibility(SysAdmin);
-		Thread.sleep(6000);
+	 	Thread.sleep(6000);
 		 SysAdmin.click( );
 		  
 	}

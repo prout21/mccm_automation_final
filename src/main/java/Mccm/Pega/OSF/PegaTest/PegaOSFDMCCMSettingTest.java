@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Mccm.Pega.OSF.OSFDMCCMSettings;
+import Mccm.Pega.OSF.OSFDSS;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
@@ -19,9 +20,10 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	private static final String priorty = null;
 	LoginPage loginpage;
 	HomePage  homepage;
-//	HomePageDetails HomePageDetails1;
+	//	HomePageDetails HomePageDetails1;
 	OSFDMCCMSettings OSFDMCCMSettings1;
 	TestUtil testutil;
+	OSFDSS osfDSS;
 
 	public PegaOSFDMCCMSettingTest()
 	{
@@ -31,26 +33,53 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 
 	public void setup() throws InterruptedException {
 		initialization();
-		 
+
 		loginpage = new LoginPage();
 		testutil = new TestUtil();
-		 
+		osfDSS =new OSFDSS();
+
 		//HomePageDetails1 =new HomePageDetails();
 		OSFDMCCMSettings1 = new OSFDMCCMSettings();
-		 
+
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-		 
-	//	HomePageDetails1=homepage.ClickHomepage();
-	//	OSFDMCCMSettings1=homepage.ClickHomepageOSF();
-		 
+
+		//	HomePageDetails1=homepage.ClickHomepage();
+		//	OSFDMCCMSettings1=homepage.ClickHomepageOSF();
+
 	}
 	@Test (priority=1)
-	public void VerifyOSFDMCCMSettingDSSSuccessfully() throws InterruptedException { 
+	public void VerifyOSFDynamicSystemSettingRunSuccessfully() throws InterruptedException { 
 		OSFDMCCMSettings1.Recordclk();
 		OSFDMCCMSettings1.SysAdmin();
 		OSFDMCCMSettings1.javaexictor4();
 		OSFDMCCMSettings1.DynamicSystemSettins();
-		 
+	
+		//Internal_REST_URL_OSF
+		testutil.SwitcToFrame(0);
+		osfDSS.FilterosfDSS();
+		osfDSS.CalNBAStartOffSrch();
+		osfDSS.ApplaycALCNBAfilter();
+		osfDSS.ClikMCCM();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.CalNBAStartOff();
+		osfDSS.SaveCalNBAStartOff();
+		osfDSS.CloseCalNBAStartOff();
+		//Internal_REST_URL_OSF
+		
+		//OSFContainerName
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFContainerName();
+		osfDSS.OSFContainerNameSrch();
+		osfDSS.ApplayOSFContainerName();
+		osfDSS.ClikMCCMOSFContainerName();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFContainerName();
+		osfDSS.SaveOSFContainerName();
+		osfDSS.CloseOSFContainerName();
+		//OSFContainerName
 		//D_mccmsettings
 		OSFDMCCMSettings1.D_mccmsettings();
 		OSFDMCCMSettings1.SerchClick();
@@ -60,8 +89,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		OSFDMCCMSettings1.ActionClkDmccmsetting();
 		OSFDMCCMSettings1.RunActionClk();
 		OSFDMCCMSettings1.FulshRunClick();
-        //D_mccmsettings
-	 
+		//D_mccmsettings
 
 	}
 
@@ -70,10 +98,10 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 
 	public void teardown() {
 
-		driver.quit();
+ 	driver.quit();
 
 
-		System.out.println("Pega OSF D_MCCM Setting DSS Done");  
+ 	System.out.println("OSF Dynamic System Setting Run Successfully");  
 	}
 
 }
