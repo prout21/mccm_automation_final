@@ -28,6 +28,12 @@ public class OSFDMCCMSettings extends TestBase {
 	@FindBy(xpath="//a[text()='Dynamic System Settings']")
 	WebElement webelement4;
 	
+	@FindBy(xpath="(//*[@id=\"iconExpandCollapse\"]/a)[15]")
+	WebElement SysAdmin1;
+	@FindBy(xpath="/html/body/div[5]/aside/div[1]/div/div[1]/div/div/div[9]/div[2]/div/span/div/span/div[1]/span/div/span/div/div[2]/div/table/tbody/tr/td/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td/div/ul/li[16]/ul/li[1]/div/div[1]/a")
+	WebElement SysAdmin2;
+	
+	
 
 	@FindBy(xpath="//input[@type='text'][@name='$PpyDisplayHarness$ppySearchText']")
 	WebElement D_mccmsettings;
@@ -82,17 +88,18 @@ public class OSFDMCCMSettings extends TestBase {
 	//	System.out.println("hi");
 		 Actions  action = new Actions(driver);
 	     action.moveToElement(Recordclk).click().build().perform();
-	     Thread.sleep(1000);
+	  //   Thread.sleep(1000);
 	
  
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-	//	wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
-	//	waitVisibility(SysAdmin);
-	 	Thread.sleep(6000);
-		 SysAdmin.click( );
-		  
+	// 	wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
+	  	 Thread.sleep(3000);
+		
+     SysAdmin.click( );
+	 
+	 
 	}
 	public void javaexictor4() throws InterruptedException
 	{

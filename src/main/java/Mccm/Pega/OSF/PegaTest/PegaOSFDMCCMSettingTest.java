@@ -53,7 +53,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		OSFDMCCMSettings1.SysAdmin();
 		OSFDMCCMSettings1.javaexictor4();
 		OSFDMCCMSettings1.DynamicSystemSettins();
-	
+
 		//Internal_REST_URL_OSF
 		testutil.SwitcToFrame(0);
 		osfDSS.FilterosfDSS();
@@ -66,7 +66,36 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveCalNBAStartOff();
 		osfDSS.CloseCalNBAStartOff();
 		//Internal_REST_URL_OSF
-		
+
+		//		//OSFDirection
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFDirection();
+		osfDSS.OSFDirectionSrch();
+		osfDSS.ApplayOSFDirection();
+		osfDSS.ClikMCCMOSFDirection();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFDirection();
+		osfDSS.SaveOSFDirection();
+		osfDSS.CloseOSFDirection();
+		//		//OSFDirection
+
+		//		//OSFChannel
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFChannel();
+		osfDSS.OSFChannelSrch();
+		osfDSS.ApplayOSFChannel();
+		osfDSS.ClikMCCMOSFChannel();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFChannel();
+		osfDSS.SaveOSFChannel();
+		osfDSS.CloseOSFChannel();
+		//		//OSFChannel
+
+
 		//OSFContainerName
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -80,6 +109,47 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFContainerName();
 		osfDSS.CloseOSFContainerName();
 		//OSFContainerName
+		//OSFSClassificationDefaultValue
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFSClassificationDefaultValue();
+		osfDSS.OSFSClassificationDefaultValueSrch();
+		osfDSS.ApplayOSFSClassificationDefaultValue();
+		osfDSS.ClikMCCMOSFSClassificationDefaultValue();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFSClassificationDefaultValue();
+		osfDSS.SaveOSFSClassificationDefaultValue();
+		osfDSS.CloseOSFSClassificationDefaultValue();
+		//OSFSClassificationDefaultValue
+
+		//MaxNoOfAcntsForOSFGetNBAPerRqst
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
+		osfDSS.OSFMaxNoOfAcntsForOSFGetNBAPerRqstSrch();
+		osfDSS.ApplayOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
+		osfDSS.ClikMCCMOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFMaxNoOfAcntsForOSFGetNBAPerRqstValue();
+		osfDSS.SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
+		osfDSS.CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
+		//MaxNoOfAcntsForOSFGetNBAPerRqst
+
+		//OSFGetNBATimeout
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget0Ifr");
+		osfDSS.FilterOSFGetNBATimeout();
+		osfDSS.OSFGetNBATimeoutSrch();
+		osfDSS.ApplayOSFGetNBATimeout();
+		osfDSS.ClikMCCMOSFGetNBATimeout();
+		testutil.SwitcTodefaultContent();
+		testutil.SwitchToFrame("PegaGadget1Ifr");
+		osfDSS.OSFGetNBATimeout();
+		osfDSS.SaveOSFGetNBATimeout();
+		osfDSS.CloseOSFGetNBATimeout();
+		//OSFGetNBATimeout
 		//D_mccmsettings
 		OSFDMCCMSettings1.D_mccmsettings();
 		OSFDMCCMSettings1.SerchClick();
@@ -98,10 +168,10 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 
 	public void teardown() {
 
- 	driver.quit();
+		// driver.quit();
 
 
- 	System.out.println("OSF Dynamic System Setting Run Successfully");  
+		System.out.println("OSF Dynamic System Setting Run Successfully");  
 	}
 
 }

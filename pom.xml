@@ -24,7 +24,7 @@
 		<plugins>
 
 			<!-- JAR plug-in -->
-			
+
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.0.2</version>
@@ -81,10 +81,10 @@
 				<version>2.21.0</version>
 				<configuration>
 					<executable>/usr/bin/java</executable>
-<!-- 				<suiteXmlFiles> -->
-<!-- 						TestNG suite XML files -->
-<!-- 						<suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.OSF.xml</suiteXmlFiles> -->
-<!-- 					</suiteXmlFiles> -->
+					<!-- <suiteXmlFiles> -->
+					<!-- TestNG suite XML files -->
+					<!-- <suiteXmlFiles>src/test/resources/TestSuite/RegressionSuite.OSF.xml</suiteXmlFiles> -->
+					<!-- </suiteXmlFiles> -->
 				</configuration>
 			</plugin>
 
@@ -417,5 +417,12 @@
 			<version>4.2.3</version>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+		<dependency>
+			<groupId>ru.yandex.qatools.ashot</groupId>
+			<artifactId>ashot</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+
 	</dependencies>
 </project>
