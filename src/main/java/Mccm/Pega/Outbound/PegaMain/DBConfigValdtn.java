@@ -75,22 +75,23 @@ public class DBConfigValdtn extends TestBase {
 	public void Recordclk() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
-	 //	Recordclk.click( );
-	      Thread.sleep(1000);
+		Thread.sleep(8000);
+	 	Recordclk.click( );
+		Thread.sleep(8000);
 	//	System.out.println("hi");
-		 Actions  action = new Actions(driver);
-	     action.moveToElement(Recordclk).click().build().perform();
-	     Thread.sleep(1000);
-	
+//		 Actions  action = new Actions(driver);
+//	     action.moveToElement(Recordclk).click().build().perform();
+//	     Thread.sleep(1000);
+//	
  
 	}
 	public void SysAdmin() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
 	//	waitVisibility(SysAdmin);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		 SysAdmin.click( );
-		  
+		 Thread.sleep(8000); 
 	}
 	public void javaexictor4() throws InterruptedException
 	{

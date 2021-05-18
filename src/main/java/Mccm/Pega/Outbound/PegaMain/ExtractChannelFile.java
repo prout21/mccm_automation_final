@@ -79,20 +79,19 @@ public class ExtractChannelFile extends TestBase {
 	public void Recordclk() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
-		 //	Recordclk.click( );
-		      Thread.sleep(1000);
-		//	System.out.println("hi");
-			 Actions  action = new Actions(driver);
-		     action.moveToElement(Recordclk).click().build().perform();
-		     Thread.sleep(1000);
+		Thread.sleep(8000);
+		 Recordclk.click( );
+		Thread.sleep(8000);
+		 
+		 
 		
 		 
 	}
 	public void SysAdmin() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		SysAdmin.click( );
-		 
+		Thread.sleep(8000); 
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -115,23 +114,26 @@ public class ExtractChannelFile extends TestBase {
 
 	public void SerchClick() throws InterruptedException
 	{
+		
 		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
 		 
 	}
 	public void ClickGetDataExtractDetails() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
-	//	Thread.sleep(1000);
+		 
+		 wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
+    	 
 		ClickReportdeftion.click();
 		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
-		 
+		Thread.sleep(8000);
 	}
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
-		Thread.sleep(8000);
-		// wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+		//Thread.sleep(8000);
+		 
+		  wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
 		ActionClkGetDataExtractDetails.click( );
 		
 	}

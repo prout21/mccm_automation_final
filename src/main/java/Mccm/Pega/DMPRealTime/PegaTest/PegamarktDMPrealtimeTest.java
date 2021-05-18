@@ -37,10 +37,10 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 		loginpageDMPrealtime = new LoginPageDMPRealTime();
 		loginpage = new LoginPage();
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));  
-	  //  pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
+		//  pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarktDMPrealtime  = new PegaMarktDMPRealTime();
-	//	pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
+		pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
 
 	}
 
@@ -49,7 +49,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 	@Test (priority=1)
 	public void VerifyDMPrealtimeRunSuccessfully() throws InterruptedException, AWTException { 
 
-		//loginpageDMPrealtime.Pegamrklunch3();
+		loginpageDMPrealtime.Pegamrklunch3();
 		pegamarktDMPrealtime.pegamarkting();
 		testutil.WindowHandling();
 		pegamarktDMPrealtime.ExpandPegMrkPage1();
@@ -87,7 +87,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 
 	public void teardown() {
 
-		driver.quit();
+		//	driver.quit();
 
 
 		System.out.println("DMP Real Time Containers  Run Done");

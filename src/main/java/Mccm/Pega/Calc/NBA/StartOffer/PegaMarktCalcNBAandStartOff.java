@@ -152,8 +152,8 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	public void pegamarkting() throws InterruptedException
 	{
 
-		Actions  action = new Actions(driver);
-		action.moveToElement(Pegalunch).click().build().perform();
+//		Actions  action = new Actions(driver);
+//		action.moveToElement(Pegalunch).click().build().perform();
 		//  Thread.sleep(1000);
 		Thread.sleep(6000);
 		pegamrkting1.click( );

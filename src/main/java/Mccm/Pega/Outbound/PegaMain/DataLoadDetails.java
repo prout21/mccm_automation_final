@@ -79,11 +79,14 @@ public class DataLoadDetails extends TestBase {
 	{
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
 	 //	Recordclk.click( );
-	      Thread.sleep(1000);
+	      Thread.sleep(8000);
+	      Recordclk.click( );
 	//	System.out.println("hi");
-		 Actions  action = new Actions(driver);
-	     action.moveToElement(Recordclk).click().build().perform();
-	     Thread.sleep(1000);
+			/*
+			 * Actions action = new Actions(driver);
+			 * action.moveToElement(Recordclk).click().build().perform();
+			 */
+	     Thread.sleep(8000);
 	
 //	     JavascriptExecutor js = (JavascriptExecutor)driver;
 //	     js.executeScript("arguments[0].click();", Recordclk);
@@ -92,9 +95,9 @@ public class DataLoadDetails extends TestBase {
 	{
 		//wait.until(ExpectedConditions.elementToBeClickable(SysAdmin));
 	//	waitVisibility(SysAdmin);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		 SysAdmin.click( );
-		  
+		 Thread.sleep(8000);
 	}
 	public void javaexictor4() throws InterruptedException
 	{

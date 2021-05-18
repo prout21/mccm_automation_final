@@ -15,7 +15,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
+public class OSFAPICallGetNBATest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -26,7 +26,7 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 
 	@Test
 
-	public void VerifyOSFGetNBAMultipleAccountsAPIcallSuccessfully() {
+	public void VerifyOSFGetNBARestAPIcallSuccessfully() {
 
 		//   public static void main(String[] args) {
 
@@ -58,7 +58,7 @@ public class OSFAPICallGetNBAMultiAccTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 
-			json = general_ReadProperty("OSF_Json_MultiAcc");
+			json = general_ReadProperty("OSF_Json_GETNBA");
 
 
 			//   String   json ="{\"Accounts\":[{\"AccountID\":\"1130542249\",\"SI\":\"MobileBAN\"},{\"AccountID\":\"30541253\",\"SI\":\"Cable\"},{\"AccountID\":\"13013453\",\"SI\":\"Fixnet\"}],\"VOID\":\"12345678\",\"SCClassification\":\"SCL\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\"}";

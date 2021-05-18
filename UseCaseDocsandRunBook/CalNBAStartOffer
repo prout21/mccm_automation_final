@@ -17,7 +17,7 @@ Step-3: Go to PEGA market and report->intraction histry->recent history
 
 
 -----------------------------------------------------------------------------------
-Test Suite loc/Name:/mccm_automation/src/test/resources/TestSuite/RegressionSuite.CalcNBAandStartOfferFlow.xml
+Test Suite loc/Name:/mccm_automation/TestSuite/RegressionSuite.CalcNBAandStartOfferFlow.xml
 
 https://10.0.4.159:8002/prweb/PRRestService/PegaMKTContainer/V2/Container
 

@@ -51,10 +51,10 @@ public class DMPRTPNBAMobHashTest extends TestBase  {
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-	    //String json ="{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
+	//  String json ="{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
             
 
-                json = general_ReadProperty("NBA_json_ProcNBA");
+            json = general_ReadProperty("NBA_json_ProcNBA");
 	
 		 
 			

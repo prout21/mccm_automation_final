@@ -150,8 +150,10 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	
 	public void pegamarkting() throws InterruptedException
 	{
-		Actions  action = new Actions(driver);
-		action.moveToElement(Pegalunch).click().build().perform();
+		/*
+		 * Actions action = new Actions(driver);
+		 * action.moveToElement(Pegalunch).click().build().perform();
+		 */
 		//  Thread.sleep(1000);
 		Thread.sleep(6000);
 		pegamrkting1.click( );
@@ -210,10 +212,11 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-        
+		//Thread.sleep(8000);
 	}
 	public void Campaigncode() throws InterruptedException
 	{
+		 
 		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 		Campaigncode.sendKeys(DMPCampaigncd);
         
@@ -332,7 +335,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	  	wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 	//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
 	//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
-	     	Thread.sleep(6000);
+	     	Thread.sleep(8000);
 	 		ApplayEngagement.click( );
 	         
 	 	}

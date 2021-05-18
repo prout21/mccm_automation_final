@@ -18,59 +18,59 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
 public class PegaPreChkValidCampCdTest extends TestBase {
-	
+
 	private static final String priorty = null;
 	LoginPage loginpage;
 	HomePage  homepage;
 	PegaPreChkValidCampCd pegaPreChkValidCampCd;
 	TestUtil testutil;
-	
+
 
 	public PegaPreChkValidCampCdTest()
 	{
 		super();
 	}
- @BeforeMethod
- 
-    public void setup() throws InterruptedException {
-	    initialization();
-	     loginpage = new LoginPage();
-	     homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	     testutil=new TestUtil();
-	     pegaPreChkValidCampCd =new PegaPreChkValidCampCd();
-	 //    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
-	  pegaPreChkValidCampCd=homepage.Pegamrklunch3();
-	    }
- 
+	@BeforeMethod
 
- 
-@Test (priority=1)
- public void VerifyOutboundPreCheckNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
-	 
-	// homepage.Pegamrklunch3();
-	 pegaPreChkValidCampCd.pegamarkting();
-	 testutil.WindowHandling();
-	 pegaPreChkValidCampCd.ExpandPegMrkPage1();
-	 pegaPreChkValidCampCd.CampaignImage();
- 	 pegaPreChkValidCampCd.Campaigns();
-	 testutil.SwitcToFrame(1);
-	 testutil.RobertAction();
-	// pegaPreChkValidCampCd.Filter();
-//	 pegaPreChkValidCampCd.CampaignVlSrch();
-//	 pegaPreChkValidCampCd.View();
-	 pegaPreChkValidCampCd.PreChkValdCampCd();
+	public void setup() throws InterruptedException {
+		initialization();
+		loginpage = new LoginPage();
+		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
+		testutil=new TestUtil();
+		pegaPreChkValidCampCd =new PegaPreChkValidCampCd();
+		//    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
+		pegaPreChkValidCampCd=homepage.Pegamrklunch3();
+	}
+
+
+
+	@Test (priority=1)
+	public void VerifyOutboundPreCheckNBACampCodeValueValidSuccessfully() throws InterruptedException, AWTException { 
+
+		homepage.Pegamrklunch3();
+		pegaPreChkValidCampCd.pegamarkting();
+		testutil.WindowHandling();
+		pegaPreChkValidCampCd.ExpandPegMrkPage1();
+		pegaPreChkValidCampCd.CampaignImage();
+		pegaPreChkValidCampCd.Campaigns();
+		testutil.SwitcToFrame(1);
+		testutil.RobertAction();
+		// pegaPreChkValidCampCd.Filter();
+		//	 pegaPreChkValidCampCd.CampaignVlSrch();
+		//	 pegaPreChkValidCampCd.View();
+		pegaPreChkValidCampCd.PreChkValdCampCd();
 
 	}
-	 
-@AfterMethod
 
- public void teardown() {
-	
- driver.quit();
+	@AfterMethod
 
-    System.out.println("Outbound NBA Precheck Campaign Code Validation Done");
-}	 
- }
- 
+	public void teardown() {
+
+		driver.quit();
+
+		System.out.println("Outbound NBA Precheck Campaign Code Validation Done");
+	}	 
+}
+
 
 

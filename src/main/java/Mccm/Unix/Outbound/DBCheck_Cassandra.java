@@ -76,7 +76,7 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 		String Close = general_ReadProperty("File_NameClose");
 
 		// String command="sh /opt/SP/data/mccm02/temp/cassandra.sh";
-		 String command= general_ReadProperty("DBCheck_Cassandra_cassandra");
+	 String command= general_ReadProperty("DBCheck_Cassandra_cassandra");
 
 		try{
 
@@ -122,7 +122,7 @@ public class DBCheck_Cassandra extends App_Unix_Outbound_Test {
 			}
 
 			//	         System.out.println(contents);
-			System.out.println();
+			System.out.println("test 16");
 
 			//            if (contents.contains(FCA))
 			//            { 

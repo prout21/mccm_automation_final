@@ -21,7 +21,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	LoginPage loginpage;
 	HomePage  homepage;
 	//	HomePageDetails HomePageDetails1;
-	OSFDMCCMSettings OSFDMCCMSettings1;
+//	OSFDMCCMSettings OSFDMCCMSettings1;
 	TestUtil testutil;
 	OSFDSS osfDSS;
 
@@ -39,7 +39,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS =new OSFDSS();
 
 		//HomePageDetails1 =new HomePageDetails();
-		OSFDMCCMSettings1 = new OSFDMCCMSettings();
+	//	OSFDMCCMSettings1 = new OSFDMCCMSettings();
 
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 
@@ -49,10 +49,10 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	}
 	@Test (priority=1)
 	public void VerifyOSFDynamicSystemSettingRunSuccessfully() throws InterruptedException { 
-		OSFDMCCMSettings1.Recordclk();
-		OSFDMCCMSettings1.SysAdmin();
-		OSFDMCCMSettings1.javaexictor4();
-		OSFDMCCMSettings1.DynamicSystemSettins();
+		osfDSS.Recordclk();
+		osfDSS.SysAdmin();
+		osfDSS.javaexictor4();
+		osfDSS.DynamicSystemSettins();
 
 		//Internal_REST_URL_OSF
 		testutil.SwitcToFrame(0);
@@ -151,14 +151,14 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.CloseOSFGetNBATimeout();
 		//OSFGetNBATimeout
 		//D_mccmsettings
-		OSFDMCCMSettings1.D_mccmsettings();
-		OSFDMCCMSettings1.SerchClick();
-		OSFDMCCMSettings1.Clickdmccmsetting();
+		osfDSS.D_mccmsettings();
+		osfDSS.SerchClick();
+		osfDSS.Clickdmccmsetting();
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget1Ifr");
-		OSFDMCCMSettings1.ActionClkDmccmsetting();
-		OSFDMCCMSettings1.RunActionClk();
-		OSFDMCCMSettings1.FulshRunClick();
+		osfDSS.ActionClkDmccmsetting();
+		osfDSS.RunActionClk();
+		osfDSS.FulshRunClick();
 		//D_mccmsettings
 
 	}
@@ -167,11 +167,11 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	@AfterMethod
 
 	public void teardown() {
+		
+      driver.quit();
 
-		// driver.quit();
 
-
-		System.out.println("OSF Dynamic System Setting Run Successfully");  
+		System.out.println("OSF Dynamic System Setting Test Case Executed");  
 	}
 
 }

@@ -44,6 +44,7 @@ public class ScriptsExecution_Cassandra extends App_Unix_Outbound_Test {
 		host=general_ReadProperty("HOST_NAME");
 
 		// String command="sh /opt/SP/mccm/SYSN/loadernode/scripts/cassandra/temp/zip.sh";
+		
 		String command=general_ReadProperty("ScriptsExecution_Cassandra");
 
 		try{        

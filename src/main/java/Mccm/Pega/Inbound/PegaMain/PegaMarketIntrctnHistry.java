@@ -221,7 +221,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		boolean result = getTextOnPage1.equals("Accepted") ; 
 
 		assertTrue(result);
-		System.out.println("MCCM OSF Outcome API Accepted Validation Done");
+		//System.out.println("MCCM OSF Outcome API Accepted Validation Done");
 	}
 	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
 	{
@@ -270,6 +270,30 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 		assertTrue(result);
 		//	 System.out.println("MCCM OSF Outcome API SubmitOrder Validation Done");
+	}
+	
+	public void PegaOSFGETNBAAPIVlidtion() throws InterruptedException {
+		driver.manage().window().maximize();
+		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+		Thread.sleep(8000);
+
+		String getTextOnPage1 = "";
+
+
+		wait.until(ExpectedConditions.visibilityOf(Outcome));
+		WebElement element1 = Outcome;
+		Thread.sleep(2000);
+
+		getTextOnPage1 = element1.getText();
+		System.out.println(getTextOnPage1);
+
+		Thread.sleep(2000);
+		boolean result = getTextOnPage1.equals("Impression") ; 
+
+		assertTrue(result);	 
+		
 	}
 
 }	 

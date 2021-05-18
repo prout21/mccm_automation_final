@@ -36,11 +36,11 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 		loginpage = new LoginPage();
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		
-//		loginPageCalcNBAandStartOff = new LoginPageCalcNBAandStartOff();
+ 		loginPageCalcNBAandStartOff = new LoginPageCalcNBAandStartOff();
 //		pegaMarktCalcNBAandStartOff = loginPageCalcNBAandStartOff.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegaMarktCalcNBAandStartOff  = new PegaMarktCalcNBAandStartOff();
-		// pegaMarktCalcNBAandStartOff=loginPageCalcNBAandStartOff.Pegamrklunch3(); 
+		pegaMarktCalcNBAandStartOff=loginPageCalcNBAandStartOff.Pegamrklunch3(); 
 
 	}
 
@@ -48,7 +48,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	public void VerifyCalcNBAandStartOfferEventRunSuccessfully() throws InterruptedException, AWTException { 
 
 	 //  loginPageCalcNBAandStartOff.Pegamrklunch3();
-		//pegaMarktCalcNBAandStartOff.Pegamrklunch();
+	//	pegaMarktCalcNBAandStartOff.Pegamrklunch();
 		pegaMarktCalcNBAandStartOff.pegamarkting();
 		testutil.WindowHandling();
 		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage1();

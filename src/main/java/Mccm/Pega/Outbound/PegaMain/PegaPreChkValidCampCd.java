@@ -83,9 +83,9 @@ public class PegaPreChkValidCampCd extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		pegamrkting1.click();
-		Thread.sleep(6000);
+		Thread.sleep(8000);
+		pegamrkting1.click( );
+		Thread.sleep(8000);
 	}
 
 

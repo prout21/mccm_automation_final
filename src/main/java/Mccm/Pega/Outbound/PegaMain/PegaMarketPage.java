@@ -194,12 +194,12 @@ public class PegaMarketPage extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-		Actions  action = new Actions(driver);
-		action.moveToElement(Pegalunch).click().build().perform();
+//		Actions  action = new Actions(driver);
+//		action.moveToElement(Pegalunch).click().build().perform();
 		//  Thread.sleep(1000);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		pegamrkting1.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 	}
 
 
@@ -477,7 +477,7 @@ public class PegaMarketPage extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(ConfirmCampgn));
 		ConfirmCampgn.click( );
-
+		Thread.sleep(6000);
 	}
 	public void RefreshCampgn() throws InterruptedException
 	{

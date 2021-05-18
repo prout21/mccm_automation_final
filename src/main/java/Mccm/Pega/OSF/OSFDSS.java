@@ -52,6 +52,27 @@ public class OSFDSS extends TestBase {
 	@FindBy(xpath="/html[1]/body[1]/div[3]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[1]/th[2]/div[1]/span[1]/a[1]")
 	WebElement FilterCalc;
 
+	@FindBy(xpath="//input[@type='text'][@name='$PpyDisplayHarness$ppySearchText']")
+	WebElement D_mccmsettings;
+
+	@FindBy(xpath="//*[@class='pi pi-search-2']")
+	WebElement SerchClick;
+
+	@FindBy(xpath="//a[text()='D_MCCMSettings']")
+	WebElement Clickdmccmsetting;
+
+
+	@FindBy(xpath="//*[@class='pi pi-caret-down margin-l-1x']")
+	WebElement ActionClkDmccmsetting;
+
+	@FindBy(xpath="(//text()[.='Run']/ancestor::a[1])[2]")
+	WebElement RunActionClk;
+
+	@FindBy(xpath="//input[@type='checkbox'][@name='$PD_pzRunRecord$ppxRunWindow$gTABTHREAD1$ppxRunParameters$ppyFlushAll']")
+	WebElement FlushClk;
+
+	@FindBy(xpath="(//div[@class='pzbtn-mid'])[3]")
+	WebElement RunFlushClk;
 
 
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
@@ -77,6 +98,8 @@ public class OSFDSS extends TestBase {
 	String OSFChannelValue = obj.getCellValue("PegaTestDataOSF", 1, 9);
 
 	String OSFContainerNameValue = obj.getCellValue("PegaTestDataOSF", 1, 10);
+	
+	String D_mccmsettingsValue = obj.getCellValue("PegaTestDataOSF", 1, 11);
 
 	String OSFSClassificationDefaultValue = obj.getCellValue("PegaTestDataOSF", 1, 12);
 
@@ -90,17 +113,18 @@ public class OSFDSS extends TestBase {
 	}
 
 	public void Recordclk() throws InterruptedException
-	{
-		wait.until(ExpectedConditions.visibilityOf(Recordclk));
+	{ 
+		Thread.sleep(8000);
 		Recordclk.click( );
+		Thread.sleep(8000);
+		}
 
-	}
 	public void SysAdmin() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		SysAdmin.click( );
-
-	}
+		Thread.sleep(8000);
+	}  
 	public void javaexictor4() throws InterruptedException
 	{
 		TestUtil obj=new TestUtil();
@@ -134,8 +158,17 @@ public class OSFDSS extends TestBase {
 	public void ClikMCCM() throws InterruptedException
 	{
 		//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-		Thread.sleep(1000);
-		ClikMCCM.click( );
+		 Thread.sleep(2000);
+			//	ClikMCCM.click( );
+				try {
+				     
+					ClikMCCM.click();
+				}
+				catch(org.openqa.selenium.StaleElementReferenceException ex)
+				{
+				    
+					ClikMCCM.click();
+				}
 
 	}
 	public void CalNBAStartOff() throws InterruptedException
@@ -185,8 +218,17 @@ public class OSFDSS extends TestBase {
 	public void ClikMCCMOSFDirection() throws InterruptedException
 	{
 		//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-		Thread.sleep(1000);
-		ClikMCCM.click( );
+		 Thread.sleep(2000);
+			//	ClikMCCM.click( );
+				try {
+				     
+					ClikMCCM.click();
+				}
+				catch(org.openqa.selenium.StaleElementReferenceException ex)
+				{
+				    
+					ClikMCCM.click();
+				}
 
 	}
 	public void OSFDirection() throws InterruptedException
@@ -235,9 +277,19 @@ public class OSFDSS extends TestBase {
 	}
 	public void ClikMCCMOSFChannel() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-		Thread.sleep(1000);
-		ClikMCCM.click( );
+		//wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
+		  Thread.sleep(2000);
+		//	ClikMCCM.click( );
+			try {
+			     
+				ClikMCCM.click();
+			}
+			catch(org.openqa.selenium.StaleElementReferenceException ex)
+			{
+			    
+				ClikMCCM.click();
+			}
+			
 
 	}
 	public void OSFChannel() throws InterruptedException
@@ -286,10 +338,19 @@ public class OSFDSS extends TestBase {
 	}
 	public void ClikMCCMOSFContainerName() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-		Thread.sleep(1000);
-		ClikMCCM.click( );
-
+		//wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
+		  Thread.sleep(2000);
+		//	ClikMCCM.click( );
+			try {
+			     
+				ClikMCCM.click();
+			}
+			catch(org.openqa.selenium.StaleElementReferenceException ex)
+			{
+			    
+				ClikMCCM.click();
+			}
+			
 	}
 	public void OSFContainerName() throws InterruptedException
 	{
@@ -338,8 +399,18 @@ public class OSFDSS extends TestBase {
 		public void ClikMCCMOSFSClassificationDefaultValue() throws InterruptedException
 		{
 			//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-			Thread.sleep(1000);
-			ClikMCCM.click( );
+		  Thread.sleep(2000);
+		//	ClikMCCM.click( );
+			try {
+			     
+				ClikMCCM.click();
+			}
+			catch(org.openqa.selenium.StaleElementReferenceException ex)
+			{
+			    
+				ClikMCCM.click();
+			}
+			
 
 		}
 		public void OSFSClassificationDefaultValue() throws InterruptedException
@@ -388,9 +459,19 @@ public class OSFDSS extends TestBase {
 				}
 				public void ClikMCCMOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
-					//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-					Thread.sleep(1000);
-					ClikMCCM.click( );
+					//wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
+					  Thread.sleep(2000);
+					//	ClikMCCM.click( );
+						try {
+						     
+							ClikMCCM.click();
+						}
+						catch(org.openqa.selenium.StaleElementReferenceException ex)
+						{
+						    
+							ClikMCCM.click();
+						}
+						
 
 				}
 				public void OSFMaxNoOfAcntsForOSFGetNBAPerRqstValue() throws InterruptedException
@@ -440,9 +521,20 @@ public class OSFDSS extends TestBase {
 				}
 				public void ClikMCCMOSFGetNBATimeout() throws InterruptedException
 				{
-					//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-					Thread.sleep(1000);
-					ClikMCCM.click( );
+					
+ 				//wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
+					  Thread.sleep(2000);
+					//	ClikMCCM.click( );
+						try {
+						     
+							ClikMCCM.click();
+						}
+						catch(org.openqa.selenium.StaleElementReferenceException ex)
+						{
+						    
+							ClikMCCM.click();
+						}
+						
 
 				}
 				public void OSFGetNBATimeout() throws InterruptedException
@@ -469,6 +561,64 @@ public class OSFDSS extends TestBase {
 				//OSFGetNBATimeout
 
 
+				//D_mccmsettings
+				public void D_mccmsettings() throws InterruptedException
+				{
+					wait.until(ExpectedConditions.visibilityOf(D_mccmsettings));
+					D_mccmsettings.sendKeys(D_mccmsettingsValue);
+
+				}
+
+				public void SerchClick() throws InterruptedException
+				{
+					wait.until(ExpectedConditions.visibilityOf(SerchClick));
+					SerchClick.click( );
+
+				}
+				public void Clickdmccmsetting() throws InterruptedException
+				{
+					wait.until(ExpectedConditions.visibilityOf(Clickdmccmsetting));
+					Clickdmccmsetting.click( );
+
+				}
+				public void ActionClkDmccmsetting() throws InterruptedException
+				{
+					wait.until(ExpectedConditions.visibilityOf(ActionClkDmccmsetting));
+					ActionClkDmccmsetting.click( );
+
+				}
+
+				public void RunActionClk() throws InterruptedException
+				{
+					TestUtil obj=new TestUtil();
+					obj.ActionMouseMov(RunActionClk);
+				}	
+
+				public void FulshRunClick() throws InterruptedException
+				{
+					String mainWindow=driver.getWindowHandle();
+					Set<String> set =driver.getWindowHandles();
+					Iterator<String> itr= set.iterator();
+					while(itr.hasNext())
+					{
+						String childWindow=itr.next();
+						if(!mainWindow.equals(childWindow)){
+							driver.switchTo().window(childWindow);
+
+							wait.until(ExpectedConditions.visibilityOf(FlushClk));
+							FlushClk.click();
+
+							wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
+							RunFlushClk.click( );
+
+
+							driver.close();
+						}
+					}
+					driver.switchTo().window(mainWindow);
+
+				}
+				//D_mccmsettings
 
 
 

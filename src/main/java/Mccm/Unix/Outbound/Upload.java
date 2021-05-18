@@ -22,7 +22,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	public class Upload extends App_Unix_Outbound_Test
  {
 	//public class Upload extends App
-//	public static String PROJECT_FOLDER_PATH1;
+ 	public static String PROJECT_FOLDER_PATH1;
 //	public static String TEST_ENV1;
 //	public static String user;
 //	public static String host;	
@@ -65,13 +65,13 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	      // File f = new File("ADDRESSBAN_20200515010201.csv");
 	      //  channelSftp.put(new FileInputStream(f), f.getName());
 	      //  Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs///");
-	     //   Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
+	      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
 	        
-	        String Upload= general_ReadProperty("Upload");
+	         String Upload= general_ReadProperty("Upload");
 	        
-	        Vector fileList = channelSftp.ls(Upload);
-	        
-	        
+	         Vector fileList = channelSftp.ls(Upload);
+	         
+	       
 	        
 	        
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,6 +131,7 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	                	 //channelSftp.put(filesList2[j].getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName());
 	                	// channelSftp.put(f2.getPath(), "/opt/SP/data/mccm02/logs/temp/cassandra/"+f2.getName(),new progressMonitor());
 	                //	 channelSftp.put(f2.getPath(), "/opt/SP/mccm/SYSN/mccm_dataload/import/input/"+f2.getName(),new progressMonitor());
+	                	 
 	                	 channelSftp.put(f2.getPath(), Upload+f2.getName(),new progressMonitor());
 	                	 
 	                	 System.out.println("The file [" + k +"]:" + name[i] + " UPLOAD done to the  ORACLE input folder");

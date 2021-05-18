@@ -14,8 +14,8 @@
 	</test> <!-- Test -->
 	<test name="Pega OSF GETNBA API Call Regression Test">
 		<classes>
-			<class
-				name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBAMultiAccTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest" />
+			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="Pega OSF Process Feedback API Call Regression Test">

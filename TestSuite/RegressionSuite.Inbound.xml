@@ -16,7 +16,7 @@
   </test> <!-- Test -->
   
 
-  <test name="Pega Inbound Intraction Recent History Regression Test">
+  <test name="Pega Inbound Interaction Recent History Regression Test">
     <classes>
       <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest"/>  
     </classes>

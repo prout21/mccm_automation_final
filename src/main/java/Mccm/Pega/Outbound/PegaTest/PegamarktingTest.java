@@ -38,13 +38,13 @@ public class PegamarktingTest extends TestBase {
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarketpage =new PegaMarketPage();
-		//pegamarketpage=homepage.Pegamrklunch();
+		 pegamarketpage=homepage.Pegamrklunch();
 	}
 
 
 	@Test (priority=1)
 	public void VerifyOutboundNBACampaignRunSuccessfully() throws InterruptedException, AWTException { 
-		//homepage.Pegamrklunch();
+		 homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
  		pegamarketpage.ExpandPegMrkPage1();
