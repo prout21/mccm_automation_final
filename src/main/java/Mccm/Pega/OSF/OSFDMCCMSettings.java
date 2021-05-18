@@ -105,15 +105,18 @@ public class OSFDMCCMSettings extends TestBase {
 
 	public void Recordclk() throws InterruptedException
 	{ 
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		Recordclk.click( );
-		Thread.sleep(6000); }
+		Thread.sleep(8000);
+		System.out.println("test 51");
+		}
 
 	public void SysAdmin() throws InterruptedException
 	{
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		SysAdmin.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
+		System.out.println("test 50");
 	}  
 
 

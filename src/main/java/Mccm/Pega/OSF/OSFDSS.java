@@ -74,8 +74,12 @@ public class OSFDSS extends TestBase {
 	@FindBy(xpath="(//div[@class='pzbtn-mid'])[3]")
 	WebElement RunFlushClk;
 
-
+	
+	
+	
 	Excel_Reader obj= new Excel_Reader(ExcelFilePath+"/UseCaseConfigFile/TestData/PegaTestData.xlsx");
+	
+	
 
 	String OSFSClassificationDefault = obj.getCellValue("PegaTestDataOSF", 1, 0);
 

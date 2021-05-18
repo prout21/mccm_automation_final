@@ -21,7 +21,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	LoginPage loginpage;
 	HomePage  homepage;
 	//	HomePageDetails HomePageDetails1;
-//	OSFDMCCMSettings OSFDMCCMSettings1;
+	OSFDMCCMSettings OSFDMCCMSettings1;
 	TestUtil testutil;
 	OSFDSS osfDSS;
 
@@ -39,20 +39,22 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS =new OSFDSS();
 
 		//HomePageDetails1 =new HomePageDetails();
-	//	OSFDMCCMSettings1 = new OSFDMCCMSettings();
+		OSFDMCCMSettings1 = new OSFDMCCMSettings();
 
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-
+		System.out.println("test 53");
 		//	HomePageDetails1=homepage.ClickHomepage();
-		//	OSFDMCCMSettings1=homepage.ClickHomepageOSF();
-
+		OSFDMCCMSettings1=homepage.ClickHomepageOSF();
+		System.out.println("test 54");
 	}
 	@Test (priority=1)
 	public void VerifyOSFDynamicSystemSettingRunSuccessfully() throws InterruptedException { 
-		osfDSS.Recordclk();
-		osfDSS.SysAdmin();
-		osfDSS.javaexictor4();
-		osfDSS.DynamicSystemSettins();
+		System.out.println("test 54");
+		OSFDMCCMSettings1.Recordclk();
+		OSFDMCCMSettings1.SysAdmin();
+		OSFDMCCMSettings1.javaexictor4();
+		OSFDMCCMSettings1.DynamicSystemSettins();
+		System.out.println("test 52");
 
 		//Internal_REST_URL_OSF
 		testutil.SwitcToFrame(0);
@@ -167,8 +169,8 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	@AfterMethod
 
 	public void teardown() {
-		
-     // driver.quit();
+
+		// driver.quit();
 
 
 		System.out.println("OSF Dynamic System Setting Test Case Executed");  
