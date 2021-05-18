@@ -121,7 +121,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(8000);
 		Recordclk.click( );
 		Thread.sleep(8000);
-		System.out.println("test 1");
+		 
 		}
 
 	public void SysAdmin() throws InterruptedException
@@ -129,13 +129,13 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(8000);
 		SysAdmin.click( );
 		Thread.sleep(8000);
-		System.out.println("test 2");
+		 
 	}  
 	public void javaexictor4() throws InterruptedException
 	{
 		TestUtil obj=new TestUtil();
 		obj.JavascriptExecutor(webelement4);
-		System.out.println("test 3");
+		 
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
@@ -143,7 +143,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		webelement4.click( );
 		Thread.sleep(6000);;
-		System.out.println("test 4");
+		 
 	}
 	//Internal_REST_URL_OSF
 	public void FilterosfDSS() throws InterruptedException
@@ -152,7 +152,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(8000);
 		FilterCalcNBA.click( );
 		Thread.sleep(8000);
-		System.out.println("test 5");
+		 
 	}
 	public void CalNBAStartOffSrch() throws InterruptedException
 	{
@@ -160,7 +160,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		CalNBAStartOffSrch.sendKeys(Internal_REST_URL_OSF);
 		Thread.sleep(6000);
-		System.out.println("test 6");
+		 
 	}
 	public void ApplaycALCNBAfilter() throws InterruptedException
 	{
@@ -168,7 +168,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
 		Thread.sleep(6000);
-		System.out.println("test 7");
+		 
 	}
 	public void ClikMCCM() throws InterruptedException
 	{
@@ -184,7 +184,7 @@ public class OSFDSS extends TestBase {
 				    
 					ClikMCCM.click();
 				}
-				System.out.println("test 8");
+				 
 	}
 	public void CalNBAStartOff() throws InterruptedException
 	{
@@ -194,7 +194,7 @@ public class OSFDSS extends TestBase {
 
 		CalNBAStartOff.sendKeys(Internal_REST_URL_OSFValue);
 		Thread.sleep(6000);
-		System.out.println("test 9");
+		 
 	}
 
 	public void SaveCalNBAStartOff() throws InterruptedException
@@ -203,7 +203,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Save.click( );
 		Thread.sleep(6000);
-		System.out.println("test 10");
+		 
 	}
 	public void CloseCalNBAStartOff() throws InterruptedException
 	{
@@ -211,7 +211,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Close.click( );
 		Thread.sleep(6000);
-		System.out.println("test 11");
+		 
 	}
 	//Internal_REST_URL_OSF
 
@@ -222,7 +222,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		FilterCalc.click( );
 		Thread.sleep(6000);
-		System.out.println("test 12");
+		 
 	}
 	public void OSFDirectionSrch() throws InterruptedException
 	{
@@ -231,7 +231,7 @@ public class OSFDSS extends TestBase {
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFDirection);
 		Thread.sleep(6000);
-		System.out.println("test 13");
+		 
 	}
 	public void ApplayOSFDirection() throws InterruptedException
 	{
@@ -239,7 +239,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
 		Thread.sleep(6000);
-		System.out.println("test 14");
+		 
 	}
 	public void ClikMCCMOSFDirection() throws InterruptedException
 	{
@@ -255,7 +255,7 @@ public class OSFDSS extends TestBase {
 				    
 					ClikMCCM.click();
 				}
-				System.out.println("test 15");
+			 
 
 	}
 	public void OSFDirection() throws InterruptedException
@@ -266,7 +266,7 @@ public class OSFDSS extends TestBase {
 
 		CalNBAStartOff.sendKeys(OSFDirectionValue);
 		Thread.sleep(6000);
-		System.out.println("test 16");
+		 
 	}
 
 	public void SaveOSFDirection() throws InterruptedException
@@ -275,7 +275,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Save.click( );
 		Thread.sleep(6000);
-		System.out.println("test 17");
+		 
 	}
 	public void CloseOSFDirection() throws InterruptedException
 	{
@@ -283,7 +283,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Close.click( );
 		Thread.sleep(6000);
-		System.out.println("test 18");
+		 
 	}
 	//OSFDirection
 
@@ -294,7 +294,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		FilterCalc.click( );
 		Thread.sleep(6000);
-		System.out.println("test 19");
+		 
 	}
 	public void OSFChannelSrch() throws InterruptedException
 	{
@@ -303,7 +303,7 @@ public class OSFDSS extends TestBase {
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFChannel);
 		Thread.sleep(6000);
-		System.out.println("test 20");
+		 
 	}
 	public void ApplayOSFChannel() throws InterruptedException
 	{
@@ -311,7 +311,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
 		Thread.sleep(6000);
-		System.out.println("test 21");
+		 
 	}
 	public void ClikMCCMOSFChannel() throws InterruptedException
 	{
@@ -328,7 +328,7 @@ public class OSFDSS extends TestBase {
 				ClikMCCM.click();
 			}
 			
-			System.out.println("test 22");
+			 
 	}
 	public void OSFChannel() throws InterruptedException
 	{
@@ -338,7 +338,7 @@ public class OSFDSS extends TestBase {
 
 		CalNBAStartOff.sendKeys(OSFChannelValue);
 		Thread.sleep(6000);
-		System.out.println("test 23");
+		 
 	}
 
 	public void SaveOSFChannel() throws InterruptedException
@@ -347,7 +347,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Save.click( );
 		Thread.sleep(6000);
-		System.out.println("test 24");
+		 
 	}
 	public void CloseOSFChannel() throws InterruptedException
 	{
@@ -355,7 +355,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Close.click( );
 		Thread.sleep(6000);
-		System.out.println("test 25");
+		 
 	}
 	//OSFChannel
 
@@ -366,7 +366,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		FilterCalc.click( );
 		Thread.sleep(6000);
-		System.out.println("test 26");
+		 
 	}
 	public void OSFContainerNameSrch() throws InterruptedException
 	{
@@ -375,7 +375,7 @@ public class OSFDSS extends TestBase {
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFContainerName);
 		Thread.sleep(6000);
-		System.out.println("test 27");
+		 
 	}
 	public void ApplayOSFContainerName() throws InterruptedException
 	{
@@ -383,7 +383,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
 		Thread.sleep(6000);
-		System.out.println("test 28");
+		 
 	}
 	public void ClikMCCMOSFContainerName() throws InterruptedException
 	{
@@ -399,7 +399,7 @@ public class OSFDSS extends TestBase {
 			    
 				ClikMCCM.click();
 			}
-			System.out.println("test 29");
+			 
 	}
 	public void OSFContainerName() throws InterruptedException
 	{
@@ -409,7 +409,7 @@ public class OSFDSS extends TestBase {
 
 		CalNBAStartOff.sendKeys(OSFContainerNameValue);
 		Thread.sleep(6000);
-		System.out.println("test 30");
+		 
 	}
 
 	public void SaveOSFContainerName() throws InterruptedException
@@ -418,7 +418,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Save.click( );
 		Thread.sleep(6000);
-		System.out.println("test 31");
+		 
 	}
 	public void CloseOSFContainerName() throws InterruptedException
 	{
@@ -426,7 +426,7 @@ public class OSFDSS extends TestBase {
 		Thread.sleep(6000);
 		Close.click( );
 		Thread.sleep(6000);
-		System.out.println("test 32");
+		 
 	}
 	//OSFContainerName
 	
@@ -437,7 +437,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
-			System.out.println("test 33");
+			 
 		}
 		public void OSFSClassificationDefaultValueSrch() throws InterruptedException
 		{
@@ -447,7 +447,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.sendKeys(OSFSClassificationDefault);
 			Thread.sleep(6000);
-			System.out.println("test 34");
+			 
 		}
 		public void ApplayOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -455,7 +455,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-			System.out.println("test 35");
+			 
 		}
 		public void ClikMCCMOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -472,7 +472,7 @@ public class OSFDSS extends TestBase {
 				ClikMCCM.click();
 			}
 			
-			System.out.println("test 36");
+			 
 		}
 		public void OSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -482,7 +482,7 @@ public class OSFDSS extends TestBase {
 
 			CalNBAStartOff.sendKeys(OSFSClassificationDefaultValue);
 			Thread.sleep(6000);
-			System.out.println("test 37");
+			 
 		}
 
 		public void SaveOSFSClassificationDefaultValue() throws InterruptedException
@@ -491,7 +491,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
-			System.out.println("test 38");
+			 
 		}
 		public void CloseOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -499,7 +499,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-			System.out.println("test 39");
+			 
 		}
 		//OSFSClassificationDefaultValue
 		
@@ -518,7 +518,7 @@ public class OSFDSS extends TestBase {
 					CalNBAStartOffSrch.clear();
 					CalNBAStartOffSrch.sendKeys(MaxNoOfAcntsForOSFGetNBAPerRqst);
 					Thread.sleep(6000);
-					System.out.println("test 40");
+					 
 				}
 				public void ApplayOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
@@ -542,7 +542,7 @@ public class OSFDSS extends TestBase {
 							ClikMCCM.click();
 						}
 						
-						System.out.println("test 41");
+						 
 				}
 				public void OSFMaxNoOfAcntsForOSFGetNBAPerRqstValue() throws InterruptedException
 				{
@@ -567,7 +567,7 @@ public class OSFDSS extends TestBase {
 					Thread.sleep(6000);
 					Close.click( );
 					Thread.sleep(6000);
-					System.out.println("test 42");
+					 
 				}
 				
 				// MaxNoOfAcntsForOSFGetNBAPerRqst
@@ -579,7 +579,7 @@ public class OSFDSS extends TestBase {
 					Thread.sleep(6000);
 					FilterCalc.click( );
 					Thread.sleep(6000);
-					System.out.println("test 43");
+					 
 				}
 				public void OSFGetNBATimeoutSrch() throws InterruptedException
 				{
@@ -596,7 +596,7 @@ public class OSFDSS extends TestBase {
 					Thread.sleep(6000);
 					ApplayNBAfilter.click( );
 					Thread.sleep(6000);
-					System.out.println("test 44");
+					 
 				}
 				public void ClikMCCMOSFGetNBATimeout() throws InterruptedException
 				{
@@ -639,7 +639,7 @@ public class OSFDSS extends TestBase {
 					Thread.sleep(6000);
 					Close.click( );
 					Thread.sleep(6000);
-					System.out.println("test 45");
+					 
 				}
 				//OSFGetNBATimeout
 
@@ -659,7 +659,7 @@ public class OSFDSS extends TestBase {
 					Thread.sleep(6000);
 					SerchClick.click( );
 					Thread.sleep(6000);
-					System.out.println("test 45");
+					 
 				}
 				public void Clickdmccmsetting() throws InterruptedException
 				{

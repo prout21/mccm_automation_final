@@ -42,19 +42,19 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		OSFDMCCMSettings1 = new OSFDMCCMSettings();
 
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-		System.out.println("test 53");
+		 
 		//	HomePageDetails1=homepage.ClickHomepage();
 		OSFDMCCMSettings1=homepage.ClickHomepageOSF();
-		System.out.println("test 54");
+		 
 	}
 	@Test (priority=1)
 	public void VerifyOSFDynamicSystemSettingRunSuccessfully() throws InterruptedException { 
-		System.out.println("test 54");
+		System.out.println("OSF DSS Script started");
 		OSFDMCCMSettings1.Recordclk();
 		OSFDMCCMSettings1.SysAdmin();
 		OSFDMCCMSettings1.javaexictor4();
 		OSFDMCCMSettings1.DynamicSystemSettins();
-		System.out.println("test 52");
+		 
 
 		//Internal_REST_URL_OSF
 		testutil.SwitcToFrame(0);
@@ -162,7 +162,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.RunActionClk();
 		osfDSS.FulshRunClick();
 		//D_mccmsettings
-
+		System.out.println("OSF DSS Ended");
 	}
 
 

@@ -108,7 +108,7 @@ public class OSFDMCCMSettings extends TestBase {
 		Thread.sleep(8000);
 		Recordclk.click( );
 		Thread.sleep(8000);
-		System.out.println("test 51");
+		 
 		}
 
 	public void SysAdmin() throws InterruptedException
@@ -116,7 +116,7 @@ public class OSFDMCCMSettings extends TestBase {
 		Thread.sleep(8000);
 		SysAdmin.click( );
 		Thread.sleep(8000);
-		System.out.println("test 50");
+	 
 	}  
 
 

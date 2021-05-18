@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="670767" started-at="2021-05-18T17:43:52 IST" finished-at="2021-05-18T17:55:02 IST">
+  <suite name="Default suite" duration-ms="675251" started-at="2021-05-18T19:55:03 IST" finished-at="2021-05-18T20:06:18 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="670767" started-at="2021-05-18T17:43:52 IST" finished-at="2021-05-18T17:55:02 IST">
+    <test name="Default test" duration-ms="675251" started-at="2021-05-18T19:55:03 IST" finished-at="2021-05-18T20:06:18 IST">
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="setup" is-config="true" duration-ms="13722" started-at="2021-05-18T17:43:52 IST" finished-at="2021-05-18T17:44:05 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="setup" is-config="true" duration-ms="24546" started-at="2021-05-18T19:55:03 IST" finished-at="2021-05-18T19:55:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFDynamicSystemSettingRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="VerifyOSFDynamicSystemSettingRunSuccessfully" duration-ms="656970" started-at="2021-05-18T17:44:05 IST" finished-at="2021-05-18T17:55:02 IST">
+        <test-method status="PASS" signature="VerifyOSFDynamicSystemSettingRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="VerifyOSFDynamicSystemSettingRunSuccessfully" duration-ms="650672" started-at="2021-05-18T19:55:27 IST" finished-at="2021-05-18T20:06:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFDynamicSystemSettingRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="teardown" is-config="true" duration-ms="1" started-at="2021-05-18T17:55:02 IST" finished-at="2021-05-18T17:55:02 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@43738a82]" name="teardown" is-config="true" duration-ms="1" started-at="2021-05-18T20:06:18 IST" finished-at="2021-05-18T20:06:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
