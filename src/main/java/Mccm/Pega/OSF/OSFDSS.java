@@ -132,33 +132,37 @@ public class OSFDSS extends TestBase {
 	}	
 	public void DynamicSystemSettins() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(webelement4));
+		//wait.until(ExpectedConditions.visibilityOf(webelement4));
+		Thread.sleep(6000);
 		webelement4.click( );
-
+		Thread.sleep(6000);;
 	}
 	//Internal_REST_URL_OSF
 	public void FilterosfDSS() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(FilterCalcNBA));
+		//wait.until(ExpectedConditions.visibilityOf(FilterCalcNBA));
+		Thread.sleep(8000);
 		FilterCalcNBA.click( );
-
+		Thread.sleep(8000);
 	}
 	public void CalNBAStartOffSrch() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		Thread.sleep(6000);
 		CalNBAStartOffSrch.sendKeys(Internal_REST_URL_OSF);
-
+		Thread.sleep(6000);
 	}
 	public void ApplaycALCNBAfilter() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
-
+		Thread.sleep(6000);
 	}
 	public void ClikMCCM() throws InterruptedException
 	{
 		//	wait.until(ExpectedConditions.elementToBeClickable(ClikMCCM));
-		 Thread.sleep(2000);
+		Thread.sleep(6000);
 			//	ClikMCCM.click( );
 				try {
 				     
@@ -173,47 +177,52 @@ public class OSFDSS extends TestBase {
 	}
 	public void CalNBAStartOff() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+	//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		Thread.sleep(6000);
 		CalNBAStartOff.clear();
 
 		CalNBAStartOff.sendKeys(Internal_REST_URL_OSFValue);
-
+		Thread.sleep(6000);
 	}
 
 	public void SaveCalNBAStartOff() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Save));
+		//wait.until(ExpectedConditions.visibilityOf(Save));
+		Thread.sleep(6000);
 		Save.click( );
-
+		Thread.sleep(6000);
 	}
 	public void CloseCalNBAStartOff() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Close));
+	//	wait.until(ExpectedConditions.visibilityOf(Close));
+		Thread.sleep(6000);
 		Close.click( );
-
+		Thread.sleep(6000);
 	}
 	//Internal_REST_URL_OSF
 
 	//OSFDirection
 	public void FilterOSFDirection() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-		//	Thread.sleep(1000);
+		//wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+		Thread.sleep(6000);
 		FilterCalc.click( );
-
+		Thread.sleep(6000);
 	}
 	public void OSFDirectionSrch() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		Thread.sleep(6000);
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFDirection);
-
+		Thread.sleep(6000);
 	}
 	public void ApplayOSFDirection() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
-
+		Thread.sleep(6000);
 	}
 	public void ClikMCCMOSFDirection() throws InterruptedException
 	{
@@ -233,47 +242,52 @@ public class OSFDSS extends TestBase {
 	}
 	public void OSFDirection() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		Thread.sleep(6000);
 		CalNBAStartOff.clear();
 
 		CalNBAStartOff.sendKeys(OSFDirectionValue);
-
+		Thread.sleep(6000);
 	}
 
 	public void SaveOSFDirection() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Save));
+		//wait.until(ExpectedConditions.visibilityOf(Save));
+		Thread.sleep(6000);
 		Save.click( );
-
+		Thread.sleep(6000);
 	}
 	public void CloseOSFDirection() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Close));
+		//wait.until(ExpectedConditions.visibilityOf(Close));
+		Thread.sleep(6000);
 		Close.click( );
-
+		Thread.sleep(6000);
 	}
 	//OSFDirection
 
 	//OSFChannel
 	public void FilterOSFChannel() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-		//	Thread.sleep(1000);
+	//	wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+		Thread.sleep(6000);
 		FilterCalc.click( );
-
+		Thread.sleep(6000);
 	}
 	public void OSFChannelSrch() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+	//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		Thread.sleep(6000);
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFChannel);
-
+		Thread.sleep(6000);
 	}
 	public void ApplayOSFChannel() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
-
+		Thread.sleep(6000);
 	}
 	public void ClikMCCMOSFChannel() throws InterruptedException
 	{
@@ -294,47 +308,52 @@ public class OSFDSS extends TestBase {
 	}
 	public void OSFChannel() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+	//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		Thread.sleep(6000);
 		CalNBAStartOff.clear();
 
 		CalNBAStartOff.sendKeys(OSFChannelValue);
-
+		Thread.sleep(6000);
 	}
 
 	public void SaveOSFChannel() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Save));
+		//wait.until(ExpectedConditions.visibilityOf(Save));
+		Thread.sleep(6000);
 		Save.click( );
-
+		Thread.sleep(6000);
 	}
 	public void CloseOSFChannel() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Close));
+		//wait.until(ExpectedConditions.visibilityOf(Close));
+		Thread.sleep(6000);
 		Close.click( );
-
+		Thread.sleep(6000);
 	}
 	//OSFChannel
 
 	//OSFContainerName
 	public void FilterOSFContainerName() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-		//	Thread.sleep(1000);
+	//	wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+		Thread.sleep(6000);
 		FilterCalc.click( );
-
+		Thread.sleep(6000);
 	}
 	public void OSFContainerNameSrch() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		Thread.sleep(6000);
 		CalNBAStartOffSrch.clear();
 		CalNBAStartOffSrch.sendKeys(OSFContainerName);
-
+		Thread.sleep(6000);
 	}
 	public void ApplayOSFContainerName() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		Thread.sleep(6000);
 		ApplayNBAfilter.click( );
-
+		Thread.sleep(6000);
 	}
 	public void ClikMCCMOSFContainerName() throws InterruptedException
 	{
@@ -354,47 +373,53 @@ public class OSFDSS extends TestBase {
 	}
 	public void OSFContainerName() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+	//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		Thread.sleep(6000);
 		CalNBAStartOff.clear();
 
 		CalNBAStartOff.sendKeys(OSFContainerNameValue);
-
+		Thread.sleep(6000);
 	}
 
 	public void SaveOSFContainerName() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Save));
+	//	wait.until(ExpectedConditions.visibilityOf(Save));
+		Thread.sleep(6000);
 		Save.click( );
-
+		Thread.sleep(6000);
 	}
 	public void CloseOSFContainerName() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Close));
+		//wait.until(ExpectedConditions.visibilityOf(Close));
+		Thread.sleep(6000);
 		Close.click( );
-
+		Thread.sleep(6000);
 	}
 	//OSFContainerName
 	
 	//OSFSClassificationDefaultValue
 		public void FilterOSFSClassificationDefaultValue() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-			//	Thread.sleep(1000);
+		//	wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+			Thread.sleep(6000);
 			FilterCalc.click( );
-
+			Thread.sleep(6000);
 		}
 		public void OSFSClassificationDefaultValueSrch() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
+			Thread.sleep(6000);
 			CalNBAStartOffSrch.sendKeys(OSFSClassificationDefault);
-
+			Thread.sleep(6000);
 		}
 		public void ApplayOSFSClassificationDefaultValue() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+		//	wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
-
+			Thread.sleep(6000);
 		}
 		public void ClikMCCMOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -415,47 +440,52 @@ public class OSFDSS extends TestBase {
 		}
 		public void OSFSClassificationDefaultValue() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+			Thread.sleep(6000);
 			CalNBAStartOff.clear();
 
 			CalNBAStartOff.sendKeys(OSFSClassificationDefaultValue);
-
+			Thread.sleep(6000);
 		}
 
 		public void SaveOSFSClassificationDefaultValue() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(Save));
+			//wait.until(ExpectedConditions.visibilityOf(Save));
+			Thread.sleep(6000);
 			Save.click( );
-
+			Thread.sleep(6000);
 		}
 		public void CloseOSFSClassificationDefaultValue() throws InterruptedException
 		{
-			wait.until(ExpectedConditions.visibilityOf(Close));
+			//wait.until(ExpectedConditions.visibilityOf(Close));
+			Thread.sleep(6000);
 			Close.click( );
-
+			Thread.sleep(6000);
 		}
 		//OSFSClassificationDefaultValue
 		
 		// MaxNoOfAcntsForOSFGetNBAPerRqst
 				public void FilterOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-					//	Thread.sleep(1000);
+					//wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+					Thread.sleep(6000);
 					FilterCalc.click( );
-
+					Thread.sleep(6000);
 				}
 				public void OSFMaxNoOfAcntsForOSFGetNBAPerRqstSrch() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+					//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+					Thread.sleep(6000);
 					CalNBAStartOffSrch.clear();
 					CalNBAStartOffSrch.sendKeys(MaxNoOfAcntsForOSFGetNBAPerRqst);
-
+					Thread.sleep(6000);
 				}
 				public void ApplayOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+				//	wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+					Thread.sleep(6000);
 					ApplayNBAfilter.click( );
-
+					Thread.sleep(6000);
 				}
 				public void ClikMCCMOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
@@ -476,24 +506,27 @@ public class OSFDSS extends TestBase {
 				}
 				public void OSFMaxNoOfAcntsForOSFGetNBAPerRqstValue() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+					//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+					Thread.sleep(6000);
 					CalNBAStartOff.clear();
 
 					CalNBAStartOff.sendKeys(MaxNoOfAcntsForOSFGetNBAPerRqstValue);
-
+					Thread.sleep(6000);
 				}
 
 				public void SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(Save));
+				//	wait.until(ExpectedConditions.visibilityOf(Save));
+					Thread.sleep(6000);
 					Save.click( );
-
+					Thread.sleep(6000);
 				}
 				public void CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(Close));
+				//	wait.until(ExpectedConditions.visibilityOf(Close));
+					Thread.sleep(6000);
 					Close.click( );
-
+					Thread.sleep(6000);
 				}
 				
 				// MaxNoOfAcntsForOSFGetNBAPerRqst
@@ -501,23 +534,26 @@ public class OSFDSS extends TestBase {
 				//OSFGetNBATimeout
 				public void FilterOSFGetNBATimeout() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(FilterCalc));
-					//	Thread.sleep(1000);
+				//	wait.until(ExpectedConditions.visibilityOf(FilterCalc));
+					Thread.sleep(6000);
 					FilterCalc.click( );
-
+					Thread.sleep(6000);
 				}
 				public void OSFGetNBATimeoutSrch() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+				//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
+					
 					CalNBAStartOffSrch.clear();
+					Thread.sleep(6000);
 					CalNBAStartOffSrch.sendKeys(OSFGetNBATimeout);
-
+					Thread.sleep(6000);
 				}
 				public void ApplayOSFGetNBATimeout() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+					//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
+					Thread.sleep(6000);
 					ApplayNBAfilter.click( );
-
+					Thread.sleep(6000);
 				}
 				public void ClikMCCMOSFGetNBATimeout() throws InterruptedException
 				{
@@ -539,24 +575,27 @@ public class OSFDSS extends TestBase {
 				}
 				public void OSFGetNBATimeout() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+					//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
+					Thread.sleep(6000);
 					CalNBAStartOff.clear();
-
+					Thread.sleep(6000);
 					CalNBAStartOff.sendKeys(OSFGetNBATimeoutValue);
-
+					Thread.sleep(6000);
 				}
 
 				public void SaveOSFGetNBATimeout() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(Save));
+					//wait.until(ExpectedConditions.visibilityOf(Save));
+					Thread.sleep(6000);
 					Save.click( );
-
+					Thread.sleep(6000);
 				}
 				public void CloseOSFGetNBATimeout() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(Close));
+					//wait.until(ExpectedConditions.visibilityOf(Close));
+					Thread.sleep(6000);
 					Close.click( );
-
+					Thread.sleep(6000);
 				}
 				//OSFGetNBATimeout
 
@@ -564,28 +603,32 @@ public class OSFDSS extends TestBase {
 				//D_mccmsettings
 				public void D_mccmsettings() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(D_mccmsettings));
+					//wait.until(ExpectedConditions.visibilityOf(D_mccmsettings));
+					Thread.sleep(6000);
 					D_mccmsettings.sendKeys(D_mccmsettingsValue);
-
+					Thread.sleep(6000);
 				}
 
 				public void SerchClick() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(SerchClick));
+				//	wait.until(ExpectedConditions.visibilityOf(SerchClick));
+					Thread.sleep(6000);
 					SerchClick.click( );
-
+					Thread.sleep(6000);
 				}
 				public void Clickdmccmsetting() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(Clickdmccmsetting));
+				//	wait.until(ExpectedConditions.visibilityOf(Clickdmccmsetting));
+					Thread.sleep(6000);
 					Clickdmccmsetting.click( );
-
+					Thread.sleep(6000);
 				}
 				public void ActionClkDmccmsetting() throws InterruptedException
 				{
-					wait.until(ExpectedConditions.visibilityOf(ActionClkDmccmsetting));
+					//wait.until(ExpectedConditions.visibilityOf(ActionClkDmccmsetting));
+					Thread.sleep(6000);
 					ActionClkDmccmsetting.click( );
-
+					Thread.sleep(6000);
 				}
 
 				public void RunActionClk() throws InterruptedException
