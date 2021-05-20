@@ -234,7 +234,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		String getTextOnPage1 = "";
 
 
-		wait.until(ExpectedConditions.visibilityOf(Outcome));
+	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
+		Thread.sleep(8000);
 		WebElement element1 = Outcome;
 		Thread.sleep(2000);
 

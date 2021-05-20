@@ -4,28 +4,6 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega OSF DSS Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="VerifyOSFDynamicSystemSettingRunSuccessfully"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
-    </classes>
-  </test> <!-- Pega OSF DSS Regression Test(failed) -->
-  <test thread-count="5" name="Pega OSF GETNBA API Call Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="VerifyOSFGETNBAAPIValidationRunSuccessfully"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
-    </classes>
-  </test> <!-- Pega OSF GETNBA API Call Regression Test(failed) -->
   <test thread-count="5" name="Pega OSF Process Feedback API Call Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">
@@ -35,24 +13,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest -->
     </classes>
   </test> <!-- Pega OSF Process Feedback API Call Regression Test(failed) -->
-  <test thread-count="5" name="Pega OSF Capture Response API Call Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
-    </classes>
-  </test> <!-- Pega OSF Capture Response API Call Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm OSF Automation Regression Suite] -->
