@@ -22,8 +22,10 @@ public class DMPRTPNBAMobHashTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
- 
-	
+	public static String mccminternaltrust;
+	public static String css1identity;
+
+
 	@Test
 
 	public void VerifyDMPRTPNBAMobHashedAPIcallSuccessfully() {
@@ -40,24 +42,29 @@ public class DMPRTPNBAMobHashTest extends TestBase  {
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
-		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+
+			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			css1identity=general_ReadProperty("css1identity");
+
+			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processNextBestAction");
 			String readLine = null;
-			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
+			//		System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
+			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-	//  String json ="{ \"parts\" : {\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"7cd536xz3000\",\"schemeID\":\"MobileHashed\"}]}}}";
-            
 
-            json = general_ReadProperty("NBA_json_ProcNBA");
-	
-		 
-			
+
+	 	json = general_ReadProperty("NBA_json_ProcNBA");
+
+		  //	String json ="{\"parts\":{\"campaign\":{\"container\":\"CSM\"},\"subscription\":{\"id\":[{\"value\":\"8cd536xz3001\",\"schemeID\":\"MobileHashed\"}]}}}";
+
+
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {

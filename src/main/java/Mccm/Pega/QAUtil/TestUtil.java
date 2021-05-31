@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
@@ -11,8 +13,11 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
@@ -87,10 +92,30 @@ public void ActionMouseMov(WebElement webelement)
 	    WebElement element2 =  webelement;
         Actions  action = new Actions(driver);
         action.moveToElement(element2).click().build().perform();
-
-
 }
- 
 
+
+public void fluentWait(WebElement webelement1)
+{
+FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+wait.withTimeout(2, TimeUnit.MINUTES);
+wait.ignoring(NoSuchElementException.class);  
+
+WebElement element = wait.until(new Function<WebDriver, WebElement>()
+ 
+{
+public WebElement apply(WebDriver driver) {
+System.out.println("Checking for the element!!");
+WebElement element = webelement1;
+if(element != null)
+{
+System.out.println("Applay Target element found");
+}
+return element;
+}
+});
+ 
+}
 }
 	

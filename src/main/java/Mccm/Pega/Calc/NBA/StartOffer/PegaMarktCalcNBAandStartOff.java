@@ -208,10 +208,36 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		MultiChannelCampaign.click( );
 
 	}
+	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
-		Campaigncode.sendKeys(CalcNBACampaigncd);
+	//	wait.until(ExpectedConditions.visibilityOf(Campaigncode));
+	//	Campaigncode.sendKeys(CalcNBACampaigncd);
+		
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		 System.out.println("found");
+		 wait.withTimeout(3, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		 
+		 WebElement element = wait.until(new Function<WebDriver, WebElement>()
+		  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	//	 System.out.println("Checking for the element!!");
+		 WebElement element = Campaigncode;
+		 if(element != null)
+		 {
+		 System.out.println("Campaigncode target element found");
+		 }
+		 return element;
+		 }
+		 });
+		 
+		 Campaigncode.sendKeys(CalcNBACampaigncd);
+		 
+		 
+		 
 
 	}
 	public void Build() throws InterruptedException
@@ -308,7 +334,18 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	{
 		//	wait.until(ExpectedConditions.visibilityOf(AddConfigureEvents)); 
 		Thread.sleep(2000);
-		AddConfigureEvents.click( );
+		
+		try {
+
+			AddConfigureEvents.click();
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+
+			AddConfigureEvents.click();
+		}
+		
+	 
 
 	}
 
@@ -328,13 +365,35 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void ApplayEngagement() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
-		//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
-		//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
-		Thread.sleep(6000);
-		ApplayEngagement.click( );
+//		wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
+//		//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
+//		//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
+//		Thread.sleep(6000);
+//		ApplayEngagement.click( );
+		
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		 wait.withTimeout(2, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		 
+		 WebElement element = wait.until(new Function<WebDriver, WebElement>()
+		  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	//	 System.out.println("Checking for the element!!");
+		 WebElement element = ApplayEngagement;
+		 if(element != null)
+		 {
+	//	 System.out.println("Applay Target element found");
+		 }
+		 return element;
+		 }
+		 });
+		 
+		element.click();
 
 	}
 

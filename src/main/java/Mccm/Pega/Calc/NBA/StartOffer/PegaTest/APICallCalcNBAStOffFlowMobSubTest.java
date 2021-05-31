@@ -22,6 +22,8 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
+	public static String mccminternaltrust;
+	public static String css1identity;
  
 	
 	@Test
@@ -41,13 +43,19 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 			
+			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			css1identity=general_ReadProperty("css1identity");
+			
+			
 		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
 			String readLine = null;
-			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
+		//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
+			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity)); 
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+	//      System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 

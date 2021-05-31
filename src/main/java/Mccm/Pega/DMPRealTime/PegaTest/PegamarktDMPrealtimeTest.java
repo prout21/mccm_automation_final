@@ -87,10 +87,10 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 
 	public void teardown() {
 
-		//	driver.quit();
+		 driver.quit();
 
 
-		System.out.println("DMP Real Time Containers  Run Done");
+		System.out.println("DMP Real Time Containers Test Cases Executed");
 	}
 
 }

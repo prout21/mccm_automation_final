@@ -68,8 +68,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-    public class TestBase {
-    	
+public class TestBase {
+
 	public static WebDriver driver;
 	public static Properties prop;
 
@@ -85,7 +85,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 			String projectPath = System.getProperty("user.dir");
 
-		//	FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
+			//	FileInputStream ip=new FileInputStream(projectPath+"/src/main/java/Mccm/Pega/ConfigPega/Config.properties");
 			FileInputStream ip=new FileInputStream(projectPath+"/UseCaseConfigFile/Config.properties");
 			prop.load(ip);
 
@@ -96,9 +96,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 			DBConfigValdtn.ExcelFilePath = System.getProperty("user.dir");
 			ExtractChannelFile.ExcelFilePath = System.getProperty("user.dir");
 			NBAOutboundValdtn.ExcelFilePath = System.getProperty("user.dir");
-//			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
-//			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
-//			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
+			//			PegaMrktNBAValuChk.ExcelFilePath = System.getProperty("user.dir");
+			//			PreChkNBACampValu.ExcelFilePath = System.getProperty("user.dir");
+			//			PegaMrktNBAReSchd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaPreChkValidDMPCampCd.ExcelFilePath = System.getProperty("user.dir");
 			PegaMarktCalcNBAandStartOff.ExcelFilePath = System.getProperty("user.dir");
@@ -123,14 +123,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 		String chromeDriver = prop.getProperty("chromedriver");
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
-			
-        System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+
+		  System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
-			
-      //    System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
-	
+		//	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+
+
 			if(headLessMode.equals("true")) {
 
 				ChromeOptions chromeOptions = new ChromeOptions();
@@ -197,7 +197,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 	}
-	
+
 	public static String general_ReadProperty_UseCase(String propertyKey)
 	{
 		String propertyValue="";

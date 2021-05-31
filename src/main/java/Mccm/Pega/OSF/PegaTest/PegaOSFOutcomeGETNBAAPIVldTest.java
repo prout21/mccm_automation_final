@@ -61,7 +61,7 @@ public class PegaOSFOutcomeGETNBAAPIVldTest extends TestBase {
 
      public void teardown() {
 	
-    driver.quit();
+   driver.quit();
 	      
 	 System.out.println("MCCM OSF GET NBA API Validation Done");  
 }

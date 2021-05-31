@@ -291,7 +291,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		System.out.println(getTextOnPage1);
 
 		Thread.sleep(2000);
-		boolean result = getTextOnPage1.equals("Impression") ; 
+		boolean result = getTextOnPage1.equals("New") ; 
 
 		assertTrue(result);	 
 		

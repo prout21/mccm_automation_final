@@ -22,8 +22,10 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 	public static String port;
 	public static String Keystorepassword;
 	public static String json;
- 
-	
+	public static String mccminternaltrust;
+	public static String css1identity;
+
+
 	@Test
 
 	public void VerifyDMPRTProcessOffResltsAPIcallSuccessfully() {
@@ -40,22 +42,26 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
+			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			css1identity=general_ReadProperty("css1identity");
+
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-		 			+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
+					+ "/prweb/PRRestService/CSM/customerMarketingProductAPI/processOffersResult");
 			String readLine = null;
-			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
+			//		System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
+			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));   
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-           
-		 
-		  json = general_ReadProperty("NBA_json_offerRslts");
-	
 
-			
+
+			json = general_ReadProperty("NBA_json_offerRslts");
+
+
+
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
@@ -87,10 +93,10 @@ public class DMPRTPNBAProOffRltsTest extends TestBase  {
 			}
 			in.close();
 			System.out.println("response: " + response.toString());
-			
-		         System.out.println(responseCode);
-		         
-		         Assert.assertEquals(responseCode, 200 );
+
+			System.out.println(responseCode);
+
+			Assert.assertEquals(responseCode, 200 );
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega Inbound Intraction Recent History Regression Test(failed)">
+  <test thread-count="5" name="Pega Inbound Interaction Recent History Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest">
         <methods>
@@ -14,5 +14,5 @@
         </methods>
       </class> <!-- Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest -->
     </classes>
-  </test> <!-- Pega Inbound Intraction Recent History Regression Test(failed) -->
+  </test> <!-- Pega Inbound Interaction Recent History Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm NBA Inbound Automation Regression Suite] -->
