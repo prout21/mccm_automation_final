@@ -293,13 +293,38 @@ public class PegaMarketPage extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
+		 Thread.sleep(8000);
 		//	driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 	}
+	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
-		Campaigncode.sendKeys(Campaigncd);
-		System.out.println("Enter Campaigncode");
+//		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
+//		Campaigncode.sendKeys(Campaigncd);
+//		System.out.println("Enter Campaigncode");
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		System.out.println("found");
+		wait.withTimeout(5, TimeUnit.MINUTES);
+		wait.ignoring(NoSuchElementException.class);  
+
+		WebElement element = wait.until(new Function<WebDriver, WebElement>()
+
+		{
+			public WebElement apply(WebDriver driver) {
+				//	 System.out.println("Checking for the element!!");
+				WebElement element = Campaigncode;
+				if(element != null)
+				{
+					System.out.println("Campaigncode target element found");
+				}
+				return element;
+			}
+		});
+
+	 
+		
+		element.sendKeys(Campaigncd);
 	}
 	public void Build() throws InterruptedException
 	{

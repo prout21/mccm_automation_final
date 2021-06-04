@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Pega OSF Process Feedback API Call Regression Test(failed)">
+  <test thread-count="5" name="Pega OSF GETNBA API Call Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">
+      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
         <methods>
-          <include name="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully"/>
           <include name="teardown"/>
+          <include name="VerifyOSFGETNBAAPIValidationRunSuccessfully"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
     </classes>
-  </test> <!-- Pega OSF Process Feedback API Call Regression Test(failed) -->
+  </test> <!-- Pega OSF GETNBA API Call Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm OSF Automation Regression Suite] -->

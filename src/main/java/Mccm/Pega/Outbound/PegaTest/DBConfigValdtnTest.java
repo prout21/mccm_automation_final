@@ -33,7 +33,7 @@ public class DBConfigValdtnTest extends TestBase {
 	    testutil = new TestUtil();
 	    DBConfigValdtn1 =new DBConfigValdtn();
 	    homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	   // DBConfigValdtn1=homepage.DBConfigValidation();
+	    DBConfigValdtn1=homepage.DBConfigValidation();
  }
  @Test (priority=1)
  public void VerifyOutboundDBConfigurationCampRunidValidationSuccessfully() throws InterruptedException { 

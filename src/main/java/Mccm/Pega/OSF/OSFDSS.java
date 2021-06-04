@@ -11,13 +11,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class OSFDSS extends TestBase {
 
 	public static String ExcelFilePath;
+	public static Logger log =LogManager.getLogger(PegaOSFDMCCMSettingTest.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -152,6 +156,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalcNBA.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement FilterosfDSS ****");
 
 		}
 		public void CalNBAStartOffSrch() throws InterruptedException
@@ -160,7 +165,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.sendKeys(Internal_REST_URL_OSF);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the Internal_REST_URL_OSF value ****");
 		}
 		public void ApplaycALCNBAfilter() throws InterruptedException
 		{
@@ -168,7 +173,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement ApplaycALCNBAfilter ****");
 		}
 		public void ClikMCCM() throws InterruptedException
 		{
@@ -184,17 +189,17 @@ public class OSFDSS extends TestBase {
 
 				ClikMCCM.click();
 			}
-
+			log.info("**** OSF DSS Clicking on webelement ClikMCCM ****");
 		}
 		public void CalNBAStartOff() throws InterruptedException
 		{
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			 Thread.sleep(3000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear the CalNBAStartOff field****");
 			CalNBAStartOff.sendKeys(Internal_REST_URL_OSFValue);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the Internal_REST_URL_OSFValue value ****");
 		}
 
 		public void SaveCalNBAStartOff() throws InterruptedException
@@ -203,7 +208,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement SaveCalNBAStartOff ****");
 		}
 		public void CloseCalNBAStartOff() throws InterruptedException
 		{
@@ -211,7 +216,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement CloseCalNBAStartOff ****");
 		}
 		//Internal_REST_URL_OSF
 
@@ -222,24 +227,25 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement FilterOSFDirection ****");
 		}
 		public void OSFDirectionSrch() throws InterruptedException
 		{
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
+			log.info("**** OSF DSS Clear the OSFDirectionSrch field ****");
 			CalNBAStartOffSrch.sendKeys(OSFDirection);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFDirection value ****");
 		}
 		public void ApplayOSFDirection() throws InterruptedException
 		{
 			//wait.until(ExpectedConditions.visibilityOf(ApplayNBAfilter));
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
-
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFDirection ****");
 		}
 		public void ClikMCCMOSFDirection() throws InterruptedException
 		{
@@ -254,6 +260,7 @@ public class OSFDSS extends TestBase {
 			{
 
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFDirection ****");
 			}
 
 
@@ -263,10 +270,10 @@ public class OSFDSS extends TestBase {
 		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear the OSFDirection srch field ****");
 			CalNBAStartOff.sendKeys(OSFDirectionValue);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFDirection value ****");
 		}
 
 		public void SaveOSFDirection() throws InterruptedException
@@ -275,7 +282,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement SaveOSFDirection ****");
 		}
 		public void CloseOSFDirection() throws InterruptedException
 		{
@@ -283,7 +290,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement CloseOSFDirection ****");
 		}
 		//OSFDirection
 
@@ -294,16 +301,17 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement FilterOSFChannel ****");
 		}
 		public void OSFChannelSrch() throws InterruptedException
 		{
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
+			log.info("**** OSF DSS Clear the OSFChannelSrch field ****");
 			CalNBAStartOffSrch.sendKeys(OSFChannel);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFChannel value ****");
 		}
 		public void ApplayOSFChannel() throws InterruptedException
 		{
@@ -311,7 +319,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFChannel ****");
 		}
 		public void ClikMCCMOSFChannel() throws InterruptedException
 		{
@@ -326,6 +334,7 @@ public class OSFDSS extends TestBase {
 			{
 
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFChannel ****");
 			}
 
 
@@ -335,9 +344,10 @@ public class OSFDSS extends TestBase {
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear the field  OSFChannel ****");
 			CalNBAStartOff.sendKeys(OSFChannelValue);
 			Thread.sleep(6000);
+			log.info("**** OSF DSS sending the OSFChannel value ****");
 		}
 
 		public void SaveOSFChannel() throws InterruptedException
@@ -346,6 +356,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement SaveOSFChannel ****");
 
 		}
 		public void CloseOSFChannel() throws InterruptedException
@@ -354,6 +365,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement CloseOSFChannel ****");
 
 		}
 		//OSFChannel
@@ -365,6 +377,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement FilterOSFContainerName ****");
 
 		}
 		public void OSFContainerNameSrch() throws InterruptedException
@@ -372,9 +385,10 @@ public class OSFDSS extends TestBase {
 		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
+			log.info("**** OSF DSS Clicking on webelement OSFContainerNameSrch ****");
 			CalNBAStartOffSrch.sendKeys(OSFContainerName);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFContainerName value ****");
 		}
 		public void ApplayOSFContainerName() throws InterruptedException
 		{
@@ -382,7 +396,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFContainerName ****");
 		}
 		public void ClikMCCMOSFContainerName() throws InterruptedException
 		{
@@ -397,6 +411,7 @@ public class OSFDSS extends TestBase {
 			{
 
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFContainerName ****");
 			}
 
 		}
@@ -405,10 +420,10 @@ public class OSFDSS extends TestBase {
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clicking on webelement OSFContainerName ****");
 			CalNBAStartOff.sendKeys(OSFContainerNameValue);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFContainerName value ****");
 		}
 
 		public void SaveOSFContainerName() throws InterruptedException
@@ -417,7 +432,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement SaveOSFContainerName ****");
 		}
 		public void CloseOSFContainerName() throws InterruptedException
 		{
@@ -425,7 +440,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement CloseOSFContainerName ****");
 		}
 		//OSFContainerName
 
@@ -436,17 +451,17 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement FilterOSFSClassificationDefaultValue ****");
 		}
 		public void OSFSClassificationDefaultValueSrch() throws InterruptedException
 		{
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
-
+			log.info("**** OSF DSS Clicking on OSFSClassificationDefaultValueSrch ****");
 			CalNBAStartOffSrch.sendKeys(OSFSClassificationDefault);
 			Thread.sleep(3000);
-
+			log.info("**** OSF DSS sending the OSFSClassificationDefault value ****");
 		}
 		public void ApplayOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -454,7 +469,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFSClassificationDefaultValue ****");
 		}
 		public void ClikMCCMOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -469,6 +484,7 @@ public class OSFDSS extends TestBase {
 			{
 
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFSClassificationDefaultValue ****");
 			}
 
 
@@ -478,10 +494,10 @@ public class OSFDSS extends TestBase {
 		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear the OSFSClassificationDefaultValue ****");
 			CalNBAStartOff.sendKeys(OSFSClassificationDefaultValue);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending the OSFSClassificationDefault Value ****");
 		}
 
 		public void SaveOSFSClassificationDefaultValue() throws InterruptedException
@@ -490,7 +506,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement SaveOSFSClassificationDefaultValue ****");
 		}
 		public void CloseOSFSClassificationDefaultValue() throws InterruptedException
 		{
@@ -498,7 +514,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement CloseOSFSClassificationDefaultValue ****");
 		}
 		//OSFSClassificationDefaultValue
 
@@ -509,6 +525,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement FilterOSFMaxNoOfAcntsForOSFGetNBAPerRqst ****");
 		}
 		public void OSFMaxNoOfAcntsForOSFGetNBAPerRqstSrch() throws InterruptedException
 		{
@@ -517,7 +534,7 @@ public class OSFDSS extends TestBase {
 			CalNBAStartOffSrch.clear();
 			CalNBAStartOffSrch.sendKeys(MaxNoOfAcntsForOSFGetNBAPerRqst);
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS sending MaxNoOfAcntsForOSFGetNBAPerRqst value ****");
 		}
 		public void ApplayOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 		{
@@ -525,6 +542,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFMaxNoOfAcntsForOSFGetNBAPerRqst ****");
 		}
 		public void ClikMCCMOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 		{
@@ -537,8 +555,8 @@ public class OSFDSS extends TestBase {
 			}
 			catch(org.openqa.selenium.StaleElementReferenceException ex)
 			{
-
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFMaxNoOfAcntsForOSFGetNBAPerRqst ****");
 			}
 
 
@@ -548,9 +566,10 @@ public class OSFDSS extends TestBase {
 		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear  OSFMaxNoOfAcntsForOSFGetNBAPerRqstValue ****");
 			CalNBAStartOff.sendKeys(MaxNoOfAcntsForOSFGetNBAPerRqstValue);
 			Thread.sleep(3000);
+			log.info("**** OSF DSS sending  OSFMaxNoOfAcntsForOSFGetNBAPerRqst Value ****");
 		}
 
 		public void SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
@@ -559,6 +578,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst ****");
 		}
 		public void CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst() throws InterruptedException
 		{
@@ -566,6 +586,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst ****");
 
 		}
 
@@ -578,6 +599,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			FilterCalc.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement FilterOSFGetNBATimeout ****");
 
 		}
 		public void OSFGetNBATimeoutSrch() throws InterruptedException
@@ -585,9 +607,10 @@ public class OSFDSS extends TestBase {
 		//	wait.until(ExpectedConditions.visibilityOf(CalNBAStartOffSrch));
 			Thread.sleep(6000);
 			CalNBAStartOffSrch.clear();
-
+			log.info("**** OSF DSS Clear on webelement CalNBAStartOffSrch ****");
 			CalNBAStartOffSrch.sendKeys(OSFGetNBATimeout);
 			Thread.sleep(3000);
+			log.info("**** OSF DSS  sending the OSFGetNBATimeout value****");
 		}
 		public void ApplayOSFGetNBATimeout() throws InterruptedException
 		{
@@ -595,7 +618,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ApplayNBAfilter.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement ApplayOSFGetNBATimeout ****");
 		}
 		public void ClikMCCMOSFGetNBATimeout() throws InterruptedException
 		{
@@ -609,8 +632,8 @@ public class OSFDSS extends TestBase {
 			}
 			catch(org.openqa.selenium.StaleElementReferenceException ex)
 			{
-
 				ClikMCCM.click();
+				log.info("**** OSF DSS Clicking on webelement ClikMCCMOSFGetNBATimeout ****");
 			}
 
 
@@ -620,9 +643,10 @@ public class OSFDSS extends TestBase {
 			//wait.until(ExpectedConditions.visibilityOf(CalNBAStartOff));
 			Thread.sleep(6000);
 			CalNBAStartOff.clear();
-
+			log.info("**** OSF DSS Clear the CalNBAStartOff field ****");
 			CalNBAStartOff.sendKeys(OSFGetNBATimeoutValue);
 			Thread.sleep(3000);
+			log.info("**** OSF DSS sending the OSFGetNBATimeout Value ****");
 		}
 
 		public void SaveOSFGetNBATimeout() throws InterruptedException
@@ -631,6 +655,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Save.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement SaveOSFGetNBATimeout ****");
 		}
 		public void CloseOSFGetNBATimeout() throws InterruptedException
 		{
@@ -638,7 +663,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Close.click( );
 			Thread.sleep(6000);
-
+			log.info("**** OSF DSS Clicking on webelement CloseOSFGetNBATimeout ****");
 		}
 		//OSFGetNBATimeout
 
@@ -650,6 +675,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			D_mccmsettings.sendKeys(D_mccmsettingsValue);
 			Thread.sleep(6000);
+			log.info("**** OSF DSS sending the D_mccmsettingsValue ****");
 		}
 
 		public void SerchClick() throws InterruptedException
@@ -658,6 +684,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			SerchClick.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement serch dmccmsetting ****");
 
 		}
 		public void Clickdmccmsetting() throws InterruptedException
@@ -666,6 +693,7 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			Clickdmccmsetting.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement dmccmsetting ****");
 		}
 		public void ActionClkDmccmsetting() throws InterruptedException
 		{
@@ -673,12 +701,14 @@ public class OSFDSS extends TestBase {
 			Thread.sleep(6000);
 			ActionClkDmccmsetting.click( );
 			Thread.sleep(6000);
+			log.info("**** OSF DSS Clicking on webelement ActionClkDmccmsetting ****");
 		}
 
 		public void RunActionClk() throws InterruptedException
 		{
 			TestUtil obj=new TestUtil();
 			obj.ActionMouseMov(RunActionClk);
+			log.info("**** OSF DSS Clicking on webelement RunActionClk ****");
 		}	
 
 		public void FulshRunClick() throws InterruptedException
@@ -694,16 +724,17 @@ public class OSFDSS extends TestBase {
 
 					wait.until(ExpectedConditions.visibilityOf(FlushClk));
 					FlushClk.click();
+					log.info("**** OSF DSS Clicking on webelement Flush ****");
 
 					wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
 					RunFlushClk.click( );
 
-
+					log.info("**** OSF DSS Clicking on webelement RunFlush ****");
 					driver.close();
 				}
 			}
 			driver.switchTo().window(mainWindow);
-
+			log.info("**** Ended the OSF Dynamic System Setting ****");
 		}
 		//D_mccmsettings
 

@@ -32,7 +32,7 @@ public class NBAOutboundValdtnTest extends TestBase {
 	    testutil = new TestUtil();
 	    NBAOutboundValdtn1 =new NBAOutboundValdtn();
 	    homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
-	  //  NBAOutboundValdtn1=homepage.NBAOutboundValdtn();
+	    NBAOutboundValdtn1=homepage.NBAOutboundValdtn();
  }
  @Test (priority=1)
  public void VerifyOutboundNBABatchProcessCompletedSuccessfully() throws InterruptedException { 
@@ -67,7 +67,7 @@ public class NBAOutboundValdtnTest extends TestBase {
  
       public void teardown() {
 	
-   //  driver.quit();
+      driver.quit();
 	 
       
  	 System.out.println("Outbound NBA Batch process completed");  

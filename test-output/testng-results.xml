@@ -1,111 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Mccm OSF Automation Regression Suite" duration-ms="830054" started-at="2021-05-31T18:22:56 IST" finished-at="2021-05-31T18:36:46 IST">
+  <suite name="Default suite" duration-ms="2955" started-at="2021-06-04T17:46:14 IST" finished-at="2021-06-04T17:46:17 IST">
     <groups>
     </groups>
-    <test name="Pega OSF GETNBA API Call Regression Test" duration-ms="52456" started-at="2021-05-31T18:22:56 IST" finished-at="2021-05-31T18:23:48 IST">
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@289d1c02]" name="setup" is-config="true" duration-ms="11400" started-at="2021-05-31T18:23:02 IST" finished-at="2021-05-31T18:23:14 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFGETNBAAPIValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@289d1c02]" name="VerifyOSFGETNBAAPIValidationRunSuccessfully" duration-ms="34707" started-at="2021-05-31T18:23:14 IST" finished-at="2021-05-31T18:23:48 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFGETNBAAPIValidationRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@289d1c02]" name="teardown" is-config="true" duration-ms="1" started-at="2021-05-31T18:23:48 IST" finished-at="2021-05-31T18:23:48 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest">
-        <test-method status="PASS" signature="VerifyOSFGetNBARestAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest@2a70a3d8]" name="VerifyOSFGetNBARestAPIcallSuccessfully" duration-ms="6272" started-at="2021-05-31T18:22:56 IST" finished-at="2021-05-31T18:23:02 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFGetNBARestAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest -->
-    </test> <!-- Pega OSF GETNBA API Call Regression Test -->
-    <test name="Pega OSF Process Feedback API Call Regression Test" duration-ms="104807" started-at="2021-05-31T18:23:49 IST" finished-at="2021-05-31T18:25:34 IST">
-      <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest">
-        <test-method status="PASS" signature="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest@4c762604]" name="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully" duration-ms="1863" started-at="2021-05-31T18:24:45 IST" finished-at="2021-05-31T18:24:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@548ad73b]" name="setup" is-config="true" duration-ms="10787" started-at="2021-05-31T18:23:51 IST" finished-at="2021-05-31T18:24:02 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@548ad73b]" name="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully" duration-ms="42374" started-at="2021-05-31T18:24:02 IST" finished-at="2021-05-31T18:24:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@548ad73b]" name="teardown" is-config="true" duration-ms="1167" started-at="2021-05-31T18:24:44 IST" finished-at="2021-05-31T18:24:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@2641e737]" name="setup" is-config="true" duration-ms="11130" started-at="2021-05-31T18:24:47 IST" finished-at="2021-05-31T18:24:58 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@2641e737]" name="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully" duration-ms="34402" started-at="2021-05-31T18:24:58 IST" finished-at="2021-05-31T18:25:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@2641e737]" name="teardown" is-config="true" duration-ms="1146" started-at="2021-05-31T18:25:33 IST" finished-at="2021-05-31T18:25:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest">
-        <test-method status="PASS" signature="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest@77846d2c]" name="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully" duration-ms="1924" started-at="2021-05-31T18:23:49 IST" finished-at="2021-05-31T18:23:51 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest -->
-    </test> <!-- Pega OSF Process Feedback API Call Regression Test -->
-    <test name="Pega OSF Capture Response API Call Regression Test" duration-ms="49496" started-at="2021-05-31T18:25:34 IST" finished-at="2021-05-31T18:26:23 IST">
+    <test name="Default test" duration-ms="2955" started-at="2021-06-04T17:46:14 IST" finished-at="2021-06-04T17:46:17 IST">
       <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest">
-        <test-method status="PASS" signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest@31f924f5]" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" duration-ms="1630" started-at="2021-05-31T18:25:34 IST" finished-at="2021-05-31T18:25:36 IST">
+        <test-method status="PASS" signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest@5136d012]" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" duration-ms="2922" started-at="2021-06-04T17:46:14 IST" finished-at="2021-06-04T17:46:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@5579bb86]" name="setup" is-config="true" duration-ms="11052" started-at="2021-05-31T18:25:36 IST" finished-at="2021-05-31T18:25:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@5579bb86]" name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully" duration-ms="35704" started-at="2021-05-31T18:25:47 IST" finished-at="2021-05-31T18:26:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@5579bb86]" name="teardown" is-config="true" duration-ms="1104" started-at="2021-05-31T18:26:22 IST" finished-at="2021-05-31T18:26:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
-    </test> <!-- Pega OSF Capture Response API Call Regression Test -->
-    <test name="Pega OSF DSS Regression Test" duration-ms="622596" started-at="2021-05-31T18:26:23 IST" finished-at="2021-05-31T18:36:46 IST">
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@b3d7190]" name="setup" is-config="true" duration-ms="16639" started-at="2021-05-31T18:26:24 IST" finished-at="2021-05-31T18:26:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFDynamicSystemSettingRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@b3d7190]" name="VerifyOSFDynamicSystemSettingRunSuccessfully" duration-ms="604479" started-at="2021-05-31T18:26:40 IST" finished-at="2021-05-31T18:36:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFDynamicSystemSettingRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@b3d7190]" name="teardown" is-config="true" duration-ms="1471" started-at="2021-05-31T18:36:45 IST" finished-at="2021-05-31T18:36:46 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
-    </test> <!-- Pega OSF DSS Regression Test -->
-  </suite> <!-- Mccm OSF Automation Regression Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

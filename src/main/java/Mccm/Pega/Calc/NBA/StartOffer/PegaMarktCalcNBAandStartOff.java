@@ -146,6 +146,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 		Actions  action = new Actions(driver);
 		action.moveToElement(Pegalunch).click().build().perform();
+		Thread.sleep(2000);
 		return new PegaMarktCalcNBAandStartOff();
 	}
 
@@ -155,9 +156,9 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 //		Actions  action = new Actions(driver);
 //		action.moveToElement(Pegalunch).click().build().perform();
 		//  Thread.sleep(1000);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		pegamrkting1.click( );
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 	}
 
 
@@ -206,7 +207,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-
+		Thread.sleep(8000); 
 	}
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
@@ -214,9 +215,9 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	//	wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 	//	Campaigncode.sendKeys(CalcNBACampaigncd);
 		
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+	 	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		 System.out.println("found");
+		  
 		 wait.withTimeout(3, TimeUnit.MINUTES);
 		 wait.ignoring(NoSuchElementException.class);  
 		 
@@ -224,20 +225,18 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		  
 		 {
 		 public WebElement apply(WebDriver driver) {
-	//	 System.out.println("Checking for the element!!");
+	 
 		 WebElement element = Campaigncode;
 		 if(element != null)
 		 {
-		 System.out.println("Campaigncode target element found");
+		 
 		 }
 		 return element;
 		 }
 		 });
 		 
-		 Campaigncode.sendKeys(CalcNBACampaigncd);
-		 
-		 
-		 
+		 element.sendKeys(CalcNBACampaigncd);
+	 
 
 	}
 	public void Build() throws InterruptedException

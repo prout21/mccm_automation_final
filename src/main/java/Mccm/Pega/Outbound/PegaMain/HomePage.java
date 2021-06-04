@@ -25,6 +25,8 @@ public class HomePage extends TestBase {
 	WebElement Homepage;
 	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
 	WebElement Pegalunch;
+	
+ 
 
 	 public HomePage( ) {
     	PageFactory.initElements(driver, this);
@@ -176,17 +178,17 @@ public class HomePage extends TestBase {
 //	   	   return new PreChkNBACampValu();
 //	   }
    public PegaPreChkValidCampCd Pegamrklunch3()throws InterruptedException {
-		
+	   
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
+	     Thread.sleep(2000);
 	   	  return new PegaPreChkValidCampCd();
 	   }
    public PegaPreChkValidDMPCampCd Pegamrklunch4()throws InterruptedException {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
+	     Thread.sleep(2000);
 	   	  return new PegaPreChkValidDMPCampCd();
 	   }
    
@@ -194,7 +196,7 @@ public class HomePage extends TestBase {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
+	     Thread.sleep(2000);
 	   	  return new PegaPreChkValidCalcNBACampCd();
 	   }
    
@@ -235,7 +237,7 @@ public class HomePage extends TestBase {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(1000);
+	     Thread.sleep(2000);
 	   	  return new PegaPreChkValidOSFCampCd();
 	   }
 }

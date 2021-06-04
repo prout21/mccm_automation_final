@@ -6,6 +6,13 @@
   </listeners>
   <test thread-count="5" name="Pega CalcNBAandStartOfferFlow PegaMarket NBAOF Event Regression Test(failed)">
     <classes>
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest">
+        <methods>
+          <include name="VerifyPreCheckCalcNBACampCodeValueValidSuccessfully"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest -->
       <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest">
         <methods>
           <include name="VerifyCalcNBAandStartOfferEventRunSuccessfully"/>

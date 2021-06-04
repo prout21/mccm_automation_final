@@ -11,13 +11,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
+import Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class OSFDMCCMSettings extends TestBase {
 
 	public static String ExcelFilePath;
+	
+	public static Logger log =LogManager.getLogger(PegaOSFDMCCMSettingTest.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -105,10 +111,11 @@ public class OSFDMCCMSettings extends TestBase {
 
 	public void Recordclk() throws InterruptedException
 	{ 
+		log.info("**** Started the OSF Dynamic System Setting ****");
 		Thread.sleep(8000);
 		Recordclk.click( );
 		Thread.sleep(8000);
-		 
+		log.info("**** OSF DSS Clicking on webelement Record ****");
 		}
 
 	public void SysAdmin() throws InterruptedException
@@ -116,7 +123,7 @@ public class OSFDMCCMSettings extends TestBase {
 		Thread.sleep(8000);
 		SysAdmin.click( );
 		Thread.sleep(8000);
-	 
+		log.info("**** OSF DSS Clicking on webelement SysAdmin ****");
 	}  
 
 
@@ -129,7 +136,7 @@ public class OSFDMCCMSettings extends TestBase {
 	{
 		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-
+		log.info("**** OSF DSS Clicking on webelement DynamicSystemSettins ****");
 	}
 
 	//D_mccmsettings
@@ -137,26 +144,26 @@ public class OSFDMCCMSettings extends TestBase {
 	{
 		wait.until(ExpectedConditions.visibilityOf(D_mccmsettings));
 		D_mccmsettings.sendKeys(D_mccmsettingsValue);
-
+		log.info("**** OSF DSS sending the D_mccmsetting value ****");
 	}
 
 	public void SerchClick() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
-
+		log.info("**** OSF DSS Clicking on webelement Search ****");
 	}
 	public void Clickdmccmsetting() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(Clickdmccmsetting));
 		Clickdmccmsetting.click( );
-
+		log.info("**** OSF DSS Clicking on webelement DmccmSettins ****");
 	}
 	public void ActionClkDmccmsetting() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(ActionClkDmccmsetting));
 		ActionClkDmccmsetting.click( );
-
+		log.info("**** OSF DSS Clicking on webelement Action ****");
 	}
 
 	public void RunActionClk() throws InterruptedException
@@ -178,10 +185,11 @@ public class OSFDMCCMSettings extends TestBase {
 
 				wait.until(ExpectedConditions.visibilityOf(FlushClk));
 				FlushClk.click();
+				log.info("**** OSF DSS Clicking on webelement Flush ****");
 
 				wait.until(ExpectedConditions.visibilityOf(RunFlushClk));
 				RunFlushClk.click( );
-
+				log.info("**** OSF DSS Clicking on webelement RunFlush ****");
 
 				driver.close();
 			}

@@ -9,6 +9,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -21,12 +23,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 
+import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class PegaMarketIntrctnHistry extends TestBase  {
 
+	
+	public static Logger log =LogManager.getLogger(PegaMarketIntrctnHistry.class.getName());
 
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
 	WebElement Homepage;
@@ -80,8 +88,9 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 		Actions  action = new Actions(driver);
 		action.moveToElement(Pegalunch).click().build().perform();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		return new PegaMarketIntrctnHistry();
+		 
 	}
 
 	public void pegamarkting() throws InterruptedException
@@ -90,26 +99,33 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
 		pegamrkting1.click( );
 		Thread.sleep(8000);
+		log.info("****OSF element click pegamrkting1 ****");
 	}
 
 
 	public void ExpandReport() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(ClkReport));
+	//	wait.until(ExpectedConditions.elementToBeClickable(ClkReport));
+		Thread.sleep(8000);
 		ClkReport.click( );
-
+		Thread.sleep(8000);
+		log.info("**** OSF element click ClkReport****");
 	}
 	public void ClkIntractionHstry() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ClkIntractionHstry));
+		//wait.until(ExpectedConditions.visibilityOf(ClkIntractionHstry));
+		Thread.sleep(8000);
 		ClkIntractionHstry.click( );
-
+		Thread.sleep(8000);
+		log.info("**** OSF element click ClkIntractionHstry****");
 	}
 	public void ClkRecentIntrctnHstry() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(ClkRecentIntrctnHstry));
+	//	wait.until(ExpectedConditions.visibilityOf(ClkRecentIntrctnHstry));
+		Thread.sleep(8000);
 		ClkRecentIntrctnHstry.click( );
-
+		Thread.sleep(8000);
+		log.info("**** OSF element click ClkRecentIntrctnHstry ****");
 	}
 	public void InboundValidation() throws InterruptedException
 	{
@@ -127,7 +143,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 		//	 WebElement element11 =  driver.findElement(By.xpath(xpath11));
-		wait.until(ExpectedConditions.visibilityOf(Channel));
+	//	wait.until(ExpectedConditions.visibilityOf(Channel));
+		Thread.sleep(8000);
 		WebElement element11 = Channel;
 		Thread.sleep(2000);
 		getTextOnPage1 = element11.getText();
@@ -151,7 +168,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		String getTextOnPage1 = "";
 
 
-		wait.until(ExpectedConditions.visibilityOf(Channel));
+	//	wait.until(ExpectedConditions.visibilityOf(Channel));
+		Thread.sleep(8000);
 		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 		WebElement element11 = Channel;
 		Thread.sleep(2000);
@@ -174,7 +192,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		String getTextOnPage1 = "",getTextOnPage2="",getTextOnPage3="";
 
 
-		wait.until(ExpectedConditions.visibilityOf(BusinessIssue));
+	//	wait.until(ExpectedConditions.visibilityOf(BusinessIssue));
+		Thread.sleep(8000);
 		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
 		WebElement element12 = BusinessIssue;
 		Thread.sleep(2000);
@@ -201,52 +220,64 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	}
 	public void PegaOSFOutcomeAPIAcceptedVlidtion() throws InterruptedException
 	{
+		
 		driver.manage().window().maximize();
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
-
-		String getTextOnPage1 = "";
-
-
-		wait.until(ExpectedConditions.visibilityOf(Outcome));
-		WebElement element1 = Outcome;
-		Thread.sleep(2000);
-
-		getTextOnPage1 = element1.getText();
-		System.out.println(getTextOnPage1);
-
-		Thread.sleep(2000);
-		boolean result = getTextOnPage1.equals("Accepted") ; 
-
-		assertTrue(result);
-		//System.out.println("MCCM OSF Outcome API Accepted Validation Done");
-	}
-	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
-	{
-		driver.manage().window().maximize();
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
-
+		//Thread.sleep(8000);
+		log.info("****  OSF webelement view accepted Journey ****");
 		String getTextOnPage1 = "";
 
 
 	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
 		Thread.sleep(8000);
 		WebElement element1 = Outcome;
-		Thread.sleep(2000);
+		log.info("****  OSF webelement click outcome accepted****");
+		Thread.sleep(8000);
 
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
+		log.info("**** Outcome value : " +getTextOnPage1);
+	 
 
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		boolean result = getTextOnPage1.equals("Accepted") ; 
+
+		assertTrue(result);
+		//System.out.println("MCCM OSF Outcome API Accepted Validation Done");
+		
+		log.info("**** OSF display Accepted ****");
+	}
+	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
+	{
+		
+		driver.manage().window().maximize();
+		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+		//Thread.sleep(8000);
+		log.info("****  OSF webelement view Journey save offer****");
+		String getTextOnPage1 = "";
+
+
+	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
+		Thread.sleep(8000);
+		WebElement element1 = Outcome;
+		 
+		Thread.sleep(8000);
+		log.info("****  OSF webelement outcome click save offer ****");
+
+		getTextOnPage1 = element1.getText();
+		System.out.println(getTextOnPage1);
+		log.info("**** Outcome value : " +getTextOnPage1);
+		log.info("****  OSF webelement outcome save offer ****");
+
+		Thread.sleep(8000);
 		boolean result = getTextOnPage1.equals("SaveOffer") ; 
 
 		assertTrue(result);
-		//	 System.out.println("MCCM OSF Outcome API SaveOffer Validation Done");
+		log.info("**** OSF display save offer ****");
 	}
 	public void PegaOSFOutcomeAPISubmitOrderVlidtion() throws InterruptedException
 	{
@@ -254,23 +285,26 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
+		log.info("****  OSF webelement view Journey submitted order****");
 
 		String getTextOnPage1 = "";
 
 
-		wait.until(ExpectedConditions.visibilityOf(Outcome));
+	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
+		Thread.sleep(8000);
 		WebElement element1 = Outcome;
-
-		Thread.sleep(2000);
+		log.info("****  OSF webelement outcome click submitted order ****");
+		Thread.sleep(8000);
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		log.info("**** Outcome value : " +getTextOnPage1);
+		log.info("****  OSF webelement outcome submitted order ****");
 		boolean result = getTextOnPage1.equals("SubmitOrder") ; 
 
 		assertTrue(result);
-		//	 System.out.println("MCCM OSF Outcome API SubmitOrder Validation Done");
+		log.info("**** OSF display Submitted order ****");
 	}
 	
 	public void PegaOSFGETNBAAPIVlidtion() throws InterruptedException {
@@ -278,23 +312,26 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
-
+		//Thread.sleep(8000);
+		log.info("****  OSF webelement view Journey new****");
 		String getTextOnPage1 = "";
 
-
-		wait.until(ExpectedConditions.visibilityOf(Outcome));
+		Thread.sleep(8000);
+		//wait.until(ExpectedConditions.visibilityOf(Outcome));
 		WebElement element1 = Outcome;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		log.info("****  OSF webelement outcome click new****");
 
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		log.info("**** Outcome value : " +getTextOnPage1);
+		log.info("****  OSF webelement outcome new ****");
 		boolean result = getTextOnPage1.equals("New") ; 
 
 		assertTrue(result);	 
-		
+		log.info("**** OSF display New ****");
 	}
 
 }	 

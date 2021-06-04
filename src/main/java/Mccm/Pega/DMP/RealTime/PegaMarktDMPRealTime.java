@@ -238,7 +238,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	{
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		System.out.println("found");
+		 
 		wait.withTimeout(4, TimeUnit.MINUTES);
 		wait.ignoring(NoSuchElementException.class);  
 
@@ -246,11 +246,11 @@ public class PegaMarktDMPRealTime extends TestBase  {
 
 		{
 			public WebElement apply(WebDriver driver) {
-				//	 System.out.println("Checking for the element!!");
+				 
 				WebElement element = Campaigncode;
 				if(element != null)
 				{
-					System.out.println("Campaigncode target element found");
+					 
 				}
 				return element;
 			}
