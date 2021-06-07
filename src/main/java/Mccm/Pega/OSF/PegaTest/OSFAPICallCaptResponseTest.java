@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 //import com.sun.tools.sjavac.Log;
 
 
@@ -29,7 +29,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 	public static String mccminternaltrust;
 	public static String css1identity;
 	
-	public static Logger log =LogManager.getLogger(OSFAPICallCaptResponseTest.class.getName());
+	//public static Logger log =LogManager.getLogger(OSFAPICallCaptResponseTest.class.getName());
 
 
 	@Test
@@ -43,25 +43,27 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
 
-			log.info("**** Started the OSF Capture Response API call ****");
+	//		log.info("**** Started the OSF Capture Response API call ****");
+			System.out.println("Started the OSF Capture Response API call");
+			
 			hostName=general_ReadProperty("NBA_hostName");
-			log.info("NBA_hostName : " +hostName);
+		//	log.info("NBA_hostName : " +hostName);
 			port=general_ReadProperty("NBA_port");
-			log.info("NBA_port : " +port);
+	//		log.info("NBA_port : " +port);
 			KeystorePath=general_ReadProperty("KeystorePath");
-			log.info("KeystorePath : " +KeystorePath);
+	//		log.info("KeystorePath : " +KeystorePath);
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			log.info("Keystorepassword : " +Keystorepassword);
+	//		log.info("Keystorepassword : " +Keystorepassword);
 
 			mccminternaltrust=general_ReadProperty("mccminternaltrust");
-			log.info("Keystorepassword : " +mccminternaltrust);
+	//		log.info("Keystorepassword : " +mccminternaltrust);
 			css1identity=general_ReadProperty("css1identity");
-			log.info("Keystorepassword : " +css1identity);
-			log.info("**** Getting the OSF CaptureResponse URL ****");
+	//		log.info("Keystorepassword : " +css1identity);
+	//		log.info("**** Getting the OSF CaptureResponse URL ****");
 
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
-			log.info("requested url : " +urlForGetRequest);
+	//		log.info("requested url : " +urlForGetRequest);
 			String readLine = null;
 			//		System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
@@ -75,7 +77,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 
 			json = general_ReadProperty("OSF_Json_CaptureResponse");
 
-			log.info("-----Successfully read the OSF CaptureResponse jSON Request file------");
+	//		log.info("-----Successfully read the OSF CaptureResponse jSON Request file------");
 			// Create all-trusting host name verifier
 
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -92,7 +94,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
 			connection.setRequestProperty("x-request-id", "GUID likead785657");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-			log.info("x-mccm-usecase", "OSF_CaptureResponse" );
+	//		log.info("x-mccm-usecase", "OSF_CaptureResponse" );
 			/*
 			 * connection.setRequestProperty("usecase ID", "OSF_CaptureResponse");
 			 * connection.setRequestProperty("correlation ID", "GUID likead64557");
@@ -118,11 +120,12 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			in.close();
 			System.out.println("response: " + response.toString());
 			System.out.println(responseCode);
-			log.info("response: " + response.toString());
-			log.info(+ responseCode);
+	//		log.info("response: " + response.toString());
+	//		log.info(+ responseCode);
 
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
-			log.info("**** Ended the OSF Capture Response API call ****");
+	//		log.info("**** Ended the OSF Capture Response API call ****");
+			System.out.println("Started the OSF Capture Response API call");
 
 		} catch (Exception e) {
 			e.printStackTrace();

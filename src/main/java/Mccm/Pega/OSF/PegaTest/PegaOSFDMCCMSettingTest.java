@@ -14,8 +14,8 @@ import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 public class PegaOSFDMCCMSettingTest extends TestBase {
 

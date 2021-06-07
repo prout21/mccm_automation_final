@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -23,14 +23,14 @@ import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 public class ExtractChannelFile extends TestBase {
 
 	public static String ExcelFilePath;
 
-	public static Logger log =LogManager.getLogger(ExtractChannelFile.class.getName());
+//	public static Logger log =LogManager.getLogger(ExtractChannelFile.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -91,14 +91,14 @@ public class ExtractChannelFile extends TestBase {
 	@SuppressWarnings("deprecation")
 	public void Recordclk() throws InterruptedException
 	{
-		log.info("**** Started the Outbond Extract Channel File Validation****");
+//		log.info("**** Started the Outbond Extract Channel File Validation****");
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
 			 	Thread.sleep(8000);
 				Recordclk.click( );
 				Thread.sleep(8000);
 		
 
-		log.info("**** Click Record****");
+	//	log.info("**** Click Record****");
 
 	}
  
@@ -107,7 +107,7 @@ public class ExtractChannelFile extends TestBase {
 		Thread.sleep(8000);
 		SysAdmin.click( );
 		Thread.sleep(8000); 
-		log.info("**** Click SysAdmin****");
+	//	log.info("**** Click SysAdmin****");
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -118,7 +118,7 @@ public class ExtractChannelFile extends TestBase {
 	{
 		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-		log.info("**** Click DynamicSystemSettins****");
+	//	log.info("**** Click DynamicSystemSettins****");
 	}
 
 	public void GetDataExtractDetails() throws InterruptedException
@@ -134,7 +134,7 @@ public class ExtractChannelFile extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
 
-		log.info("**** Search and Click ****");
+//		log.info("**** Search and Click ****");
 	}
 	public void ClickGetDataExtractDetails() throws InterruptedException
 	{
@@ -142,11 +142,11 @@ public class ExtractChannelFile extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
 
 		ClickReportdeftion.click();
-		log.info("**** Click Report Defination****");
+//		log.info("**** Click Report Defination****");
 
 		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
-		log.info("**** Click DataExtractDetails****");
+	//	log.info("**** Click DataExtractDetails****");
 
 
 	}
@@ -172,7 +172,7 @@ public class ExtractChannelFile extends TestBase {
 				WebElement element = ActionClkGetDataExtractDetails;
 				if(element != null)
 				{
-					log.info("**** Click Action GetDataExtract Details****");
+	//				log.info("**** Click Action GetDataExtract Details****");
 				}
 				return element;
 			}
