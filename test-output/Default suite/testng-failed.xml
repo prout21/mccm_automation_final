@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">
+      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest">
         <methods>
-          <include name="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully"/>
         </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,6 +1,7 @@
 package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -38,7 +39,7 @@ public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
 		testutil=new TestUtil();
 		pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
 		pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
-
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
 

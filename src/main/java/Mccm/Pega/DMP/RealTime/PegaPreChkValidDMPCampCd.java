@@ -76,8 +76,12 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 	public void pegamarkting() throws InterruptedException
 	{
 		Thread.sleep(8000);
-		pegamrkting1.click( );
+		WebElement element9 = pegamrkting1;
+		JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+		executor3.executeScript("arguments[0].click();", element9);
+	//	pegamrkting1.click( );
 		Thread.sleep(8000);
+		System.out.println("element click pegamrkting1");
 	}
 
 

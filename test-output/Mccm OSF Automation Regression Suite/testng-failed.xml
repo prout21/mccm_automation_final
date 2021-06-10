@@ -44,15 +44,4 @@
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
     </classes>
   </test> <!-- Pega OSF Capture Response API Call Regression Test(failed) -->
-  <test thread-count="5" name="Pega OSF DSS Regression Test(failed)">
-    <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="VerifyOSFDynamicSystemSettingRunSuccessfully"/>
-        </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
-    </classes>
-  </test> <!-- Pega OSF DSS Regression Test(failed) -->
 </suite> <!-- Failed suite [Mccm OSF Automation Regression Suite] -->

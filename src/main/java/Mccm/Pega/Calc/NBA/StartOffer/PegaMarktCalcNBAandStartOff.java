@@ -152,13 +152,23 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-
-//		Actions  action = new Actions(driver);
-//		action.moveToElement(Pegalunch).click().build().perform();
-		//  Thread.sleep(1000);
 		Thread.sleep(8000);
-		pegamrkting1.click( );
-		Thread.sleep(8000);
+	 	 
+		{
+			WebElement element9 = pegamrkting1;
+			JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+			executor3.executeScript("arguments[0].click();", element9);
+			
+		}
+		  
+		 
+		 
+	Thread.sleep(8000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
+//	pegamrkting1.click( );
+//	Thread.sleep(8000);
+//	log.info("****OSF element click pegamrkting1 ****");
+	System.out.println("element click pegamrkting1");
 	}
 
 
@@ -218,7 +228,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	 	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
 		  
-		 wait.withTimeout(3, TimeUnit.MINUTES);
+		 wait.withTimeout(4, TimeUnit.MINUTES);
 		 wait.ignoring(NoSuchElementException.class);  
 		 
 		 WebElement element = wait.until(new Function<WebDriver, WebElement>()

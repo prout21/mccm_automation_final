@@ -65,7 +65,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
+import java.util.concurrent.TimeUnit;
 
 
 public class TestBase {
@@ -124,11 +124,11 @@ public class TestBase {
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 
-		    System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+		     System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
-		// 	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+		//  	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 
 			if(headLessMode.equals("true")) {

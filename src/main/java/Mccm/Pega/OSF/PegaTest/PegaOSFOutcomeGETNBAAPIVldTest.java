@@ -1,6 +1,7 @@
 package Mccm.Pega.OSF.PegaTest;
 
 import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
 
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
@@ -41,12 +42,12 @@ public class PegaOSFOutcomeGETNBAAPIVldTest extends TestBase {
 	     pegaMarketIntrctnHistry = loginpageinbound.login(prop.getProperty("username"), prop.getProperty("password")); 
 	     testutil=new TestUtil();
 	     pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
-	     pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
+	 //    pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
 	//     log.info("**** call the method new pegalinch3 ****");
+	 	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	     System.out.println("call the method new pegalinch3 ");  
 	
 	    }
-
 
  
 @Test (priority=1)

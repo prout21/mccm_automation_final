@@ -22,7 +22,8 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
 	
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
 	WebElement Homepage;
-	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+//	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+	@FindBy(xpath="//a[@title='Launch web interface']")
 	WebElement Pegalunch;
 
   

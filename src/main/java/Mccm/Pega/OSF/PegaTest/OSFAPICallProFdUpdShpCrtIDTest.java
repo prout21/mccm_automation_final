@@ -41,14 +41,14 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 	//		log.info("**** Started the OSF Process Fedback ShpCrtl ID API call ****");
 			System.out.println("Started the OSF Process Fedback ShpCrtl ID API call");
 
-			hostName=general_ReadProperty("NBA_hostName");
-			port=general_ReadProperty("NBA_port");
+			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
+			port=general_ReadProperty("HTTPS_OSF_PORT");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 
-			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			mccminternaltrust=general_ReadProperty("KEYSTORE_TRUST_FILENAME");
 
-			css1identity=general_ReadProperty("css1identity");
+			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");

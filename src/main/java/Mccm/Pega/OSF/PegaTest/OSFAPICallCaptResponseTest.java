@@ -46,18 +46,18 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 	//		log.info("**** Started the OSF Capture Response API call ****");
 			System.out.println("Started the OSF Capture Response API call");
 			
-			hostName=general_ReadProperty("NBA_hostName");
+			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
 		//	log.info("NBA_hostName : " +hostName);
-			port=general_ReadProperty("NBA_port");
+			port=general_ReadProperty("HTTPS_OSF_PORT");
 	//		log.info("NBA_port : " +port);
 			KeystorePath=general_ReadProperty("KeystorePath");
 	//		log.info("KeystorePath : " +KeystorePath);
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 	//		log.info("Keystorepassword : " +Keystorepassword);
 
-			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			mccminternaltrust=general_ReadProperty("KEYSTORE_TRUST_FILENAME");
 	//		log.info("Keystorepassword : " +mccminternaltrust);
-			css1identity=general_ReadProperty("css1identity");
+			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 	//		log.info("Keystorepassword : " +css1identity);
 	//		log.info("**** Getting the OSF CaptureResponse URL ****");
 

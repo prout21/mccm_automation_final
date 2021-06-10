@@ -1,6 +1,7 @@
 package Mccm.Pega.Calc.NBA.StartOffer.PegaTest;
 
 import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -42,6 +43,7 @@ public class PegaPreChkValidCalcNBACampCdTest extends TestBase {
 		testutil=new TestUtil();
 		pegaPreChkValidCalcNBACampCd =new PegaPreChkValidCalcNBACampCd();
 		pegaPreChkValidCalcNBACampCd= homepage.Pegamrklunch5();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
 

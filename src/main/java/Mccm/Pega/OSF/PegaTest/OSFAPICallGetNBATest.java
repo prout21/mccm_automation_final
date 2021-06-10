@@ -43,14 +43,14 @@ public class OSFAPICallGetNBATest extends TestBase  {
 	//		log.info("**** Started the OSF GET NBA API call ****");
 			System.out.println("Started the OSF GET NBA API call");
 
-			hostName=general_ReadProperty("NBA_hostName");
-			port=general_ReadProperty("NBA_port");
+			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
+			port=general_ReadProperty("HTTPS_OSF_PORT");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
 
-			mccminternaltrust=general_ReadProperty("mccminternaltrust");
+			mccminternaltrust=general_ReadProperty("KEYSTORE_TRUST_FILENAME");
 
-			css1identity=general_ReadProperty("css1identity");
+			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
 
 

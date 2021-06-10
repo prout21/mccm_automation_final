@@ -1,6 +1,7 @@
 package Mccm.Pega.DMPRealTime.PegaTest;
 
 import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -42,6 +43,7 @@ public class PegaPreChkValidDMPCampCdTest extends TestBase {
 		pegaPreChkValidDMPCampCd =new PegaPreChkValidDMPCampCd();
 		//    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
 		pegaPreChkValidDMPCampCd=homepage.Pegamrklunch4();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
 

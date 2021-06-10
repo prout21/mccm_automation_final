@@ -4,10 +4,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
+import java.util.function.Function;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
+import org.openqa.selenium.remote.HttpSessionId;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,11 +27,14 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
- 
-	
+
+
 	@Test
 
 	public void VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully() {
+
+	
+
 
 		//   public static void main(String[] args) {
 
@@ -36,35 +42,36 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			//          String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
+			Assert.assertEquals("NBA_hostName","NBA_hostName");
 
 
 			hostName=general_ReadProperty("NBA_hostName");
 			port=general_ReadProperty("NBA_port");
 			KeystorePath=general_ReadProperty("KeystorePath");
 			Keystorepassword=general_ReadProperty("Keystorepassword");
-			
+
 			mccminternaltrust=general_ReadProperty("mccminternaltrust");
 			css1identity=general_ReadProperty("css1identity");
-			
-			
-		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+
+
+			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
 			String readLine = null;
-		//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
+			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity)); 
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-	//      System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//      System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		 //	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
-			              
-		 	  json = general_ReadProperty("CalNBA_json_MobileSubscr");
-	
-		 
-			
+			//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
+
+			json = general_ReadProperty("CalNBA_json_MobileSubscr");
+
+			//	String json   = "{\"Account\": {\"AccountID\": \"1130541259\",\"SI\": \"MobileSubscr\"},\"EventName\": \"Track\",\"Channel\": \"Track\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
+
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() { 
 				public boolean verify(String hostname, SSLSession session) {

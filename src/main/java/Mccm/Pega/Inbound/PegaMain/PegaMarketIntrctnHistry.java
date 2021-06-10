@@ -39,8 +39,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
 	WebElement Homepage;
 
-	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+	//@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
+		@FindBy(xpath="//a[@title='Launch web interface']")
 	WebElement Pegalunch;
+	
+	
+ 
 
 	@FindBy(xpath="(//span[@class='menu-item-title'])[5]")
 	WebElement pegamrkting1;
@@ -88,7 +92,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 		Actions  action = new Actions(driver);
 		action.moveToElement(Pegalunch).click().build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		return new PegaMarketIntrctnHistry();
 		 
 	}
@@ -96,11 +100,22 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	public void pegamarkting() throws InterruptedException
 	{
 		Thread.sleep(8000);
-		//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
-		pegamrkting1.click( );
+	 	 
+			{
+				WebElement element9 = pegamrkting1;
+				JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+				executor3.executeScript("arguments[0].click();", element9);
+				
+			}
+			  
+			 
+			 
 		Thread.sleep(8000);
+		//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
+	//	pegamrkting1.click( );
+	//	Thread.sleep(8000);
 	//	log.info("****OSF element click pegamrkting1 ****");
-		System.out.println("OSF element click pegamrkting1");
+		System.out.println("element click pegamrkting1");
 	}
 
 
@@ -111,7 +126,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		ClkReport.click( );
 		Thread.sleep(8000);
 //	log.info("**** OSF element click ClkReport****");
-		System.out.println(" OSF element click ClkReport");
+		System.out.println(" element click ClkReport");
 	}
 	public void ClkIntractionHstry() throws InterruptedException
 	{
@@ -120,7 +135,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		ClkIntractionHstry.click( );
 		Thread.sleep(8000);
 	//	log.info("**** OSF element click ClkIntractionHstry****");
-		System.out.println("OSF element click ClkIntractionHstry");
+		System.out.println("element click ClkIntractionHstry");
 	}
 	public void ClkRecentIntrctnHstry() throws InterruptedException
 	{
@@ -129,7 +144,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		ClkRecentIntrctnHstry.click( );
 		Thread.sleep(8000);
 	//	log.info("**** OSF element click ClkRecentIntrctnHstry ****");
-		System.out.println(" OSF element click ClkRecentIntrctnHstry");
+		System.out.println(" element click ClkRecentIntrctnHstry");
 	}
 	public void InboundValidation() throws InterruptedException
 	{
@@ -176,10 +191,10 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(8000);
 		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
 		WebElement element11 = Channel;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		getTextOnPage1 = element11.getText();
 		System.out.println(getTextOnPage1);
-		Thread.sleep(2000); 
+		Thread.sleep(8000);
 		boolean result = getTextOnPage1.equals("DMP")|| 
 				getTextOnPage1.equals("Online"); 
 		assertTrue(result);
@@ -191,7 +206,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
+		
 
 		String getTextOnPage1 = "",getTextOnPage2="",getTextOnPage3="";
 
@@ -200,15 +215,15 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(8000);
 		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
 		WebElement element12 = BusinessIssue;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		// 	 wait.until(ExpectedConditions.visibilityOf(Group));
 		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
 		WebElement element13 = Group;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		//  	 wait.until(ExpectedConditions.visibilityOf(Proposition));
 		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
 		WebElement element14 = Proposition;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 
 		getTextOnPage1 = element12.getText();
 		System.out.println(getTextOnPage1);
@@ -241,7 +256,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	//	log.info("****  OSF webelement click outcome accepted****");
 		System.out.println(" OSF webelement click outcome accepted");
 		Thread.sleep(8000);
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 	//	log.info("**** Outcome value : " +getTextOnPage1);
@@ -277,7 +292,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(8000);
 	//	log.info("****  OSF webelement outcome click save offer ****");
 		System.out.println(" OSF webelement outcome click save offer");
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 	//	log.info("**** Outcome value : " +getTextOnPage1);
@@ -309,6 +324,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		log.info("****  OSF webelement outcome click submitted order ****");
 		System.out.println(" OSF webelement outcome click submitted order");
 		Thread.sleep(8000);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 
@@ -339,7 +355,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
  		Thread.sleep(8000);
 	//	log.info("****  OSF webelement outcome click new****");
 		System.out.println(" OSF webelement outcome click new");
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 
