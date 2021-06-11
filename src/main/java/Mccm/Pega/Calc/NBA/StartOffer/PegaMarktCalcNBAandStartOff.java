@@ -217,7 +217,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-		Thread.sleep(8000); 
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	}
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException

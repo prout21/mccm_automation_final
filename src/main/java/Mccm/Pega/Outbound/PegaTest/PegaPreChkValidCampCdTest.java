@@ -1,6 +1,7 @@
 package Mccm.Pega.Outbound.PegaTest;
 
 import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -39,7 +40,8 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 		testutil=new TestUtil();
 		pegaPreChkValidCampCd =new PegaPreChkValidCampCd();
 		//    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
-		 pegaPreChkValidCampCd=homepage.Pegamrklunch3();
+		// pegaPreChkValidCampCd=homepage.Pegamrklunch3();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
 
@@ -50,6 +52,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
     	homepage.Pegamrklunch3();
 		pegaPreChkValidCampCd.pegamarkting();
 		testutil.WindowHandling();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		pegaPreChkValidCampCd.ExpandPegMrkPage1();
 		pegaPreChkValidCampCd.CampaignImage();
 		pegaPreChkValidCampCd.Campaigns();

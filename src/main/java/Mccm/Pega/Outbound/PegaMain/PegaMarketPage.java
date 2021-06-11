@@ -194,12 +194,23 @@ public class PegaMarketPage extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-//		Actions  action = new Actions(driver);
-//		action.moveToElement(Pegalunch).click().build().perform();
-		//  Thread.sleep(1000);
 		Thread.sleep(8000);
-		pegamrkting1.click( );
-		Thread.sleep(8000);
+	 	 
+		{
+			WebElement element9 = pegamrkting1;
+			JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+			executor3.executeScript("arguments[0].click();", element9);
+			
+		}
+		  
+		 
+		 
+	Thread.sleep(8000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
+//	pegamrkting1.click( );
+//	Thread.sleep(8000);
+//	log.info("****OSF element click pegamrkting1 ****");
+	System.out.println("element click pegamrkting1");
 	}
 
 
@@ -293,8 +304,7 @@ public class PegaMarketPage extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-		 Thread.sleep(8000);
-		//	driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	}
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
@@ -304,7 +314,7 @@ public class PegaMarketPage extends TestBase  {
 //		System.out.println("Enter Campaigncode");
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		System.out.println("found");
+		 
 		wait.withTimeout(5, TimeUnit.MINUTES);
 		wait.ignoring(NoSuchElementException.class);  
 
@@ -312,11 +322,11 @@ public class PegaMarketPage extends TestBase  {
 
 		{
 			public WebElement apply(WebDriver driver) {
-				//	 System.out.println("Checking for the element!!");
+			 
 				WebElement element = Campaigncode;
 				if(element != null)
 				{
-					System.out.println("Campaigncode target element found");
+				 
 				}
 				return element;
 			}

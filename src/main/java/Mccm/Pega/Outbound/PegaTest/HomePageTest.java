@@ -134,7 +134,7 @@ public class HomePageTest extends TestBase {
 
 	public void teardown() {
 
-		driver.quit();
+	 	driver.quit();
 
 
 		System.out.println("Pega Outbound Dynamic System Setting Done");  

@@ -2,6 +2,7 @@ package Mccm.Pega.Outbound.PegaMain;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -501,7 +502,7 @@ public class HomePageDetails extends TestBase {
 	{
 		wait.until(ExpectedConditions.visibilityOf(OverrideCampSrchClk));
 		OverrideCampSrchClk.click( );
-        
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 	
 	public void OverrideCampBlockrClk() throws InterruptedException

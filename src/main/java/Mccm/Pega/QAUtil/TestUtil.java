@@ -95,6 +95,7 @@ public void ActionMouseMov(WebElement webelement)
 }
 
 
+@SuppressWarnings("deprecation")
 public void fluentWait(WebElement webelement1)
 {
 FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);

@@ -2,6 +2,7 @@ package Mccm.Pega.Outbound.PegaMain;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -126,7 +127,7 @@ public class DBConfigValdtn extends TestBase {
 	// 	wait.until(ExpectedConditions.elementToBeClickable(ClickMCCMLCOutbound));
  		  Thread.sleep(1000);
 		 ClickMCCMLCOutbound.click( );
-        
+		 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 	public void ActionClkMCCMLCOutbound() throws InterruptedException
 	{

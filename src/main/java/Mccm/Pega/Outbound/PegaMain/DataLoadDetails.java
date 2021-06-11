@@ -2,6 +2,7 @@ package Mccm.Pega.Outbound.PegaMain;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -130,7 +131,7 @@ public class DataLoadDetails extends TestBase {
 		ClickDataPage.click();
 		wait.until(ExpectedConditions.visibilityOf(Clickd_latestdataloadFlag));
 		Clickd_latestdataloadFlag.click( );
-       
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 	public void ActionClkd_latestdataloadFlag() throws InterruptedException
 	{

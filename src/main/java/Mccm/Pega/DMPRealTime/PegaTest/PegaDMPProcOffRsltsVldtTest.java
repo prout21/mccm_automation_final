@@ -40,7 +40,7 @@ public class PegaDMPProcOffRsltsVldtTest extends TestBase {
 		
 		testutil=new TestUtil();
 		pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
-	    pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
+	 //   pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
 		
 	  	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}

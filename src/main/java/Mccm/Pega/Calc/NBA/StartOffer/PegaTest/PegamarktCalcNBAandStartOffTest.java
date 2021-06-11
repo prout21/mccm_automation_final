@@ -41,7 +41,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 //		pegaMarktCalcNBAandStartOff = loginPageCalcNBAandStartOff.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegaMarktCalcNBAandStartOff  = new PegaMarktCalcNBAandStartOff();
-		pegaMarktCalcNBAandStartOff=loginPageCalcNBAandStartOff.Pegamrklunch3(); 
+	//	pegaMarktCalcNBAandStartOff=loginPageCalcNBAandStartOff.Pegamrklunch3(); 
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 	}
@@ -53,6 +53,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	//	pegaMarktCalcNBAandStartOff.Pegamrklunch();
 		pegaMarktCalcNBAandStartOff.pegamarkting();
 		testutil.WindowHandling();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage1();
 		pegaMarktCalcNBAandStartOff.CampaignImage();
 		pegaMarktCalcNBAandStartOff.Campaigns();

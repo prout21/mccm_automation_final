@@ -41,7 +41,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 		//  pegamarktDMPrealtime = loginpageDMPrealtime.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarktDMPrealtime  = new PegaMarktDMPRealTime();
-		pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
+	//	pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 	}

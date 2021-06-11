@@ -143,6 +143,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(8000);
 		ClkRecentIntrctnHstry.click( );
 		Thread.sleep(8000);
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	//	log.info("**** OSF element click ClkRecentIntrctnHstry ****");
 		System.out.println(" element click ClkRecentIntrctnHstry");
 	}
@@ -154,7 +155,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		//	 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		WebElement element6 = Journey;
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
+		 
 
 		String getTextOnPage1 = "";
 
@@ -165,10 +166,10 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	//	wait.until(ExpectedConditions.visibilityOf(Channel));
 		Thread.sleep(8000);
 		WebElement element11 = Channel;
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		getTextOnPage1 = element11.getText();
 		System.out.println(getTextOnPage1);
-		Thread.sleep(2000);
+		Thread.sleep(8000);
 		boolean result = getTextOnPage1.equals("O") ||
 				getTextOnPage1.equals("J") ||
 				getTextOnPage1.equals("C") ||
@@ -182,7 +183,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		Thread.sleep(8000);
+		 
 
 		String getTextOnPage1 = "";
 
@@ -226,12 +227,14 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		Thread.sleep(8000);
 
 		getTextOnPage1 = element12.getText();
+		Thread.sleep(2000);
 		System.out.println(getTextOnPage1);
 		getTextOnPage2 = element13.getText();
 		System.out.println(getTextOnPage2);
+		Thread.sleep(2000);
 		getTextOnPage3 = element14.getText();
 		System.out.println(getTextOnPage3);
-
+		Thread.sleep(2000);
 		boolean result = getTextOnPage1.equals("Event") && getTextOnPage2.equals("real time")&&
 				getTextOnPage3.equals("NBAOF"); 
 		assertTrue(result);

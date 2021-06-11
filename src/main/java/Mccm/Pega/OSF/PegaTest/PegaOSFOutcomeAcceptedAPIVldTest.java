@@ -61,6 +61,7 @@ public class PegaOSFOutcomeAcceptedAPIVldTest extends TestBase {
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 System.out.println("pegamarkting");  
 	 testutil.WindowHandling();
+	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	 pegaMarketIntrctnHistry.ExpandReport();
 	 System.out.println("xpandReport");  
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();

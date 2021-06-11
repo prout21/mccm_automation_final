@@ -85,9 +85,24 @@ public class PegaPreChkValidCampCd extends TestBase  {
 	
 	{   
 		 
+
 		Thread.sleep(8000);
-		pegamrkting1.click( );
-		Thread.sleep(8000);
+	 	 
+		{
+			WebElement element9 = pegamrkting1;
+			JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+			executor3.executeScript("arguments[0].click();", element9);
+			
+		}
+		  
+		 
+		 
+	Thread.sleep(8000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
+//	pegamrkting1.click( );
+//	Thread.sleep(8000);
+//	log.info("****OSF element click pegamrkting1 ****");
+	System.out.println("element click pegamrkting1");
 	}
 
 

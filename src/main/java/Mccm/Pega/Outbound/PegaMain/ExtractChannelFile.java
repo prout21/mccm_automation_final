@@ -143,42 +143,43 @@ public class ExtractChannelFile extends TestBase {
 
 		ClickReportdeftion.click();
 //		log.info("**** Click Report Defination****");
-
+		System.out.println("test1");
 		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
 	//	log.info("**** Click DataExtractDetails****");
 
-
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		
 	}
-	@SuppressWarnings("deprecation")
+	 
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
 
+                   Thread.sleep(8000);
+		 	//	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+		 		ActionClkGetDataExtractDetails.click( );
 
-		//		wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
-		//		ActionClkGetDataExtractDetails.click( );
-
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-
-		wait.withTimeout(4, TimeUnit.MINUTES);
-		wait.ignoring(NoSuchElementException.class);  
-
-		WebElement element = wait.until(new Function<WebDriver, WebElement>()
-
-		{
-			public WebElement apply(WebDriver driver) {
-
-				WebElement element = ActionClkGetDataExtractDetails;
-				if(element != null)
-				{
-	//				log.info("**** Click Action GetDataExtract Details****");
-				}
-				return element;
-			}
-		});
-
-		element.click();
+//		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+//		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+//
+//		wait.withTimeout(4, TimeUnit.MINUTES);
+//		wait.ignoring(NoSuchElementException.class);  
+//
+//		WebElement element = wait.until(new Function<WebDriver, WebElement>()
+//
+//		{
+//			public WebElement apply(WebDriver driver) {
+//
+//				WebElement element = ActionClkGetDataExtractDetails;
+//				if(element != null)
+//				{
+//	//				log.info("**** Click Action GetDataExtract Details****");
+//				}
+//				return element;
+//			}
+//		});
+//
+//		element.click();
 
 
 	}

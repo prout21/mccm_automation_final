@@ -5,6 +5,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -38,7 +40,9 @@ public class PegamarktingTest extends TestBase {
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegamarketpage =new PegaMarketPage();
-		 pegamarketpage=homepage.Pegamrklunch();
+		// pegamarketpage=homepage.Pegamrklunch();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
 	}
 
 

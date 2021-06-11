@@ -38,7 +38,7 @@ public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
 		pegaMarketIntrctnHistry = loginpageinbound.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
-		pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
+		//pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
@@ -50,6 +50,7 @@ public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
 		loginpageinbound.Pegamrklunch3();
 		pegaMarketIntrctnHistry.pegamarkting();
 		testutil.WindowHandling();
+		 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		pegaMarketIntrctnHistry.ExpandReport();
 		pegaMarketIntrctnHistry.ClkIntractionHstry();
 		testutil.SwitchToFrame("PegaGadget1Ifr");

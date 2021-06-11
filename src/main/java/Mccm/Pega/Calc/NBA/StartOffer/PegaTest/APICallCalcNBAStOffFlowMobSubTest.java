@@ -45,13 +45,18 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			Assert.assertEquals("NBA_hostName","NBA_hostName");
 
 
-			hostName=general_ReadProperty("NBA_hostName");
-			port=general_ReadProperty("NBA_port");
+			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
+		//	log.info("NBA_hostName : " +hostName);
+			port=general_ReadProperty("HTTPS_OSF_PORT");
+	//		log.info("NBA_port : " +port);
 			KeystorePath=general_ReadProperty("KeystorePath");
+	//		log.info("KeystorePath : " +KeystorePath);
 			Keystorepassword=general_ReadProperty("Keystorepassword");
+	//		log.info("Keystorepassword : " +Keystorepassword);
 
-			mccminternaltrust=general_ReadProperty("mccminternaltrust");
-			css1identity=general_ReadProperty("css1identity");
+			mccminternaltrust=general_ReadProperty("KEYSTORE_TRUST_FILENAME");
+	//		log.info("Keystorepassword : " +mccminternaltrust);
+			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
 
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port

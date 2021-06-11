@@ -42,7 +42,7 @@ public class PegaPreChkValidCalcNBACampCdTest extends TestBase {
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		testutil=new TestUtil();
 		pegaPreChkValidCalcNBACampCd =new PegaPreChkValidCalcNBACampCd();
-		pegaPreChkValidCalcNBACampCd= homepage.Pegamrklunch5();
+	//	pegaPreChkValidCalcNBACampCd= homepage.Pegamrklunch5();
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	}
 
@@ -54,6 +54,7 @@ public class PegaPreChkValidCalcNBACampCdTest extends TestBase {
 		homepage.Pegamrklunch5();
 		pegaPreChkValidCalcNBACampCd.pegamarkting();
 		testutil.WindowHandling();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		pegaPreChkValidCalcNBACampCd.ExpandPegMrkPage1();
 		pegaPreChkValidCalcNBACampCd.CampaignImage();
 		pegaPreChkValidCalcNBACampCd.Campaigns();
