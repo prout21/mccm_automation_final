@@ -46,7 +46,7 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(3000);
+	     Thread.sleep(6000);
 	   	  return new PegaMarktCalcNBAandStartOff();
 	   }
     
@@ -54,7 +54,7 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
 		
 	     Actions  action = new Actions(driver);
 	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(2000);
+	     Thread.sleep(6000);
 	   	  return new PegaPreChkValidCalcNBACampCd();
 	   }
 }

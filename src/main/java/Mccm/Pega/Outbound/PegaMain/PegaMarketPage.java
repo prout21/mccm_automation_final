@@ -304,6 +304,8 @@ public class PegaMarketPage extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
+		Thread.sleep(8000);
+		System.out.println("element click MultiChannelCampaign");
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	}
 	@SuppressWarnings("deprecation")
@@ -331,10 +333,8 @@ public class PegaMarketPage extends TestBase  {
 				return element;
 			}
 		});
-
-	 
-		
 		element.sendKeys(Campaigncd);
+		System.out.println("Entered the Campaign Code");
 	}
 	public void Build() throws InterruptedException
 	{
@@ -366,14 +366,14 @@ public class PegaMarketPage extends TestBase  {
 	}
 	public void Applay() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(Applay));
+		 	wait.until(ExpectedConditions.visibilityOf(Applay));
 		Applay.click( );
 		Thread.sleep(6000);
 	}    
 
 	public void AudianceConfig() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(AudianceConfig));
+		 wait.until(ExpectedConditions.visibilityOf(AudianceConfig));
 		AudianceConfig.click( );
 
 	}
@@ -394,7 +394,7 @@ public class PegaMarketPage extends TestBase  {
 
 	public void ApplayAdience() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(ApplayAdience));
+		 wait.until(ExpectedConditions.visibilityOf(ApplayAdience));
 		ApplayAdience.click( );
 		Thread.sleep(6000);
 	}
@@ -501,7 +501,7 @@ public class PegaMarketPage extends TestBase  {
 
 	public void RunCampgn() throws InterruptedException
 	{
-		System.out.println("Checked Campaign Code");
+		System.out.println("Run with Campaign Code");
 		wait.until(ExpectedConditions.visibilityOf(RunCampgn));
 		RunCampgn.click( );
 
@@ -593,7 +593,7 @@ public class PegaMarketPage extends TestBase  {
 				if ((getTextOnPage1.equals("COMPLETED")) || (getTextOnPage2.equals("FAILED")) || (getTextOnPage3.equals("STOPPED"))) {
 
 
-					System.out.println("Test Case Passed");
+					System.out.println("NBA Batch Run Campgn Status updated");
 
 					break;
 				}
@@ -653,7 +653,7 @@ public class PegaMarketPage extends TestBase  {
 			FileOutputStream fos = new FileOutputStream(file);
 			wb.write(fos);
 		}catch (Exception e) {
-
+			System.out.println("Cretaed NBA Batch Campaign Run ID");
 		}
 	}
 

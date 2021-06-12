@@ -29,7 +29,7 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 // 		String password="unix11";
 		
 	
-		PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
+	//	PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
 		TEST_ENV1=general_ReadProperty("TEST_ENV");
 		 user=general_ReadProperty("USER_NAME");
 		 pass=general_ReadProperty("PASSWORD");
@@ -50,9 +50,9 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		 * readFile.getCellValue("EnvDetails", rowIndex, passwordColIndex);
 		 * host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
 		 */
-		// String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
+	//  String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
 		
-		 String command= general_ReadProperty("DataExtractScriptsExecution_NBA_ONB");
+ 		 String command= general_ReadProperty("DataExtractScriptsExecution_NBA_ONB");
 		 
 		try{
 			java.util.Properties config = new java.util.Properties(); 
@@ -90,9 +90,8 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		}catch(Exception e){
 			e.printStackTrace();
 		}	
-		
-		//String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_KIASEPOS";
-		 String command1= general_ReadProperty("DataExtractScriptsExecution_NBA_KIASEPOS");
+	// String command1="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_KIASEPOS";
+ 	 String command1= general_ReadProperty("DataExtractScriptsExecution_NBA_KIASEPOS");
 		
 		try{
 			java.util.Properties config = new java.util.Properties(); 
@@ -130,8 +129,8 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		}catch(Exception e){
 			e.printStackTrace();
 		}	
-	//	String command2="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_DMP";
-		 String command2= general_ReadProperty("DataExtractScriptsExecution_NBA_DMP");
+ //	String command2="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_DMP";
+	 	 String command2= general_ReadProperty("DataExtractScriptsExecution_NBA_DMP");
 		try{
 			java.util.Properties config = new java.util.Properties(); 
 			config.put("StrictHostKeyChecking", "no");

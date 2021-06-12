@@ -58,8 +58,8 @@ public class PegaOSFOutcomeGETNBAAPIVldTest extends TestBase {
 	 System.out.println("call the method new loginpageinbound pegalinch3 ");  
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 testutil.WindowHandling();
-	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-	 pegaMarketIntrctnHistry.ExpandReport();;
+ 	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	 pegaMarketIntrctnHistry.ExpandReport(); 
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();

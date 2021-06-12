@@ -57,7 +57,7 @@ public class PegaOSFOutcomeSubmitOrderAPIVldTest extends TestBase {
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 testutil.WindowHandling();
 	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-	 pegaMarketIntrctnHistry.ExpandReport();;
+	 pegaMarketIntrctnHistry.ExpandReport(); 
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
 	 pegaMarketIntrctnHistry.ClkRecentIntrctnHstry();

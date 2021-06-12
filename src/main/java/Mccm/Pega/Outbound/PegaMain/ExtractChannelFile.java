@@ -143,7 +143,7 @@ public class ExtractChannelFile extends TestBase {
 
 		ClickReportdeftion.click();
 //		log.info("**** Click Report Defination****");
-		System.out.println("test1");
+		 
 		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
 	//	log.info("**** Click DataExtractDetails****");

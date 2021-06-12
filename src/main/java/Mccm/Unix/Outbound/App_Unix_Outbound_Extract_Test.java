@@ -51,9 +51,9 @@
 		public void VerifyOutboundExtracDataLoadedSuccessfully() throws InterruptedException, AWTException, SftpException, JSchException {
 	
 			System.out.println("Connection started");        	
-			System.out.println("PROJECT_FOLDER_PATH:");  
-			System.out.println("ENV_WIKI:");  
-			PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
+//			System.out.println("PROJECT_FOLDER_PATH:");  
+//			System.out.println("ENV_WIKI:");  
+	//		PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
 			/*
 			 * ENV_WIKI=general_ReadProperty("ENV_WIKI"); String path=
 			 * (PROJECT_FOLDER_PATH1+ENV_WIKI);
