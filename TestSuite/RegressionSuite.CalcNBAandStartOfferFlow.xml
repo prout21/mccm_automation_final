@@ -14,12 +14,12 @@
   </test> <!-- Test -->
       <test name="Pega CalcNBAandStartOfferFlow API Call Regression Test">
     <classes>
-      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobSubTest"/> 
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.APICallCalcNBAStOffFlowMobBanTest"/> 
     </classes>
   </test> <!-- Test -->
     <test name="Pega CalcNBAandStartOfferFlow API Call Validation Regression Test">
     <classes>
-      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBSUBSCTest"/> 
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBBANTest"/> 
     </classes>
   </test> <!-- Test -->
      

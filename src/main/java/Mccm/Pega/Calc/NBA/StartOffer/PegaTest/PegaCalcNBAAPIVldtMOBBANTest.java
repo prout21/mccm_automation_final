@@ -18,7 +18,7 @@ import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 
-public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
+public class PegaCalcNBAAPIVldtMOBBANTest extends TestBase {
 	private static final String priorty = null;
 	LoginPageInbound loginpageinbound;
 
@@ -26,7 +26,7 @@ public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
 	TestUtil testutil;
 
 
-	public PegaCalcNBAAPIVldtMOBSUBSCTest()
+	public PegaCalcNBAAPIVldtMOBBANTest()
 	{
 		super();
 	}
@@ -62,7 +62,7 @@ public class PegaCalcNBAAPIVldtMOBSUBSCTest extends TestBase {
 
 	public void teardown() {
 
-		driver.quit();
+	//	driver.quit();
 
 
 		System.out.println("Calc NBAandStart Offer API IH Validation Done");

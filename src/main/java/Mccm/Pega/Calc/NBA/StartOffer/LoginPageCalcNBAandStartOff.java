@@ -44,8 +44,10 @@ public class LoginPageCalcNBAandStartOff extends TestBase {
    
     public PegaMarktCalcNBAandStartOff Pegamrklunch3()throws InterruptedException {
 		
-	     Actions  action = new Actions(driver);
-	     action.moveToElement(Pegalunch).click().build().perform();
+//	     Actions  action = new Actions(driver);
+//	     action.moveToElement(Pegalunch).click().build().perform();
+    	 Thread.sleep(6000);
+	     Pegalunch.click();
 	     Thread.sleep(6000);
 	   	  return new PegaMarktCalcNBAandStartOff();
 	   }

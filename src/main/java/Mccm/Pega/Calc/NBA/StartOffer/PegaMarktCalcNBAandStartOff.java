@@ -146,7 +146,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 		Actions  action = new Actions(driver);
 		action.moveToElement(Pegalunch).click().build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		return new PegaMarktCalcNBAandStartOff();
 	}
 
@@ -192,16 +192,16 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 	public void Campaigns() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
-		Thread.sleep(8000); 
+		
 	}
 
 
 	public void CampaignImage() throws InterruptedException
 	{
 
-		//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+		wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
 
 	}
@@ -217,7 +217,9 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
+		Thread.sleep(8000); 
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		System.out.println("Selected MultiChannel Campaign ");
 	}
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
@@ -247,7 +249,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		 
 		 element.sendKeys(CalcNBACampaigncd);
 	 
-
+		 System.out.println("Entered the CalcNBACampaigncd");
 	}
 	public void Build() throws InterruptedException
 	{
@@ -273,7 +275,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 	public void AddMrkStrtgy() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(AddMrkStrtgy));
+			wait.until(ExpectedConditions.visibilityOf(AddMrkStrtgy));
 		try {
 			AddMrkStrtgy.click( );
 		} catch(StaleElementReferenceException e) {
@@ -281,7 +283,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	}
 	public void Applay() throws InterruptedException
 	{
-		//	wait.until(ExpectedConditions.visibilityOf(Applay)); 
+			wait.until(ExpectedConditions.visibilityOf(Applay)); 
 		Applay.click( );
 		Thread.sleep(6000);
 	}    

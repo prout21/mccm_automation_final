@@ -32,6 +32,8 @@ import Mccm.Pega.excel.utility.Excel_Reader;
 //import org.apache.logging.log4j.Logger;
 
 public class PegaMarketIntrctnHistry extends TestBase  {
+	
+	public static String NBACalSubjectID;
 
 	
 //	public static Logger log =LogManager.getLogger(PegaMarketIntrctnHistry.class.getName());
@@ -41,7 +43,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
 		@FindBy(xpath="//a[@title='Launch web interface']")
-	WebElement Pegalunch;
+    	WebElement Pegalunch;
 	
 	
  
@@ -78,11 +80,17 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[8]/div[1]/span[1]")
 	WebElement Proposition ;
+	
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[9]/div[1]/span[1]")
 	WebElement Outcome;
 
-
-
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[3]/div[1]/span[1]")
+    WebElement SubjectID;
+	
+	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[11]/div[1]/span[1]")
+    WebElement Direction;
+	
+	
 
 	public PegaMarketIntrctnHistry( ) {
 		PageFactory.initElements(driver, this);
@@ -214,18 +222,17 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(BusinessIssue));
 		Thread.sleep(8000);
-		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
-		WebElement element12 = BusinessIssue;
+		WebElement element12 =SubjectID;
 		Thread.sleep(8000);
 		// 	 wait.until(ExpectedConditions.visibilityOf(Group));
-		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
-		WebElement element13 = Group;
+		WebElement element13 = Direction;
 		Thread.sleep(8000);
 		//  	 wait.until(ExpectedConditions.visibilityOf(Proposition));
-		// 	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[6]/div[1]/span[1]";
-		WebElement element14 = Proposition;
+		WebElement element14 = Channel;
 		Thread.sleep(8000);
-
+		
+		NBACalSubjectID = general_ReadProperty("NBACalSubjectID");
+		Thread.sleep(2000);
 		getTextOnPage1 = element12.getText();
 		Thread.sleep(2000);
 		System.out.println(getTextOnPage1);
@@ -235,8 +242,8 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		getTextOnPage3 = element14.getText();
 		System.out.println(getTextOnPage3);
 		Thread.sleep(2000);
-		boolean result = getTextOnPage1.equals("Event") && getTextOnPage2.equals("real time")&&
-				getTextOnPage3.equals("NBAOF"); 
+		boolean result = getTextOnPage1.equals(NBACalSubjectID) && getTextOnPage2.equals("Inbound")&&
+				getTextOnPage3.equals("OSF"); 
 		assertTrue(result);
 		System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
 	}

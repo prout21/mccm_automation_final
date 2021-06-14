@@ -18,7 +18,7 @@ import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
 
-public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
+public class APICallCalcNBAStOffFlowMobBanTest extends TestBase  {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -31,7 +31,7 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 
 	@Test
 
-	public void VerifyCalcNBAandStartOfferFlowMobileSubscrAPIcallSuccessfully() {
+	public void VerifyCalcNBAandStartOfferFlowMobileBanAPIcallSuccessfully() {
 
 	
 
@@ -42,7 +42,7 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			//          String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
-			Assert.assertEquals("NBA_hostName","NBA_hostName");
+		//	Assert.assertEquals("NBA_hostName","NBA_hostName");
 
 
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
@@ -59,8 +59,10 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
 
-			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
+		 	URL urlForGetRequest = new URL("https://" + hostName + ":" + port
+	 				+ "/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
+					
+	//		URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CalcNBAAndStartOfferFlow");
 			String readLine = null;
 			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity)); 
@@ -73,12 +75,12 @@ public class APICallCalcNBAStOffFlowMobSubTest extends TestBase  {
 
 			//	 String json = "{\"Account\": {\"SubscriptionID\": \"GSM1721234585\",\"SI\": \"MobileSubscr\"},\"ContainerName\": \"CustomerNBAOSF\",\"Channel\": \"OSF\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 
-			json = general_ReadProperty("CalNBA_json_MobileSubscr");
+			json = general_ReadProperty("CalNBA_json_MobileBan");
 
-			//	String json   = "{\"Account\": {\"AccountID\": \"1130541259\",\"SI\": \"MobileSubscr\"},\"EventName\": \"Track\",\"Channel\": \"Track\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
+	 //	String json   = "{\"Account\": {\"AccountID\": \"1130541259\",\"SI\": \"MobileBAN\"},\"EventName\": \"Track\",\"Channel\": \"Track\",\"Direction\": \"Inbound\",\"Context\": [\"StatusChange\",\"Winback\"],\"TargetChannels\": [\"SMS\",\"AppPush\"]}";
 
 			// Create all-trusting host name verifier
-			HostnameVerifier allHostsValid = new HostnameVerifier() { 
+	 	   HostnameVerifier allHostsValid = new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
 					return true;
 				}
