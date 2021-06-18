@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
@@ -27,8 +27,8 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
-	
-//	public static Logger log =LogManager.getLogger(OSFAPICallProFdUpdOrdIDTest.class.getName());
+
+	public static Logger log =LogManager.getLogger(OSFAPICallProFdUpdOrdIDTest.class.getName());
 
 	@Test
 
@@ -41,7 +41,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
 
-	//		log.info("**** Started the OSF Process Fedback update Order ID API call ****");
+			log.info("**** Started the OSF Process Fedback update Order ID API call ****");
 			System.out.println("Started the OSF Process Fedback update Order ID API call");
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
 			port=general_ReadProperty("HTTPS_OSF_PORT");
@@ -55,20 +55,20 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");
-//			log.info("requested url : " +urlForGetRequest);
+			log.info("requested url : " +urlForGetRequest);
 			String readLine = null;
-		//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
+			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-		//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 
 			json = general_ReadProperty("OSF_Json_PfdbOrderID");
-	//		log.info("-----Successfully read the OSF ProcessFeedback update Order ID  jSON Request file------");
+			log.info("-----Successfully read the OSF ProcessFeedback update Order ID  jSON Request file------");
 
 			// Create all-trusting host name verifier
 			HostnameVerifier allHostsValid = new HostnameVerifier() {
@@ -85,7 +85,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
 			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-	//		log.info("x-mccm-usecase", "OSF_ProcessFeedback" );
+			log.info("x-mccm-usecase", "OSF_ProcessFeedback" );
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -107,10 +107,10 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			System.out.println("response: " + response.toString());
 
 			System.out.println(responseCode);
-	//		log.info("response: " + response.toString());
-	//		log.info(+ responseCode);
+			log.info("response: " + response.toString());
+			log.info(+ responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
-//			log.info("**** Ended the OSF Process Fedback update Order ID API call ****");
+			log.info("**** Ended the OSF Process Fedback update Order ID API call ****");
 			System.out.println("Ended the OSF Process Fedback update Order ID API call");
 		} catch (Exception e) {
 			e.printStackTrace();

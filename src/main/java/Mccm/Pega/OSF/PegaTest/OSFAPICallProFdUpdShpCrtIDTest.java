@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 
@@ -25,8 +25,8 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
-	
-//	public static Logger log =LogManager.getLogger(OSFAPICallProFdUpdShpCrtIDTest.class.getName());
+
+	public static Logger log =LogManager.getLogger(OSFAPICallProFdUpdShpCrtIDTest.class.getName());
 
 	@Test
 
@@ -38,7 +38,7 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			//          String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
-	//		log.info("**** Started the OSF Process Fedback ShpCrtl ID API call ****");
+			log.info("**** Started the OSF Process Fedback ShpCrtl ID API call ****");
 			System.out.println("Started the OSF Process Fedback ShpCrtl ID API call");
 
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
@@ -52,20 +52,20 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");
-	//		log.info("requested url : " +urlForGetRequest);
+			log.info("requested url : " +urlForGetRequest);
 			String readLine = null;
-		//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
+			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-		//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 
 			json = general_ReadProperty("OSF_Json_Pfdbkscid");
-	//		log.info("-----Successfully read the OSF Process Fedback ShpCrtl ID jSON Request file------");
+			log.info("-----Successfully read the OSF Process Fedback ShpCrtl ID jSON Request file------");
 
 			// String   json ="{\"OrderID\":\"7473\",\"Outcome\":\"SaveOffer\",\"RankedResults\":[{\"CustomerID\":\"45189267\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\",\"OriginAccount\":{\"AccountID\":\"30541396\",\"SI\":\"Cable\"},\"Name\":\"SG5\",\"Issue\":\"Sales\",\"Group\":\"Cable\",\"CampaignID\":\"P-12\",\"InteractionID\":\"-56933434234234299\",\"CommissionPoints\":4,\"VOID\":\"1000\",\"NBAOfferID\":\"755\"},{\"CustomerID\":\"45189268\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\",\"OriginAccount\":{\"AccountID\":\"13013596\",\"SI\":\"Fixnet\"},\"Name\":\"SG4\",\"Issue\":\"Sales\",\"Group\":\"Cable\",\"CampaignID\":\"P-987\",\"InteractionID\":\"-46033434234234300\",\"CommissionPoints\":1,\"VOID\":\"2272\",\"NBAOfferID\":\"876\"}]}";
 
@@ -84,7 +84,7 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
 			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-	//		log.info("x-mccm-usecase", "OSF_ProcessFeedback" );
+			log.info("x-mccm-usecase", "OSF_ProcessFeedback" );
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -106,10 +106,10 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 			System.out.println("response: " + response.toString());
 
 			System.out.println(responseCode);
-	//		log.info("response: " + response.toString());
-	//		log.info(+ responseCode);
+			log.info("response: " + response.toString());
+			log.info(+ responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
-	//		log.info("**** Ended the OSF Process Fedback ShpCrtl ID API call ****");
+			log.info("**** Ended the OSF Process Fedback ShpCrtl ID API call ****");
 			System.out.println(" Ended the OSF Process Fedback ShpCrtl ID API call");
 		} catch (Exception e) {
 			e.printStackTrace();

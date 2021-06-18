@@ -127,7 +127,7 @@ public class DBConfigValdtn extends TestBase {
 	// 	wait.until(ExpectedConditions.elementToBeClickable(ClickMCCMLCOutbound));
  		  Thread.sleep(1000);
 		 ClickMCCMLCOutbound.click( );
-		 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	}
 	public void ActionClkMCCMLCOutbound() throws InterruptedException
 	{

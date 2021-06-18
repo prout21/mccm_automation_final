@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class OSFAPICallGetNBATest extends TestBase  {
@@ -27,8 +27,8 @@ public class OSFAPICallGetNBATest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
-	
-//	public static Logger log =LogManager.getLogger(OSFAPICallGetNBATest.class.getName());
+
+	public static Logger log =LogManager.getLogger(OSFAPICallGetNBATest.class.getName());
 
 	@Test
 
@@ -40,7 +40,7 @@ public class OSFAPICallGetNBATest extends TestBase  {
 			//          String hostName="mccm-191102761.eu-central-1.elb.amazonaws.com";
 			//          String hostName = "192.57.138.25";
 			//          String port = "18576";// 8573
-	//		log.info("**** Started the OSF GET NBA API call ****");
+			log.info("**** Started the OSF GET NBA API call ****");
 			System.out.println("Started the OSF GET NBA API call");
 
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
@@ -59,21 +59,21 @@ public class OSFAPICallGetNBATest extends TestBase  {
 
 
 			//	  	URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA");  
-	//		log.info("requested url : " +urlForGetRequest);
+			log.info("requested url : " +urlForGetRequest);
 
 			String readLine = null;
-		//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
+			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-		//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
 
 			json = general_ReadProperty("OSF_Json_GETNBA");
-	//		log.info("-----Successfully read the OSF GET NBA jSON Request file------");
+			log.info("-----Successfully read the OSF GET NBA jSON Request file------");
 
 			//   String   json ="{\"Accounts\":[{\"AccountID\":\"1130542249\",\"SI\":\"MobileBAN\"},{\"AccountID\":\"30541253\",\"SI\":\"Cable\"},{\"AccountID\":\"13013453\",\"SI\":\"Fixnet\"}],\"VOID\":\"12345678\",\"SCClassification\":\"SCL\",\"ContainerName\":\"OSF\",\"Channel\":\"OSF\",\"Direction\":\"Inbound\"}";
 
@@ -93,7 +93,7 @@ public class OSFAPICallGetNBATest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
 			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-	//		log.info("x-mccm-usecase", "OSF_GetNBA" );
+			log.info("x-mccm-usecase", "OSF_GetNBA" );
 
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
@@ -117,11 +117,11 @@ public class OSFAPICallGetNBATest extends TestBase  {
 			System.out.println("response: " + response.toString());
 
 			System.out.println(responseCode);
-	//		log.info("response: " + response.toString());
-	//		log.info(+ responseCode);
+			log.info("response: " + response.toString());
+			log.info(+ responseCode);
 
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
-	//		log.info("**** Ended the OSF GET NBA API call ****");
+			log.info("**** Ended the OSF GET NBA API call ****");
 			System.out.println("Ended the OSF GET NBA API call");
 		} catch (Exception e) {
 			e.printStackTrace();

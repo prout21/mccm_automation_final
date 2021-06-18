@@ -42,6 +42,12 @@ public class TestUtil extends TestBase {
 	      // Compare whether the main windows is not equal to child window. If not equal, we will close.
 	      if(!mainWindow.equals(childWindow)){
 	      driver.switchTo().window(childWindow);
+	      try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	      }
 	   }
 	}

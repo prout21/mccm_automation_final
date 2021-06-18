@@ -41,7 +41,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
 		pegaPreChkValidCampCd =new PegaPreChkValidCampCd();
 		//    pegaMrktNBAValuChk=homepage.PegaMrktNBAValuChk();
 		// pegaPreChkValidCampCd=homepage.Pegamrklunch3();
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	}
 
 
@@ -52,7 +52,7 @@ public class PegaPreChkValidCampCdTest extends TestBase {
     	homepage.Pegamrklunch3();
 		pegaPreChkValidCampCd.pegamarkting();
 		testutil.WindowHandling();
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		pegaPreChkValidCampCd.ExpandPegMrkPage1();
 		pegaPreChkValidCampCd.CampaignImage();
 		pegaPreChkValidCampCd.Campaigns();

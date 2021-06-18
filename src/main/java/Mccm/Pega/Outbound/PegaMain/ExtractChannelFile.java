@@ -148,7 +148,7 @@ public class ExtractChannelFile extends TestBase {
 		ClickGetDataExtractDetails.click( );
 	//	log.info("**** Click DataExtractDetails****");
 
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		
 	}
 	 

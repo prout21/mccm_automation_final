@@ -42,7 +42,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 		testutil=new TestUtil();
 		pegamarktDMPrealtime  = new PegaMarktDMPRealTime();
 	//	pegamarktDMPrealtime=loginpageDMPrealtime.Pegamrklunch3();
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 
 	}
 
@@ -54,6 +54,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 		loginpageDMPrealtime.Pegamrklunch3();
 		pegamarktDMPrealtime.pegamarkting();
 		testutil.WindowHandling();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		pegamarktDMPrealtime.ExpandPegMrkPage1();
 		pegamarktDMPrealtime.CampaignImage();
 		pegamarktDMPrealtime.Campaigns();
@@ -89,7 +90,7 @@ public class PegamarktDMPrealtimeTest extends TestBase {
 
 	public void teardown() {
 
-		 driver.quit();
+	   driver.quit();
 
 
 		System.out.println("DMP Real Time Containers Test Cases Executed");

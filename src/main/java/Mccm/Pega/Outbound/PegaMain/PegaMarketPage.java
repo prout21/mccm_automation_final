@@ -131,7 +131,8 @@ public class PegaMarketPage extends TestBase  {
 	@FindBy(xpath="//button[text()='Apply']")
 	WebElement ApplayEngagement;
 
-	@FindBy(xpath="//button[text()='Save']")
+//	@FindBy(xpath="//button[text()='Save']")
+	@FindBy(xpath="/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]")
 	WebElement SaveCampgn;
 
 	@FindBy(xpath="//button[text()='Run']")
@@ -304,9 +305,10 @@ public class PegaMarketPage extends TestBase  {
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
+		Thread.sleep(8000); 
 		Thread.sleep(8000);
-		System.out.println("element click MultiChannelCampaign");
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		System.out.println("Selected MultiChannel Campaign ");
 	}
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
@@ -480,21 +482,43 @@ public class PegaMarketPage extends TestBase  {
 	}
 
 
+	@SuppressWarnings("deprecation")
 	public void ApplayEngagement() throws InterruptedException
 	{
 
 		//	wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 		//ApplayEngagement.click( );
-		Thread.sleep(8000); 
-		//	wait.until(ExpectedConditions.stalenessOf(ApplayEngagement));
-		ApplayEngagement.click( );
-		Thread.sleep(8000); 
+//		Thread.sleep(8000); 
+//		//	wait.until(ExpectedConditions.stalenessOf(ApplayEngagement));
+//		ApplayEngagement.click( );
+//		Thread.sleep(8000); 
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		wait.withTimeout(2, TimeUnit.MINUTES);
+		wait.ignoring(NoSuchElementException.class);  
+
+		WebElement element = wait.until(new Function<WebDriver, WebElement>()
+
+		{
+			public WebElement apply(WebDriver driver) {
+				//	 System.out.println("Checking for the element!!");
+				WebElement element = ApplayEngagement;
+				if(element != null)
+				{
+					//	 System.out.println("Applay Target element found");
+				}
+				return element;
+			}
+		});
+
+		element.click();
+
 	}
 
 	public void SaveCampgn() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		SaveCampgn.click( );
 
 	}

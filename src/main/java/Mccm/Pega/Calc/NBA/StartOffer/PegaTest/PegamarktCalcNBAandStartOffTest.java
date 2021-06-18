@@ -55,7 +55,7 @@ public class PegamarktCalcNBAandStartOffTest extends TestBase {
 	//	pegaMarktCalcNBAandStartOff.Pegamrklunch();
 		pegaMarktCalcNBAandStartOff.pegamarkting();
 		testutil.WindowHandling();
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		pegaMarktCalcNBAandStartOff.ExpandPegMrkPage1();
 		pegaMarktCalcNBAandStartOff.CampaignImage();
 		pegaMarktCalcNBAandStartOff.Campaigns();

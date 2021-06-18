@@ -1,5 +1,7 @@
 package Mccm.Pega.Outbound.PegaMain;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,6 +42,7 @@ public class LoginPage extends TestBase {
     	username.sendKeys(uid);
     	password.sendKeys(pwd);
     	loginbtm.click();
+    	 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
     	return new HomePage();
     }
     

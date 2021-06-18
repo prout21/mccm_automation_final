@@ -42,7 +42,7 @@ public class PegaDMPProcOffRsltsVldtTest extends TestBase {
 		pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
 	 //   pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
 		
-	  	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	}
 
 
@@ -54,6 +54,7 @@ public class PegaDMPProcOffRsltsVldtTest extends TestBase {
 		 
 		pegaMarketIntrctnHistry.pegamarkting();
 		testutil.WindowHandling();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		pegaMarketIntrctnHistry.ExpandReport();;
 		pegaMarketIntrctnHistry.ClkIntractionHstry();
 		testutil.SwitchToFrame("PegaGadget1Ifr");

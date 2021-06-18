@@ -105,7 +105,7 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 
 	public void Campaigns() throws InterruptedException
 	{
-	//	wait.until(ExpectedConditions.visibilityOf(Campaigns));
+ 	wait.until(ExpectedConditions.visibilityOf(Campaigns));
 		Campaigns.click( );
 		Thread.sleep(8000); 
 	}
@@ -114,7 +114,7 @@ public class PegaPreChkValidDMPCampCd extends TestBase  {
 public void CampaignImage() throws InterruptedException
 	{
 
-	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+	 	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
 		 
 	}
@@ -140,6 +140,7 @@ public void CampaignImage() throws InterruptedException
 //		View.click( );
 //		Thread.sleep(6000);
 //	}
+	@SuppressWarnings("deprecation")
 	public void PreChkValdDMPCampCd() throws InterruptedException
 	{
 		for(int i=1;i<10;i++){

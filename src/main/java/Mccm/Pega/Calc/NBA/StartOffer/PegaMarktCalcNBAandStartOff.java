@@ -34,6 +34,8 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 	@FindBy(xpath="(//i[@class='pi pi-caret-down'])[2]")
 	WebElement Pegalunch;
+	
+	
 
 	@FindBy(xpath="(//span[@class='menu-item-title'])[5]")
 	WebElement pegamrkting1;
@@ -76,7 +78,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 	@FindBy(css="button[name='EngagementContainer_pyWorkPage_7']")
 	WebElement Engagementconfig;
-
+	
 
 	@FindBy(xpath="//input[@type='checkbox'][@name='$PpyWorkPage$pEnableEvents']")
 	WebElement Realtimevents;
@@ -105,9 +107,12 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 
 
 	@FindBy(xpath="//button[text()='Apply']")
+//	 @FindBy(css="(button[name='CampaignEngagementModalTemplate_pyWorkPage_17'])[1]")
+	//@FindBy(xpath="//button[normalize-space()='Apply']")
 	WebElement ApplayEngagement;
 
-	@FindBy(xpath="//button[text()='Save']")
+	//@FindBy(xpath="//button[text()='Save']")
+	@FindBy(xpath="/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]")
 	WebElement SaveCampgn;
 
 	@FindBy(xpath="//button[text()='Run']")
@@ -218,7 +223,9 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
 		Thread.sleep(8000); 
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		Thread.sleep(8000); 
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+	//	driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 		System.out.println("Selected MultiChannel Campaign ");
 	}
 	@SuppressWarnings("deprecation")
@@ -226,7 +233,7 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 	{
 	//	wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 	//	Campaigncode.sendKeys(CalcNBACampaigncd);
-		
+		try {
 	 	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
 		  
@@ -250,6 +257,10 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		 element.sendKeys(CalcNBACampaigncd);
 	 
 		 System.out.println("Entered the CalcNBACampaigncd");
+		 
+		 } catch (Exception e) {
+
+		}
 	}
 	public void Build() throws InterruptedException
 	{
@@ -372,40 +383,42 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 			WebElement element9 = AddEvents;
 			JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 			executor3.executeScript("arguments[0].click();", element9);
-
+			System.out.println("AddContainers element clicked");
+			Thread.sleep(8000);
 		}
 	}
 
-	@SuppressWarnings("deprecation")
+ 
 	public void ApplayEngagement() throws InterruptedException
 	{
-//		wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
+  //  	wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 //		//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
 //		//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
-//		Thread.sleep(6000);
-//		ApplayEngagement.click( );
+		Thread.sleep(8000);
+ 		ApplayEngagement.click( );
 		
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		 wait.withTimeout(2, TimeUnit.MINUTES);
-		 wait.ignoring(NoSuchElementException.class);  
-		 
-		 WebElement element = wait.until(new Function<WebDriver, WebElement>()
-		  
-		 {
-		 public WebElement apply(WebDriver driver) {
-	//	 System.out.println("Checking for the element!!");
-		 WebElement element = ApplayEngagement;
-		 if(element != null)
-		 {
-	//	 System.out.println("Applay Target element found");
-		 }
-		 return element;
-		 }
-		 });
-		 
-		element.click();
-
+//		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+//		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+//		 wait.withTimeout(3, TimeUnit.MINUTES);
+//		 wait.ignoring(NoSuchElementException.class);  
+//		 
+//		 WebElement element = wait.until(new Function<WebDriver, WebElement>()
+//		  
+//		 {
+//		 public WebElement apply(WebDriver driver) {
+//	//	 System.out.println("Checking for the element!!");
+//		 WebElement element = ApplayEngagement;
+//		 if(element != null)
+//		 {
+//	 
+//		 }
+//		 return element;
+//		 }
+//		 });
+//		 
+//		element.click();
+		System.out.println("Applay Target element Clicked");
+		Thread.sleep(8000);
 	}
 
 	public void SaveCampgn() throws InterruptedException
@@ -414,16 +427,16 @@ public class PegaMarktCalcNBAandStartOff extends TestBase  {
 		// 	wait.until(ExpectedConditions.elementToBeClickable(SaveCampgn));
 		wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
 		// 	wait.until(ExpectedConditions.visibilityOfElementLocated((By) SaveCampgn));
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		SaveCampgn.click( );
-
+		System.out.println("Save Target element Clicked");
 	}
 
 	public void RunCampgn() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(RunCampgn));
 		RunCampgn.click( );
-
+		System.out.println("RunCampgn Target element Clicked");
 	}
 
 

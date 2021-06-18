@@ -1,12 +1,17 @@
 package Mccm.Pega.Inbound.PegaMain;
 
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
@@ -43,14 +48,28 @@ public class LoginPageInbound extends TestBase {
     	username.sendKeys(uid);
     	password.sendKeys(pwd);
     	loginbtm.click();
+    	driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
     	return new PegaMarketIntrctnHistry();
     }
-    public PegaMarketIntrctnHistry Pegamrklunch3() throws InterruptedException {
+  
+	public PegaMarketIntrctnHistry Pegamrklunch3() throws InterruptedException {
 		
-	     Actions  action = new Actions(driver);
-	     action.moveToElement(Pegalunch).click().build().perform();
-	     Thread.sleep(6000);
-	    
+	 //    Actions  action = new Actions(driver);
+	  //   action.moveToElement(Pegalunch).click().build().perform();
+	   //  action.moveToElement(Pegalunch).doubleClick().build().perform();
+    	
+		wait.until(ExpectedConditions.visibilityOf( Pegalunch));  
+		wait.until(ExpectedConditions.elementToBeClickable( Pegalunch));
+    	 Thread.sleep(8000);
+	 	 			{
+				WebElement element9 = Pegalunch;
+				JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+				executor3.executeScript("arguments[0].click();", element9);
+					}
+					 
+		Thread.sleep(8000);
+     
+    	 System.out.println("Entered the PegaMarket");
 	   	  return new PegaMarketIntrctnHistry();
 	   	  
 	  

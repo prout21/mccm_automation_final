@@ -37,7 +37,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 	     testutil=new TestUtil();
 	     pegaMarketIntrctnHistry =new PegaMarketIntrctnHistry();
 	 //    pegaMarketIntrctnHistry=loginpageinbound.Pegamrklunch3();
-	     driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	     driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	    }
 
 
@@ -49,7 +49,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 	 pegaMarketIntrctnHistry.pegamarkting();
 	 testutil.WindowHandling();
 	 
-	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	 pegaMarketIntrctnHistry.ExpandReport();;
 	 pegaMarketIntrctnHistry.ClkIntractionHstry();
 	 testutil.SwitchToFrame("PegaGadget1Ifr");
@@ -64,7 +64,7 @@ public class PegamarktIntrctnHistoryTest extends TestBase {
 
      public void teardown() {
 	
-   // driver.quit();
+    driver.quit();
 	      
 	 System.out.println("Inbound Intraction History Validation Chanel Done");  
 }

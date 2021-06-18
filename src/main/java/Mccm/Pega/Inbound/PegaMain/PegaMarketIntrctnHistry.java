@@ -113,16 +113,14 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 				WebElement element9 = pegamrkting1;
 				JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 				executor3.executeScript("arguments[0].click();", element9);
-				
-			}
-			  
-			 
-			 
+					}
+					 
 		Thread.sleep(8000);
 		//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
 	//	pegamrkting1.click( );
 	//	Thread.sleep(8000);
 	//	log.info("****OSF element click pegamrkting1 ****");
+ 	//	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		System.out.println("element click pegamrkting1");
 	}
 
@@ -155,27 +153,41 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	//	log.info("**** OSF element click ClkRecentIntrctnHstry ****");
 		System.out.println(" element click ClkRecentIntrctnHstry");
 	}
+	@SuppressWarnings("deprecation")
 	public void InboundValidation() throws InterruptedException
 	{
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		//	 WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		WebElement element6 = Journey;
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
 		 
-
 		String getTextOnPage1 = "";
 
-
-
-		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
-		//	 WebElement element11 =  driver.findElement(By.xpath(xpath11));
 	//	wait.until(ExpectedConditions.visibilityOf(Channel));
 		Thread.sleep(8000);
-		WebElement element11 = Channel;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element1 = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element1 = Channel;
+		 if(element1 != null)
+		 {
+			 System.out.println("Display the Outcome value for inbound  Channel");
+		 			 }
+		 return element1;
+		 }
+		 });
+		 
+		  element1 = Channel;
 		Thread.sleep(8000);
-		getTextOnPage1 = element11.getText();
+		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 		Thread.sleep(8000);
 		boolean result = getTextOnPage1.equals("O") ||
@@ -183,11 +195,14 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 				getTextOnPage1.equals("C") ||
 				getTextOnPage1.equals("B");
 		assertTrue(result);
-		System.out.println("MCCM Inbound Use Cases Passed");
+		System.out.println("Selected value inbound from channel");
 	}
+	@SuppressWarnings("deprecation")
 	public void DMPRealTimeVlidtion() throws InterruptedException
 	{
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -198,20 +213,39 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(Channel));
 		Thread.sleep(8000);
-		//	 String xpath11 = "/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[12]/div[1]/span[1]";
-		WebElement element11 = Channel;
+	//	WebElement element11 = Channel;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element1 = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element1 = Channel;
+		 if(element1 != null)
+		 {
+			 System.out.println("Display the Outcome value for Channel");
+		 			 }
+		 return element1;
+		 }
+		 });
+		 
+		  element1 = Channel;
 		Thread.sleep(8000);
-		getTextOnPage1 = element11.getText();
+		getTextOnPage1 = element1.getText();
 		System.out.println(getTextOnPage1);
 		Thread.sleep(8000);
 		boolean result = getTextOnPage1.equals("DMP")|| 
 				getTextOnPage1.equals("Online"); 
 		assertTrue(result);
-		System.out.println("MCCM DMP Real Time Use Cases Passed");
+		System.out.println("Selected value from Channel DMP Real Time");
 	}
+	@SuppressWarnings("deprecation")
 	public void PegaCalcNBAandStartOffAPIVlidtion() throws InterruptedException
 	{
-		driver.manage().window().maximize();
+		//Thread.sleep(8000);
+	//	driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -222,13 +256,66 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(BusinessIssue));
 		Thread.sleep(8000);
-		WebElement element12 =SubjectID;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element12 = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element12 = SubjectID;
+		 if(element12 != null)
+		 {
+			 System.out.println("Display the Outcome value for subbjct id");
+		 			 }
+		 return element12;
+		 }
+		 });
+		 
+		  element12 =SubjectID;
+		
+	//	WebElement element12 =SubjectID;
 		Thread.sleep(8000);
 		// 	 wait.until(ExpectedConditions.visibilityOf(Group));
-		WebElement element13 = Direction;
+		FluentWait<WebDriver> wait1 = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element13 = wait1.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element13 = Direction;
+		 if(element13 != null)
+		 {
+			 System.out.println("Display the Outcome value for Direction");
+		 			 }
+		 return element13;
+		 }
+		 });
+		 
+		  element13 = Direction;
+		//WebElement element13 = Direction;
 		Thread.sleep(8000);
 		//  	 wait.until(ExpectedConditions.visibilityOf(Proposition));
-		WebElement element14 = Channel;
+		FluentWait<WebDriver> wait2 = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element14 = wait2.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element14 =  Channel;
+		 if(element14 != null)
+		 {
+			 System.out.println("Display the Outcome value for Channel");
+		 			 }
+		 return element14;
+		 }
+		 });
+		 
+		  element14 =  Channel;
+		  
+	//	WebElement element14 = Channel;
 		Thread.sleep(8000);
 		
 		NBACalSubjectID = general_ReadProperty("NBACalSubjectID");
@@ -247,10 +334,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		assertTrue(result);
 		System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
 	}
+	@SuppressWarnings("deprecation")
 	public void PegaOSFOutcomeAPIAcceptedVlidtion() throws InterruptedException
 	{
-		
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);		
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -262,12 +351,29 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
 		Thread.sleep(8000);
-		WebElement element1 = Outcome;
+	//	WebElement element1 = Outcome;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element = Outcome;
+		 if(element != null)
+		 {
+			 System.out.println("Display the Outcome value for accepted");
+		 			 }
+		 return element;
+		 }
+		 });
+		 
+		  element = Outcome;
 	//	log.info("****  OSF webelement click outcome accepted****");
 		System.out.println(" OSF webelement click outcome accepted");
 		Thread.sleep(8000);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element1.getText();
+	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		getTextOnPage1 = element.getText();
 		System.out.println(getTextOnPage1);
 	//	log.info("**** Outcome value : " +getTextOnPage1);
 		System.out.println(" Outcome value");
@@ -282,10 +388,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		log.info("**** OSF display Accepted ****");
 		System.out.println(" OSF display Accepted");
 	}
+	@SuppressWarnings("deprecation")
 	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
 	{
-		
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -297,13 +405,30 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
 		Thread.sleep(8000);
-		WebElement element1 = Outcome;
+	//	WebElement element1 = Outcome;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element = Outcome;
+		 if(element != null)
+		 {
+			 System.out.println("Display the Outcome value for save offer");
+		 			 }
+		 return element;
+		 }
+		 });
+		 
+		  element = Outcome;
 		 
 		Thread.sleep(8000);
 	//	log.info("****  OSF webelement outcome click save offer ****");
 		System.out.println(" OSF webelement outcome click save offer");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element1.getText();
+	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		getTextOnPage1 = element.getText();
 		System.out.println(getTextOnPage1);
 	//	log.info("**** Outcome value : " +getTextOnPage1);
 	//	log.info("****  OSF webelement outcome save offer ****");
@@ -316,9 +441,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		log.info("**** OSF display save offer ****");
 		System.out.println(" OSF display save offer");
 	}
+	@SuppressWarnings("deprecation")
 	public void PegaOSFOutcomeAPISubmitOrderVlidtion() throws InterruptedException
 	{
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -330,12 +458,29 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
 		Thread.sleep(8000);
-		WebElement element1 = Outcome;
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+		   wait.withTimeout(4, TimeUnit.MINUTES);
+		 wait.ignoring(NoSuchElementException.class);  
+		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
+		 {
+		 public WebElement apply(WebDriver driver) {
+	 	 WebElement element = Outcome;
+		 if(element != null)
+		 {
+			 System.out.println("Display the Outcome value for submitted order");
+		 			 }
+		 return element;
+		 }
+		 });
+		 
+		  element = Outcome;
+	//	WebElement element1 = Outcome;
 //		log.info("****  OSF webelement outcome click submitted order ****");
 		System.out.println(" OSF webelement outcome click submitted order");
 		Thread.sleep(8000);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element1.getText();
+	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		getTextOnPage1 = element.getText();
 		System.out.println(getTextOnPage1);
 
 		Thread.sleep(8000);
@@ -349,8 +494,11 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		System.out.println(" OSF display Submitted order");
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void PegaOSFGETNBAAPIVlidtion() throws InterruptedException {
-		driver.manage().window().maximize();
+//		Thread.sleep(8000);
+//		driver.manage().window().maximize();
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -361,12 +509,33 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	 	Thread.sleep(8000);
 		// wait.until(ExpectedConditions.visibilityOf(Outcome));
-		WebElement element1 = Outcome;
+	 	 
+		 	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+			 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+			   wait.withTimeout(4, TimeUnit.MINUTES);
+			 wait.ignoring(NoSuchElementException.class);  
+			  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
+			 {
+			 public WebElement apply(WebDriver driver) {
+		 	 WebElement element = Outcome;
+			 if(element != null)
+			 {
+				 System.out.println("Display the Outcome value for new");
+			 			 }
+			 return element;
+			 }
+			 });
+			 
+			  element = Outcome;
+		 
+			
+		 
+	//	WebElement element1 = Outcome;
  		Thread.sleep(8000);
 	//	log.info("****  OSF webelement outcome click new****");
 		System.out.println(" OSF webelement outcome click new");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element1.getText();
+	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		getTextOnPage1 = element.getText();
 		System.out.println(getTextOnPage1);
 
 		Thread.sleep(8000);

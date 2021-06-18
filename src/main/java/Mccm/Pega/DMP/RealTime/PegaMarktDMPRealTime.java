@@ -107,8 +107,9 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	@FindBy(xpath="//button[text()='Apply']")   
 	WebElement ApplayEngagement;
 
-	@FindBy(xpath="//button[text()='Save']")
+	//@FindBy(xpath="//button[text()='Save']")
 	//	@FindBy(xpath="button[name='MKTNewCaseHeader_pyWorkPage_2']")
+ 	@FindBy(xpath="/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]")
 	WebElement SaveCampgn;
 
 	@FindBy(xpath="//button[text()='Run']")
@@ -166,6 +167,7 @@ public class PegaMarktDMPRealTime extends TestBase  {
 	}
 
 
+	@SuppressWarnings("deprecation")
 	public void ExpandPegMrkPage() throws InterruptedException
 	{
 
@@ -215,36 +217,43 @@ public class PegaMarktDMPRealTime extends TestBase  {
 
 	public void Campaigns() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		//wait.until(ExpectedConditions.visibilityOf(Campaigns));
+		 
 		Campaigns.click( );
 		Thread.sleep(8000); 
+		 
 	}
 
 
 	public void CampaignImage() throws InterruptedException
 	{
 
-		wait.until(ExpectedConditions.visibilityOf(CampaignImage));
+	//	wait.until(ExpectedConditions.visibilityOf(CampaignImage));
 		CampaignImage.click( );
-
+		 
 	}
 
 	public void Create() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Create));
+	//	wait.until(ExpectedConditions.visibilityOf(Create));
 		Create.click( );
-
+		 
 	}
 	public void MultiChannelCampaign() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(MultiChannelCampaign));
 		MultiChannelCampaign.click( );
-		 
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		Thread.sleep(8000); 
+		Thread.sleep(8000);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+	//	driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+		System.out.println("Selected MultiChannel Campaign ");
 	}
+ 
 	@SuppressWarnings("deprecation")
 	public void Campaigncode() throws InterruptedException
 	{
+		
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
 		 
@@ -264,26 +273,27 @@ public class PegaMarktDMPRealTime extends TestBase  {
 				return element;
 			}
 		});
-
+	//	Thread.sleep(8000); 
 	//	Campaigncode.sendKeys(DMPCampaigncd);
 		
-		element.sendKeys(DMPCampaigncd);
-
-		//		Thread.sleep(3000);
+	 	element.sendKeys(DMPCampaigncd);
+		 System.out.println("Entered the DMP Campaigncd");
+		 Thread.sleep(8000); 
 		//		wait.until(ExpectedConditions.visibilityOf(Campaigncode));
 		//		Campaigncode.sendKeys(DMPCampaigncd);
 
 	}
 	public void Build() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(Build));
+		//wait.until(ExpectedConditions.visibilityOf(Build));
+		Thread.sleep(8000); 
 		Build.click( );
 
 	}
 	public void MrktStrtgyConfig() throws InterruptedException
 	{
 		//	wait.until(ExpectedConditions.visibilityOf(MrktStrtgyConfig)); 
-		Thread.sleep(3000);
+		Thread.sleep(3000); 
 		MrktStrtgyConfig.click( );
 
 	}
@@ -403,56 +413,77 @@ public class PegaMarktDMPRealTime extends TestBase  {
 			WebElement element9 = AddContainers;
 			JavascriptExecutor executor3 = (JavascriptExecutor)driver;
 			executor3.executeScript("arguments[0].click();", element9);
-
+			
+			Thread.sleep(8000);
+			System.out.println("AddContainers element clicked");
 		}
 	}
 
+ 
 	public void ApplayEngagement() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.visibilityOf(ApplayEngagement));
 		//	wait.until(ExpectedConditions.elementToBeClickable(ApplayEngagement)); 
 		//	wait.until(ExpectedConditions.presenceOfElementLocated((By) ApplayEngagement));
-		//Thread.sleep(8000);
-		//	ApplayEngagement.click( );
+		  Thread.sleep(8000);
+	      ApplayEngagement.click( );
 
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		wait.withTimeout(2, TimeUnit.MINUTES);
-		wait.ignoring(NoSuchElementException.class);  
+//		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+//		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
+//		wait.withTimeout(2, TimeUnit.MINUTES);
+//		wait.ignoring(NoSuchElementException.class);  
+//
+//		WebElement element = wait.until(new Function<WebDriver, WebElement>()
+//
+//		{
+//			public WebElement apply(WebDriver driver) {
+//				//	 System.out.println("Checking for the element!!");
+//				WebElement element = ApplayEngagement;
+//				if(element != null)
+//				{
+//					//	 System.out.println("Applay Target element found");
+//				}
+//				return element;
+//			}
+//		});
+//
+//		element.click();
 
-		WebElement element = wait.until(new Function<WebDriver, WebElement>()
-
-		{
-			public WebElement apply(WebDriver driver) {
-				//	 System.out.println("Checking for the element!!");
-				WebElement element = ApplayEngagement;
-				if(element != null)
-				{
-					//	 System.out.println("Applay Target element found");
-				}
-				return element;
-			}
-		});
-
-		element.click();
-
-
+ 		Thread.sleep(8000); 
+ 		System.out.println("Applay element clicked");
+//	 	ApplayEngagement.click( );
+//		Thread.sleep(8000); 
 
 	}
 
 
+
 	public void SaveCampgn() throws InterruptedException
 	{
-		wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
-		Thread.sleep(3000);
+	//	wait.until(ExpectedConditions.elementToBeClickable(SaveCampgn));
+		 
+	 	wait.until(ExpectedConditions.visibilityOf(SaveCampgn));
+     	Thread.sleep(6000);
+	//	driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		SaveCampgn.click( );
+
+		Thread.sleep(8000);
+		System.out.println("Save element clicked");
+//		WebElement ele = SaveCampgn;
+//		JavascriptExecutor jse = (JavascriptExecutor)driver;
+//		jse.executeScript("arguments[0].click()", ele);
+	//	Assert.assertTrue(ExpectedConditions.titleContains("Save").apply(driver).booleanValue());
+	//	Assert.assertTrue(ExpectedConditions.elementToBeClickable(SaveCampgn).apply(driver).isDisplayed());
+ 	//	SaveCampgn.click( );
+ 
+		
 	}
 
 	public void RunCampgn() throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(RunCampgn));
 		RunCampgn.click( );
-
+		System.out.println("RunCampgn element clicked");
 	}
 
 

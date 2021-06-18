@@ -41,7 +41,7 @@ public class PegamarktingTest extends TestBase {
 		testutil=new TestUtil();
 		pegamarketpage =new PegaMarketPage();
 		// pegamarketpage=homepage.Pegamrklunch();
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 
 	}
 
@@ -51,7 +51,7 @@ public class PegamarktingTest extends TestBase {
 		 homepage.Pegamrklunch();
 		pegamarketpage.pegamarkting();
 		testutil.WindowHandling();
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
  		pegamarketpage.ExpandPegMrkPage1();
     	pegamarketpage.CampaignImage();
 		pegamarketpage.Campaigns();
@@ -94,7 +94,7 @@ public class PegamarktingTest extends TestBase {
 	public void teardown() {
 
  
-    driver.quit();
+  //  driver.quit();
  
 	 
 
