@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBBANTest">
+      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
         <methods>
-          <include name="setup"/>
-          <include name="VerifyPegaCalcNBAandStartOffAPIVldtTestSuccessfully"/>
           <include name="teardown"/>
+          <include name="VerifyOSFGETNBAAPIValidationRunSuccessfully"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBBANTest -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

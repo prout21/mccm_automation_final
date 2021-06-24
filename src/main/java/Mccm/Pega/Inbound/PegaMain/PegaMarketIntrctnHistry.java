@@ -205,6 +205,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -248,6 +249,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		//Thread.sleep(8000);
 	//	driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -343,6 +345,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);		
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -397,6 +400,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -450,6 +454,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
@@ -502,6 +507,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 wait.until(ExpectedConditions.visibilityOf(Journey));
 		JavascriptExecutor js5 = (JavascriptExecutor) driver;
 		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
 		js5.executeScript("arguments[0].scrollIntoView();", element6);	
