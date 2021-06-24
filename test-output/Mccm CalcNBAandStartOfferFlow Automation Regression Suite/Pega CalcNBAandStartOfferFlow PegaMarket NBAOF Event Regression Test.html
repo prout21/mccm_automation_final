@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 17 15:37:50 IST 2021</td>
+<td>Started on:</td><td>Wed Jun 23 12:33:51 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>374 seconds (374635 ms)</td>
+<tr><td>Total time:</td><td>459 seconds (459313 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,53 +76,46 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully()'><b>VerifyCalcNBAandStartOfferEventRunSuccessfully</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-test-id=&quot;20140919030420037410647&quot; data-ctl=&quot;&quot; data-click=&quot;[[&amp;quot;runScript&amp;quot;, [&amp;quot;doModalAction(pega.u.d.submitModalDlgParam,\&amp;quot;:event\&amp;quot;)&amp;quot;]]]&quot; name=&quot;CampaignEngagementModalTemplate_pyWorkPage_17&quot; class=&quot;Strong pzhc pzbutton&quot; type=&quot;button&quot; title=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (1129, 543). Other element would receive the click: &lt;div id=&quot;pega_ui_mask&quot; class=&quot;pega_ui_masking&quot; style=&quot;position: fixed; display: block; top: 0px; left: 0px; height: 573px; width: 1315px;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=91.0.4472.106)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.145.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3723e456d4cba64dbe6326c24f6b7076
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy25.click(Unknown Source)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff.ApplayEngagement(PegaMarktCalcNBAandStartOff.java:397)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully(PegamarktCalcNBAandStartOffTest.java:83)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: /html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff.SaveCampgn(PegaMarktCalcNBAandStartOff.java:428)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully(PegamarktCalcNBAandStartOffTest.java:84)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1512273713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1512273713'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-test-id=&quot;20140919030420037410647&quot; data-ctl=&quot;&quot; data-click=&quot;[[&amp;quot;runScript&amp;quot;, [&amp;quot;doModalAction(pega.u.d.submitModalDlgParam,\&amp;quot;:event\&amp;quot;)&amp;quot;]]]&quot; name=&quot;CampaignEngagementModalTemplate_pyWorkPage_17&quot; class=&quot;Strong pzhc pzbutton&quot; type=&quot;button&quot; title=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (1129, 543). Other element would receive the click: &lt;div id=&quot;pega_ui_mask&quot; class=&quot;pega_ui_masking&quot; style=&quot;position: fixed; display: block; top: 0px; left: 0px; height: 573px; width: 1315px;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=91.0.4472.106)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]&quot;}
+  (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;10.218.145.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;192.168.43.19&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.106, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3723e456d4cba64dbe6326c24f6b7076
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 842e3198c05f5569c6de2083bdff17e2
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy25.click(Unknown Source)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff.ApplayEngagement(PegaMarktCalcNBAandStartOff.java:397)
-	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully(PegamarktCalcNBAandStartOffTest.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy25.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1225927567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1225927567'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: /html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff.SaveCampgn(PegaMarktCalcNBAandStartOff.java:428)
+	at Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest.VerifyCalcNBAandStartOfferEventRunSuccessfully(PegamarktCalcNBAandStartOffTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,9 +144,41 @@ Session ID: 3723e456d4cba64dbe6326c24f6b7076
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]&quot;}
+  (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;IN5CD94237KD&apos;, ip: &apos;192.168.43.19&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\prout21\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 842e3198c05f5569c6de2083bdff17e2
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[3]/form[1]/div[3]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/button[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy25.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
 </pre></div></td>
-<td>195</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@15bbf42f</td></tr>
+<td>383</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest@5f9b2141</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -165,8 +190,8 @@ Session ID: 3723e456d4cba64dbe6326c24f6b7076
 <tr>
 <td title='Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest.VerifyPreCheckCalcNBACampCodeValueValidSuccessfully()'><b>VerifyPreCheckCalcNBACampCodeValueValidSuccessfully</b><br>Test class: Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest</td>
 <td></td>
-<td>102</td>
-<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@2dde1bff</td></tr>
+<td>52</td>
+<td>Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaPreChkValidCalcNBACampCdTest@550ee7e5</td></tr>
 </table><p>
 </body>
 </html>

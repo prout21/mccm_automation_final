@@ -70,6 +70,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveCalNBAStartOff();
 		osfDSS.CloseCalNBAStartOff();
 		//Internal_REST_URL_OSF
+		System.out.println("Internal_REST_URL_OSF DSS Setting Done");
 
 		//		//OSFDirection
 		testutil.SwitcTodefaultContent();
@@ -84,7 +85,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFDirection();
 		osfDSS.CloseOSFDirection();
 		//		//OSFDirection
-
+		System.out.println("OSFDirection DSS Setting Done");
 		//		//OSFChannel
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -98,7 +99,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFChannel();
 		osfDSS.CloseOSFChannel();
 		//		//OSFChannel
-
+		System.out.println("OSFChannel DSS Setting Done");
 
 		//OSFContainerName
 		testutil.SwitcTodefaultContent();
@@ -113,6 +114,8 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFContainerName();
 		osfDSS.CloseOSFContainerName();
 		//OSFContainerName
+		System.out.println("OSFContainerName DSS Setting Done");
+
 		//OSFSClassificationDefaultValue
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -126,6 +129,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFSClassificationDefaultValue();
 		osfDSS.CloseOSFSClassificationDefaultValue();
 		//OSFSClassificationDefaultValue
+		System.out.println("OSFSClassificationDefaultValue DSS Setting Done");
 
 		//MaxNoOfAcntsForOSFGetNBAPerRqst
 		testutil.SwitcTodefaultContent();
@@ -140,6 +144,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
 		osfDSS.CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
 		//MaxNoOfAcntsForOSFGetNBAPerRqst
+		System.out.println("MaxNoOfAcntsForOSFGetNBAPerRqst DSS Setting Done");
 
 		//OSFGetNBATimeout
 		testutil.SwitcTodefaultContent();
@@ -154,6 +159,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFGetNBATimeout();
 		osfDSS.CloseOSFGetNBATimeout();
 		//OSFGetNBATimeout
+		System.out.println("OSFGetNBATimeout DSS Setting Done");
 		//D_mccmsettings
 		osfDSS.D_mccmsettings();
 		osfDSS.SerchClick();
@@ -164,7 +170,9 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.RunActionClk();
 		osfDSS.FulshRunClick();
 		//D_mccmsettings
-		System.out.println("OSF DSS Ended");
+		System.out.println("D_mccmsettings DSS Setting Done");
+		
+		System.out.println("OSF DSS Execution Ended");
 	}
 
 

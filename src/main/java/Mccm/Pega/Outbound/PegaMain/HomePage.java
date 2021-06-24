@@ -22,6 +22,7 @@ import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
+import Mccm.Pega.Calc.NBA.StartOffer.CalNBADMCCMSettings;
 import Mccm.Pega.Calc.NBA.StartOffer.CalcNBAStartOffDSS;
 import Mccm.Pega.Calc.NBA.StartOffer.PegaPreChkValidCalcNBACampCd;
 
@@ -93,6 +94,23 @@ public class HomePage extends TestBase {
 		}
 
 		return new OSFDMCCMSettings(); }
+	
+	public CalNBADMCCMSettings ClickHomepageCalNBA() throws InterruptedException {
+		Thread.sleep(6000); // Homepage.click();
+
+		boolean searchIconPresence = Homepage.isDisplayed(); boolean
+		searchIconEnabled = Homepage.isEnabled();
+
+		if (searchIconPresence==true && searchIconEnabled==true)
+
+		{ 
+			WebElement element20 = Homepage; JavascriptExecutor executor14 =
+					(JavascriptExecutor)driver; executor14.executeScript("arguments[0].click();",
+							element20);
+
+		}
+
+		return new CalNBADMCCMSettings(); }
 
 	public PegaMarketPage Pegamrklunch()throws InterruptedException {
 

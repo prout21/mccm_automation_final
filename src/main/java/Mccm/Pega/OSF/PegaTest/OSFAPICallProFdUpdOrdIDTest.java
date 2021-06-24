@@ -14,8 +14,10 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
+import org.apache.log4j.Logger;
 
 
 public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
@@ -28,7 +30,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 	public static String mccminternaltrust;
 	public static String css1identity;
 
-	public static Logger log =LogManager.getLogger(OSFAPICallProFdUpdOrdIDTest.class.getName());
+	Logger log = Logger.getLogger(OSFAPICallProFdUpdOrdIDTest.class.getName());
 
 	@Test
 
@@ -85,7 +87,7 @@ public class OSFAPICallProFdUpdOrdIDTest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
 			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-			log.info("x-mccm-usecase", "OSF_ProcessFeedback" );
+			log.debug("Header passed" );
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);

@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
+import java.net.URLConnection;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
@@ -14,8 +16,11 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.excel.utility.Excel_Reader;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
+ import org.apache.log4j.Logger;
+
 //import com.sun.tools.sjavac.Log;
 
 
@@ -29,7 +34,9 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 	public static String mccminternaltrust;
 	public static String css1identity;
 
-	public static Logger log =LogManager.getLogger(OSFAPICallCaptResponseTest.class.getName());
+	//public static Logger log =LogManager.getLogger(OSFAPICallCaptResponseTest.class.getName());
+	
+	 Logger log = Logger.getLogger("OSFAPICallCaptResponseTest.class.getName()");
 
 
 	@Test
@@ -64,6 +71,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
 					+ "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
 			log.info("requested url : " +urlForGetRequest);
+			
 			String readLine = null;
 			//		System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
@@ -94,7 +102,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
 			connection.setRequestProperty("x-request-id", "GUID likead785657");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
-			log.info("x-mccm-usecase", "OSF_CaptureResponse" );
+			log.debug("Header passed" );
 			/*
 			 * connection.setRequestProperty("usecase ID", "OSF_CaptureResponse");
 			 * connection.setRequestProperty("correlation ID", "GUID likead64557");

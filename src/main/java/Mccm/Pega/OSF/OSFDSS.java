@@ -15,13 +15,14 @@ import Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 public class OSFDSS extends TestBase {
 
 	public static String ExcelFilePath;
-	public static Logger log =LogManager.getLogger(PegaOSFDMCCMSettingTest.class.getName());
+	Logger log = Logger.getLogger(OSFDSS.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;

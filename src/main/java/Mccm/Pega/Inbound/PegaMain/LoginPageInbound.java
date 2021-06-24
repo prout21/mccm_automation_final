@@ -49,6 +49,7 @@ public class LoginPageInbound extends TestBase {
     	password.sendKeys(pwd);
     	loginbtm.click();
     	driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     	return new PegaMarketIntrctnHistry();
     }
   

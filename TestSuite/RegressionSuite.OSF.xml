@@ -7,11 +7,16 @@
 			class-name="Mccm.Pega.ExtentReportListner.TestListener" />
 	</listeners>
 
-	
+	<test name="Pega OSF DSS Regression Test">
+		<classes>
+			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest" />
+		</classes>
+	</test> <!-- Test -->
 	<test name="Pega OSF GETNBA API Call Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest" />
-			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest" />
+			<class
+				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="Pega OSF Process Feedback API Call Regression Test">
@@ -33,10 +38,6 @@
 				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest" />
 		</classes>
 	</test> <!-- Test -->
-	<test name="Pega OSF DSS Regression Test">
-		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest" />
-		</classes>
-	</test> <!-- Test -->
+
 
 </suite> <!-- Suite -->

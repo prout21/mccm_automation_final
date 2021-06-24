@@ -16,8 +16,9 @@ import Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 //import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 public class PegaOSFOutcomeGETNBAAPIVldTest extends TestBase {
 	private static final String priorty = null;
@@ -25,7 +26,7 @@ public class PegaOSFOutcomeGETNBAAPIVldTest extends TestBase {
 
 	PegaMarketIntrctnHistry pegaMarketIntrctnHistry;
 	TestUtil testutil;
-	public static Logger log =LogManager.getLogger(PegaOSFOutcomeGETNBAAPIVldTest.class.getName());
+	 Logger log = Logger.getLogger(PegaOSFOutcomeGETNBAAPIVldTest.class.getName());
 
 	public PegaOSFOutcomeGETNBAAPIVldTest()
 	{

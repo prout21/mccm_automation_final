@@ -1,4 +1,4 @@
-package Mccm.Pega.OSF;
+package Mccm.Pega.Calc.NBA.StartOffer;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -16,15 +16,14 @@ import Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class OSFDMCCMSettings extends TestBase {
+public class CalNBADMCCMSettings extends TestBase {
 
 	public static String ExcelFilePath;
 
-	Logger log = Logger.getLogger(OSFDMCCMSettings.class.getName());
+	public static Logger log =LogManager.getLogger(PegaOSFDMCCMSettingTest.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -75,7 +74,7 @@ public class OSFDMCCMSettings extends TestBase {
 
 	//D_mccmsettingsValue
 
-	String D_mccmsettingsValue = obj.getCellValue("PegaTestDataOSF", 1, 11);
+	String D_mccmsettingsValue = obj.getCellValue("PegaTestDataCalcNBA", 1, 3);
 
 	//D_mccmsettingsValue
 
@@ -83,7 +82,7 @@ public class OSFDMCCMSettings extends TestBase {
 
 
 
-	public OSFDMCCMSettings( ) {
+	public CalNBADMCCMSettings( ) {
 		PageFactory.initElements(driver, this);
 	}
 
