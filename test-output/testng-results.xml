@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="223803" started-at="2021-06-24T11:06:30 IST" finished-at="2021-06-24T11:10:14 IST">
+  <suite name="Default suite" duration-ms="2932" started-at="2021-06-24T14:31:37 IST" finished-at="2021-06-24T14:31:40 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="223803" started-at="2021-06-24T11:06:30 IST" finished-at="2021-06-24T11:10:14 IST">
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@c03cf28]" name="setup" is-config="true" duration-ms="66850" started-at="2021-06-24T11:06:30 IST" finished-at="2021-06-24T11:07:37 IST">
+    <test name="Default test" duration-ms="2932" started-at="2021-06-24T14:31:37 IST" finished-at="2021-06-24T14:31:40 IST">
+      <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest">
+        <test-method status="PASS" signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest@5f16132a]" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" duration-ms="2905" started-at="2021-06-24T14:31:37 IST" finished-at="2021-06-24T14:31:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@c03cf28]" name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully" duration-ms="155822" started-at="2021-06-24T11:07:37 IST" finished-at="2021-06-24T11:10:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@c03cf28]" name="teardown" is-config="true" duration-ms="1100" started-at="2021-06-24T11:10:13 IST" finished-at="2021-06-24T11:10:14 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

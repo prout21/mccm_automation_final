@@ -1,2 +1,14 @@
-2021-06-23 20:09:48,376 DEBUG PegaMarketIntrctnHistry.class.getName()<strong>{1}</strong>:73 - Getting pegamrkting1
-2021-06-23 20:09:48,381  INFO PegaMarketIntrctnHistry.class.getName()<strong>{1}</strong>:74 - Getting pegamrkting1
+2021-06-24 14:31:37,907  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:53 - **** Started the OSF Capture Response API call ****
+2021-06-24 14:31:37,910  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:57 - NBA_hostName : 192.57.138.25
+2021-06-24 14:31:37,911  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:59 - NBA_port : 18576
+2021-06-24 14:31:37,912  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:61 - KeystorePath : C:\Users\prout21\git\mccm_automation\Keystore\
+2021-06-24 14:31:37,912  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:63 - Keystorepassword : password
+2021-06-24 14:31:37,914  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:66 - Keystorepassword : mccminternaltrust.jks
+2021-06-24 14:31:37,914  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:68 - Keystorepassword : css1identity.jks
+2021-06-24 14:31:37,914  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:69 - **** Getting the OSF CaptureResponse URL ****
+2021-06-24 14:31:37,915  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:73 - requested url : https://192.57.138.25:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse
+2021-06-24 14:31:37,915  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:88 - -----Successfully read the OSF CaptureResponse jSON Request file------
+2021-06-24 14:31:38,416 DEBUG OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:105 - Header passed
+2021-06-24 14:31:40,803  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:131 - response: {"Status":"OK","RecalculateNBA":false,"Message":"Response captured successfully"}
+2021-06-24 14:31:40,803  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:132 - 200
+2021-06-24 14:31:40,805  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:135 - **** Ended the OSF Capture Response API call ****

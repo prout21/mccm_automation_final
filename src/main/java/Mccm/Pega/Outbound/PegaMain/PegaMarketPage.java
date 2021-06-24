@@ -308,6 +308,7 @@ public class PegaMarketPage extends TestBase  {
 		Thread.sleep(8000); 
 		Thread.sleep(8000);
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		System.out.println("Selected MultiChannel Campaign ");
 	}
 	@SuppressWarnings("deprecation")

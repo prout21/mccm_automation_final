@@ -42,7 +42,7 @@ public class PegamarktingTest extends TestBase {
 		pegamarketpage =new PegaMarketPage();
 		// pegamarketpage=homepage.Pegamrklunch();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-
+		 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 
 
