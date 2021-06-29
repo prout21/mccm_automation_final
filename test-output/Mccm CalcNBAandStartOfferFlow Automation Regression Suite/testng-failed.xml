@@ -4,6 +4,17 @@
   <listeners>
     <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Pega CalcNBAandStartOfferFlow PegaMarket NBAOF Event Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest">
+        <methods>
+          <include name="VerifyCalcNBAandStartOfferEventRunSuccessfully"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegamarktCalcNBAandStartOffTest -->
+    </classes>
+  </test> <!-- Pega CalcNBAandStartOfferFlow PegaMarket NBAOF Event Regression Test(failed) -->
   <test thread-count="5" name="Pega CalcNBAandStartOfferFlow API Call Validation Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Calc.NBA.StartOffer.PegaTest.PegaCalcNBAAPIVldtMOBBANTest">

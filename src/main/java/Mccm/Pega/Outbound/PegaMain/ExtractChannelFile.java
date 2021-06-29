@@ -156,31 +156,10 @@ public class ExtractChannelFile extends TestBase {
 	{
 
                    Thread.sleep(8000);
-		 	//	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+		 	 	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
 		 		ActionClkGetDataExtractDetails.click( );
 
-//		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-//		wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-//
-//		wait.withTimeout(4, TimeUnit.MINUTES);
-//		wait.ignoring(NoSuchElementException.class);  
-//
-//		WebElement element = wait.until(new Function<WebDriver, WebElement>()
-//
-//		{
-//			public WebElement apply(WebDriver driver) {
-//
-//				WebElement element = ActionClkGetDataExtractDetails;
-//				if(element != null)
-//				{
-//	//				log.info("**** Click Action GetDataExtract Details****");
-//				}
-//				return element;
-//			}
-//		});
-//
-//		element.click();
-
+ 
 
 	}
 

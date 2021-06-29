@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm OSF Automation Regression Suite]">
-  <listeners>
-    <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
-  </listeners>
-  <test thread-count="5" name="Pega OSF GETNBA API Call Regression Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
+      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
         <methods>
           <include name="teardown"/>
-          <include name="VerifyOSFGETNBAAPIValidationRunSuccessfully"/>
+          <include name="VerifyOutboundNBABatchProcessCompletedSuccessfully"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
     </classes>
-  </test> <!-- Pega OSF GETNBA API Call Regression Test(failed) -->
-</suite> <!-- Failed suite [Mccm OSF Automation Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

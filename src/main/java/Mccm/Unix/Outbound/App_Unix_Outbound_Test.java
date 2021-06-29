@@ -72,9 +72,9 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 		//Create page objects and set the test result path
 		//	SFDC_LoginPage sfdcLoginPageObject = new SFDC_LoginPage(getDriver());
 		//	sfdcLoginPageObject.setResultPath(getOutputDirectory());
-	////	System.out.println("Case 1:");        	
-	////	System.out.println("PROJECT_FOLDER_PATH:");  
-	 	System.out.println("test1");  
+		////	System.out.println("Case 1:");        	
+		////	System.out.println("PROJECT_FOLDER_PATH:");  
+		// 	System.out.println("test1");  
 		//    		PROJECT_FOLDER_PATH=general_ReadProperty("PROJECT_FOLDER_PATH");
 		// PROJECT_FOLDER_PATH1=general_ReadProperty("PROJECT_FOLDER_PATH");
 		/*
@@ -111,7 +111,7 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 		//		//Assert.fail("Login Not Successful");
 		//		}   	
 		//    	
-		System.out.println("test2");  
+
 		try { 	
 			//Object myObject = null;
 			// String user = "mccm02";
@@ -124,11 +124,11 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 			String name11= " ";
 			int k;
 			//String host1 = "46.190.224.85";
-			System.out.println("test 3");  
-			//upload script                                                              ////script
+			System.out.println("Oracle Load Started"); 
+			//upload script                                                             
 			Upload.main(null);//main();
 
-			System.out.println("test 4");  
+
 			JSch jSch = new JSch();
 			Session session = jSch.getSession(user,host,9022);
 			//Session session = jSch.getSession(user1,host1,22);
@@ -138,19 +138,18 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 			session.connect();
 			ChannelSftp channelSftp = (ChannelSftp) session.openChannel("sftp");
 			channelSftp.connect();
-			System.out.println("Case 1:");        	
+
 			//System.out.println("");     
 
 			System.out.println("Session connected: "+session.isConnected());
 			System.out.println("");            
 
 			//	Vector fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/temp/cassandra");
-			System.out.println("test 5");  
+
 			String App_Unix_Outbound_temp_cassandra= general_ReadProperty("App_Unix_Outbound_temp_cassandra");
 
 			Vector fileList = channelSftp.ls(App_Unix_Outbound_temp_cassandra);
 
-			System.out.println("test 6");
 
 			//        for (int i = 0; i < fileList.size(); i++) {
 			//            ChannelSftp.LsEntry lsEntry = (ChannelSftp.LsEntry) fileList.get(i);
@@ -160,10 +159,10 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 			//fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_dataload/import/input");
 
 			String App_Unix_Outbound_import_input= general_ReadProperty("App_Unix_Outbound_import_input");
-			
+
 			fileList = channelSftp.ls(App_Unix_Outbound_import_input);
 
-			System.out.println("test 7");
+
 
 			//pr    fileList = channelSftp.ls("/opt/SP/data/mccm02/logs/temp/cassandra");
 
@@ -313,57 +312,54 @@ public class App_Unix_Outbound_Test extends MyAutomationConstants {
 		//Oracle Load        
 		Object args = null;
 
-		System.out.println(""); 
-		//System.out.println("Case 1:");////////////////////////script here
+
 
 		ZippingFiles.main(args); 
-		System.out.println("test 8");
 
-		System.out.println(""); 
-		// System.out.println("Case 2:");
-		System.out.println("");
+
+
 		// FilesAvailabilityCheck.main(args);
-		System.out.println("Case 3:"); 
+
 		ScriptsExecution.main(args); 
-		
-		System.out.println("test 9");
-		//load start System.out.println(""); System.out.println("Case 4-5-6:");
-		//DBCheck_Mccm.main(args); // ////////////////////////////
-		System.out.println("test 10");
+
+
+
+		//DBCheck_Mccm.main(args);  
+
 		//Cassandra load start
 
 		System.out.println("Cassandra load start");
-		System.out.println("");
+
 
 		Upload_Cassandra.main(null);
-		System.out.println("Case 2:"); 
-		System.out.println("test 11");
+
 		//converted date script use
 		Convertdate_script_Test.main(null);
 		System.out.println("converted date script used"); 
 		//converted date script use
-         
+
 		FilesAvailabilityCheck_Cassandra.main(null);
 
-		System.out.println("test 12");
 
-		System.out.println(""); System.out.println("Case 3:"); //
 
-	 	ZippingFiles_Cassandra.main(args); 
-	
-		System.out.println(""); //
-		//  System.out.println("Case 3:"); 
+
+
+		/////ZippingFiles_Cassandra.main(args); 
+
+
+
 		//ZippingFiles_Cassandra.main(args);
-		System.out.println(""); //// System.out.println("Case 4:");
-		
-		System.out.println("test 13");
-	//	DBCheck_Cassandra.main(args);  
-		System.out.println("test 14");
-		ScriptsExecution_Cassandra.main(args); //// //
 
-		//  PegaAppEndToEndFlow.RunNBACampaignEndToEndFlow();
 
-		System.out.println("test 15");
+
+		//	DBCheck_Cassandra.main(args);  
+
+
+		ScriptsExecution_Cassandra.main(args);  
+
+		ScriptsExecution_Cassandra_ClosingFile.main(args);
+
+
 
 		///////////////////////////////////            
 		// }

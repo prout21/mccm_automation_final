@@ -146,6 +146,7 @@ public class NBAOutboundValdtn extends TestBase {
 	}
 	public void ActionClkD_LatestNBACampaignFlag() throws InterruptedException
 	{
+		Thread.sleep(8000);
 		wait.until(ExpectedConditions.visibilityOf(ActionClkD_LatestNBACampaignFlag));
 		ActionClkD_LatestNBACampaignFlag.click( );
 

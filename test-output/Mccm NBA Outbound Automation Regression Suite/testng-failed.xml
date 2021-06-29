@@ -13,13 +13,6 @@
           <include name="teardown"/>
         </methods>
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
-      <class name="Mccm.Pega.Outbound.PegaTest.HomePageTest">
-        <methods>
-          <include name="VerifyOutboundDynamicSystemSettingSuccessfully"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.HomePageTest -->
     </classes>
   </test> <!-- Pega Dynamic System Setting Regression Test(failed) -->
   <test thread-count="5" name="Pega NBA DB Config Completed Regression Test(failed)">
@@ -33,6 +26,17 @@
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DBConfigValdtnTest -->
     </classes>
   </test> <!-- Pega NBA DB Config Completed Regression Test(failed) -->
+  <test thread-count="5" name="Pega Generated Extract Channel File Regression Test(failed)">
+    <classes>
+      <class name="Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="VerifyOutboundExtractChannelFileCheckSuccessfully"/>
+        </methods>
+      </class> <!-- Mccm.Pega.Outbound.PegaTest.ExtractChannelFileTest -->
+    </classes>
+  </test> <!-- Pega Generated Extract Channel File Regression Test(failed) -->
   <test thread-count="5" name="Pega NBACampaign Batch Process Completed Regression Test(failed)">
     <classes>
       <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">

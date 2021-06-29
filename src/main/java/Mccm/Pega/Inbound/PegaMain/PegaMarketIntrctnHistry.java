@@ -205,10 +205,10 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
 		 
 
 		String getTextOnPage1 = "";
@@ -249,10 +249,10 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		//Thread.sleep(8000);
 	//	driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
 		
 
 		String getTextOnPage1 = "",getTextOnPage2="",getTextOnPage3="";
@@ -345,13 +345,13 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);		
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		//Thread.sleep(8000);
-	 	log.info("****  OSF webelement view accepted Journey ****");
-		System.out.println("  OSF webelement view accepted Journey");
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+//		//Thread.sleep(8000);
+//	 	log.info("****  OSF webelement view accepted Journey ****");
+//		System.out.println("  OSF webelement view accepted Journey");
 		String getTextOnPage1 = "";
 
 
@@ -400,13 +400,13 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		//Thread.sleep(8000);
-	 	log.info("****  OSF webelement view Journey save offer****");
-		System.out.println(" OSF webelement view Journey save offer");
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+//		//Thread.sleep(8000);
+//	 	log.info("****  OSF webelement view Journey save offer****");
+//		System.out.println(" OSF webelement view Journey save offer");
 		String getTextOnPage1 = "";
 
 
@@ -454,12 +454,12 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
- 		log.info("****  OSF webelement view Journey submitted order****");
-		System.out.println(" OSF webelement view Journey submitted order");
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+// 		log.info("****  OSF webelement view Journey submitted order****");
+//		System.out.println(" OSF webelement view Journey submitted order");
 
 		String getTextOnPage1 = "";
 
@@ -507,13 +507,13 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 //		Thread.sleep(8000);
 //		driver.manage().window().maximize();
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		 wait.until(ExpectedConditions.visibilityOf(Journey));
-		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-		//Thread.sleep(8000);
-	 	log.info("****  OSF webelement view Journey new****");
-		System.out.println(" OSF webelement view Journey new");
+//		 wait.until(ExpectedConditions.visibilityOf(Journey));
+//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
+//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
+//		//Thread.sleep(8000);
+//	 	log.info("****  OSF webelement view Journey Impression****");
+//		System.out.println(" OSF webelement view Journey Impression");
 		String getTextOnPage1 = "";
 
 	 	Thread.sleep(8000);
@@ -529,7 +529,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		 	 WebElement element = Outcome;
 			 if(element != null)
 			 {
-				 System.out.println("Display the Outcome value for new");
+				 System.out.println("Display the Outcome value for Impression");
 			 			 }
 			 return element;
 			 }
@@ -541,21 +541,21 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		 
 	//	WebElement element1 = Outcome;
  		Thread.sleep(8000);
-	 	log.info("****  OSF webelement outcome click new****");
-		System.out.println(" OSF webelement outcome click new");
+	 	log.info("****  OSF webelement outcome click Impression****");
+		System.out.println(" OSF webelement outcome click Impression");
 	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		getTextOnPage1 = element.getText();
 		System.out.println(getTextOnPage1);
 
 		Thread.sleep(8000);
 	 	log.info("**** Outcome value : " +getTextOnPage1);
-	 	log.info("****  OSF webelement outcome new ****");
-		System.out.println(" OSF webelement outcome new");
-		boolean result = getTextOnPage1.equals("New") ; 
+	 	log.info("****  OSF webelement outcome Impression ****");
+		System.out.println(" OSF webelement outcome Impression");
+		boolean result = getTextOnPage1.equals("Impression") ; 
 
 		assertTrue(result);	 
-	 	log.info("**** OSF display New ****");
-		System.out.println(" OSF display New");
+	 	log.info("**** OSF display Impression ****");
+		System.out.println(" OSF display Impression");
 	}
 
 }	 

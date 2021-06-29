@@ -61,11 +61,11 @@ import com.jcraft.jsch.SftpProgressMonitor;
 	        session.connect();
 	        ChannelSftp channelSftp = (ChannelSftp) session.openChannel("sftp");
 	        channelSftp.connect();
-	      //  Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile");
+	    ////   Vector fileList = channelSftp.ls("/opt/SP/mccm/SYSN/mccm_data/csv_cassandrafile");
 	        
-	        String Upload_Cassandra= general_ReadProperty("Upload_Cassandra");
+	       String Upload_Cassandra= general_ReadProperty("Upload_Cassandra");
 	        
-	        Vector fileList = channelSftp.ls(Upload_Cassandra);
+	       Vector fileList = channelSftp.ls(Upload_Cassandra);
 	        
 	        
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
