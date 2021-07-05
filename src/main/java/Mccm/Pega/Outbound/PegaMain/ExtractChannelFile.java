@@ -23,14 +23,12 @@ import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+ 
 
 public class ExtractChannelFile extends TestBase {
 
 	public static String ExcelFilePath;
-
-//	public static Logger log =LogManager.getLogger(ExtractChannelFile.class.getName());
+ 
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -88,7 +86,7 @@ public class ExtractChannelFile extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	@SuppressWarnings("deprecation")
+
 	public void Recordclk() throws InterruptedException
 	{
 //		log.info("**** Started the Outbond Extract Channel File Validation****");
@@ -157,7 +155,7 @@ public class ExtractChannelFile extends TestBase {
 
                   
 		 	 	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
-		 	 	 Thread.sleep(8000);
+		 	 
 		 		ActionClkGetDataExtractDetails.click( );
 
  
@@ -198,15 +196,15 @@ public class ExtractChannelFile extends TestBase {
 			}
 		}
 	}
-//	public void FileNameSerach() throws InterruptedException
-//	{
-//		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
-//		Thread.sleep(6000); 
-//		FileNameSerach.sendKeys(ChanelFileNameIN);
-//		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
-//		Thread.sleep(6000); 
-//		FilterApplayClk.click( );
-//	}
+	public void FileNameSerach() throws InterruptedException
+	{
+		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
+		Thread.sleep(6000); 
+		FileNameSerach.sendKeys(ChanelFileNameIN);
+		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
+		Thread.sleep(6000); 
+		FilterApplayClk.click( );
+	}
 	// display validation of the Flag id data
 
 	public void EXTFLAGCheck() throws InterruptedException
