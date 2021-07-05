@@ -142,11 +142,11 @@ public class ExtractChannelFile extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
 
 		ClickReportdeftion.click();
-//		log.info("**** Click Report Defination****");
+ 
 		 
 		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
 		ClickGetDataExtractDetails.click( );
-	//	log.info("**** Click DataExtractDetails****");
+		 Thread.sleep(8000);
 
 		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 		
@@ -155,8 +155,9 @@ public class ExtractChannelFile extends TestBase {
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
 
-                   Thread.sleep(8000);
+                  
 		 	 	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+		 	 	 Thread.sleep(8000);
 		 		ActionClkGetDataExtractDetails.click( );
 
  
@@ -197,15 +198,15 @@ public class ExtractChannelFile extends TestBase {
 			}
 		}
 	}
-	public void FileNameSerach() throws InterruptedException
-	{
-		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
-		Thread.sleep(6000); 
-		FileNameSerach.sendKeys(ChanelFileNameIN);
-		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
-		Thread.sleep(6000); 
-		FilterApplayClk.click( );
-	}
+//	public void FileNameSerach() throws InterruptedException
+//	{
+//		wait.until(ExpectedConditions.visibilityOf(FileNameSerach));
+//		Thread.sleep(6000); 
+//		FileNameSerach.sendKeys(ChanelFileNameIN);
+//		wait.until(ExpectedConditions.visibilityOf(FilterApplayClk));
+//		Thread.sleep(6000); 
+//		FilterApplayClk.click( );
+//	}
 	// display validation of the Flag id data
 
 	public void EXTFLAGCheck() throws InterruptedException

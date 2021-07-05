@@ -91,8 +91,10 @@ public class APICallCalcNBAStOffFlowMobBanTest extends TestBase  {
 			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("x-mccm-usecase", "CalcNBAAndStartOfferFlow");
-			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
-			connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
+			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
+		//	connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");
+			connection.setRequestProperty("x-request-id", "87654321");
+		//	connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
 			connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);

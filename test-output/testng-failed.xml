@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Mccm NBA Inbound Automation Regression Suite]">
+  <listeners>
+    <listener class-name="Mccm.Pega.ExtentReportListner.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Pega Inbound Interaction Recent History Regression Test(failed)">
     <classes>
-      <class name="Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest">
+      <class name="Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest">
         <methods>
+          <include name="VerifyIntractionHistoryRunSuccessfully"/>
           <include name="teardown"/>
-          <include name="VerifyOutboundNBABatchProcessCompletedSuccessfully"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Mccm.Pega.Outbound.PegaTest.NBAOutboundValdtnTest -->
+      </class> <!-- Mccm.Pega.Inbound.PegaTest.PegamarktIntrctnHistoryTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Pega Inbound Interaction Recent History Regression Test(failed) -->
+</suite> <!-- Failed suite [Mccm NBA Inbound Automation Regression Suite] -->
