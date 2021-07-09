@@ -170,11 +170,12 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 
 		for (int i = 0; i < rowcount1 - 1; i++) {
 
-			row = obj.getfirstrow1("GetNBA_error_data", i + 1);
+			row = obj.getfirstrow1("GetNBA_error_data", i);
 
 			for (int j = 0; j < col; j++) {
-				XSSFCell cell = obj.getcell1("GetNBA_error_data", j);
+				XSSFCell cell = row.getCell(j);
 				excelData[i][j] = formatter.formatCellValue(cell);
+				
 
 			}
 
