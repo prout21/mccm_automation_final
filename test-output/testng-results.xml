@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-08T15:00:39 IST" name="Default suite" finished-at="2021-07-08T15:00:43 IST" duration-ms="3942">
+  <suite started-at="2021-07-09T12:34:16 IST" name="Default suite" finished-at="2021-07-09T12:34:18 IST" duration-ms="2036">
     <groups>
     </groups>
-    <test started-at="2021-07-08T15:00:39 IST" name="Default test" finished-at="2021-07-08T15:00:43 IST" duration-ms="3942">
-      <class name="Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest">
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest@62452cc9]" started-at="2021-07-08T15:00:40 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-08T15:00:43 IST" duration-ms="2689" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-07-09T12:34:16 IST" name="Default test" finished-at="2021-07-09T12:34:18 IST" duration-ms="2036">
+      <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest">
+        <test-method signature="VerifyOSFGetNBARestAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest@1fdfafd2]" started-at="2021-07-09T12:34:16 IST" name="VerifyOSFGetNBARestAPIcallSuccessfully" finished-at="2021-07-09T12:34:18 IST" duration-ms="1989" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest@62452cc9]" started-at="2021-07-08T15:00:43 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-08T15:00:43 IST" duration-ms="525" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest -->
+        </test-method> <!-- VerifyOSFGetNBARestAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

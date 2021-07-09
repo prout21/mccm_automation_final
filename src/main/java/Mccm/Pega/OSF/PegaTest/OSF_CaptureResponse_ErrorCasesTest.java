@@ -172,11 +172,12 @@ public class OSF_CaptureResponse_ErrorCasesTest extends TestBase {
 
 		for (int i = 0; i < rowcount1 - 1; i++) {
 
-			row = obj.getfirstrow1("Capture_response_error_data", i + 1);
+			row = obj.getfirstrow1("Capture_response_error_data", i);
 
 			for (int j = 0; j < col; j++) {
-				XSSFCell cell = obj.getcell1("Capture_response_error_data", j);
+				XSSFCell cell = row.getCell(j);
 				excelData[i][j] = formatter.formatCellValue(cell);
+				
 
 			}
 
