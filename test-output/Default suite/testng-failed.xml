@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest">
+      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
         <methods>
-          <include name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="VerifyOSFDynamicSystemSettingRunSuccessfully"/>
         </methods>
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

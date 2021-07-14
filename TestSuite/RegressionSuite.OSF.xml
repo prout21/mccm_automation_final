@@ -38,6 +38,16 @@
 				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest" />
 		</classes>
 	</test> <!-- Test -->
+	<test name="Pega OSF Error Code Regression Test">
+		<classes>
+			<class 
+			    name="Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest" />
+			<class
+				name="Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest" />
+			<class
+				name="Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest" />
+		</classes>
+		</test> <!-- Test -->
 
 
 </suite> <!-- Suite -->
