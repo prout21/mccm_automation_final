@@ -10,3 +10,91 @@
 2021-07-09 16:42:47,429  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:110 - response: {"Status":"Ok","Message":"Response captured successfully"}
 2021-07-09 16:42:47,429  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:111 - 200
 2021-07-09 16:42:47,431  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:113 - **** Ended the OSF Process Fedback ShpCrtl ID API call ****
+2021-07-14 11:29:44,391  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:46 - **** Started the OSF GET NBA API call ****
+2021-07-14 11:29:44,399  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:78 - -----Successfully read the OSF GET NBA jSON Request file------
+2021-07-14 11:29:44,561 DEBUG Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:98 - Header passed
+2021-07-14 11:29:45,720  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:122 - response: {"Status":"Ok","Message":"","RankedResults":[{"Group":"Mobile","Issue":"Sales","InteractionID":"-1590140798311731078","OriginAccount":{"AccountID":"1130541259","SubscriptionID":"GSM1629905600","SI":"MobileBAN"},"Priority":0.0,"Channel":"OSF","Label":"Upsell Offer 1GB","CustomerID":"46189100","Direction":"Inbound","Name":"UpsellOffer1GB","Type":"Offer","NBAOfferID":"OSFNBA_WBM_ILSRED6_P","CampaignID":"P-626","Packages":[{"ProcessContext":"ILSBLU"},{"ProcessContext":"MIGCOC"}],"CommissionPoints":5,"ChannelRemarks":"OSF"}]}
+2021-07-14 11:29:45,721  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:123 - 200
+2021-07-14 11:29:45,722  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:126 - **** Ended the OSF GET NBA API call ****
+2021-07-14 11:42:51,619  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:43 - **** Started the OSF PegaOSFOutcomeGETNBAAPIVldTest ****
+2021-07-14 11:43:01,620  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:51 - **** call the method new pegalinch3 ****
+2021-07-14 11:43:17,859  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:62 - **** call the method new loginpageinbound pegalinch3 ****
+2021-07-14 11:43:33,966  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
+2021-07-14 11:43:58,168  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
+2021-07-14 11:44:14,335  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
+2021-07-14 11:44:30,581  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+2021-07-14 11:44:46,607  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:544 - ****  OSF webelement outcome click Impression****
+2021-07-14 11:44:54,657  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:551 - **** Outcome value : New
+2021-07-14 11:44:54,658  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:552 - ****  OSF webelement outcome Impression ****
+2021-07-14 11:45:39,219  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:43 - **** Started the OSF PegaOSFOutcomeGETNBAAPIVldTest ****
+2021-07-14 11:45:46,819  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:51 - **** call the method new pegalinch3 ****
+2021-07-14 11:46:03,305  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:62 - **** call the method new loginpageinbound pegalinch3 ****
+2021-07-14 11:46:19,417  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
+2021-07-14 11:46:43,611  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
+2021-07-14 11:46:59,776  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
+2021-07-14 11:47:16,036  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+2021-07-14 11:47:32,053  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:544 - ****  OSF webelement outcome click Impression****
+2021-07-14 11:47:40,113  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:551 - **** Outcome value : New
+2021-07-14 11:47:40,113  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:552 - ****  OSF webelement outcome Impression ****
+2021-07-14 11:47:40,116  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:559 - **** OSF display Impression ****
+2021-07-14 11:47:40,117  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest<strong>{1}</strong>:73 - **** Ended the OSF PegaOSFOutcomeGETNBAAPIVldTest ****
+2021-07-14 11:49:33,741  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:43 - **** Started the OSF Process Fedback ShpCrtl ID API call ****
+2021-07-14 11:49:33,751  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:69 - -----Successfully read the OSF Process Fedback ShpCrtl ID jSON Request file------
+2021-07-14 11:49:33,898 DEBUG Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:88 - Header passed
+2021-07-14 11:49:35,299  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:110 - response: {"Status":"Ok","Message":"Response captured successfully"}
+2021-07-14 11:49:35,299  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:111 - 200
+2021-07-14 11:49:35,302  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest<strong>{1}</strong>:113 - **** Ended the OSF Process Fedback ShpCrtl ID API call ****
+2021-07-14 11:50:19,701  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest<strong>{1}</strong>:36 - **** Started the OSF PegaOSFOutcomeSaveOffAPIVldTest ****
+2021-07-14 11:50:27,664  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest<strong>{1}</strong>:44 - **** call the method save offer pegalinch3 ****
+2021-07-14 11:50:43,957  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest<strong>{1}</strong>:54 - **** call the method save offer loginpageinbound pegalinch3 ****
+2021-07-14 11:51:00,064  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
+2021-07-14 11:51:24,244  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
+2021-07-14 11:51:40,388  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
+2021-07-14 11:51:56,650  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+2021-07-14 11:52:12,677  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:435 - ****  OSF webelement outcome click save offer ****
+2021-07-14 11:52:12,720  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:440 - **** Outcome value : SaveOffer
+2021-07-14 11:52:12,720  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:441 - ****  OSF webelement outcome save offer ****
+2021-07-14 11:52:20,738  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:448 - **** OSF display save offer ****
+2021-07-14 11:52:20,739  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest<strong>{1}</strong>:65 - **** Ended the OSF PegaOSFOutcomeSaveOffAPIVldTest ****
+2021-07-14 11:53:13,165  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:47 - **** Started the OSF Process Fedback update Order ID API call ****
+2021-07-14 11:53:13,175  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:72 - -----Successfully read the OSF ProcessFeedback update Order ID  jSON Request file------
+2021-07-14 11:53:13,319 DEBUG Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:89 - Header passed
+2021-07-14 11:53:14,463  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:111 - response: {"Status":"Ok","Message":"Response captured successfully"}
+2021-07-14 11:53:14,464  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:112 - 200
+2021-07-14 11:53:14,466  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest<strong>{1}</strong>:114 - **** Ended the OSF Process Fedback update Order ID API call ****
+2021-07-14 11:53:42,477  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest<strong>{1}</strong>:37 - **** Started the OSF PegaOSFOutcomeSubmitOrderAPIVldTest ****
+2021-07-14 11:53:50,087  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest<strong>{1}</strong>:45 - **** call the method submitted pegalinch3 ****
+2021-07-14 11:54:06,340  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest<strong>{1}</strong>:56 - **** call the method submitted loginpageinbound pegalinch3 ****
+2021-07-14 11:54:22,449  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
+2021-07-14 11:54:46,642  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
+2021-07-14 11:55:02,812  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
+2021-07-14 11:55:19,043  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+2021-07-14 11:55:27,052  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:487 - ****  OSF webelement outcome click submitted order ****
+2021-07-14 11:55:43,121  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:495 - **** Outcome value : SubmitOrder
+2021-07-14 11:55:43,121  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:496 - ****  OSF webelement outcome submitted order ****
+2021-07-14 11:55:43,125  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:501 - **** OSF display Submitted order ****
+2021-07-14 11:55:43,125  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest<strong>{1}</strong>:67 - **** Ended the OSF PegaOSFOutcomeSubmitOrderAPIVldTest ****
+2021-07-14 11:56:14,522  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:54 - **** Started the OSF Capture Response API call ****
+2021-07-14 11:56:14,526  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:58 - NBA_hostName : 192.57.138.25
+2021-07-14 11:56:14,527  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:60 - NBA_port : 18576
+2021-07-14 11:56:14,528  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:62 - KeystorePath : C:\Users\adey32\git\mccm_automation\Keystore\
+2021-07-14 11:56:14,528  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:64 - Keystorepassword : password
+2021-07-14 11:56:14,529  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:67 - Keystorepassword : mccminternaltrust.jks
+2021-07-14 11:56:14,530  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:69 - Keystorepassword : css1identity.jks
+2021-07-14 11:56:14,531  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:70 - **** Getting the OSF CaptureResponse URL ****
+2021-07-14 11:56:14,534  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:88 - -----Successfully read the OSF CaptureResponse jSON Request file------
+2021-07-14 11:56:14,661 DEBUG OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:105 - Header passed
+2021-07-14 11:56:16,028  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:131 - response: {"Status":"OK","RecalculateNBA":false,"Message":"Response captured successfully"}
+2021-07-14 11:56:16,029  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:132 - 200
+2021-07-14 11:56:16,031  INFO OSFAPICallCaptResponseTest.class.getName()<strong>{1}</strong>:135 - **** Ended the OSF Capture Response API call ****
+2021-07-14 11:56:35,571  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest<strong>{1}</strong>:40 - **** Started the OSF PegaOSFOutcomeAcceptedAPIVldTest ****
+2021-07-14 11:56:57,949  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest<strong>{1}</strong>:48 - **** call the method accepted pegalinch3 ****
+2021-07-14 11:57:14,163  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest<strong>{1}</strong>:60 - **** call the method accepted loginpageinbound pegalinch3 ****
+2021-07-14 11:57:30,255  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
+2021-07-14 11:57:54,450  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
+2021-07-14 11:58:10,613  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
+2021-07-14 11:58:26,867  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+2021-07-14 11:58:34,880  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:378 - ****  OSF webelement click outcome accepted****
+2021-07-14 11:58:42,933  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:384 - **** Outcome value : Accepted
+2021-07-14 11:58:50,937  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:394 - **** OSF display Accepted ****
+2021-07-14 11:58:50,938  INFO Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest<strong>{1}</strong>:74 - **** Ended the OSF PegaOSFOutcomeAPIAcceptedVlidtion ****

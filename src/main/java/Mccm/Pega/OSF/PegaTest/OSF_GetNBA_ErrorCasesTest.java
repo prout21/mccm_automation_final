@@ -56,15 +56,17 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 
 	public void VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(String json1) throws IOException {
 
-		log.info("**** Capturing the NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
+		log.info("**** Capturing GetNBA NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
 		hostName = general_ReadProperty("NBA_hostName");
 		port = general_ReadProperty("NBA_port");
 		KeystorePath = general_ReadProperty("KeystorePath");
 		Keystorepassword = general_ReadProperty("Keystorepassword");
+		log.info("Capturing the NBA_Hostname: " +hostName, "NBA_PORT: " +port,"Keystorepath: " +KeystorePath, "Keystorepassword: "+Keystorepassword );
 
-		log.info("**** Getting the OSF CaptureResponse URL  ****");
+		log.info("**** Getting the OSF GetNBA URL  ****");
 		OSF_URL_NBA= general_ReadProperty("OSFNBA_URL");
 		URL url = new URL(OSF_URL_NBA);
+		log.info("GetNBA URL: "+url);
 		
 		String readLine = null;
 		System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
@@ -74,12 +76,13 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 		System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 		System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		log.info("-----Reading the OSF CaptureResponse Request file------");
+		log.info("-----Reading the OSF GetNBA Requested json file------");
 
 		json = json1;
 		System.out.println("json file is:" + json);
+		log.info("Requested Json: " +json);
 
-		log.info("-----Successfully read the OSF CaptureResponse Request file------");
+		log.info("-----Reading the OSF GetNBA response Code------");
 
 		// Create all-trusting host name verifier
 
@@ -106,6 +109,7 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 		os.close();
 		int responseCode = connection.getResponseCode();
 		System.out.println("response code is " + responseCode);
+		log.info("response code: " +responseCode);
 		BufferedReader in = null;
 		StringBuffer response = new StringBuffer();
 
@@ -119,6 +123,7 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 		in.close();
 
 		System.out.println("response: " + response.toString());
+		log.info("response: " + response.toString());
 		log.info(+responseCode);
 		Assert.assertEquals(responseCode, 400, "Status code is not 200 ,");
 

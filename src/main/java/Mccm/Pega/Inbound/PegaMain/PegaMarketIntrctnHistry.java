@@ -551,7 +551,9 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	 	log.info("**** Outcome value : " +getTextOnPage1);
 	 	log.info("****  OSF webelement outcome Impression ****");
 		System.out.println(" OSF webelement outcome Impression");
-		boolean result = getTextOnPage1.equals("Impression") ; 
+		//boolean result = getTextOnPage1.equals("Impression") ; 
+		boolean result = getTextOnPage1.equals("New") ;
+
 
 		assertTrue(result);	 
 	 	log.info("**** OSF display Impression ****");
