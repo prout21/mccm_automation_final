@@ -113,7 +113,7 @@ public class OSFDMCCMSettings extends TestBase {
 	public void Recordclk() throws InterruptedException
 	{ 
 		log.info("**** Started the OSF Dynamic System Setting ****");
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Recordclk.click( );
 		Thread.sleep(8000);
 		log.info("**** OSF DSS Clicking on webelement Record ****");
