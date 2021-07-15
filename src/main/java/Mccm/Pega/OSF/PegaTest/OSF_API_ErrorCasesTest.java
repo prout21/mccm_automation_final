@@ -10,6 +10,9 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
@@ -41,7 +44,7 @@ import Mccm.Pega.excel.utility.Excel_Reader;
 import io.restassured.RestAssured;
 import io.restassured.config.SSLConfig;
 
-public class OSF_CaptureResponse_ErrorCasesTest extends TestBase {
+public class OSF_API_ErrorCasesTest extends TestBase {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -50,43 +53,52 @@ public class OSF_CaptureResponse_ErrorCasesTest extends TestBase {
 	public static String json;
 	public static String ExcelFilePath;
 	public static String OSF_URL_CR;
+	public static String OSF_URL_PF;
+	public static String OSF_URL_NBA;
+	public static String Header;
+	public static String header_value;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 	DataFormatter formatter = new DataFormatter();
 
 	
 	
-	@Test(dataProvider = "exceldata")
+	@Test(dataProviderClass = Data_provider_class.class,dataProvider = "exceldata")
 
-	public void VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(String json1) throws IOException {
+	public void VerifyOSFOutcomeAPIcallSuccessfully(String URL ,String json1) throws IOException {
 
-		log.info("**** Capturing CaptureResponse NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
+		log.info("**** Capturing the NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
 		hostName = general_ReadProperty("NBA_hostName");
 		port = general_ReadProperty("NBA_port");
 		KeystorePath = general_ReadProperty("KeystorePath");
 		Keystorepassword = general_ReadProperty("Keystorepassword");
-		log.info("Capturing the NBA_Hostname: " +hostName, "NBA_PORT: " +port,"Keystorepath: " +KeystorePath, "Keystorepassword: "+Keystorepassword );
 
-
-		log.info("**** Getting the OSF CaptureResponse URL  ****");
+		log.info("**** Getting the OSF  URL  ****");
+		log.info("OSF API Call URL :  " +URL);
+		System.out.println("OSF API Call URL :" + URL);
 		OSF_URL_CR= general_ReadProperty("OSFCR_URL");
-		URL url = new URL(OSF_URL_CR);
-		log.info("GetNBA URL: "+url);
-		
+		OSF_URL_PF= general_ReadProperty("OSFPF_URL");
+		OSF_URL_NBA= general_ReadProperty("OSFNBA_URL");
+		Excel_Reader obj = new Excel_Reader(ExcelFilePath + "/UseCaseConfigFile/TestData/OSF_Error_Scenarios.xlsx");
+       	URL url = new URL(URL);
+		URL OSF_URL_CR1 = new URL(OSF_URL_CR);
+		URL OSF_URL_PF1 = new URL(OSF_URL_PF);
+		URL OSF_URL_NBA1 = new URL(OSF_URL_NBA);
 		String readLine = null;
 		System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
+		
 		System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 		System.setProperty("javax.net.ssl.keyStoreType", "JKS");
 		System.setProperty("javax.net.ssl.trustStore", (KeystorePath + "/mccminternaltrust.jks"));
+		
 		System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 		System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		log.info("-----Reading the OSF CaptureResponse Request file------");
+		log.info("-----Reading the OSF Request file------");
 
 		json = json1;
 		System.out.println("json file is:" + json);
-		log.info("Requested Json: " +json);
 
-		log.info("-----Reading the OSF CaptureResponse response code------");
+		log.info("-----Successfully read the OSF  Request file------");
 
 		// Create all-trusting host name verifier
 
@@ -102,18 +114,65 @@ public class OSF_CaptureResponse_ErrorCasesTest extends TestBase {
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
 		connection.setRequestMethod("POST");
-		connection.setRequestProperty("X-MCCM-UseCase", "OSF_CaptureResponse");
-		connection.setRequestProperty("X-MCCM-CorrelationID", "GUID likead64557");
-		connection.setRequestProperty("X-Request-Id", "GUID likead785657");
-		connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+		String header1= obj.getCellValue("Headers", 1, 0);
+		String header2= obj.getCellValue("Headers", 2, 0);
+		String header3= obj.getCellValue("Headers", 3, 0);
+		String header4= obj.getCellValue("Headers", 4, 0);
+	
+		if (url.equals(OSF_URL_CR1))
+		{
+		String header_value1= obj.getCellValue("Headers", 1, 1);
+		String header_value2= obj.getCellValue("Headers", 2, 1);
+		String header_value3= obj.getCellValue("Headers", 3, 1);
+		String header_value4= obj.getCellValue("Headers", 4, 1);
+		
+		connection.setRequestProperty(header1, header_value1);
+		connection.setRequestProperty(header2, header_value2);
+		connection.setRequestProperty(header3, header_value3);
+		connection.setRequestProperty(header4, header_value4);
+		}
+		
+		else if (url.equals(OSF_URL_PF1))
+		{
+			String header_value1= obj.getCellValue("Headers", 1, 2);
+			String header_value2= obj.getCellValue("Headers", 2, 2);
+			String header_value3= obj.getCellValue("Headers", 3, 2);
+			String header_value4= obj.getCellValue("Headers", 4, 2);
+			
+			connection.setRequestProperty(header1, header_value1);
+			connection.setRequestProperty(header2, header_value2);
+			connection.setRequestProperty(header3, header_value3);
+			connection.setRequestProperty(header4, header_value4);
+			
+		}
 
+		else if (url.equals(OSF_URL_NBA1))
+		{
+			String header_value1= obj.getCellValue("Headers", 1, 3);
+			String header_value2= obj.getCellValue("Headers", 2, 3);
+			String header_value3= obj.getCellValue("Headers", 3, 3);
+			String header_value4= obj.getCellValue("Headers", 4, 3);
+			
+			connection.setRequestProperty(header1, header_value1);
+			connection.setRequestProperty(header2, header_value2);
+			connection.setRequestProperty(header3, header_value3);
+			connection.setRequestProperty(header4, header_value4);
+			
+			
+		}
+		
+		else
+		{
+			
+			System.out.println("No Headers listed ");
+		}
+		
 		OutputStream os = connection.getOutputStream();
 		os.write(json.getBytes());
 		os.flush();
 		os.close();
 		int responseCode = connection.getResponseCode();
 		System.out.println("response code is " + responseCode);
-		log.info("response code: " +responseCode);
 		BufferedReader in = null;
 		StringBuffer response = new StringBuffer();
 
@@ -133,64 +192,8 @@ public class OSF_CaptureResponse_ErrorCasesTest extends TestBase {
 
 	}
 
-	@DataProvider(name = "exceldata")
-	public Object[][] testData() throws Exception {
-		/*
-		 * String projectfolderpath = System.getProperty("user.dir"); FileInputStream
-		 * fis= new FileInputStream(projectfolderpath+
-		 * "\\UseCaseConfigFile\\TestData\\OSF_Error_Scenarios.xlsx"); XSSFWorkbook wb =
-		 * new XSSFWorkbook(fis); XSSFSheet sheet=
-		 * wb.getSheet("Capture_response_error_data"); int rowcount =
-		 * sheet.getPhysicalNumberOfRows(); XSSFRow row= sheet.getRow(0); int col=
-		 * row.getLastCellNum();
-		 * 
-		 * 
-		 * Object excelData[][] = new Object[rowcount-1][col];
-		 * 
-		 * for(int i=0; i<rowcount-1; i++) { row = sheet.getRow(i+1);
-		 * 
-		 * for(int j=0; j<col; j++) {
-		 * 
-		 * XSSFCell cell= row.getCell(j); // excelData[i][j]= cell.getStringCellValue();
-		 * excelData[i][j]= formatter.formatCellValue(cell);
-		 * 
-		 * 
-		 * }
-		 * 
-		 * } return excelData;
-		 */
 
-		
 
-		Excel_Reader obj = new Excel_Reader(ExcelFilePath + "/UseCaseConfigFile/TestData/OSF_Error_Scenarios.xlsx");
-
-		obj.getSheet("Capture_response_error_data");
-		int rowcount1 = obj.getrowsnum("Capture_response_error_data");
-
-		System.out.println(rowcount1);
-
-		XSSFRow row = obj.getfirstrow("Capture_response_error_data");
-
-		int col = row.getLastCellNum();
-
-		System.out.println(col);
-
-		Object excelData[][] = new Object[rowcount1 - 1][col];
-
-		for (int i = 0; i < rowcount1 - 1; i++) {
-
-			row = obj.getfirstrow1("Capture_response_error_data", i);
-
-			for (int j = 0; j < col; j++) {
-				XSSFCell cell = row.getCell(j);
-				excelData[i][j] = formatter.formatCellValue(cell);
-				
-
-			}
-
-		}
-		return excelData;
-
-	}
+    
 
 }

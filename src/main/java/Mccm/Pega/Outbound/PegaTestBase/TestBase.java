@@ -37,9 +37,10 @@ import Mccm.Pega.OSF.OSFDMCCMSettings;
 import Mccm.Pega.OSF.OSFDSS;
 import Mccm.Pega.OSF.PegaMarktOSF;
 import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
-import Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest;
-import Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest;
-import Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest;
+import Mccm.Pega.OSF.PegaTest.Data_provider_class;
+import Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest;
+import Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest;
+
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
@@ -113,10 +114,10 @@ public class TestBase {
 			PegaMarktOSF.ExcelFilePath=System.getProperty("user.dir");
 			PegaPreChkValidOSFCampCd.ExcelFilePath=System.getProperty("user.dir");
 			CalNBADMCCMSettings.ExcelFilePath=System.getProperty("user.dir");
-			OSF_CaptureResponse_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
-			OSF_ProcessFeedback_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
-			OSF_GetNBA_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
-
+			Data_provider_class.ExcelFilePath=System.getProperty("user.dir");
+			OSF_API_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
+			OSF_API_InvalidHeaders_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

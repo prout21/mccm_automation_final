@@ -133,7 +133,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ,");
 			log.info("**** Ended the OSF Capture Response API call ****");
-			System.out.println("Started the OSF Capture Response API call");
+			System.out.println("Ended the OSF Capture Response API call");
 
 		} catch (Exception e) {
 			e.printStackTrace();

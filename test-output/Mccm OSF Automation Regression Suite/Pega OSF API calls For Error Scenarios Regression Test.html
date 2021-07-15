@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>TestNG:  Pega OSF API calls For Error Scenarios Regression Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Pega OSF API calls For Error Scenarios Regression Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 15 14:29:00 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6656 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse , {"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr123"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}</td>
+<td></td>
+<td>1</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse , {"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse , {"CustomerID":"46189100123","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse , {"CustomerID":"","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback , {"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback , {"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"461891001234","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"SG5","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA , {"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA , {"Accounts":[{"AccountID":"","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA , {"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN344"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA , {"Accounts":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+<tr>
+<td title='Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest.VerifyOSFOutcomeAPIcallSuccessfully()'><b>VerifyOSFOutcomeAPIcallSuccessfully</b><br>Test class: Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest<br>Parameters: https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA , {"":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}</td>
+<td></td>
+<td>0</td>
+<td>Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522</td></tr>
+</table><p>
+</body>
+</html>

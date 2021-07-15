@@ -1,231 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
+<testng-results ignored="0" total="23" passed="23" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-15T11:21:34 IST" name="Mccm OSF Automation Regression Suite" finished-at="2021-07-15T11:40:52 IST" duration-ms="1158371">
+  <suite started-at="2021-07-15T14:10:01 IST" name="Mccm OSF Automation Regression Suite" finished-at="2021-07-15T14:29:08 IST" duration-ms="1146469">
     <groups>
     </groups>
-    <test started-at="2021-07-15T11:21:34 IST" name="Pega OSF DSS Regression Test" finished-at="2021-07-15T11:32:19 IST" duration-ms="644897">
+    <test started-at="2021-07-15T14:10:01 IST" name="Pega OSF DSS Regression Test" finished-at="2021-07-15T14:20:37 IST" duration-ms="635830">
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T11:21:34 IST" name="setup" finished-at="2021-07-15T11:21:50 IST" duration-ms="16259" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T14:10:01 IST" name="setup" finished-at="2021-07-15T14:10:16 IST" duration-ms="14973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyOSFDynamicSystemSettingRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T11:21:50 IST" name="VerifyOSFDynamicSystemSettingRunSuccessfully" finished-at="2021-07-15T11:32:18 IST" duration-ms="627762" status="PASS">
+        <test-method signature="VerifyOSFDynamicSystemSettingRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T14:10:16 IST" name="VerifyOSFDynamicSystemSettingRunSuccessfully" finished-at="2021-07-15T14:20:36 IST" duration-ms="620037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFDynamicSystemSettingRunSuccessfully -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T11:32:18 IST" name="teardown" finished-at="2021-07-15T11:32:19 IST" duration-ms="844" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest@2c3dec30]" started-at="2021-07-15T14:20:36 IST" name="teardown" finished-at="2021-07-15T14:20:37 IST" duration-ms="783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest -->
     </test> <!-- Pega OSF DSS Regression Test -->
-    <test started-at="2021-07-15T11:32:19 IST" name="Pega OSF GETNBA API Call Regression Test" finished-at="2021-07-15T11:34:21 IST" duration-ms="121310">
+    <test started-at="2021-07-15T14:20:37 IST" name="Pega OSF GETNBA API Call Regression Test" finished-at="2021-07-15T14:22:38 IST" duration-ms="120404">
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@7e985ce9]" started-at="2021-07-15T11:32:20 IST" name="setup" finished-at="2021-07-15T11:32:27 IST" duration-ms="6813" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@5ab14cb9]" started-at="2021-07-15T14:20:40 IST" name="setup" finished-at="2021-07-15T14:20:45 IST" duration-ms="4992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyOSFGETNBAAPIValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@7e985ce9]" started-at="2021-07-15T11:32:27 IST" name="VerifyOSFGETNBAAPIValidationRunSuccessfully" finished-at="2021-07-15T11:34:20 IST" duration-ms="112638" status="PASS">
+        <test-method signature="VerifyOSFGETNBAAPIValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@5ab14cb9]" started-at="2021-07-15T14:20:45 IST" name="VerifyOSFGETNBAAPIValidationRunSuccessfully" finished-at="2021-07-15T14:22:37 IST" duration-ms="112653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFGETNBAAPIValidationRunSuccessfully -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@7e985ce9]" started-at="2021-07-15T11:34:20 IST" name="teardown" finished-at="2021-07-15T11:34:21 IST" duration-ms="711" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest@5ab14cb9]" started-at="2021-07-15T14:22:37 IST" name="teardown" finished-at="2021-07-15T14:22:38 IST" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest -->
       <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest">
-        <test-method signature="VerifyOSFGetNBARestAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest@42b64ab8]" started-at="2021-07-15T11:32:19 IST" name="VerifyOSFGetNBARestAPIcallSuccessfully" finished-at="2021-07-15T11:32:20 IST" duration-ms="1142" status="PASS">
+        <test-method signature="VerifyOSFGetNBARestAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest@3f23a3a0]" started-at="2021-07-15T14:20:37 IST" name="VerifyOSFGetNBARestAPIcallSuccessfully" finished-at="2021-07-15T14:20:40 IST" duration-ms="2063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFGetNBARestAPIcallSuccessfully -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest -->
     </test> <!-- Pega OSF GETNBA API Call Regression Test -->
-    <test started-at="2021-07-15T11:34:21 IST" name="Pega OSF Process Feedback API Call Regression Test" finished-at="2021-07-15T11:38:32 IST" duration-ms="251310">
+    <test started-at="2021-07-15T14:22:38 IST" name="Pega OSF Process Feedback API Call Regression Test" finished-at="2021-07-15T14:26:38 IST" duration-ms="239859">
       <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest">
-        <test-method signature="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest@6256ac4f]" started-at="2021-07-15T11:36:22 IST" name="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully" finished-at="2021-07-15T11:36:23 IST" duration-ms="806" status="PASS">
+        <test-method signature="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest@2f94c4db]" started-at="2021-07-15T14:24:38 IST" name="VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully" finished-at="2021-07-15T14:24:39 IST" duration-ms="1462" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFProcessFeedBackUpdateOrderIDAPIcallSuccessfully -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest -->
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@2a1edad4]" started-at="2021-07-15T11:34:21 IST" name="setup" finished-at="2021-07-15T11:34:29 IST" duration-ms="7697" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@3954d008]" started-at="2021-07-15T14:22:39 IST" name="setup" finished-at="2021-07-15T14:22:45 IST" duration-ms="5105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@2a1edad4]" started-at="2021-07-15T11:34:29 IST" name="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully" finished-at="2021-07-15T11:36:22 IST" duration-ms="112640" status="PASS">
+        <test-method signature="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@3954d008]" started-at="2021-07-15T14:22:45 IST" name="VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully" finished-at="2021-07-15T14:24:37 IST" duration-ms="112666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFOutcomeAPISaveOffValidationRunSuccessfully -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@2a1edad4]" started-at="2021-07-15T11:36:22 IST" name="teardown" finished-at="2021-07-15T11:36:22 IST" duration-ms="696" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest@3954d008]" started-at="2021-07-15T14:24:37 IST" name="teardown" finished-at="2021-07-15T14:24:38 IST" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest -->
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@44c79f32]" started-at="2021-07-15T11:36:23 IST" name="setup" finished-at="2021-07-15T11:36:39 IST" duration-ms="15411" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@593e824f]" started-at="2021-07-15T14:24:39 IST" name="setup" finished-at="2021-07-15T14:24:44 IST" duration-ms="5058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@44c79f32]" started-at="2021-07-15T11:36:39 IST" name="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully" finished-at="2021-07-15T11:38:31 IST" duration-ms="112638" status="PASS">
+        <test-method signature="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@593e824f]" started-at="2021-07-15T14:24:44 IST" name="VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully" finished-at="2021-07-15T14:26:37 IST" duration-ms="112689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFOutcomeAPISubmitOrderValidationRunSuccessfully -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@44c79f32]" started-at="2021-07-15T11:38:31 IST" name="teardown" finished-at="2021-07-15T11:38:32 IST" duration-ms="737" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest@593e824f]" started-at="2021-07-15T14:26:37 IST" name="teardown" finished-at="2021-07-15T14:26:38 IST" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest -->
       <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest">
-        <test-method signature="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest@4ebea12c]" started-at="2021-07-15T11:34:21 IST" name="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully" finished-at="2021-07-15T11:34:21 IST" duration-ms="677" status="PASS">
+        <test-method signature="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest@591e58fa]" started-at="2021-07-15T14:22:38 IST" name="VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully" finished-at="2021-07-15T14:22:39 IST" duration-ms="1479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFProcessFeedBackUpdateShoppingCartIDAPIcallSuccessfully -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest -->
     </test> <!-- Pega OSF Process Feedback API Call Regression Test -->
-    <test started-at="2021-07-15T11:38:32 IST" name="Pega OSF Capture Response API Call Regression Test" finished-at="2021-07-15T11:40:49 IST" duration-ms="137104">
+    <test started-at="2021-07-15T14:26:38 IST" name="Pega OSF Capture Response API Call Regression Test" finished-at="2021-07-15T14:28:59 IST" duration-ms="141623">
       <class name="Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest">
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest@475835b1]" started-at="2021-07-15T11:38:32 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" finished-at="2021-07-15T11:38:34 IST" duration-ms="1750" status="PASS">
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully()[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest@71c5b236]" started-at="2021-07-15T14:26:38 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" finished-at="2021-07-15T14:26:44 IST" duration-ms="6577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest -->
       <class name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@6326d182]" started-at="2021-07-15T11:38:34 IST" name="setup" finished-at="2021-07-15T11:38:56 IST" duration-ms="22009" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@2cab9998]" started-at="2021-07-15T14:26:44 IST" name="setup" finished-at="2021-07-15T14:27:06 IST" duration-ms="21654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@6326d182]" started-at="2021-07-15T11:38:56 IST" name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully" finished-at="2021-07-15T11:40:48 IST" duration-ms="112628" status="PASS">
+        <test-method signature="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@2cab9998]" started-at="2021-07-15T14:27:06 IST" name="VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully" finished-at="2021-07-15T14:28:59 IST" duration-ms="112675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyOSFOutcomeAPIAcceptedValidationRunSuccessfully -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@6326d182]" started-at="2021-07-15T11:40:48 IST" name="teardown" finished-at="2021-07-15T11:40:49 IST" duration-ms="713" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest@2cab9998]" started-at="2021-07-15T14:28:59 IST" name="teardown" finished-at="2021-07-15T14:28:59 IST" duration-ms="713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest -->
     </test> <!-- Pega OSF Capture Response API Call Regression Test -->
-    <test started-at="2021-07-15T11:40:49 IST" name="Pega OSF Error Code Regression Test" finished-at="2021-07-15T11:40:52 IST" duration-ms="3338">
-      <class name="Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest">
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest@60d8c0dc]" started-at="2021-07-15T11:40:52 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:52 IST" duration-ms="228" status="PASS">
+    <test started-at="2021-07-15T14:29:00 IST" name="Pega OSF API calls For Error Scenarios Regression Test" finished-at="2021-07-15T14:29:06 IST" duration-ms="6656">
+      <class name="Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest">
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:00 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:01 IST" duration-ms="1505" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"45189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr123"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest@60d8c0dc]" started-at="2021-07-15T11:40:52 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:52 IST" duration-ms="254" status="PASS">
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:01 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:02 IST" duration-ms="500" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"451891001234","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"SG5","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest">
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@fd46303]" started-at="2021-07-15T11:40:51 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:51 IST" duration-ms="227" status="PASS">
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:02 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:02 IST" duration-ms="499" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"CustomerID":"46189100123","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@fd46303]" started-at="2021-07-15T11:40:51 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:51 IST" duration-ms="238" status="PASS">
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:02 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:03 IST" duration-ms="518" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Accounts":[{"AccountID":"","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse ]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@fd46303]" started-at="2021-07-15T11:40:51 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:52 IST" duration-ms="223" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN344"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@fd46303]" started-at="2021-07-15T11:40:52 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:52 IST" duration-ms="219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Accounts":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@fd46303]" started-at="2021-07-15T11:40:52 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:52 IST" duration-ms="214" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest -->
-      <class name="Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest">
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest@51df223b]" started-at="2021-07-15T11:40:49 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:50 IST" duration-ms="995" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"CustomerID":"45189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr123"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest@51df223b]" started-at="2021-07-15T11:40:50 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:50 IST" duration-ms="236" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"CustomerID":"45189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest@51df223b]" started-at="2021-07-15T11:40:50 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:51 IST" duration-ms="226" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"CustomerID":"45189100123","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest@51df223b]" started-at="2021-07-15T11:40:51 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T11:40:51 IST" duration-ms="221" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
                 <![CDATA[{"CustomerID":"","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
               </value>
@@ -233,8 +172,172 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
-      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest -->
-    </test> <!-- Pega OSF Error Code Regression Test -->
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:03 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:03 IST" duration-ms="510" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:03 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:04 IST" duration-ms="498" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"461891001234","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"SG5","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"45189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:04 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:04 IST" duration-ms="523" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:04 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:05 IST" duration-ms="488" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:05 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:05 IST" duration-ms="501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN344"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:05 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:06 IST" duration-ms="528" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest@21c64522]" started-at="2021-07-15T14:29:06 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-15T14:29:06 IST" duration-ms="490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest -->
+    </test> <!-- Pega OSF API calls For Error Scenarios Regression Test -->
+    <test started-at="2021-07-15T14:29:06 IST" name="Pega OSF API call For Error case- invalid headers" finished-at="2021-07-15T14:29:08 IST" duration-ms="1549">
+      <class name="Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest">
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest@4a8ab068]" started-at="2021-07-15T14:29:06 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="invalidheader_data" finished-at="2021-07-15T14:29:07 IST" duration-ms="517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/CaptureResponse ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"1130541264","SubscriptionID":"GSM1821234581","SI":"MobileSubscr123"},"Name":"SG4","Issue":"Sales","Group":"Mobile","CampaignID":"P-12345","InteractionID":"-56033434234234255","Outcome":"Accepted","FeedbackCode":"Accepted","CommissionPoints":5,"VOID":"2343","NBAOfferID":"PAPs12344777"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest@4a8ab068]" started-at="2021-07-15T14:29:07 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="invalidheader_data" finished-at="2021-07-15T14:29:07 IST" duration-ms="523" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"OrderID":"7473","Outcome":"SaveOffer","RankedResults":[{"CustomerID":"46189100","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"30541230","SI":"Cable"},"Name":"","Issue":"Sales","Group":"Cable","CampaignID":"P-12","InteractionID":"-56933434234234299","CommissionPoints":4,"VOID":"1000","NBAOfferID":"755"},{"CustomerID":"46189101","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound","OriginAccount":{"AccountID":"13013430","SI":"Fixnet"},"Name":"SG4","Issue":"Sales","Group":"Cable","CampaignID":"P-987","InteractionID":"-46033434234234300","CommissionPoints":1,"VOID":"2272","NBAOfferID":"876"}]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFOutcomeAPIcallSuccessfully(java.lang.String, java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest@4a8ab068]" started-at="2021-07-15T14:29:07 IST" name="VerifyOSFOutcomeAPIcallSuccessfully" data-provider="invalidheader_data" finished-at="2021-07-15T14:29:08 IST" duration-ms="495" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFOutcomeAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest -->
+    </test> <!-- Pega OSF API call For Error case- invalid headers -->
   </suite> <!-- Mccm OSF Automation Regression Suite -->
 </testng-results>

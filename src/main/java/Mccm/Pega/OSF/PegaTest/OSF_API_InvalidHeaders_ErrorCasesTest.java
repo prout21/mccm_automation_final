@@ -10,6 +10,9 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
@@ -32,6 +35,7 @@ import org.testng.annotations.Test;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.sun.tools.sjavac.Log;
+import com.sun.xml.fastinfoset.sax.Properties;
 
 //import com.sun.tools.sjavac.Log;
 
@@ -40,7 +44,7 @@ import Mccm.Pega.excel.utility.Excel_Reader;
 import io.restassured.RestAssured;
 import io.restassured.config.SSLConfig;
 
-public class OSF_GetNBA_ErrorCasesTest extends TestBase {
+public class OSF_API_InvalidHeaders_ErrorCasesTest extends TestBase {
 
 	public static String KeystorePath;
 	public static String hostName;
@@ -48,41 +52,53 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 	public static String Keystorepassword;
 	public static String json;
 	public static String ExcelFilePath;
+	public static String OSF_URL_CR;
+	public static String OSF_URL_PF;
 	public static String OSF_URL_NBA;
+	public static String Header;
+	public static String header_value;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 	DataFormatter formatter = new DataFormatter();
 
-	@Test(dataProvider = "exceldata")
+	
+	
+	@Test(dataProviderClass = Data_provider_class.class,dataProvider = "invalidheader_data")
 
-	public void VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(String json1) throws IOException {
+	public void VerifyOSFOutcomeAPIcallSuccessfully(String URL ,String json1) throws IOException {
 
-		log.info("**** Capturing GetNBA NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
+		log.info("**** Capturing the NBA_Hostname , NBA_PORT , Keystorepath , Keystorepassword ****");
 		hostName = general_ReadProperty("NBA_hostName");
 		port = general_ReadProperty("NBA_port");
 		KeystorePath = general_ReadProperty("KeystorePath");
 		Keystorepassword = general_ReadProperty("Keystorepassword");
-		log.info("Capturing the NBA_Hostname: " +hostName, "NBA_PORT: " +port,"Keystorepath: " +KeystorePath, "Keystorepassword: "+Keystorepassword );
 
-		log.info("**** Getting the OSF GetNBA URL  ****");
+		log.info("**** Getting the OSF  URL  ****");
+		log.info("OSF API Call URL :  " +URL);
+		System.out.println("OSF API Call URL :" + URL);
+		OSF_URL_CR= general_ReadProperty("OSFCR_URL");
+		OSF_URL_PF= general_ReadProperty("OSFPF_URL");
 		OSF_URL_NBA= general_ReadProperty("OSFNBA_URL");
-		URL url = new URL(OSF_URL_NBA);
-		log.info("GetNBA URL: "+url);
-		
+		Excel_Reader obj = new Excel_Reader(ExcelFilePath + "/UseCaseConfigFile/TestData/OSF_Error_Scenarios.xlsx");
+       	URL url = new URL(URL);
+		URL OSF_URL_CR1 = new URL(OSF_URL_CR);
+		URL OSF_URL_PF1 = new URL(OSF_URL_PF);
+		URL OSF_URL_NBA1 = new URL(OSF_URL_NBA);
 		String readLine = null;
 		System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
+		
 		System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 		System.setProperty("javax.net.ssl.keyStoreType", "JKS");
 		System.setProperty("javax.net.ssl.trustStore", (KeystorePath + "/mccminternaltrust.jks"));
+		
 		System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 		System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
-		log.info("-----Reading the OSF GetNBA Requested json file------");
+		log.info("-----Reading the OSF Request file------");
 
 		json = json1;
 		System.out.println("json file is:" + json);
-		log.info("Requested Json: " +json);
 
-		log.info("-----Reading the OSF GetNBA response Code------");
+		log.info("-----Successfully read the OSF  Request file------");
 
 		// Create all-trusting host name verifier
 
@@ -98,18 +114,65 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
 		connection.setRequestMethod("POST");
-		connection.setRequestProperty("x-mccm-usecase", "OSF_GetNBA");
-		connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like a45ed-eded");
-		connection.setRequestProperty("x-request-id", "GUID like 45656-eade");
-		connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+		String header1= obj.getCellValue("invalid_headers", 1, 0);
+		String header2= obj.getCellValue("invalid_headers", 2, 0);
+		String header3= obj.getCellValue("invalid_headers", 3, 0);
+		String header4= obj.getCellValue("invalid_headers", 4, 0);
+	
+		if (url.equals(OSF_URL_CR1))
+		{
+		String header_value1= obj.getCellValue("invalid_headers", 1, 1);
+		String header_value2= obj.getCellValue("invalid_headers", 2, 1);
+		String header_value3= obj.getCellValue("invalid_headers", 3, 1);
+		String header_value4= obj.getCellValue("invalid_headers", 4, 1);
+		
+		connection.setRequestProperty(header1, header_value1);
+		connection.setRequestProperty(header2, header_value2);
+		connection.setRequestProperty(header3, header_value3);
+		connection.setRequestProperty(header4, header_value4);
+		}
+		
+		else if (url.equals(OSF_URL_PF1))
+		{
+			String header_value1= obj.getCellValue("invalid_headers", 1, 2);
+			String header_value2= obj.getCellValue("invalid_headers", 2, 2);
+			String header_value3= obj.getCellValue("invalid_headers", 3, 2);
+			String header_value4= obj.getCellValue("invalid_headers", 4, 2);
+			
+			connection.setRequestProperty(header1, header_value1);
+			connection.setRequestProperty(header2, header_value2);
+			connection.setRequestProperty(header3, header_value3);
+			connection.setRequestProperty(header4, header_value4);
+			
+		}
 
+		else if (url.equals(OSF_URL_NBA1))
+		{
+			String header_value1= obj.getCellValue("invalid_headers", 1, 3);
+			String header_value2= obj.getCellValue("invalid_headers", 2, 3);
+			String header_value3= obj.getCellValue("invalid_headers", 3, 3);
+			String header_value4= obj.getCellValue("invalid_headers", 4, 3);
+			
+			connection.setRequestProperty(header1, header_value1);
+			connection.setRequestProperty(header2, header_value2);
+			connection.setRequestProperty(header3, header_value3);
+			connection.setRequestProperty(header4, header_value4);
+			
+			
+		}
+		
+		else
+		{
+			
+			System.out.println("No Headers listed ");
+		}
+		
 		OutputStream os = connection.getOutputStream();
 		os.write(json.getBytes());
 		os.flush();
 		os.close();
 		int responseCode = connection.getResponseCode();
 		System.out.println("response code is " + responseCode);
-		log.info("response code: " +responseCode);
 		BufferedReader in = null;
 		StringBuffer response = new StringBuffer();
 
@@ -123,70 +186,14 @@ public class OSF_GetNBA_ErrorCasesTest extends TestBase {
 		in.close();
 
 		System.out.println("response: " + response.toString());
-		log.info("response: " + response.toString());
 		log.info(+responseCode);
+		log.info("response: " + response.toString());
 		Assert.assertEquals(responseCode, 400, "Status code is not 200 ,");
 
 	}
 
-	@DataProvider(name = "exceldata")
-	public Object[][] testData() throws Exception {
-		/*
-		 * String projectfolderpath = System.getProperty("user.dir"); FileInputStream
-		 * fis= new FileInputStream(projectfolderpath+
-		 * "\\UseCaseConfigFile\\TestData\\OSF_Error_Scenarios.xlsx"); XSSFWorkbook wb =
-		 * new XSSFWorkbook(fis); XSSFSheet sheet=
-		 * wb.getSheet("Capture_response_error_data"); int rowcount =
-		 * sheet.getPhysicalNumberOfRows(); XSSFRow row= sheet.getRow(0); int col=
-		 * row.getLastCellNum();
-		 * 
-		 * 
-		 * Object excelData[][] = new Object[rowcount-1][col];
-		 * 
-		 * for(int i=0; i<rowcount-1; i++) { row = sheet.getRow(i+1);
-		 * 
-		 * for(int j=0; j<col; j++) {
-		 * 
-		 * XSSFCell cell= row.getCell(j); // excelData[i][j]= cell.getStringCellValue();
-		 * excelData[i][j]= formatter.formatCellValue(cell);
-		 * 
-		 * 
-		 * }
-		 * 
-		 * } return excelData;
-		 */
 
-		String projectfolderpath = System.getProperty("user.dir");
 
-		Excel_Reader obj = new Excel_Reader(ExcelFilePath + "/UseCaseConfigFile/TestData/OSF_Error_Scenarios.xlsx");
-
-		obj.getSheet("GetNBA_error_data");
-		int rowcount1 = obj.getrowsnum("GetNBA_error_data");
-
-		System.out.println(rowcount1);
-
-		XSSFRow row = obj.getfirstrow("GetNBA_error_data");
-
-		int col = row.getLastCellNum();
-
-		System.out.println(col);
-
-		Object excelData[][] = new Object[rowcount1 - 1][col];
-
-		for (int i = 0; i < rowcount1 - 1; i++) {
-
-			row = obj.getfirstrow1("GetNBA_error_data", i);
-
-			for (int j = 0; j < col; j++) {
-				XSSFCell cell = row.getCell(j);
-				excelData[i][j] = formatter.formatCellValue(cell);
-				
-
-			}
-
-		}
-		return excelData;
-
-	}
+    
 
 }
