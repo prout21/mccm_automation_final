@@ -101,14 +101,14 @@ public class TestBase {
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+		//	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
 
 			String projectPath = System.getProperty("user.dir");
 
-		//	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+			System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
 
 
-			if(headLessMode.equals("true")) {
+			if(headLessMode.equals("false")) {
 
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");

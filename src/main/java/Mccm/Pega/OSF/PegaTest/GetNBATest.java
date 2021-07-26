@@ -61,6 +61,7 @@ public class GetNBATest extends TestBase {
 	public static String OSF_URL_NBA, OSF_URL_CR, OSF_URL_PF;
 	public static String Header1, Header2, Header3, Header4;
 	public static String header_value1, header_value2, header_value3;
+	JsonElement jsonvalue1= null;
 	StringBuffer response;
 
 	public static Logger log = LogManager.getLogger(GetNBATest.class.getName());
@@ -147,13 +148,11 @@ public class GetNBATest extends TestBase {
 			}
 			in.close();
 
-			Thread.sleep(2000);
 			// reading NBA multiple accounts
 			JsonObject obj1 = (JsonObject) new JsonParser().parse(response.toString());
 			JsonArray arr = obj1.getAsJsonArray("RankedResults");
 			JsonObject data1 = arr.get(0).getAsJsonObject();
-			Thread.sleep(2000);
-			JsonElement jsonvalue1 = data1.get("InteractionID");
+			jsonvalue1 = data1.get("InteractionID");
 			String str = jsonvalue1.getAsString();
 			// System.out.println( jsonvalue1.getAsJsonObject().toString());
 			String jsonvalue = str.toString().trim();
