@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import Mccm.Pega.DMP.RealTime.PegaMarktDMPRealTime;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
+
 public class LoginPageInbound extends TestBase {
 	//page factory - OR:
 	
@@ -68,9 +69,9 @@ public class LoginPageInbound extends TestBase {
 				executor3.executeScript("arguments[0].click();", element9);
 					}
 					 
-		Thread.sleep(8000);
+		Thread.sleep(5000);
      
-    	 System.out.println("Entered the PegaMarket");
+    	// System.out.println("Entered the PegaMarket");
 	   	  return new PegaMarketIntrctnHistry();
 	   	  
 	  

@@ -17,9 +17,10 @@ import Mccm.Pega.QAUtil.TestUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class PegaOSFDMCCMSettingTest extends TestBase {
+public class PegaOSF_DMCCM_SettingTest extends TestBase {
 
 	private static final String priorty = null;
+	public static Logger log = LogManager.getLogger(PegaOSF_DMCCM_SettingTest.class.getName());
 	LoginPage loginpage;
 	HomePage  homepage;
 	//	HomePageDetails HomePageDetails1;
@@ -27,7 +28,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	TestUtil testutil;
 	OSFDSS osfDSS;
 
-	public PegaOSFDMCCMSettingTest()
+	public PegaOSF_DMCCM_SettingTest()
 	{
 		super();
 	}
@@ -50,8 +51,8 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		 
 	}
 	@Test (priority=1)
-	public void VerifyOSFDynamicSystemSettingRunSuccessfully() throws InterruptedException { 
-		System.out.println("OSF DSS Script started");
+	public void OSFDynamicSystemSettingsCheck() throws InterruptedException { 
+		log.info("OSF DSS Settings started");
 		OSFDMCCMSettings1.Recordclk();
 		OSFDMCCMSettings1.SysAdmin();
 		OSFDMCCMSettings1.javaexictor4();
@@ -70,7 +71,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveCalNBAStartOff();
 		osfDSS.CloseCalNBAStartOff();
 		//Internal_REST_URL_OSF
-		System.out.println("Internal_REST_URL_OSF DSS Setting Done");
+		log.info("Internal_REST_URL_OSF DSS Setting Done");
 
 		//		//OSFDirection
 		testutil.SwitcTodefaultContent();
@@ -85,7 +86,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFDirection();
 		osfDSS.CloseOSFDirection();
 		//		//OSFDirection
-		System.out.println("OSFDirection DSS Setting Done");
+		log.info("OSFDirection DSS Setting Done");
 		//		//OSFChannel
 		testutil.SwitcTodefaultContent();
 		testutil.SwitchToFrame("PegaGadget0Ifr");
@@ -99,7 +100,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFChannel();
 		osfDSS.CloseOSFChannel();
 		//		//OSFChannel
-		System.out.println("OSFChannel DSS Setting Done");
+		log.info("OSFChannel DSS Setting Done");
 
 		//OSFContainerName
 		testutil.SwitcTodefaultContent();
@@ -114,7 +115,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFContainerName();
 		osfDSS.CloseOSFContainerName();
 		//OSFContainerName
-		System.out.println("OSFContainerName DSS Setting Done");
+		log.info("OSFContainerName DSS Setting Done");
 
 		//OSFSClassificationDefaultValue
 		testutil.SwitcTodefaultContent();
@@ -129,7 +130,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFSClassificationDefaultValue();
 		osfDSS.CloseOSFSClassificationDefaultValue();
 		//OSFSClassificationDefaultValue
-		System.out.println("OSFSClassificationDefaultValue DSS Setting Done");
+		log.info("OSFSClassificationDefaultValue DSS Setting Done");
 
 		//MaxNoOfAcntsForOSFGetNBAPerRqst
 		testutil.SwitcTodefaultContent();
@@ -144,7 +145,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
 		osfDSS.CloseOSFMaxNoOfAcntsForOSFGetNBAPerRqst();
 		//MaxNoOfAcntsForOSFGetNBAPerRqst
-		System.out.println("MaxNoOfAcntsForOSFGetNBAPerRqst DSS Setting Done");
+		log.info("MaxNoOfAcntsForOSFGetNBAPerRqst DSS Setting Done");
 
 		//OSFGetNBATimeout
 		testutil.SwitcTodefaultContent();
@@ -159,7 +160,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.SaveOSFGetNBATimeout();
 		osfDSS.CloseOSFGetNBATimeout();
 		//OSFGetNBATimeout
-		System.out.println("OSFGetNBATimeout DSS Setting Done");
+		log.info("OSFGetNBATimeout DSS Setting Done");
 		//D_mccmsettings
 		osfDSS.D_mccmsettings();
 		osfDSS.SerchClick();
@@ -170,9 +171,9 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 		osfDSS.RunActionClk();
 		osfDSS.FulshRunClick();
 		//D_mccmsettings
-		System.out.println("D_mccmsettings DSS Setting Done");
+		log.info("D_mccmsettings DSS Setting Done");
 		
-		System.out.println("OSF DSS Execution Ended");
+		log.info("OSF DSS Settings Completed");
 	}
 
 
@@ -183,7 +184,7 @@ public class PegaOSFDMCCMSettingTest extends TestBase {
 	 driver.quit();
 
 
-		System.out.println("OSF Dynamic System Setting Test Case Executed");  
+		//System.out.println("OSF Dynamic System Setting Test Case Executed");  
 	}
 
 }

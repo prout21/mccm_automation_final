@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import Mccm.Pega.Calc.NBA.StartOffer.LoginPageCalcNBAandStartOff;
 import Mccm.Pega.Calc.NBA.StartOffer.PegaMarktCalcNBAandStartOff;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
-import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.LoginPage;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;

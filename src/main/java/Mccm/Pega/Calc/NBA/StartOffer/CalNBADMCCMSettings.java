@@ -11,8 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
-import Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest;
+
+import Mccm.Pega.OSF.PegaTest.PegaOSF_DMCCM_SettingTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
@@ -23,7 +23,7 @@ public class CalNBADMCCMSettings extends TestBase {
 
 	public static String ExcelFilePath;
 
-	public static Logger log =LogManager.getLogger(PegaOSFDMCCMSettingTest.class.getName());
+	public static Logger log =LogManager.getLogger(PegaOSF_DMCCM_SettingTest.class.getName());
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;

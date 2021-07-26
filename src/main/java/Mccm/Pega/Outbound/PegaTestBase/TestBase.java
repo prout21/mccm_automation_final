@@ -7,24 +7,14 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import ExecutionUSECase.MainClass;
 import Mccm.Pega.Calc.NBA.StartOffer.CalNBADMCCMSettings;
@@ -38,39 +28,17 @@ import Mccm.Pega.OSF.OSFDSS;
 import Mccm.Pega.OSF.PegaMarktOSF;
 import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
 import Mccm.Pega.OSF.PegaTest.Data_provider_class;
-import Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest;
-import Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest;
 
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
 import Mccm.Pega.Outbound.PegaMain.HomePage;
 import Mccm.Pega.Outbound.PegaMain.PegaMarketPage;
-//import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAReSchd;
-//import Mccm.Pega.Outbound.PegaMain.PegaMrktNBAValuChk;
 import Mccm.Pega.Outbound.PegaMain.PegaPreChkValidCampCd;
-//import Mccm.Pega.Outbound.PegaMain.PreChkNBACampValu;
 import Mccm.Pega.Outbound.PegaMain.HomePageDetails;
 import Mccm.Pega.Outbound.PegaMain.NBAOutboundValdtn;
-//import Mccm.Pega.Outbound.PegaSubClass.HomePageDetails;
 import Mccm.Pega.QAUtil.TestUtil;
-import Mccm.RESTful.APICall.DMPRTPNBAMobHash;
 
-
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.aventstack.extentreports.reporter.configuration.Theme;
-import java.util.concurrent.TimeUnit;
 
 
 public class TestBase {
@@ -80,7 +48,7 @@ public class TestBase {
 
 	public static String CampRunID;
 	public static WebDriverWait wait;
-
+	//public static Logger log =LogManager.getLogger(TestBase.class.getName());
 
 
 	public TestBase()
@@ -114,9 +82,9 @@ public class TestBase {
 			PegaMarktOSF.ExcelFilePath=System.getProperty("user.dir");
 			PegaPreChkValidOSFCampCd.ExcelFilePath=System.getProperty("user.dir");
 			CalNBADMCCMSettings.ExcelFilePath=System.getProperty("user.dir");
-			Data_provider_class.ExcelFilePath=System.getProperty("user.dir");
-			OSF_API_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
-			OSF_API_InvalidHeaders_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
+			
+			
+			;
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

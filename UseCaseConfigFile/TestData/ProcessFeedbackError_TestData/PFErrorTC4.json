@@ -1,0 +1,44 @@
+{  
+   "OrderID":"7473",
+   "Outcome":"SubmitOrder",
+   "RankedResults":[  
+      {  
+         "CustomerID":"46189100",
+
+         "ContainerName":"OSF",
+         "Channel":"OSF",
+         "Direction":"Inbound",
+         "OriginAccount":{  
+            "AccountID":"30541230",
+            "SI":"Cable"
+         },
+         "Name":"",
+         "Issue":"Sales",
+         "Group":"Cable",
+         "CampaignID":"P-12",
+         "InteractionID":"-56933434234234299",
+         "CommissionPoints":4,
+         "VOID":"1000",
+         "NBAOfferID":"755"
+      },
+      {  
+         "CustomerID":"46189101",
+
+         "ContainerName":"OSF",
+         "Channel":"OSF",
+         "Direction":"Inbound",
+         "OriginAccount":{  
+            "AccountID":"13013430",
+            "SI":"Fixnet"
+         },
+         "Name":"SG4",
+         "Issue":"Sales",
+         "Group":"Cable",
+         "CampaignID":"P-987",
+         "InteractionID":"-46033434234234300",
+         "CommissionPoints":1,
+         "VOID":"2272",
+         "NBAOfferID":"876"
+      }
+   ]
+}

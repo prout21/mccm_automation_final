@@ -1,0 +1,18 @@
+{
+   "Accounts":[
+      {
+         "AccountID":"30541235",
+         "SI":"Cable"
+      },
+      {
+         "AccountID":"30541234",
+         "SI":"UME-NRW"
+      },
+      {
+         "AccountID":"30541235",
+         "SI":"UME-KBW"
+      }
+   ],
+   "VOID":"12345678",
+   "SCClassification":"SCL"
+}

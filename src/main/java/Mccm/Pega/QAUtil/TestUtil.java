@@ -31,7 +31,7 @@ public class TestUtil extends TestBase {
 	public void WindowHandling()
 	{
 		String mainWindow=driver.getWindowHandle();
-	      System.out.println(mainWindow);
+	    //  System.out.println(mainWindow);
 	      // It returns no. of windows opened by WebDriver and will return Set of Strings
 	      Set<String> set =driver.getWindowHandles();
 	      // Using Iterator to iterate with in windows

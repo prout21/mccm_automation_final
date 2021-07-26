@@ -1,0 +1,18 @@
+{
+   "Accounts":[
+      {
+         "AccountID":"30541235",
+         "SI":"Cable"
+      },
+      {
+         "AccountID":"13013434",
+         "SI":"Fixnet"
+      },
+      {
+         "AccountID":"30541236",
+         "SI":"UME-HSN"
+      }
+   ],
+   "VOID":"12345678",
+   "SCClassification":"SCL"
+}

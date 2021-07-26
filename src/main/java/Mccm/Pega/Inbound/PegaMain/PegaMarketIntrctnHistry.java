@@ -1,16 +1,22 @@
 package Mccm.Pega.Inbound.PegaMain;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -21,24 +27,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.Assert;
 
-import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
+import Mccm.Pega.OSF.PegaTest.CaptureResponseTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
-import Mccm.Pega.QAUtil.TestUtil;
-import Mccm.Pega.excel.utility.Excel_Reader;
 
-// import org.apache.logging.log4j.LogManager;
-// import org.apache.logging.log4j.Logger;
- 
- import org.apache.log4j.Logger;
 
 public class PegaMarketIntrctnHistry extends TestBase  {
 	
 	public static String NBACalSubjectID;
 
+	public static Logger log = LogManager.getLogger(PegaMarketIntrctnHistry.class.getName());
 	
-	Logger log = Logger.getLogger(PegaMarketIntrctnHistry.class.getName());
 
 	@FindBy(xpath="//a[@id='appview-nav-toggle-one']")
 	WebElement Homepage;
@@ -92,9 +91,222 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 	@FindBy(xpath="/html[1]/body[1]/div[2]/form[1]/div[3]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/span[1]/div[1]/span[1]/div[1]/span[2]/div[1]/div[2]/div[2]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[11]/div[1]/span[1]")
     WebElement Direction;
 	
+	//New WebElements defined--OSF
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']")
+	List<WebElement> oddrows;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']")
+	List<WebElement> evenrows;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Outcome time']")
+	List<WebElement> Outcome_times;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Outcome time']")
+	List<WebElement> Outcome_times1;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Fact ID']")
+	List<WebElement> Fact;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Subject ID']")
+	List<WebElement> subject;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Business issue']")
+	List<WebElement> Business;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Group']")
+	List<WebElement> GroupValue;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Outcome']")
+	List<WebElement> OutcomeValue;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Direction']")
+	List<WebElement> Direction1;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Channel']")
+	List<WebElement> Channel1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Fact ID']")
+	List<WebElement> Fact1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Subject ID']")
+	List<WebElement> Subject1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Business issue']")
+	List<WebElement> Business1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Group']")
+	List<WebElement> Group1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Outcome']")
+	List<WebElement> OutcomeValue1;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Direction']")
+	List<WebElement> Direction2;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Channel']")
+	List<WebElement> Channel2;
+	
+	@FindBy(xpath="//tr[@class='oddRow cellCont']/td[@data-attribute-name='Proposition']")
+	List<WebElement> PropositionValue;
+	
+	@FindBy(xpath="//tr[@class='evenRow cellCont']/td[@data-attribute-name='Proposition']")
+	List<WebElement> PropositionValue1;
+	
+	@FindBy(xpath="//a[@href='#']")
+	List<WebElement> pagesize;
+	
+	public List<WebElement> oddrows()
+	{
+		
+		return oddrows;
+		
+	}
 	
 
-	public PegaMarketIntrctnHistry( ) {
+	public List<WebElement> evenrows()
+	{
+		
+		return evenrows;
+		
+	}
+
+	public List<WebElement> Outcome_times()
+	{
+		
+		return Outcome_times;
+		
+	}
+	public List<WebElement> Fact()
+	{
+		
+		return Fact;
+		
+	}
+	
+	public List<WebElement> subject()
+	{
+		
+		return subject;
+		
+	}
+	
+	public List<WebElement> Business()
+	{
+		
+		return Business;
+		
+	}
+	
+	public List<WebElement> GroupValue()
+	{
+		
+		return GroupValue;
+		
+	}
+	
+	public List<WebElement> OutcomeValue()
+	{
+		
+		return OutcomeValue;
+		
+	}
+	
+	public List<WebElement> Direction1()
+	{
+		
+		return Direction1;
+		
+	}
+	
+	public List<WebElement> Channel1()
+	{
+		
+		return Channel1;
+		
+	}
+	
+	
+	public List<WebElement> Fact1()
+	{
+		
+		return Fact1;
+		
+	}
+	
+	
+	public List<WebElement> Subject1()
+	{
+		
+		return Subject1;
+		
+	}
+	
+	
+	public List<WebElement> Business1()
+	{
+		
+		return Business1;
+		
+	}
+	
+	public List<WebElement> Outcome_times1()
+	{
+		
+		return Outcome_times1;
+		
+	}
+	
+	public List<WebElement> Group1()
+	{
+		
+		return Group1;
+		
+	}
+	
+	public List<WebElement> OutcomeValue1()
+	{
+		
+		return OutcomeValue1;
+		
+	}
+	
+	public List<WebElement> Direction2()
+	{
+		
+		return Direction2;
+		
+	}
+	
+	public List<WebElement> Channel2()
+	{
+		
+		return Channel2;
+		
+	}
+	
+	public List<WebElement> PropositionValue()
+	{
+		
+		return PropositionValue;
+		
+	}
+	
+	public List<WebElement> PropositionValue1()
+	{
+		
+		return PropositionValue1;
+		
+	}
+	
+	public List<WebElement> pagesize()
+	{
+		
+		return pagesize;
+		
+	}
+	
+	public PegaMarketIntrctnHistry() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -109,7 +321,7 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 
 	public void pegamarkting() throws InterruptedException
 	{
-		Thread.sleep(8000);
+		Thread.sleep(4000);
 	 	 
 			{
 				WebElement element9 = pegamrkting1;
@@ -121,39 +333,39 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		//	wait.until(ExpectedConditions.elementToBeClickable(pegamrkting1));
 	//	pegamrkting1.click( );
 	//	Thread.sleep(8000);
-	 	log.info("****OSF element click pegamrkting1 ****");
+	 //	log.info("****OSF element click pegamrkting1 ****");
  	//	 driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-		System.out.println("element click pegamrkting1");
+	//	System.out.println("element click pegamrkting1");
 	}
 
 
 	public void ExpandReport() throws InterruptedException
 	{
 	//	wait.until(ExpectedConditions.elementToBeClickable(ClkReport));
-		Thread.sleep(8000);
+		//Thread.sleep(3000);
 		ClkReport.click( );
-		Thread.sleep(8000);
- 	log.info("**** OSF element click ClkReport****");
-		System.out.println(" element click ClkReport");
+	//	Thread.sleep(3000);
+ 	//log.info("**** OSF element click ClkReport****");
+	//	System.out.println(" element click ClkReport");
 	}
 	public void ClkIntractionHstry() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.visibilityOf(ClkIntractionHstry));
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 		ClkIntractionHstry.click( );
-		Thread.sleep(8000);
-	 	log.info("**** OSF element click ClkIntractionHstry****");
-		System.out.println("element click ClkIntractionHstry");
+		//Thread.sleep(3000);
+	 //	log.info("**** OSF element click ClkIntractionHstry****");
+	//	System.out.println("element click ClkIntractionHstry");
 	}
 	public void ClkRecentIntrctnHstry() throws InterruptedException
 	{
 	//	wait.until(ExpectedConditions.visibilityOf(ClkRecentIntrctnHstry));
-		Thread.sleep(8000);
+	//	Thread.sleep(1000);
 		ClkRecentIntrctnHstry.click( );
-		Thread.sleep(8000);
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-	 	log.info("**** OSF element click ClkRecentIntrctnHstry ****");
-		System.out.println(" element click ClkRecentIntrctnHstry");
+	//	Thread.sleep(2000);
+		//driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	 //	log.info("**** OSF element click ClkRecentIntrctnHstry ****");
+	//	System.out.println(" element click ClkRecentIntrctnHstry");
 	}
 	@SuppressWarnings("deprecation")
 	public void InboundValidation() throws InterruptedException
@@ -339,225 +551,92 @@ public class PegaMarketIntrctnHistry extends TestBase  {
 		assertTrue(result);
 		System.out.println("MCCM Calc NBAandStart Offer Use Cases Passed");
 	}
-	@SuppressWarnings("deprecation")
-	public void PegaOSFOutcomeAPIAcceptedVlidtion() throws InterruptedException
-	{
-//		Thread.sleep(8000);		
-//		driver.manage().window().maximize();
-		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-//		 wait.until(ExpectedConditions.visibilityOf(Journey));
-//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-//		//Thread.sleep(8000);
-//	 	log.info("****  OSF webelement view accepted Journey ****");
-//		System.out.println("  OSF webelement view accepted Journey");
-		String getTextOnPage1 = "";
-
-
-	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
-		Thread.sleep(8000);
-	//	WebElement element1 = Outcome;
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		   wait.withTimeout(4, TimeUnit.MINUTES);
-		 wait.ignoring(NoSuchElementException.class);  
-		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
-		 {
-		 public WebElement apply(WebDriver driver) {
-	 	 WebElement element = Outcome;
-		 if(element != null)
-		 {
-			 System.out.println("Display the Outcome value for accepted");
-		 			 }
-		 return element;
-		 }
-		 });
-		 
-		  element = Outcome;
-	 	log.info("****  OSF webelement click outcome accepted****");
-		System.out.println(" OSF webelement click outcome accepted");
-		Thread.sleep(8000);
-	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element.getText();
-		System.out.println(getTextOnPage1);
-	 	log.info("**** Outcome value : " +getTextOnPage1);
-		System.out.println(" Outcome value");
-	 
-
-		Thread.sleep(8000);
-		boolean result = getTextOnPage1.equals("Accepted") ; 
-
-		assertTrue(result);
-		//System.out.println("MCCM OSF Outcome API Accepted Validation Done");
-		
- 		log.info("**** OSF display Accepted ****");
-		System.out.println(" OSF display Accepted");
-	}
-	@SuppressWarnings("deprecation")
-	public void PegaOSFOutcomeAPISaveOfferVlidtion() throws InterruptedException
-	{
-//		Thread.sleep(8000);
-//		driver.manage().window().maximize();
-		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-//		 wait.until(ExpectedConditions.visibilityOf(Journey));
-//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-//		//Thread.sleep(8000);
-//	 	log.info("****  OSF webelement view Journey save offer****");
-//		System.out.println(" OSF webelement view Journey save offer");
-		String getTextOnPage1 = "";
-
-
-	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
-		Thread.sleep(8000);
-	//	WebElement element1 = Outcome;
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		   wait.withTimeout(4, TimeUnit.MINUTES);
-		 wait.ignoring(NoSuchElementException.class);  
-		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
-		 {
-		 public WebElement apply(WebDriver driver) {
-	 	 WebElement element = Outcome;
-		 if(element != null)
-		 {
-			 System.out.println("Display the Outcome value for save offer");
-		 			 }
-		 return element;
-		 }
-		 });
-		 
-		  element = Outcome;
-		 
-		Thread.sleep(8000);
-	 	log.info("****  OSF webelement outcome click save offer ****");
-		System.out.println(" OSF webelement outcome click save offer");
-	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element.getText();
-		System.out.println(getTextOnPage1);
-	 	log.info("**** Outcome value : " +getTextOnPage1);
-	 	log.info("****  OSF webelement outcome save offer ****");
-		System.out.println(" OSF webelement outcome save offer");
-
-		Thread.sleep(8000);
-		boolean result = getTextOnPage1.equals("SaveOffer") ; 
-
-		assertTrue(result);
- 		log.info("**** OSF display save offer ****");
-		System.out.println(" OSF display save offer");
-	}
-	@SuppressWarnings("deprecation")
-	public void PegaOSFOutcomeAPISubmitOrderVlidtion() throws InterruptedException
-	{
-//		Thread.sleep(8000);
-//		driver.manage().window().maximize();
-		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-//		 wait.until(ExpectedConditions.visibilityOf(Journey));
-//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-// 		log.info("****  OSF webelement view Journey submitted order****");
-//		System.out.println(" OSF webelement view Journey submitted order");
-
-		String getTextOnPage1 = "";
-
-
-	//	wait.until(ExpectedConditions.visibilityOf(Outcome));
-		Thread.sleep(8000);
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-		   wait.withTimeout(4, TimeUnit.MINUTES);
-		 wait.ignoring(NoSuchElementException.class);  
-		  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
-		 {
-		 public WebElement apply(WebDriver driver) {
-	 	 WebElement element = Outcome;
-		 if(element != null)
-		 {
-			 System.out.println("Display the Outcome value for submitted order");
-		 			 }
-		 return element;
-		 }
-		 });
-		 
-		  element = Outcome;
-	//	WebElement element1 = Outcome;
- 		log.info("****  OSF webelement outcome click submitted order ****");
-		System.out.println(" OSF webelement outcome click submitted order");
-		Thread.sleep(8000);
-	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element.getText();
-		System.out.println(getTextOnPage1);
-
-		Thread.sleep(8000);
- 		log.info("**** Outcome value : " +getTextOnPage1);
- 		log.info("****  OSF webelement outcome submitted order ****");
-		System.out.println(" OSF webelement outcome submitted order");
-		boolean result = getTextOnPage1.equals("SubmitOrder") ; 
-
-		assertTrue(result);
-	 	log.info("**** OSF display Submitted order ****");
-		System.out.println(" OSF display Submitted order");
-	}
+	
 	
 	@SuppressWarnings("deprecation")
-	public void PegaOSFGETNBAAPIVlidtion() throws InterruptedException {
-//		Thread.sleep(8000);
-//		driver.manage().window().maximize();
-		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-//		 wait.until(ExpectedConditions.visibilityOf(Journey));
-//		JavascriptExecutor js5 = (JavascriptExecutor) driver;
-//		WebElement element6 = driver.findElement(By.xpath("//div[text()='Journey']"));
-//		js5.executeScript("arguments[0].scrollIntoView();", element6);	
-//		//Thread.sleep(8000);
-//	 	log.info("****  OSF webelement view Journey Impression****");
-//		System.out.println(" OSF webelement view Journey Impression");
-		String getTextOnPage1 = "";
+	public void PegaOSFAPIValidation() throws InterruptedException
+	{
 
-	 	Thread.sleep(8000);
-		// wait.until(ExpectedConditions.visibilityOf(Outcome));
-	 	 
-		 	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-			 wait.pollingEvery(250,  TimeUnit.MILLISECONDS);
-			   wait.withTimeout(4, TimeUnit.MINUTES);
-			 wait.ignoring(NoSuchElementException.class);  
-			  WebElement element = wait.until(new Function<WebDriver, WebElement>()  
-			 {
-			 public WebElement apply(WebDriver driver) {
-		 	 WebElement element = Outcome;
-			 if(element != null)
-			 {
-				 System.out.println("Display the Outcome value for Impression");
-			 			 }
-			 return element;
-			 }
-			 });
-			 
-			  element = Outcome;
-		 
+		driver.manage().window().maximize();
+		int oddrowcount= oddrows.size();
+		int evenrowcount =evenrows.size();
+		for(int k=1;k<pagesize.size();k++)
+		{
+			Thread.sleep(3000);
+			if (pagesize.get(k).getText().equals("1"))
+			{
+				
+				log.info("------------");
+			}
+			else
+			{
+				pagesize.get(k).click();
+				Thread.sleep(4000);
+			}
 			
-		 
-	//	WebElement element1 = Outcome;
- 		Thread.sleep(8000);
-	 	log.info("****  OSF webelement outcome click Impression****");
-		System.out.println(" OSF webelement outcome click Impression");
-	//	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		getTextOnPage1 = element.getText();
-		System.out.println(getTextOnPage1);
-
-		Thread.sleep(8000);
-	 	log.info("**** Outcome value : " +getTextOnPage1);
-	 	log.info("****  OSF webelement outcome Impression ****");
-		System.out.println(" OSF webelement outcome Impression");
-		//boolean result = getTextOnPage1.equals("Impression") ; 
-		boolean result = getTextOnPage1.equals("New") ;
-
-
-		assertTrue(result);	 
-	 	log.info("**** OSF display Impression ****");
-		System.out.println(" OSF display Impression");
+			
+			
+		for(int i=0;i<oddrowcount;i++)
+		{
+			String outcomeTime= Outcome_times.get(i).getText();
+			if (outcomeTime.equals("about a minute ago"))
+			{
+				log.info("-----Validated API Records in IH-----");
+		
+			String fact_id= Fact.get(i).getText();
+			log.debug("Fact ID is :   " +fact_id);
+			String subject_id= subject.get(i).getText();
+			log.debug("Customer ID is :   " +subject_id);
+			String Outcome_time= Outcome_times.get(i).getText();
+			log.debug("Outcome time is :   " +Outcome_time);
+			String Business_issue= Business.get(i).getText();
+			log.debug("Business issue is :   " +Business_issue);
+			String Group= GroupValue.get(i).getText();
+			log.debug("Group value is :   " +Group);
+			String PropositionValue1= PropositionValue.get(i).getText();
+			log.debug("Proposition value is :   " +PropositionValue1);
+			String Outcome_value= OutcomeValue.get(i).getText();
+			log.debug("Outcome Value is :   " +Outcome_value);
+			String Direction= Direction1.get(i).getText();
+			log.debug("Direction value is :   " +Direction);
+			String Channel= Channel1.get(i).getText();
+			log.debug("Channel value is :   " +Channel);
+			
+			}
+				
+		}
+			for(int j=0;j<evenrowcount;j++)
+			{
+				String outcomeTime1=Outcome_times1.get(j).getText();
+			if(outcomeTime1.equals("about a minute ago"))
+			{
+				log.info("-----Validated API Records in IH-----");
+			    String fact_id= Fact1.get(j).getText();
+				log.debug("Fact ID is :   " +fact_id);
+				String subject_id= Subject1.get(j).getText();
+				log.debug("Customer ID is :   " +subject_id);	
+				String Outcome_time= Outcome_times1.get(j).getText();
+				log.debug("Outcome time is :   " +Outcome_time);
+				String Business_issue= Business1.get(j).getText();
+				log.debug("Business issue is :   " +Business_issue);
+				String Group= Group1.get(j).getText();
+				log.debug("Group value is :   " +Group);
+				String PropositionValue2= PropositionValue1.get(j).getText();
+				log.debug("Proposition value is :   " +PropositionValue2);
+				String Outcome_value= OutcomeValue1.get(j).getText();
+				log.debug("Outcome Value is :   " +Outcome_value);
+				String Direction= Direction2.get(j).getText();
+				log.debug("Direction value is :   " +Direction);
+				String Channel= Channel2.get(j).getText();
+				log.debug("Channel value is :   " +Channel);
+			
+			}
+			
+			}		
+			Thread.sleep(3000);
+			
+		
 	}
-
-}	 
+	}	
+	
+}

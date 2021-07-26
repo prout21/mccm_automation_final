@@ -1,0 +1,18 @@
+{
+   "Accounts":[
+      {
+         "AccountID":"1130541265",
+         "SI":"MobileBAN"
+      },
+      {
+         "AccountID":"30541234",
+         "SI":"UME-NRW"
+      },
+      {
+         "AccountID":"13013434",
+         "SI":"Fixnet"
+      }
+   ],
+   "VOID":"12345678",
+   "SCClassification":"SCL"
+}

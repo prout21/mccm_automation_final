@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Mccm OSF Automation Regression Suite">
+<suite name="Mccm OSF Automation Regression Suite" allow-return-values="true">
 
 	<listeners>
 		<listener
@@ -9,49 +9,51 @@
 
 	<test name="Pega OSF DSS Regression Test">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.PegaOSFDMCCMSettingTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.PegaOSF_DMCCM_SettingTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test>  
 	<test name="Pega OSF GETNBA API Call Regression Test">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest" />
-			<class
-				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeGETNBAAPIVldTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.GetNBATest" />
+		
 		</classes>
 	</test> <!-- Test -->
 	<test name="Pega OSF Process Feedback API Call Regression Test">
 		<classes>
 			<class
-				name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdShpCrtIDTest" />
-			<class
-				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSaveOffAPIVldTest" />
-			<class
-				name="Mccm.Pega.OSF.PegaTest.OSFAPICallProFdUpdOrdIDTest" />
-			<class
-				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeSubmitOrderAPIVldTest" />
+				name="Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest" />
+			
+			
 		</classes>
 	</test> <!-- Test -->
 	<test name="Pega OSF Capture Response API Call Regression Test">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.CaptureResponseTest" />
 			<class
-				name="Mccm.Pega.OSF.PegaTest.PegaOSFOutcomeAcceptedAPIVldTest" />
+				name="Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest" />
 		</classes>
 	</test> <!-- Test -->
 	
 		<!-- Test -->
   <test name="Pega OSF API calls For Error Scenarios Regression Test">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.OSF_API_ErrorCasesTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest" />
 		</classes>
 	</test> <!-- Test -->
 	
-	
-		<!-- Test -->
-  <test name="Pega OSF API call For Error case- invalid headers">
+			<!-- Test -->
+  <test name="Pega OSF API calls For Error Scenarios Regression Test2">
 		<classes>
-			<class name="Mccm.Pega.OSF.PegaTest.OSF_API_InvalidHeaders_ErrorCasesTest" />
+			<class name="Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest" />
 		</classes>
 	</test> <!-- Test -->
+	
+			<!-- Test -->
+  <test name="Pega OSF API calls For Error Scenarios Regression Test1">
+		<classes>
+			<class name="Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest" />
+		</classes>
+	</test> <!-- Test -->
+	
 
 </suite> <!-- Suite -->

@@ -1,0 +1,21 @@
+{
+   "CustomerID":"46189101",
+   "ContainerName":"OSF",  
+   "Channel":"OSF",
+   "Direction":"Inbound",
+   "OriginAccount":{
+      "AccountID":"1130541264",
+	  "SubscriptionID":"GSM1821234581",
+      "SI":"MobileSubscr123"
+   },
+   "Name":"SG8",
+   "Issue":"Sales",
+   "Group":"Mobile",
+   "CampaignID":"P-12345",
+   "InteractionID":"-56033434234234255",
+   "Outcome":"Accepted",
+   "FeedbackCode":"Accepted",
+   "CommissionPoints":5,
+   "VOID":"2343",
+   "NBAOfferID":"PAPs12344777"
+}

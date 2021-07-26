@@ -1,0 +1,13 @@
+{
+"Accounts":[
+{
+"AccountID":"1130541259",
+"SI":"MobileBAN"
+}
+],
+"VOID":"12345678",
+"SCClassification":"SCL",
+"ContainerName":"OSF",
+"Channel":"OSF",
+"Direction":"Inbound"
+}
