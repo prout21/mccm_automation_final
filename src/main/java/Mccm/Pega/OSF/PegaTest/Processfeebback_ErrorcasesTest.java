@@ -72,10 +72,10 @@ public class Processfeebback_ErrorcasesTest extends TestBase {
 			URL url = new URL(OSF_URL_PF);
 			log.debug(" {} : [API URL] :{}" ,uuid,url); 
 			String readLine = null;
-			System.setProperty("javax.net.ssl.keyStore", (KeystorePath + css1identity));
+			System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-			System.setProperty("javax.net.ssl.trustStore", (KeystorePath + mccminternaltrust));
+			System.setProperty("javax.net.ssl.trustStore", (KeystorePath +"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
 
