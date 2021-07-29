@@ -49,7 +49,7 @@ public class CaptureResponseTest extends TestBase {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
-	public static String OSF_URL_CR;
+	public static String OSF_URL_CR,hostName,port;
 	public static String Header1, Header2, Header3, Header4;
 	public static String header_value1, header_value2, header_value3;
 
@@ -81,9 +81,11 @@ public class CaptureResponseTest extends TestBase {
 			log.info(" {} : OSF Capture Response API call Started", uuid);
 			KeystorePath = general_ReadProperty("KeystorePath");
 			Keystorepassword = general_ReadProperty("Keystorepassword");
+			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
+			port=general_ReadProperty("HTTPS_OSF_PORT");
 			mccminternaltrust = general_ReadProperty("KEYSTORE_TRUST_FILENAME");
 			css1identity = general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
-			OSF_URL_CR = general_ReadProperty("OSFCR_URL");
+			//OSF_URL_CR = general_ReadProperty("OSFCR_URL");
 			Header1 = general_ReadProperty("Header1");
 			header_value1 = general_ReadProperty("header_value1");
 			Header2 = general_ReadProperty("Header2");
@@ -91,7 +93,12 @@ public class CaptureResponseTest extends TestBase {
 			Header3 = general_ReadProperty("Header3");
 			header_value3 = general_ReadProperty("header_value3");
 			Header4 = general_ReadProperty("Header4");
-			URL url = new URL(OSF_URL_CR);
+			//hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
+		//	port=general_ReadProperty("HTTPS_OSF_PORT");
+			URL url = new URL("https://" + hostName + ":" + port +
+					"/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
+			//String url1= "https://" +hostName + ":" +port + "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse";
+			//URL url = new URL(OSF_URL_CR);
 			log.debug(" {} : [API URL] :{}" ,uuid,url); 
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
