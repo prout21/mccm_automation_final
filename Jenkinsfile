@@ -86,9 +86,11 @@ pipeline {
         {
             when { 
                     allOf {
-                        triggeredBy "TimerTrigger"
-                        expression { BRANCH_NAME ==~ /(develop)/ 
-                    }   
+                        anyOf {
+                            triggeredBy cause: "UserIdCause"
+                            triggeredBy "TimerTrigger"
+                        }
+                        expression { BRANCH_NAME ==~ /(develop)/ }   
                 } 
             } 
             
