@@ -66,6 +66,7 @@ public class CaptureResponseTest extends TestBase {
 
 		try {
 			String projectfolderpath= System.getProperty("user.dir");
+			freemarker.log.Logger.selectLoggerLibrary(freemarker.log.Logger.LIBRARY_NONE);
 			
 			File filePath= file;
 		//	String j1= j.toString();
