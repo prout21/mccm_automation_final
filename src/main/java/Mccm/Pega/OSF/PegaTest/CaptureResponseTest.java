@@ -11,14 +11,14 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.UUID;
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -55,9 +55,9 @@ public class CaptureResponseTest extends TestBase {
 	public static String header_value1, header_value2, header_value3;
 
 	
-	//public static Logger log = Logger.getLogger(CaptureResponseTest.class);
+	public static Logger log = Logger.getLogger(CaptureResponseTest.class);
 
-	public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
+	//public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
 	@Test(dataProviderClass = Data_provider_class.class, dataProvider = "files_CR")
 
 	public void OSFCaptureResponse_APIcall(File file) {

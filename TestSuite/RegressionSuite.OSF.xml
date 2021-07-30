@@ -11,13 +11,13 @@
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.PegaOSF_DMCCM_SettingTest" />
 		</classes>
-	</test>  -->
+	</test> 
 	<test name="Pega OSF GETNBA API Call Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.GetNBATest" />
 		
 		</classes>
-	</test> <!-- Test -->
+	</test> 
 	<test name="Pega OSF Process Feedback API Call Regression Test">
 		<classes>
 			<class
@@ -25,7 +25,7 @@
 			
 			
 		</classes>
-	</test> <!-- Test -->
+	</test>   -->
 	<test name="Pega OSF Capture Response API Call Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.CaptureResponseTest" />
@@ -34,26 +34,26 @@
 		</classes>
 	</test> <!-- Test -->
 	
-		<!-- Test -->
+		<!-- 
   <test name="Pega OSF API calls For Error Scenarios Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test> 
 	
-			<!-- Test -->
+			
   <test name="Pega OSF API calls For Error Scenarios Regression Test2">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test> 
 	
-			<!-- Test -->
+			
   <test name="Pega OSF API calls For Error Scenarios Regression Test1">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test>  -->
 	
 
 </suite> <!-- Suite -->
