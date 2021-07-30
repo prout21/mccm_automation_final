@@ -74,11 +74,12 @@ public class CaptureResponseTest extends TestBase {
 			String json= json1.toString();
 			System.out.println(json); */
 			
-			DOMConfigurator.configure("/app/mccm/config/Log4j2.xml");
+			DOMConfigurator.configure("/app/mccm/config/log4j.xml");
+		//	DOMConfigurator.configure("C:/Users/ns32/git/mccm_automation/UseCaseConfigFile/log4j.xml");
 			
 		//	DOMConfigurator.configure(projectfolderpath+ "/src/test/resources/Log4j2.xml");
 		//	PropertyConfigurator.configure("C:/Users/ns32/git/mccm_automation/src/test/resources/Log4j2.xml");
-			// System.setProperty("log4j.configuration", new File("resources", "log4j2.xml").toURL().toString());
+			 System.setProperty("log4j.configuration", new File("C:/Users/ns32/git/mccm_automation/UseCaseConfigFile", "Log4j2.xml").toURL().toString());
 			
 			JSONObject jobj=	(JSONObject) new JSONParser().parse(new FileReader(filePath));
 			String json= jobj.toJSONString();

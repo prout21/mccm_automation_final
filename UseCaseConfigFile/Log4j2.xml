@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
        <Properties>    
-<Property name="basePath">./logs</Property>
+<Property name="basePath">.\logs</Property>
 </Properties>
  
   <Appenders>
-      <RollingFile name="Console" fileName="C:/Users/ns32/git/mccm_automation/UseCaseConfigFile/logger.log" filePattern="${basePath}/logs-%d{yyyy-MM-dd}.log">
+      <RollingFile name="Console" fileName="/log/logger.log" filePattern="${basePath}/logs-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{yyyy-MM-dd} %d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
       <SizeBasedTriggeringPolicy size="10000" />
           </RollingFile>
