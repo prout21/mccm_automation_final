@@ -1,13 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="31" passed="31" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-29T17:09:50 IST" name="Default suite" finished-at="2021-07-29T17:09:56 IST" duration-ms="6062">
+  <suite started-at="2021-07-30T13:56:29 IST" name="Mccm OSF Automation Regression Suite" finished-at="2021-07-30T13:59:21 IST" duration-ms="171831">
     <groups>
     </groups>
-    <test started-at="2021-07-29T17:09:50 IST" name="Default test" finished-at="2021-07-29T17:09:56 IST" duration-ms="6062">
+    <test started-at="2021-07-30T13:56:29 IST" name="Pega OSF GETNBA API Call Regression Test" finished-at="2021-07-30T13:56:36 IST" duration-ms="6789">
+      <class name="Mccm.Pega.OSF.PegaTest.GetNBATest">
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:29 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:32 IST" duration-ms="2686" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\Cable_2Unitymedia.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:32 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:32 IST" duration-ms="849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\DSL_CableUnitymedia.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:32 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:33 IST" duration-ms="941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\GetNBA_multiacc.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:33 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:34 IST" duration-ms="636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\GetNBA_singleacc.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:34 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:35 IST" duration-ms="821" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\Mobile_DSL_Cable.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+        <test-method signature="OSFGetNBA_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBATest@277f7dd3]" started-at="2021-07-30T13:56:35 IST" name="OSFGetNBA_APIcall" data-provider="files_NBA" finished-at="2021-07-30T13:56:36 IST" duration-ms="812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_GetNBA_TestData\Mobile_DSL_Unitymedia.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.GetNBATest -->
+    </test> <!-- Pega OSF GETNBA API Call Regression Test -->
+    <test started-at="2021-07-30T13:56:36 IST" name="Pega OSF Process Feedback API Call Regression Test" finished-at="2021-07-30T13:56:39 IST" duration-ms="3348">
+      <class name="Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest">
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:36 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:36 IST" duration-ms="568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\CabCustNr_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:36 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:37 IST" duration-ms="570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\cable_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:37 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:38 IST" duration-ms="548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\fixednet_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:38 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:38 IST" duration-ms="555" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\mobileban_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:38 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:39 IST" duration-ms="550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\uniity_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+        <test-method signature="OSFProcesFeedback_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest@7e3f95fe]" started-at="2021-07-30T13:56:39 IST" name="OSFProcesFeedback_APIcall" data-provider="files_PF" finished-at="2021-07-30T13:56:39 IST" duration-ms="544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\OSF_ProcessFeedback_TestData\unitymedia_pr.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.ProcessFeebbackTest -->
+    </test> <!-- Pega OSF Process Feedback API Call Regression Test -->
+    <test started-at="2021-07-30T13:56:39 IST" name="Pega OSF Capture Response API Call Regression Test" finished-at="2021-07-30T13:59:13 IST" duration-ms="153442">
       <class name="Mccm.Pega.OSF.PegaTest.CaptureResponseTest">
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5536379e]" started-at="2021-07-29T17:09:50 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-29T17:09:53 IST" duration-ms="3565" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@7db82169]" started-at="2021-07-30T13:56:39 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T13:56:40 IST" duration-ms="594" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +158,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5536379e]" started-at="2021-07-29T17:09:53 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-29T17:09:54 IST" duration-ms="637" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@7db82169]" started-at="2021-07-30T13:56:40 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T13:56:41 IST" duration-ms="610" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +169,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5536379e]" started-at="2021-07-29T17:09:54 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-29T17:09:54 IST" duration-ms="592" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@7db82169]" started-at="2021-07-30T13:56:41 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T13:56:41 IST" duration-ms="615" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,7 +180,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5536379e]" started-at="2021-07-29T17:09:54 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-29T17:09:55 IST" duration-ms="605" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@7db82169]" started-at="2021-07-30T13:56:41 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T13:56:42 IST" duration-ms="610" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,7 +191,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5536379e]" started-at="2021-07-29T17:09:55 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-29T17:09:56 IST" duration-ms="586" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@7db82169]" started-at="2021-07-30T13:56:42 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T13:56:42 IST" duration-ms="616" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,6 +203,175 @@
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
       </class> <!-- Mccm.Pega.OSF.PegaTest.CaptureResponseTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest@1992eaf4]" started-at="2021-07-30T13:56:42 IST" name="setup" finished-at="2021-07-30T13:56:48 IST" duration-ms="6049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="OSFAPICallsValidation()[pri:1, instance:Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest@1992eaf4]" started-at="2021-07-30T13:56:48 IST" name="OSFAPICallsValidation" finished-at="2021-07-30T13:59:12 IST" duration-ms="143606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFAPICallsValidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest@1992eaf4]" started-at="2021-07-30T13:59:12 IST" name="teardown" finished-at="2021-07-30T13:59:13 IST" duration-ms="725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.PegaOSFValidationTest -->
+    </test> <!-- Pega OSF Capture Response API Call Regression Test -->
+    <test started-at="2021-07-30T13:59:13 IST" name="Pega OSF API calls For Error Scenarios Regression Test" finished-at="2021-07-30T13:59:16 IST" duration-ms="3050">
+      <class name="Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest">
+        <test-method signature="OSFCaptureResponse_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest@18245eb0]" started-at="2021-07-30T13:59:13 IST" name="OSFCaptureResponse_APIcall_ErrorCase" data-provider="jsondataCRerror" finished-at="2021-07-30T13:59:14 IST" duration-ms="1500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\CaptureResponseError_TestData\CRErrorTC1.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFCaptureResponse_APIcall_ErrorCase -->
+        <test-method signature="OSFCaptureResponse_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest@18245eb0]" started-at="2021-07-30T13:59:14 IST" name="OSFCaptureResponse_APIcall_ErrorCase" data-provider="jsondataCRerror" finished-at="2021-07-30T13:59:15 IST" duration-ms="511" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\CaptureResponseError_TestData\CRErrorTC2.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFCaptureResponse_APIcall_ErrorCase -->
+        <test-method signature="OSFCaptureResponse_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest@18245eb0]" started-at="2021-07-30T13:59:15 IST" name="OSFCaptureResponse_APIcall_ErrorCase" data-provider="jsondataCRerror" finished-at="2021-07-30T13:59:15 IST" duration-ms="518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\CaptureResponseError_TestData\CRErrorTC3.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFCaptureResponse_APIcall_ErrorCase -->
+        <test-method signature="OSFCaptureResponse_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest@18245eb0]" started-at="2021-07-30T13:59:15 IST" name="OSFCaptureResponse_APIcall_ErrorCase" data-provider="jsondataCRerror" finished-at="2021-07-30T13:59:16 IST" duration-ms="515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\CaptureResponseError_TestData\CRErrorTC4.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFCaptureResponse_APIcall_ErrorCase -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.CaptureResonse_ErrorCasesTest -->
+    </test> <!-- Pega OSF API calls For Error Scenarios Regression Test -->
+    <test started-at="2021-07-30T13:59:16 IST" name="Pega OSF API calls For Error Scenarios Regression Test2" finished-at="2021-07-30T13:59:18 IST" duration-ms="2133">
+      <class name="Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest">
+        <test-method signature="OSFProcesFeedback_APIcall_ErroCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest@b40bb6e]" started-at="2021-07-30T13:59:16 IST" name="OSFProcesFeedback_APIcall_ErroCase" data-provider="jsondataPFerror" finished-at="2021-07-30T13:59:16 IST" duration-ms="539" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\ProcessFeedbackError_TestData\PFErrorTC1.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall_ErroCase -->
+        <test-method signature="OSFProcesFeedback_APIcall_ErroCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest@b40bb6e]" started-at="2021-07-30T13:59:16 IST" name="OSFProcesFeedback_APIcall_ErroCase" data-provider="jsondataPFerror" finished-at="2021-07-30T13:59:17 IST" duration-ms="519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\ProcessFeedbackError_TestData\PFErrorTC2.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall_ErroCase -->
+        <test-method signature="OSFProcesFeedback_APIcall_ErroCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest@b40bb6e]" started-at="2021-07-30T13:59:17 IST" name="OSFProcesFeedback_APIcall_ErroCase" data-provider="jsondataPFerror" finished-at="2021-07-30T13:59:18 IST" duration-ms="564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\ProcessFeedbackError_TestData\PFErrorTC3.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall_ErroCase -->
+        <test-method signature="OSFProcesFeedback_APIcall_ErroCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest@b40bb6e]" started-at="2021-07-30T13:59:18 IST" name="OSFProcesFeedback_APIcall_ErroCase" data-provider="jsondataPFerror" finished-at="2021-07-30T13:59:18 IST" duration-ms="505" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\ProcessFeedbackError_TestData\PFErrorTC4.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFProcesFeedback_APIcall_ErroCase -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.Processfeebback_ErrorcasesTest -->
+    </test> <!-- Pega OSF API calls For Error Scenarios Regression Test2 -->
+    <test started-at="2021-07-30T13:59:18 IST" name="Pega OSF API calls For Error Scenarios Regression Test1" finished-at="2021-07-30T13:59:21 IST" duration-ms="2544">
+      <class name="Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest">
+        <test-method signature="OSFGetNBA_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest@1643d68f]" started-at="2021-07-30T13:59:18 IST" name="OSFGetNBA_APIcall_ErrorCase" data-provider="jsondataNBAerror" finished-at="2021-07-30T13:59:19 IST" duration-ms="514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\GetNBAError_TestData\GetNBAErrorTC1.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall_ErrorCase -->
+        <test-method signature="OSFGetNBA_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest@1643d68f]" started-at="2021-07-30T13:59:19 IST" name="OSFGetNBA_APIcall_ErrorCase" data-provider="jsondataNBAerror" finished-at="2021-07-30T13:59:19 IST" duration-ms="504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\GetNBAError_TestData\GetNBAErrorTC2.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall_ErrorCase -->
+        <test-method signature="OSFGetNBA_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest@1643d68f]" started-at="2021-07-30T13:59:19 IST" name="OSFGetNBA_APIcall_ErrorCase" data-provider="jsondataNBAerror" finished-at="2021-07-30T13:59:20 IST" duration-ms="508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\GetNBAError_TestData\GetNBAErrorTC3.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall_ErrorCase -->
+        <test-method signature="OSFGetNBA_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest@1643d68f]" started-at="2021-07-30T13:59:20 IST" name="OSFGetNBA_APIcall_ErrorCase" data-provider="jsondataNBAerror" finished-at="2021-07-30T13:59:20 IST" duration-ms="508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\GetNBAError_TestData\GetNBAErrorTC4.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall_ErrorCase -->
+        <test-method signature="OSFGetNBA_APIcall_ErrorCase(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest@1643d68f]" started-at="2021-07-30T13:59:20 IST" name="OSFGetNBA_APIcall_ErrorCase" data-provider="jsondataNBAerror" finished-at="2021-07-30T13:59:21 IST" duration-ms="503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\ns32\git\mccm_automation\UseCaseConfigFile\TestData\GetNBAError_TestData\GetNBAErrorTC5.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OSFGetNBA_APIcall_ErrorCase -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.GetNBA_ErrorCasesTest -->
+    </test> <!-- Pega OSF API calls For Error Scenarios Regression Test1 -->
+  </suite> <!-- Mccm OSF Automation Regression Suite -->
 </testng-results>

@@ -22,6 +22,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.codehaus.jackson.JsonNode;
@@ -72,6 +73,8 @@ public class GetNBA_ErrorCasesTest extends TestBase {
 	public void OSFGetNBA_APIcall_ErrorCase(File file){
 		
 		try {
+			
+			PropertyConfigurator.configure("C:\\Users\\ns32\\git\\mccm_automation\\src\\main\\java\\log4j2.xml");
 			String projectfolderpath= System.getProperty("user.dir");
 			File filePath=file;
 			JSONObject jobj=(JSONObject) new JSONParser().parse(new FileReader(filePath));

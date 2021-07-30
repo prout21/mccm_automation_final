@@ -22,6 +22,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.codehaus.jackson.JsonNode;
@@ -72,6 +73,7 @@ public class GetNBATest extends TestBase {
 	public void OSFGetNBA_APIcall(File file){
 		
 		try {
+			PropertyConfigurator.configure("C:\\Users\\ns32\\git\\mccm_automation\\src\\main\\java\\log4j2.xml");
 			String projectfolderpath= System.getProperty("user.dir");
 		/*	jsondata data1= new jsondata();
 			Object json1 = data1.NBAdata();

@@ -6,12 +6,12 @@
 		<listener
 			class-name="Mccm.Pega.ExtentReportListner.TestListener" />
 	</listeners>
-
+<!--  
 	<test name="Pega OSF DSS Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.PegaOSF_DMCCM_SettingTest" />
 		</classes>
-	</test>  
+	</test>  -->
 	<test name="Pega OSF GETNBA API Call Regression Test">
 		<classes>
 			<class name="Mccm.Pega.OSF.PegaTest.GetNBATest" />

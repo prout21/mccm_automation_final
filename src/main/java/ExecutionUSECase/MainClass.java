@@ -1,5 +1,7 @@
 package ExecutionUSECase;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +10,7 @@ import org.testng.TestNG;
 import Mccm.Pega.ExtentReportListner.TestListener;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 
-
+import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 
@@ -21,12 +23,16 @@ public class MainClass extends TestBase {
 	public static String  TestSuite_UseCase4;
 	public static String  TestSuite_UseCase5;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MalformedURLException {
 
 		TestListener ext = new TestListener();
 
 		TestNG	testNG = new TestNG();
 
+		BasicConfigurator.configure();
+		
+		// -Dlog4j.configuration=file:///C:/Users/ns32/git/mccm_automation/src/test/resources/Log4j2.xml
+		 System.setProperty("log4j.configuration", new File("C:/Users/ns32/git/mccm_automation/src/test/resources", "log4j2.xml").toURL().toString());		
 		String projectPath = System.getProperty("user.dir");
 
 		TestSuite_UseCase1 = general_ReadProperty_UseCase("UseCase_Name1");

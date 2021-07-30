@@ -16,6 +16,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
@@ -48,6 +49,7 @@ public class ProcessFeebbackTest extends TestBase {
 	public void OSFProcesFeedback_APIcall(File file) {
 
 		try {
+			PropertyConfigurator.configure("C:\\Users\\ns32\\git\\mccm_automation\\src\\main\\java\\log4j2.xml");
 			String projectfolderpath= System.getProperty("user.dir");
 		/*	jsondata data1= new jsondata();
 			Object json1 = data1.PFdata();

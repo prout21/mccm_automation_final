@@ -11,11 +11,12 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.UUID;
-
+//import org.apache.log4j.Logger;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
@@ -53,9 +54,10 @@ public class CaptureResponseTest extends TestBase {
 	public static String Header1, Header2, Header3, Header4;
 	public static String header_value1, header_value2, header_value3;
 
-	public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
-
 	
+	//public static Logger log = Logger.getLogger(CaptureResponseTest.class);
+
+	public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
 	@Test(dataProviderClass = Data_provider_class.class, dataProvider = "files_CR")
 
 	public void OSFCaptureResponse_APIcall(File file) {
@@ -70,6 +72,8 @@ public class CaptureResponseTest extends TestBase {
 			Object json1 = data1.CRdata();
 			String json= json1.toString();
 			System.out.println(json); */
+			PropertyConfigurator.configure("/app/mccm/mccm_config/log4j.properties");
+			// System.setProperty("log4j.configuration", new File("resources", "log4j2.xml").toURL().toString());
 			
 			JSONObject jobj=	(JSONObject) new JSONParser().parse(new FileReader(filePath));
 			String json= jobj.toJSONString();
@@ -78,14 +82,15 @@ public class CaptureResponseTest extends TestBase {
 			String uuid = uuid1.toString();
 			UUID uuid2 = UUID.randomUUID();
 			String uuid3 = uuid2.toString();
-			log.info(" {} : OSF Capture Response API call Started", uuid);
+			log.info("OSF Capture Response API call Started- log4j - testing ");
+			//log.info(" {} : OSF Capture Response API call Started", uuid);
 			KeystorePath = general_ReadProperty("KeystorePath");
 			Keystorepassword = general_ReadProperty("Keystorepassword");
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
 			port=general_ReadProperty("HTTPS_OSF_PORT");
 			mccminternaltrust = general_ReadProperty("KEYSTORE_TRUST_FILENAME");
 			css1identity = general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
-			//OSF_URL_CR = general_ReadProperty("OSFCR_URL");
+			OSF_URL_CR = general_ReadProperty("OSFCR_URL");
 			Header1 = general_ReadProperty("Header1");
 			header_value1 = general_ReadProperty("header_value1");
 			Header2 = general_ReadProperty("Header2");
@@ -95,11 +100,11 @@ public class CaptureResponseTest extends TestBase {
 			Header4 = general_ReadProperty("Header4");
 			//hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
 		//	port=general_ReadProperty("HTTPS_OSF_PORT");
-			URL url = new URL("https://" + hostName + ":" + port +
-					"/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
+		//	URL url = new URL("https://" + hostName + ":" + port +
+		//			"/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
 			//String url1= "https://" +hostName + ":" +port + "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse";
-			//URL url = new URL(OSF_URL_CR);
-			log.debug(" {} : [API URL] :{}" ,uuid,url); 
+			URL url = new URL(OSF_URL_CR);
+			//log.debug(" {} : [API URL] :{}" ,uuid,url); 
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -124,12 +129,12 @@ public class CaptureResponseTest extends TestBase {
 			connection.setRequestProperty(Header4, uuid);
 			connection.setRequestProperty(Header1, uuid3);
 			connection.setRequestProperty(Header3, header_value3);
-			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header1 , uuid3);
-			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header2 , header_value2);
-			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid,Header3 , header_value3);
-			log.debug(" {} : [HTTP Request Headers] : {} = {}", uuid, Header4 , uuid);
+			//log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header1 , uuid3);
+		//	log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header2 , header_value2);
+		//	log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid,Header3 , header_value3);
+		//	log.debug(" {} : [HTTP Request Headers] : {} = {}", uuid, Header4 , uuid);
 			//json = data.getAsJsonObject().toString();
-			log.debug(" {} : [Request Payload] :{} ", uuid, json);
+			//log.debug(" {} : [Request Payload] :{} ", uuid, json);
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -148,12 +153,13 @@ public class CaptureResponseTest extends TestBase {
 			}
 			in.close();
 
-			log.debug(" {} : [Response Payload] : {}  " , uuid, response.toString());
-			log.debug(" {} : [HTTP Response Code] : {}   " , uuid,  responseCode);
+		//	log.debug(" {} : [Response Payload] : {}  " , uuid, response.toString());
+		//	log.debug(" {} : [HTTP Response Code] : {}   " , uuid,  responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ");
-			log.info(" {} : OSF Capture Response API call Completed", uuid);
-			log.info("           **************          ");
+		//	log.info(" {} : OSF Capture Response API call Completed", uuid);
+//			log.info("           **************          ");
 
+			log.info("OSF Capture Response API call completed- log4j - testing ");
 		} catch (Exception e) {
 			e.printStackTrace();
 
