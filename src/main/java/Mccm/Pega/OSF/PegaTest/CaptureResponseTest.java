@@ -20,6 +20,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -74,7 +75,14 @@ public class CaptureResponseTest extends TestBase {
 			String json= json1.toString();
 			System.out.println(json); */
 		//	DOMConfigurator.configure(projectfolderpath+ "/src/main/java/Log4j2.xml");
-			DOMConfigurator.configure("/app/mccm/config/Log4j2.xml");
+			LoggerContext context = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false);
+			File logfilepath = new File("/app/mccm/config/Log4j2.xml");
+
+
+			// this will force a reconfiguration
+			context.setConfigLocation(logfilepath.toURI());
+			
+		//	DOMConfigurator.configure("/app/mccm/config/Log4j2.xml");
 		//	DOMConfigurator.configure("C:/Users/ns32/git/mccm_automation/UseCaseConfigFile/log4j.xml");
 			
 		//	DOMConfigurator.configure(projectfolderpath+ "/src/test/resources/Log4j2.xml");
