@@ -112,13 +112,8 @@ public class CaptureResponseTest extends TestBase {
 			Header3 = general_ReadProperty("Header3");
 			header_value3 = general_ReadProperty("header_value3");
 			Header4 = general_ReadProperty("Header4");
-			//hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
-		//	port=general_ReadProperty("HTTPS_OSF_PORT");
-		//	URL url = new URL("https://" + hostName + ":" + port +
-		//			"/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
-			//String url1= "https://" +hostName + ":" +port + "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse";
 			URL url = new URL(OSF_URL_CR);
-			//log.debug(" {} : [API URL] :{}" ,uuid,url); 
+			log.debug(" {} : [API URL] :{}" ,uuid,url); 
 			String readLine = null;
 			System.setProperty("javax.net.ssl.keyStore", (KeystorePath + "/css1identity.jks"));
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
@@ -143,12 +138,12 @@ public class CaptureResponseTest extends TestBase {
 			connection.setRequestProperty(Header4, uuid);
 			connection.setRequestProperty(Header1, uuid3);
 			connection.setRequestProperty(Header3, header_value3);
-			//log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header1 , uuid3);
-		//	log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header2 , header_value2);
-		//	log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid,Header3 , header_value3);
-		//	log.debug(" {} : [HTTP Request Headers] : {} = {}", uuid, Header4 , uuid);
+			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header1 , uuid3);
+			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid, Header2 , header_value2);
+			log.debug(" {} : [HTTP Request Headers] : {} = {}" ,uuid,Header3 , header_value3);
+			log.debug(" {} : [HTTP Request Headers] : {} = {}", uuid, Header4 , uuid);
 			//json = data.getAsJsonObject().toString();
-			//log.debug(" {} : [Request Payload] :{} ", uuid, json);
+			log.debug(" {} : [Request Payload] :{} ", uuid, json);
 			StringBuffer response = new StringBuffer();
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
@@ -167,8 +162,8 @@ public class CaptureResponseTest extends TestBase {
 			}
 			in.close();
 
-		//	log.debug(" {} : [Response Payload] : {}  " , uuid, response.toString());
-		//	log.debug(" {} : [HTTP Response Code] : {}   " , uuid,  responseCode);
+			log.debug(" {} : [Response Payload] : {}  " , uuid, response.toString());
+			log.debug(" {} : [HTTP Response Code] : {}   " , uuid,  responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ");
 			log.info(" {} : OSF Capture Response API call Completed", uuid);
     		log.info("           **************          ");
