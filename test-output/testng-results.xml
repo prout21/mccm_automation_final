@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-30T15:43:43 IST" name="Default suite" finished-at="2021-07-30T15:43:44 IST" duration-ms="386">
+  <suite started-at="2021-07-30T16:01:19 IST" name="Default suite" finished-at="2021-07-30T16:01:20 IST" duration-ms="303">
     <groups>
     </groups>
-    <test started-at="2021-07-30T15:43:43 IST" name="Default test" finished-at="2021-07-30T15:43:44 IST" duration-ms="386">
+    <test started-at="2021-07-30T16:01:19 IST" name="Default test" finished-at="2021-07-30T16:01:20 IST" duration-ms="303">
       <class name="Mccm.Pega.OSF.PegaTest.CaptureResponseTest">
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@3a3e4aff]" started-at="2021-07-30T15:43:43 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T15:43:44 IST" duration-ms="282" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5d1659ea]" started-at="2021-07-30T16:01:19 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T16:01:20 IST" duration-ms="201" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@3a3e4aff]" started-at="2021-07-30T15:43:44 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T15:43:44 IST" duration-ms="13" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5d1659ea]" started-at="2021-07-30T16:01:20 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T16:01:20 IST" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@3a3e4aff]" started-at="2021-07-30T15:43:44 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T15:43:44 IST" duration-ms="13" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5d1659ea]" started-at="2021-07-30T16:01:20 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T16:01:20 IST" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@3a3e4aff]" started-at="2021-07-30T15:43:44 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T15:43:44 IST" duration-ms="10" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5d1659ea]" started-at="2021-07-30T16:01:20 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T16:01:20 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OSFCaptureResponse_APIcall -->
-        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@3a3e4aff]" started-at="2021-07-30T15:43:44 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T15:43:44 IST" duration-ms="9" status="PASS">
+        <test-method signature="OSFCaptureResponse_APIcall(java.io.File)[pri:0, instance:Mccm.Pega.OSF.PegaTest.CaptureResponseTest@5d1659ea]" started-at="2021-07-30T16:01:20 IST" name="OSFCaptureResponse_APIcall" data-provider="files_CR" finished-at="2021-07-30T16:01:20 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>

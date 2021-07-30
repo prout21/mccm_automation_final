@@ -11,14 +11,14 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.UUID;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -55,9 +55,9 @@ public class CaptureResponseTest extends TestBase {
 	public static String header_value1, header_value2, header_value3;
 
 	
-	public static Logger log = Logger.getLogger(CaptureResponseTest.class);
+	//public static Logger log = Logger.getLogger(CaptureResponseTest.class);
 
-	//public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
+	public static Logger log = LogManager.getLogger(CaptureResponseTest.class.getName());
 	@Test(dataProviderClass = Data_provider_class.class, dataProvider = "files_CR")
 
 	public void OSFCaptureResponse_APIcall(File file) {
@@ -72,7 +72,7 @@ public class CaptureResponseTest extends TestBase {
 			Object json1 = data1.CRdata();
 			String json= json1.toString();
 			System.out.println(json); */
-			PropertyConfigurator.configure("/app/mccm/mccm_config/log4j.properties");
+			PropertyConfigurator.configure("/app/mccm/config/Log4j2.xml");
 			// System.setProperty("log4j.configuration", new File("resources", "log4j2.xml").toURL().toString());
 			
 			JSONObject jobj=	(JSONObject) new JSONParser().parse(new FileReader(filePath));
@@ -82,8 +82,8 @@ public class CaptureResponseTest extends TestBase {
 			String uuid = uuid1.toString();
 			UUID uuid2 = UUID.randomUUID();
 			String uuid3 = uuid2.toString();
-			log.info("OSF Capture Response API call Started- log4j - testing ");
-			//log.info(" {} : OSF Capture Response API call Started", uuid);
+			//log.info("OSF Capture Response API call Started- log4j - testing ");
+			log.info(" {} : OSF Capture Response API call Started", uuid);
 			KeystorePath = general_ReadProperty("KeystorePath");
 			Keystorepassword = general_ReadProperty("Keystorepassword");
 			hostName=general_ReadProperty("HTTPS_OSF_HOSTNAME");
@@ -156,10 +156,10 @@ public class CaptureResponseTest extends TestBase {
 		//	log.debug(" {} : [Response Payload] : {}  " , uuid, response.toString());
 		//	log.debug(" {} : [HTTP Response Code] : {}   " , uuid,  responseCode);
 			Assert.assertEquals(responseCode, 200, "Status code is not 200 ");
-		//	log.info(" {} : OSF Capture Response API call Completed", uuid);
-//			log.info("           **************          ");
+			log.info(" {} : OSF Capture Response API call Completed", uuid);
+    		log.info("           **************          ");
 
-			log.info("OSF Capture Response API call completed- log4j - testing ");
+			//log.info("OSF Capture Response API call completed- log4j - testing ");
 		} catch (Exception e) {
 			e.printStackTrace();
 
