@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
-       <Properties>    
-<Property name="basePath">.\logs</Property>
-</Properties>
- 
-  <Appenders>
-      <RollingFile name="Console" fileName="/log/logger.log" filePattern="${basePath}/logs-%d{yyyy-MM-dd}.log">
-     <PatternLayout pattern="%d{yyyy-MM-dd} %d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-      <SizeBasedTriggeringPolicy size="10000" />
-          </RollingFile>
-    <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d{yyyy-MM-dd} %d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-    </Console>
-  </Appenders>
-  <Loggers>
-     <Root level="trace">
-      <AppenderRef ref="Console"/>
-    </Root>
-  </Loggers>
+<appender name="console" class="org.apache.log4j.ConsoleAppender">
+    <param name="Target" value="System.out" />
+    <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="%-5p %c{1} - %m%n" />
+    </layout>
+</appender>
+   <appender name="Log" class="org.apache.log4j.FileAppender">
+    <param name="File" value="Web.log" />
+    <param name="Append" value="true" />
+    <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1}: %m%n" />
+    </layout>
+</appender>
+
+<logger name="com.web" additivity="false">
+    <level value="info" />
+    <appender-ref ref="Log" />
+</logger>
+
 </log4j:configuration>
