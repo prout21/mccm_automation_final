@@ -17,6 +17,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
@@ -72,7 +73,11 @@ public class CaptureResponseTest extends TestBase {
 			Object json1 = data1.CRdata();
 			String json= json1.toString();
 			System.out.println(json); */
-			PropertyConfigurator.configure("/app/mccm/config/Log4j2.xml");
+			
+			DOMConfigurator.configure("/app/mccm/config/Log4j2.xml");
+			
+		//	DOMConfigurator.configure(projectfolderpath+ "/src/test/resources/Log4j2.xml");
+		//	PropertyConfigurator.configure("C:/Users/ns32/git/mccm_automation/src/test/resources/Log4j2.xml");
 			// System.setProperty("log4j.configuration", new File("resources", "log4j2.xml").toURL().toString());
 			
 			JSONObject jobj=	(JSONObject) new JSONParser().parse(new FileReader(filePath));
